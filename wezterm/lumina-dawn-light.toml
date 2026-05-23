@@ -1,0 +1,26 @@
+# lumina-dawn-light -- Lumina (dawn, light)
+# Generated from spec/lumina.json. Do not edit by hand.
+[colors]
+foreground   = "#2B2A28"
+background   = "#FAF7F2"
+cursor_bg    = "#2B2A28"
+cursor_fg    = "#FAF7F2"
+cursor_border = "#2B2A28"
+selection_bg = "#E3DEEF"
+selection_fg = "#2B2A28"
+scrollbar_thumb = "#C5BBA8"
+split = "#DBD3C4"
+ansi = ["#F1ECE3", "#BE2F33", "#2E7D4F", "#9A6B16", "#1F6FB5", "#8A3F73", "#1B6E86", "#47423A"]
+brights = ["#9A9080", "#B0532A", "#1C7A78", "#9A6B16", "#14538A", "#4B4FBF", "#1B6E86", "#2B2A28"]
+
+[colors.tab_bar]
+background = "#F1ECE3"
+[colors.tab_bar.active_tab]
+bg_color = "#FAF7F2"
+fg_color = "#2B2A28"
+[colors.tab_bar.inactive_tab]
+bg_color = "#F1ECE3"
+fg_color = "#6E665A"
+
+[metadata]
+name = "lumina-dawn-light"

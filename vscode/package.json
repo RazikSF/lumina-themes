@@ -1,0 +1,99 @@
+{
+  "name": "lumina-themes",
+  "displayName": "Lumina",
+  "description": "A curated palette-first theme family \u2014 one light governs each field. Seven flavors \u00d7 dark/light.",
+  "version": "1.0.0",
+  "publisher": "RazikSF",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "color-theme",
+    "dark",
+    "light",
+    "lumina"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RazikSF/lumina-themes.git"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Lumina Dawn Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lumina-dawn-dark-color-theme.json"
+      },
+      {
+        "label": "Lumina Dawn Light",
+        "uiTheme": "vs",
+        "path": "./themes/lumina-dawn-light-color-theme.json"
+      },
+      {
+        "label": "Lumina Oxblood Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lumina-oxblood-dark-color-theme.json"
+      },
+      {
+        "label": "Lumina Oxblood Light",
+        "uiTheme": "vs",
+        "path": "./themes/lumina-oxblood-light-color-theme.json"
+      },
+      {
+        "label": "Lumina Ember Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lumina-ember-dark-color-theme.json"
+      },
+      {
+        "label": "Lumina Ember Light",
+        "uiTheme": "vs",
+        "path": "./themes/lumina-ember-light-color-theme.json"
+      },
+      {
+        "label": "Lumina Tide Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lumina-tide-dark-color-theme.json"
+      },
+      {
+        "label": "Lumina Tide Light",
+        "uiTheme": "vs",
+        "path": "./themes/lumina-tide-light-color-theme.json"
+      },
+      {
+        "label": "Lumina Indigo Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lumina-indigo-dark-color-theme.json"
+      },
+      {
+        "label": "Lumina Indigo Light",
+        "uiTheme": "vs",
+        "path": "./themes/lumina-indigo-light-color-theme.json"
+      },
+      {
+        "label": "Lumina Canopy Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lumina-canopy-dark-color-theme.json"
+      },
+      {
+        "label": "Lumina Canopy Light",
+        "uiTheme": "vs",
+        "path": "./themes/lumina-canopy-light-color-theme.json"
+      },
+      {
+        "label": "Lumina Slate Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lumina-slate-dark-color-theme.json"
+      },
+      {
+        "label": "Lumina Slate Light",
+        "uiTheme": "vs",
+        "path": "./themes/lumina-slate-light-color-theme.json"
+      }
+    ]
+  }
+}

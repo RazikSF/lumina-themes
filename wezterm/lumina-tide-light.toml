@@ -1,0 +1,26 @@
+# lumina-tide-light -- Lumina (tide, light)
+# Generated from spec/lumina.json. Do not edit by hand.
+[colors]
+foreground   = "#1E2E2B"
+background   = "#EEF6F5"
+cursor_bg    = "#1E2E2B"
+cursor_fg    = "#EEF6F5"
+cursor_border = "#1E2E2B"
+selection_bg = "#DBEAE8"
+selection_fg = "#1E2E2B"
+scrollbar_thumb = "#A6C0BD"
+split = "#C4D6D3"
+ansi = ["#E3EEEC", "#BE3848", "#1C7A58", "#8A6510", "#1F66A8", "#984070", "#0E6678", "#3A4E4C"]
+brights = ["#7E9794", "#A8541E", "#0E7470", "#8A6510", "#144C6E", "#50469E", "#0E6678", "#1C2E2B"]
+
+[colors.tab_bar]
+background = "#E3EEEC"
+[colors.tab_bar.active_tab]
+bg_color = "#EEF6F5"
+fg_color = "#1E2E2B"
+[colors.tab_bar.inactive_tab]
+bg_color = "#E3EEEC"
+fg_color = "#5A726F"
+
+[metadata]
+name = "lumina-tide-light"

@@ -1,0 +1,26 @@
+# lumina-indigo-dark -- Lumina (indigo, dark)
+# Generated from spec/lumina.json. Do not edit by hand.
+[colors]
+foreground   = "#DEE0EC"
+background   = "#141625"
+cursor_bg    = "#DEE0EC"
+cursor_fg    = "#141625"
+cursor_border = "#DEE0EC"
+selection_bg = "#31354F"
+selection_fg = "#DEE0EC"
+scrollbar_thumb = "#414763"
+split = "#31354F"
+ansi = ["#1E2133", "#E0707C", "#54C194", "#DCC36E", "#6E88E4", "#DC7CBA", "#58B6DE", "#A6ABC4"]
+brights = ["#5B6184", "#E0935A", "#46BAB4", "#DCC36E", "#36488F", "#9286E4", "#58B6DE", "#E2E4EE"]
+
+[colors.tab_bar]
+background = "#0F1019"
+[colors.tab_bar.active_tab]
+bg_color = "#141625"
+fg_color = "#DEE0EC"
+[colors.tab_bar.inactive_tab]
+bg_color = "#0F1019"
+fg_color = "#7C82A4"
+
+[metadata]
+name = "lumina-indigo-dark"
