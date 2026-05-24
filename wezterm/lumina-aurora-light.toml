@@ -1,0 +1,26 @@
+# lumina-aurora-light -- Lumina (aurora, light)
+# Generated from spec/lumina.json. Do not edit by hand.
+[colors]
+foreground   = "#1A2028"
+background   = "#F0F3F2"
+cursor_bg    = "#1A2028"
+cursor_fg    = "#F0F3F2"
+cursor_border = "#1A2028"
+selection_bg = "#D8E8EA"
+selection_fg = "#1A2028"
+scrollbar_thumb = "#9AA8B0"
+split = "#C5CDCC"
+ansi = ["#E5EAE9", "#B23048", "#1A8E66", "#8A6810", "#2A6CB0", "#7A3868", "#1F7088", "#324450"]
+brights = ["#6E7C84", "#A85E22", "#1E8B82", "#8A6810", "#1A3858", "#7A3CB8", "#1F7088", "#1A2028"]
+
+[colors.tab_bar]
+background = "#E5EAE9"
+[colors.tab_bar.active_tab]
+bg_color = "#F0F3F2"
+fg_color = "#1A2028"
+[colors.tab_bar.inactive_tab]
+bg_color = "#E5EAE9"
+fg_color = "#4E5C64"
+
+[metadata]
+name = "lumina-aurora-light"

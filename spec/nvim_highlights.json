@@ -1,210 +1,1471 @@
 {
   "_schema": "highlight group -> {fg, bg, sp, bold, italic, underline, undercurl, link}. Color refs same as faces.json. 'link' takes precedence over other attrs.",
-
-  "Normal":                       {"fg": "fg", "bg": "bg"},
-  "NormalFloat":                  {"fg": "fg", "bg": "bg-alt"},
-  "FloatBorder":                  {"fg": "base3", "bg": "bg-alt"},
-  "FloatTitle":                   {"fg": "schema.lead", "bg": "bg-alt", "bold": true},
-  "CursorLine":                   {"bg": "base1"},
-  "CursorColumn":                 {"bg": "base1"},
-  "CursorLineNr":                 {"fg": "schema.lead", "bold": true},
-  "LineNr":                       {"fg": "base4"},
-  "SignColumn":                   {"bg": "bg"},
-  "VertSplit":                    {"fg": "base3", "bg": "bg"},
-  "WinSeparator":                 {"fg": "base3", "bg": "bg"},
-  "ColorColumn":                  {"bg": "base1"},
-  "Folded":                       {"fg": "base5", "bg": "base1"},
-  "FoldColumn":                   {"fg": "base4", "bg": "bg"},
-  "EndOfBuffer":                  {"fg": "bg"},
-  "NonText":                      {"fg": "base3"},
-  "SpecialKey":                   {"fg": "base4"},
-  "Whitespace":                   {"fg": "base3"},
-  "MatchParen":                   {"fg": "green", "bg": "base2", "bold": true},
-  "Cursor":                       {"fg": "bg", "bg": "schema.lead"},
-  "iCursor":                      {"link": "Cursor"},
-  "TermCursor":                   {"link": "Cursor"},
-  "Visual":                       {"bg": "region"},
-  "VisualNOS":                    {"link": "Visual"},
-  "Search":                       {"fg": "bg", "bg": "yellow"},
-  "IncSearch":                    {"fg": "bg", "bg": "schema.lead", "bold": true},
-  "CurSearch":                    {"fg": "bg", "bg": "orange", "bold": true},
-  "Substitute":                   {"link": "IncSearch"},
-  "StatusLine":                   {"fg": "fg-alt", "bg": "schema.modeline_bg"},
-  "StatusLineNC":                 {"fg": "base5", "bg": "schema.modeline_bg"},
-  "TabLine":                      {"fg": "base5", "bg": "bg-alt"},
-  "TabLineSel":                   {"fg": "schema.lead", "bg": "bg", "bold": true},
-  "TabLineFill":                  {"bg": "bg-alt"},
-  "WinBar":                       {"fg": "fg-alt", "bg": "bg"},
-  "WinBarNC":                     {"fg": "base5", "bg": "bg"},
-  "Pmenu":                        {"fg": "fg", "bg": "bg-alt"},
-  "PmenuSel":                     {"fg": "schema.lead", "bg": "base2", "bold": true},
-  "PmenuSbar":                    {"bg": "base2"},
-  "PmenuThumb":                   {"bg": "base4"},
-  "ModeMsg":                      {"fg": "schema.lead", "bold": true},
-  "MoreMsg":                      {"fg": "green"},
-  "MsgArea":                      {"fg": "fg"},
-  "WarningMsg":                   {"fg": "orange"},
-  "ErrorMsg":                     {"fg": "red", "bold": true},
-  "Question":                     {"fg": "blue"},
-  "Title":                        {"fg": "schema.lead", "bold": true},
-  "Directory":                    {"fg": "schema.lead", "bold": true},
-
-  "DiagnosticError":              {"fg": "red"},
-  "DiagnosticWarn":               {"fg": "orange"},
-  "DiagnosticInfo":               {"fg": "blue"},
-  "DiagnosticHint":               {"fg": "teal"},
-  "DiagnosticOk":                 {"fg": "green"},
-  "DiagnosticUnderlineError":     {"sp": "red", "undercurl": true},
-  "DiagnosticUnderlineWarn":      {"sp": "orange", "undercurl": true},
-  "DiagnosticUnderlineInfo":      {"sp": "blue", "undercurl": true},
-  "DiagnosticUnderlineHint":      {"sp": "teal", "undercurl": true},
-  "DiagnosticUnderlineOk":        {"sp": "green", "undercurl": true},
-  "DiagnosticVirtualTextError":   {"fg": "red", "italic": true},
-  "DiagnosticVirtualTextWarn":    {"fg": "orange", "italic": true},
-  "DiagnosticVirtualTextInfo":    {"fg": "blue", "italic": true},
-  "DiagnosticVirtualTextHint":    {"fg": "teal", "italic": true},
-  "DiagnosticVirtualTextOk":      {"fg": "green", "italic": true},
-
-  "Comment":                      {"fg": "comments", "italic": true},
-  "Constant":                     {"fg": "constants", "bold": true},
-  "String":                       {"fg": "strings"},
-  "Character":                    {"fg": "strings"},
-  "Number":                       {"fg": "numbers"},
-  "Boolean":                      {"fg": "constants", "bold": true},
-  "Float":                        {"fg": "numbers"},
-  "Identifier":                   {"fg": "variables"},
-  "Function":                     {"fg": "functions"},
-  "Statement":                    {"fg": "keywords", "bold": true},
-  "Conditional":                  {"link": "Statement"},
-  "Repeat":                       {"link": "Statement"},
-  "Label":                        {"link": "Statement"},
-  "Operator":                     {"fg": "operators"},
-  "Keyword":                      {"link": "Statement"},
-  "Exception":                    {"fg": "red", "bold": true},
-  "PreProc":                      {"fg": "schema.preprocessor"},
-  "Include":                      {"link": "PreProc"},
-  "Define":                       {"link": "PreProc"},
-  "Macro":                        {"link": "PreProc"},
-  "PreCondit":                    {"link": "PreProc"},
-  "Type":                         {"fg": "type", "italic": true},
-  "StorageClass":                 {"fg": "type"},
-  "Structure":                    {"fg": "type"},
-  "Typedef":                      {"link": "Type"},
-  "Special":                      {"fg": "violet"},
-  "SpecialChar":                  {"fg": "schema.escape"},
-  "Tag":                          {"fg": "keywords"},
-  "Delimiter":                    {"fg": "fg-alt"},
-  "SpecialComment":               {"fg": "doc-comments", "italic": true},
-  "Debug":                        {"fg": "orange"},
-  "Underlined":                   {"fg": "blue", "underline": true},
-  "Error":                        {"fg": "red", "bold": true},
-  "Todo":                         {"fg": "orange", "bg": "bg", "bold": true},
-
-  "@comment":                     {"link": "Comment"},
-  "@string":                      {"link": "String"},
-  "@string.escape":               {"fg": "schema.escape"},
-  "@string.regex":                {"fg": "orange"},
-  "@number":                      {"link": "Number"},
-  "@boolean":                     {"link": "Boolean"},
-  "@float":                       {"link": "Float"},
-  "@keyword":                     {"link": "Keyword"},
-  "@keyword.return":              {"fg": "keywords", "bold": true, "italic": true},
-  "@keyword.function":            {"link": "Keyword"},
-  "@keyword.operator":            {"link": "Operator"},
-  "@conditional":                 {"link": "Conditional"},
-  "@repeat":                      {"link": "Repeat"},
-  "@operator":                    {"link": "Operator"},
-  "@function":                    {"link": "Function"},
-  "@function.call":               {"fg": "schema.function_call"},
-  "@function.builtin":            {"fg": "builtin"},
-  "@function.macro":              {"fg": "schema.preprocessor"},
-  "@method":                      {"link": "Function"},
-  "@method.call":                 {"fg": "schema.function_call"},
-  "@constructor":                 {"fg": "type"},
-  "@parameter":                   {"fg": "fg", "italic": true},
-  "@variable":                    {"link": "Identifier"},
-  "@variable.builtin":            {"fg": "constants", "italic": true},
-  "@type":                        {"link": "Type"},
-  "@type.builtin":                {"fg": "type", "italic": true},
-  "@type.qualifier":              {"fg": "type"},
-  "@constant":                    {"link": "Constant"},
-  "@constant.builtin":            {"fg": "constants", "bold": true},
-  "@constant.macro":              {"link": "Macro"},
-  "@namespace":                   {"fg": "type"},
-  "@module":                      {"fg": "type"},
-  "@attribute":                   {"fg": "yellow"},
-  "@property":                    {"fg": "schema.property"},
-  "@field":                       {"fg": "schema.property"},
-  "@tag":                         {"fg": "keywords"},
-  "@tag.attribute":               {"fg": "yellow"},
-  "@tag.delimiter":               {"link": "Delimiter"},
-  "@punctuation":                 {"link": "Delimiter"},
-  "@punctuation.bracket":         {"link": "Delimiter"},
-  "@punctuation.delimiter":       {"link": "Delimiter"},
-  "@punctuation.special":         {"fg": "violet"},
-  "@text":                        {"fg": "fg"},
-  "@text.strong":                 {"bold": true},
-  "@text.emphasis":               {"italic": true},
-  "@text.underline":              {"underline": true},
-  "@text.title":                  {"fg": "schema.lead", "bold": true},
-  "@text.literal":                {"fg": "orange"},
-  "@text.uri":                    {"fg": "blue", "underline": true},
-  "@text.todo":                   {"link": "Todo"},
-  "@text.note":                   {"fg": "blue", "bold": true},
-  "@text.warning":                {"fg": "orange", "bold": true},
-  "@text.danger":                 {"fg": "red", "bold": true},
-  "@text.diff.add":               {"fg": "green"},
-  "@text.diff.delete":            {"fg": "red"},
-
-  "@lsp.type.class":              {"link": "@type"},
-  "@lsp.type.function":           {"link": "@function"},
-  "@lsp.type.method":             {"link": "@method"},
-  "@lsp.type.variable":           {"link": "@variable"},
-  "@lsp.type.parameter":          {"link": "@parameter"},
-  "@lsp.type.property":           {"link": "@property"},
-  "@lsp.type.enum":               {"link": "@type"},
-  "@lsp.type.enumMember":         {"link": "@constant"},
-  "@lsp.type.interface":          {"link": "@type"},
-  "@lsp.type.struct":             {"link": "@type"},
-  "@lsp.type.namespace":          {"link": "@namespace"},
-  "@lsp.type.macro":              {"link": "Macro"},
-  "@lsp.type.type":               {"link": "@type"},
-  "@lsp.type.typeParameter":      {"link": "@type"},
-
-  "DiffAdd":                      {"fg": "green", "bg": "bg"},
-  "DiffChange":                   {"fg": "yellow", "bg": "bg"},
-  "DiffDelete":                   {"fg": "red", "bg": "bg"},
-  "DiffText":                     {"fg": "orange", "bg": "bg", "bold": true},
-  "diffAdded":                    {"fg": "green"},
-  "diffRemoved":                  {"fg": "red"},
-  "diffChanged":                  {"fg": "yellow"},
-  "GitSignsAdd":                  {"fg": "green"},
-  "GitSignsChange":               {"fg": "yellow"},
-  "GitSignsDelete":               {"fg": "red"},
-
-  "TelescopeBorder":              {"fg": "base3", "bg": "bg-alt"},
-  "TelescopeNormal":              {"link": "NormalFloat"},
-  "TelescopePromptBorder":        {"link": "TelescopeBorder"},
-  "TelescopeResultsBorder":       {"link": "TelescopeBorder"},
-  "TelescopePreviewBorder":       {"link": "TelescopeBorder"},
-  "TelescopeSelection":           {"fg": "schema.lead", "bg": "base2"},
-  "TelescopeMatching":            {"fg": "schema.lead", "bold": true},
-  "TelescopePromptPrefix":        {"fg": "schema.lead"},
-
-  "NvimTreeNormal":               {"link": "Normal"},
-  "NvimTreeFolderName":           {"fg": "schema.lead"},
-  "NvimTreeFolderIcon":           {"fg": "schema.lead"},
-  "NvimTreeOpenedFolderName":     {"fg": "schema.lead", "bold": true},
-  "NvimTreeEmptyFolderName":      {"fg": "base5"},
-  "NvimTreeRootFolder":           {"fg": "violet", "bold": true},
-  "NvimTreeGitDirty":             {"fg": "yellow"},
-  "NvimTreeGitNew":               {"fg": "green"},
-  "NvimTreeGitDeleted":           {"fg": "red"},
-  "NvimTreeIndentMarker":         {"fg": "base3"},
-
-  "markdownH1":                   {"fg": "schema.lead", "bold": true},
-  "markdownH2":                   {"fg": "blue", "bold": true},
-  "markdownH3":                   {"fg": "green", "bold": true},
-  "markdownCode":                 {"fg": "orange"},
-  "markdownLink":                 {"link": "Underlined"}
+  "Normal": {
+    "fg": "fg",
+    "bg": "bg"
+  },
+  "NormalFloat": {
+    "fg": "fg",
+    "bg": "bg-alt"
+  },
+  "FloatBorder": {
+    "fg": "base3",
+    "bg": "bg-alt"
+  },
+  "FloatTitle": {
+    "fg": "schema.lead",
+    "bg": "bg-alt",
+    "bold": true
+  },
+  "CursorLine": {
+    "bg": "base1"
+  },
+  "CursorColumn": {
+    "bg": "base1"
+  },
+  "CursorLineNr": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "LineNr": {
+    "fg": "base4"
+  },
+  "SignColumn": {
+    "bg": "bg"
+  },
+  "VertSplit": {
+    "fg": "base3",
+    "bg": "bg"
+  },
+  "WinSeparator": {
+    "fg": "base3",
+    "bg": "bg"
+  },
+  "ColorColumn": {
+    "bg": "base1"
+  },
+  "Folded": {
+    "fg": "base5",
+    "bg": "base1"
+  },
+  "FoldColumn": {
+    "fg": "base4",
+    "bg": "bg"
+  },
+  "EndOfBuffer": {
+    "fg": "bg"
+  },
+  "NonText": {
+    "fg": "base3"
+  },
+  "SpecialKey": {
+    "fg": "base4"
+  },
+  "Whitespace": {
+    "fg": "base3"
+  },
+  "MatchParen": {
+    "fg": "green",
+    "bg": "base2",
+    "bold": true
+  },
+  "Cursor": {
+    "fg": "bg",
+    "bg": "schema.lead"
+  },
+  "iCursor": {
+    "link": "Cursor"
+  },
+  "TermCursor": {
+    "link": "Cursor"
+  },
+  "Visual": {
+    "bg": "region"
+  },
+  "VisualNOS": {
+    "link": "Visual"
+  },
+  "Search": {
+    "fg": "bg",
+    "bg": "yellow"
+  },
+  "IncSearch": {
+    "fg": "bg",
+    "bg": "schema.lead",
+    "bold": true
+  },
+  "CurSearch": {
+    "fg": "bg",
+    "bg": "orange",
+    "bold": true
+  },
+  "Substitute": {
+    "link": "IncSearch"
+  },
+  "StatusLine": {
+    "fg": "fg-alt",
+    "bg": "schema.modeline_bg"
+  },
+  "StatusLineNC": {
+    "fg": "base5",
+    "bg": "schema.modeline_bg"
+  },
+  "TabLine": {
+    "fg": "base5",
+    "bg": "bg-alt"
+  },
+  "TabLineSel": {
+    "fg": "schema.lead",
+    "bg": "bg",
+    "bold": true
+  },
+  "TabLineFill": {
+    "bg": "bg-alt"
+  },
+  "WinBar": {
+    "fg": "fg-alt",
+    "bg": "bg"
+  },
+  "WinBarNC": {
+    "fg": "base5",
+    "bg": "bg"
+  },
+  "Pmenu": {
+    "fg": "fg",
+    "bg": "bg-alt"
+  },
+  "PmenuSel": {
+    "fg": "schema.lead",
+    "bg": "base2",
+    "bold": true
+  },
+  "PmenuSbar": {
+    "bg": "base2"
+  },
+  "PmenuThumb": {
+    "bg": "base4"
+  },
+  "ModeMsg": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "MoreMsg": {
+    "fg": "green"
+  },
+  "MsgArea": {
+    "fg": "fg"
+  },
+  "WarningMsg": {
+    "fg": "orange"
+  },
+  "ErrorMsg": {
+    "fg": "red",
+    "bold": true
+  },
+  "Question": {
+    "fg": "blue"
+  },
+  "Title": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "Directory": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "DiagnosticError": {
+    "fg": "red"
+  },
+  "DiagnosticWarn": {
+    "fg": "orange"
+  },
+  "DiagnosticInfo": {
+    "fg": "blue"
+  },
+  "DiagnosticHint": {
+    "fg": "teal"
+  },
+  "DiagnosticOk": {
+    "fg": "green"
+  },
+  "DiagnosticUnderlineError": {
+    "sp": "red",
+    "undercurl": true
+  },
+  "DiagnosticUnderlineWarn": {
+    "sp": "orange",
+    "undercurl": true
+  },
+  "DiagnosticUnderlineInfo": {
+    "sp": "blue",
+    "undercurl": true
+  },
+  "DiagnosticUnderlineHint": {
+    "sp": "teal",
+    "undercurl": true
+  },
+  "DiagnosticUnderlineOk": {
+    "sp": "green",
+    "undercurl": true
+  },
+  "DiagnosticVirtualTextError": {
+    "fg": "red",
+    "italic": true
+  },
+  "DiagnosticVirtualTextWarn": {
+    "fg": "orange",
+    "italic": true
+  },
+  "DiagnosticVirtualTextInfo": {
+    "fg": "blue",
+    "italic": true
+  },
+  "DiagnosticVirtualTextHint": {
+    "fg": "teal",
+    "italic": true
+  },
+  "DiagnosticVirtualTextOk": {
+    "fg": "green",
+    "italic": true
+  },
+  "Comment": {
+    "fg": "comments",
+    "italic": true
+  },
+  "Constant": {
+    "fg": "constants",
+    "bold": true
+  },
+  "String": {
+    "fg": "strings"
+  },
+  "Character": {
+    "fg": "strings"
+  },
+  "Number": {
+    "fg": "numbers"
+  },
+  "Boolean": {
+    "fg": "constants",
+    "bold": true
+  },
+  "Float": {
+    "fg": "numbers"
+  },
+  "Identifier": {
+    "fg": "variables"
+  },
+  "Function": {
+    "fg": "functions"
+  },
+  "Statement": {
+    "fg": "keywords",
+    "bold": true
+  },
+  "Conditional": {
+    "link": "Statement"
+  },
+  "Repeat": {
+    "link": "Statement"
+  },
+  "Label": {
+    "link": "Statement"
+  },
+  "Operator": {
+    "fg": "operators"
+  },
+  "Keyword": {
+    "link": "Statement"
+  },
+  "Exception": {
+    "fg": "red",
+    "bold": true
+  },
+  "PreProc": {
+    "fg": "schema.preprocessor"
+  },
+  "Include": {
+    "link": "PreProc"
+  },
+  "Define": {
+    "link": "PreProc"
+  },
+  "Macro": {
+    "link": "PreProc"
+  },
+  "PreCondit": {
+    "link": "PreProc"
+  },
+  "Type": {
+    "fg": "type",
+    "italic": true
+  },
+  "StorageClass": {
+    "fg": "type"
+  },
+  "Structure": {
+    "fg": "type"
+  },
+  "Typedef": {
+    "link": "Type"
+  },
+  "Special": {
+    "fg": "violet"
+  },
+  "SpecialChar": {
+    "fg": "schema.escape"
+  },
+  "Tag": {
+    "fg": "keywords"
+  },
+  "Delimiter": {
+    "fg": "fg-alt"
+  },
+  "SpecialComment": {
+    "fg": "doc-comments",
+    "italic": true
+  },
+  "Debug": {
+    "fg": "orange"
+  },
+  "Underlined": {
+    "fg": "blue",
+    "underline": true
+  },
+  "Error": {
+    "fg": "red",
+    "bold": true
+  },
+  "Todo": {
+    "fg": "orange",
+    "bg": "bg",
+    "bold": true
+  },
+  "@comment": {
+    "link": "Comment"
+  },
+  "@string": {
+    "link": "String"
+  },
+  "@string.escape": {
+    "fg": "schema.escape"
+  },
+  "@string.regex": {
+    "fg": "orange"
+  },
+  "@number": {
+    "link": "Number"
+  },
+  "@boolean": {
+    "link": "Boolean"
+  },
+  "@float": {
+    "link": "Float"
+  },
+  "@keyword": {
+    "link": "Keyword"
+  },
+  "@keyword.return": {
+    "fg": "keywords",
+    "bold": true,
+    "italic": true
+  },
+  "@keyword.function": {
+    "link": "Keyword"
+  },
+  "@keyword.operator": {
+    "link": "Operator"
+  },
+  "@conditional": {
+    "link": "Conditional"
+  },
+  "@repeat": {
+    "link": "Repeat"
+  },
+  "@operator": {
+    "link": "Operator"
+  },
+  "@function": {
+    "link": "Function"
+  },
+  "@function.call": {
+    "fg": "schema.function_call"
+  },
+  "@function.builtin": {
+    "fg": "builtin"
+  },
+  "@function.macro": {
+    "fg": "schema.preprocessor"
+  },
+  "@method": {
+    "link": "Function"
+  },
+  "@method.call": {
+    "fg": "schema.function_call"
+  },
+  "@constructor": {
+    "fg": "type"
+  },
+  "@parameter": {
+    "fg": "fg",
+    "italic": true
+  },
+  "@variable": {
+    "link": "Identifier"
+  },
+  "@variable.builtin": {
+    "fg": "constants",
+    "italic": true
+  },
+  "@type": {
+    "link": "Type"
+  },
+  "@type.builtin": {
+    "fg": "type",
+    "italic": true
+  },
+  "@type.qualifier": {
+    "fg": "type"
+  },
+  "@constant": {
+    "link": "Constant"
+  },
+  "@constant.builtin": {
+    "fg": "constants",
+    "bold": true
+  },
+  "@constant.macro": {
+    "link": "Macro"
+  },
+  "@namespace": {
+    "fg": "type"
+  },
+  "@module": {
+    "fg": "type"
+  },
+  "@attribute": {
+    "fg": "yellow"
+  },
+  "@property": {
+    "fg": "schema.property"
+  },
+  "@field": {
+    "fg": "schema.property"
+  },
+  "@tag": {
+    "fg": "keywords"
+  },
+  "@tag.attribute": {
+    "fg": "yellow"
+  },
+  "@tag.delimiter": {
+    "link": "Delimiter"
+  },
+  "@punctuation": {
+    "link": "Delimiter"
+  },
+  "@punctuation.bracket": {
+    "link": "Delimiter"
+  },
+  "@punctuation.delimiter": {
+    "link": "Delimiter"
+  },
+  "@punctuation.special": {
+    "fg": "violet"
+  },
+  "@text": {
+    "fg": "fg"
+  },
+  "@text.strong": {
+    "bold": true
+  },
+  "@text.emphasis": {
+    "italic": true
+  },
+  "@text.underline": {
+    "underline": true
+  },
+  "@text.title": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "@text.literal": {
+    "fg": "orange"
+  },
+  "@text.uri": {
+    "fg": "blue",
+    "underline": true
+  },
+  "@text.todo": {
+    "link": "Todo"
+  },
+  "@text.note": {
+    "fg": "blue",
+    "bold": true
+  },
+  "@text.warning": {
+    "fg": "orange",
+    "bold": true
+  },
+  "@text.danger": {
+    "fg": "red",
+    "bold": true
+  },
+  "@text.diff.add": {
+    "fg": "green"
+  },
+  "@text.diff.delete": {
+    "fg": "red"
+  },
+  "@lsp.type.class": {
+    "link": "@type"
+  },
+  "@lsp.type.function": {
+    "link": "@function"
+  },
+  "@lsp.type.method": {
+    "link": "@method"
+  },
+  "@lsp.type.variable": {
+    "link": "@variable"
+  },
+  "@lsp.type.parameter": {
+    "link": "@parameter"
+  },
+  "@lsp.type.property": {
+    "link": "@property"
+  },
+  "@lsp.type.enum": {
+    "link": "@type"
+  },
+  "@lsp.type.enumMember": {
+    "link": "@constant"
+  },
+  "@lsp.type.interface": {
+    "link": "@type"
+  },
+  "@lsp.type.struct": {
+    "link": "@type"
+  },
+  "@lsp.type.namespace": {
+    "link": "@namespace"
+  },
+  "@lsp.type.macro": {
+    "link": "Macro"
+  },
+  "@lsp.type.type": {
+    "link": "@type"
+  },
+  "@lsp.type.typeParameter": {
+    "link": "@type"
+  },
+  "DiffAdd": {
+    "fg": "green",
+    "bg": "bg"
+  },
+  "DiffChange": {
+    "fg": "yellow",
+    "bg": "bg"
+  },
+  "DiffDelete": {
+    "fg": "red",
+    "bg": "bg"
+  },
+  "DiffText": {
+    "fg": "orange",
+    "bg": "bg",
+    "bold": true
+  },
+  "diffAdded": {
+    "fg": "green"
+  },
+  "diffRemoved": {
+    "fg": "red"
+  },
+  "diffChanged": {
+    "fg": "yellow"
+  },
+  "GitSignsAdd": {
+    "fg": "green"
+  },
+  "GitSignsChange": {
+    "fg": "yellow"
+  },
+  "GitSignsDelete": {
+    "fg": "red"
+  },
+  "TelescopeBorder": {
+    "fg": "base3",
+    "bg": "bg-alt"
+  },
+  "TelescopeNormal": {
+    "link": "NormalFloat"
+  },
+  "TelescopePromptBorder": {
+    "link": "TelescopeBorder"
+  },
+  "TelescopeResultsBorder": {
+    "link": "TelescopeBorder"
+  },
+  "TelescopePreviewBorder": {
+    "link": "TelescopeBorder"
+  },
+  "TelescopeSelection": {
+    "fg": "schema.lead",
+    "bg": "base2"
+  },
+  "TelescopeMatching": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "TelescopePromptPrefix": {
+    "fg": "schema.lead"
+  },
+  "NvimTreeNormal": {
+    "link": "Normal"
+  },
+  "NvimTreeFolderName": {
+    "fg": "schema.lead"
+  },
+  "NvimTreeFolderIcon": {
+    "fg": "schema.lead"
+  },
+  "NvimTreeOpenedFolderName": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "NvimTreeEmptyFolderName": {
+    "fg": "base5"
+  },
+  "NvimTreeRootFolder": {
+    "fg": "violet",
+    "bold": true
+  },
+  "NvimTreeGitDirty": {
+    "fg": "yellow"
+  },
+  "NvimTreeGitNew": {
+    "fg": "green"
+  },
+  "NvimTreeGitDeleted": {
+    "fg": "red"
+  },
+  "NvimTreeIndentMarker": {
+    "fg": "base3"
+  },
+  "markdownH1": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "markdownH2": {
+    "fg": "blue",
+    "bold": true
+  },
+  "markdownH3": {
+    "fg": "green",
+    "bold": true
+  },
+  "markdownCode": {
+    "fg": "orange"
+  },
+  "markdownLink": {
+    "link": "Underlined"
+  },
+  "@lsp.type.decorator": {
+    "link": "@function"
+  },
+  "@lsp.mod.deprecated": {
+    "strikethrough": true
+  },
+  "@lsp.mod.readonly": {
+    "italic": true
+  },
+  "@lsp.mod.defaultLibrary": {
+    "link": "@function.builtin"
+  },
+  "CmpItemAbbr": {
+    "fg": "fg"
+  },
+  "CmpItemAbbrDeprecated": {
+    "fg": "base5",
+    "strikethrough": true
+  },
+  "CmpItemAbbrMatch": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "CmpItemAbbrMatchFuzzy": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "CmpItemKind": {
+    "fg": "violet"
+  },
+  "CmpItemKindClass": {
+    "fg": "yellow"
+  },
+  "CmpItemKindFunction": {
+    "fg": "blue"
+  },
+  "CmpItemKindMethod": {
+    "fg": "blue"
+  },
+  "CmpItemKindKeyword": {
+    "fg": "violet"
+  },
+  "CmpItemKindVariable": {
+    "fg": "fg"
+  },
+  "CmpItemKindConstant": {
+    "fg": "orange"
+  },
+  "CmpItemKindInterface": {
+    "fg": "yellow"
+  },
+  "CmpItemKindModule": {
+    "fg": "violet"
+  },
+  "CmpItemKindProperty": {
+    "fg": "schema.property"
+  },
+  "CmpItemKindUnit": {
+    "fg": "orange"
+  },
+  "CmpItemKindValue": {
+    "fg": "orange"
+  },
+  "CmpItemKindEnum": {
+    "fg": "yellow"
+  },
+  "CmpItemKindEnumMember": {
+    "fg": "orange"
+  },
+  "CmpItemKindText": {
+    "fg": "fg-alt"
+  },
+  "CmpItemKindSnippet": {
+    "fg": "cyan"
+  },
+  "CmpItemKindFile": {
+    "fg": "fg"
+  },
+  "CmpItemKindFolder": {
+    "fg": "schema.lead"
+  },
+  "CmpItemKindEvent": {
+    "fg": "magenta"
+  },
+  "CmpItemKindOperator": {
+    "fg": "fg-alt"
+  },
+  "CmpItemKindTypeParameter": {
+    "fg": "yellow"
+  },
+  "CmpItemMenu": {
+    "fg": "base5",
+    "italic": true
+  },
+  "NeoTreeNormal": {
+    "link": "Normal"
+  },
+  "NeoTreeNormalNC": {
+    "link": "Normal"
+  },
+  "NeoTreeDirectoryName": {
+    "fg": "schema.lead"
+  },
+  "NeoTreeDirectoryIcon": {
+    "fg": "schema.lead"
+  },
+  "NeoTreeRootName": {
+    "fg": "violet",
+    "bold": true
+  },
+  "NeoTreeFileName": {
+    "fg": "fg"
+  },
+  "NeoTreeFileIcon": {
+    "fg": "base6"
+  },
+  "NeoTreeIndentMarker": {
+    "fg": "base3"
+  },
+  "NeoTreeExpander": {
+    "fg": "base5"
+  },
+  "NeoTreeDimText": {
+    "fg": "base5"
+  },
+  "NeoTreeGitAdded": {
+    "fg": "green"
+  },
+  "NeoTreeGitConflict": {
+    "fg": "red",
+    "bold": true
+  },
+  "NeoTreeGitDeleted": {
+    "fg": "red"
+  },
+  "NeoTreeGitIgnored": {
+    "fg": "base5"
+  },
+  "NeoTreeGitModified": {
+    "fg": "yellow"
+  },
+  "NeoTreeGitRenamed": {
+    "fg": "violet"
+  },
+  "NeoTreeGitUntracked": {
+    "fg": "orange",
+    "italic": true
+  },
+  "NeoTreeFloatBorder": {
+    "fg": "base3",
+    "bg": "bg-alt"
+  },
+  "NeoTreeTitleBar": {
+    "fg": "schema.lead",
+    "bg": "bg-alt",
+    "bold": true
+  },
+  "NoicePopup": {
+    "bg": "bg-alt"
+  },
+  "NoiceCmdlinePopup": {
+    "bg": "bg-alt"
+  },
+  "NoiceCmdline": {
+    "fg": "fg"
+  },
+  "NoiceCmdlineIcon": {
+    "fg": "schema.lead"
+  },
+  "NoiceCmdlineIconSearch": {
+    "fg": "orange"
+  },
+  "NoiceCmdlinePopupBorder": {
+    "fg": "base3"
+  },
+  "NoiceCmdlinePopupBorderSearch": {
+    "fg": "orange"
+  },
+  "NoiceConfirm": {
+    "bg": "bg-alt"
+  },
+  "NoiceConfirmBorder": {
+    "fg": "schema.lead"
+  },
+  "NoiceMini": {
+    "link": "Normal"
+  },
+  "NoiceLspProgressTitle": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "NoiceLspProgressClient": {
+    "fg": "violet"
+  },
+  "NoiceLspProgressSpinner": {
+    "fg": "schema.lead"
+  },
+  "WhichKey": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "WhichKeyGroup": {
+    "fg": "schema.lead",
+    "italic": true
+  },
+  "WhichKeyDesc": {
+    "fg": "fg"
+  },
+  "WhichKeySeparator": {
+    "fg": "base5"
+  },
+  "WhichKeyFloat": {
+    "bg": "bg-alt"
+  },
+  "WhichKeyBorder": {
+    "fg": "base3",
+    "bg": "bg-alt"
+  },
+  "WhichKeyValue": {
+    "fg": "violet"
+  },
+  "TroubleNormal": {
+    "link": "Normal"
+  },
+  "TroubleText": {
+    "fg": "fg"
+  },
+  "TroubleCount": {
+    "fg": "orange",
+    "bold": true
+  },
+  "TroubleIndent": {
+    "fg": "base3"
+  },
+  "TroubleFile": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "TroubleLocation": {
+    "fg": "base5"
+  },
+  "TroubleFoldIcon": {
+    "fg": "base5"
+  },
+  "TodoBgFix": {
+    "fg": "bg",
+    "bg": "red",
+    "bold": true
+  },
+  "TodoBgHack": {
+    "fg": "bg",
+    "bg": "orange",
+    "bold": true
+  },
+  "TodoBgNote": {
+    "fg": "bg",
+    "bg": "blue",
+    "bold": true
+  },
+  "TodoBgTodo": {
+    "fg": "bg",
+    "bg": "yellow",
+    "bold": true
+  },
+  "TodoBgWarn": {
+    "fg": "bg",
+    "bg": "orange",
+    "bold": true
+  },
+  "TodoBgPerf": {
+    "fg": "bg",
+    "bg": "magenta",
+    "bold": true
+  },
+  "TodoFgFix": {
+    "fg": "red",
+    "bold": true
+  },
+  "TodoFgHack": {
+    "fg": "orange",
+    "bold": true
+  },
+  "TodoFgNote": {
+    "fg": "blue",
+    "bold": true
+  },
+  "TodoFgTodo": {
+    "fg": "yellow",
+    "bold": true
+  },
+  "TodoFgWarn": {
+    "fg": "orange",
+    "bold": true
+  },
+  "TodoFgPerf": {
+    "fg": "magenta",
+    "bold": true
+  },
+  "TodoSignFix": {
+    "fg": "red"
+  },
+  "TodoSignHack": {
+    "fg": "orange"
+  },
+  "TodoSignNote": {
+    "fg": "blue"
+  },
+  "TodoSignTodo": {
+    "fg": "yellow"
+  },
+  "TodoSignWarn": {
+    "fg": "orange"
+  },
+  "TodoSignPerf": {
+    "fg": "magenta"
+  },
+  "LualineFilenameNormal": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "LualineModifiedNormal": {
+    "fg": "schema.modeline_modified",
+    "bold": true
+  },
+  "LualineFiletypeNormal": {
+    "fg": "fg"
+  },
+  "LualineLocationNormal": {
+    "fg": "fg-alt"
+  },
+  "BufferLineFill": {
+    "bg": "bg-alt"
+  },
+  "BufferLineBackground": {
+    "fg": "base5",
+    "bg": "bg-alt"
+  },
+  "BufferLineBufferVisible": {
+    "fg": "fg-alt",
+    "bg": "bg-alt"
+  },
+  "BufferLineBufferSelected": {
+    "fg": "schema.lead",
+    "bg": "bg",
+    "bold": true
+  },
+  "BufferLineSeparator": {
+    "fg": "bg-alt",
+    "bg": "bg-alt"
+  },
+  "BufferLineSeparatorVisible": {
+    "fg": "bg-alt",
+    "bg": "bg-alt"
+  },
+  "BufferLineSeparatorSelected": {
+    "fg": "bg-alt",
+    "bg": "bg"
+  },
+  "BufferLineCloseButton": {
+    "fg": "base5",
+    "bg": "bg-alt"
+  },
+  "BufferLineCloseButtonVisible": {
+    "fg": "fg-alt",
+    "bg": "bg-alt"
+  },
+  "BufferLineCloseButtonSelected": {
+    "fg": "red",
+    "bg": "bg"
+  },
+  "BufferLineIndicatorSelected": {
+    "fg": "schema.lead",
+    "bg": "bg"
+  },
+  "BufferLineModified": {
+    "fg": "schema.modeline_modified",
+    "bg": "bg-alt"
+  },
+  "BufferLineModifiedVisible": {
+    "fg": "schema.modeline_modified",
+    "bg": "bg-alt"
+  },
+  "BufferLineModifiedSelected": {
+    "fg": "schema.modeline_modified",
+    "bg": "bg"
+  },
+  "BufferLineTabSelected": {
+    "fg": "schema.lead",
+    "bg": "bg",
+    "bold": true
+  },
+  "BufferLineTab": {
+    "fg": "base5",
+    "bg": "bg-alt"
+  },
+  "BufferLineTabClose": {
+    "fg": "red",
+    "bg": "bg-alt"
+  },
+  "IblIndent": {
+    "fg": "base3"
+  },
+  "IblScope": {
+    "fg": "base5"
+  },
+  "IblWhitespace": {
+    "fg": "base3"
+  },
+  "IndentBlanklineChar": {
+    "fg": "base3"
+  },
+  "IndentBlanklineContextChar": {
+    "fg": "base5"
+  },
+  "LazyButton": {
+    "fg": "fg",
+    "bg": "bg-alt"
+  },
+  "LazyButtonActive": {
+    "fg": "schema.lead",
+    "bg": "base2",
+    "bold": true
+  },
+  "LazyH1": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "LazyH2": {
+    "fg": "violet",
+    "bold": true
+  },
+  "LazyProgressDone": {
+    "fg": "green"
+  },
+  "LazyProgressTodo": {
+    "fg": "base5"
+  },
+  "LazyReasonCmd": {
+    "fg": "orange"
+  },
+  "LazyReasonEvent": {
+    "fg": "magenta"
+  },
+  "LazyReasonFt": {
+    "fg": "cyan"
+  },
+  "LazyReasonKeys": {
+    "fg": "violet"
+  },
+  "LazyReasonPlugin": {
+    "fg": "schema.lead"
+  },
+  "LazyReasonRuntime": {
+    "fg": "yellow"
+  },
+  "LazyReasonSource": {
+    "fg": "green"
+  },
+  "LazyReasonStart": {
+    "fg": "green"
+  },
+  "LazyCommit": {
+    "fg": "violet"
+  },
+  "LazyValue": {
+    "fg": "orange"
+  },
+  "LazyDir": {
+    "fg": "schema.lead"
+  },
+  "LazyUrl": {
+    "fg": "blue",
+    "underline": true
+  },
+  "MasonHeader": {
+    "fg": "bg",
+    "bg": "schema.lead",
+    "bold": true
+  },
+  "MasonHeaderSecondary": {
+    "fg": "bg",
+    "bg": "violet",
+    "bold": true
+  },
+  "MasonHighlight": {
+    "fg": "schema.lead"
+  },
+  "MasonHighlightBlock": {
+    "fg": "bg",
+    "bg": "schema.lead"
+  },
+  "MasonHighlightBlockBold": {
+    "fg": "bg",
+    "bg": "schema.lead",
+    "bold": true
+  },
+  "MasonHighlightSecondary": {
+    "fg": "violet"
+  },
+  "MasonError": {
+    "fg": "red"
+  },
+  "MasonMuted": {
+    "fg": "base5"
+  },
+  "MasonMutedBlock": {
+    "fg": "base8",
+    "bg": "base3"
+  },
+  "DapBreakpoint": {
+    "fg": "red"
+  },
+  "DapBreakpointCondition": {
+    "fg": "yellow"
+  },
+  "DapBreakpointRejected": {
+    "fg": "base5"
+  },
+  "DapLogPoint": {
+    "fg": "blue"
+  },
+  "DapStopped": {
+    "fg": "green",
+    "bold": true
+  },
+  "DapUIVariable": {
+    "fg": "fg"
+  },
+  "DapUIScope": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "DapUIType": {
+    "fg": "yellow"
+  },
+  "DapUIValue": {
+    "fg": "orange"
+  },
+  "DapUIModifiedValue": {
+    "fg": "schema.modeline_modified",
+    "bold": true
+  },
+  "DapUIDecoration": {
+    "fg": "schema.lead"
+  },
+  "DapUIThread": {
+    "fg": "green"
+  },
+  "DapUIStoppedThread": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "DapUIFrameName": {
+    "fg": "fg"
+  },
+  "DapUISource": {
+    "fg": "violet"
+  },
+  "DapUILineNumber": {
+    "fg": "base5"
+  },
+  "DapUIFloatBorder": {
+    "fg": "base3",
+    "bg": "bg-alt"
+  },
+  "DapUIWatchesEmpty": {
+    "fg": "red"
+  },
+  "DapUIWatchesValue": {
+    "fg": "green"
+  },
+  "DapUIWatchesError": {
+    "fg": "red"
+  },
+  "DapUIBreakpointsPath": {
+    "fg": "violet"
+  },
+  "DapUIBreakpointsInfo": {
+    "fg": "green"
+  },
+  "DapUIBreakpointsCurrentLine": {
+    "fg": "green",
+    "bold": true
+  },
+  "GitSignsAddNr": {
+    "fg": "green"
+  },
+  "GitSignsAddLn": {
+    "bg": "base1"
+  },
+  "GitSignsChangeNr": {
+    "fg": "yellow"
+  },
+  "GitSignsChangeLn": {
+    "bg": "base1"
+  },
+  "GitSignsDeleteNr": {
+    "fg": "red"
+  },
+  "GitSignsDeleteLn": {
+    "bg": "base1"
+  },
+  "GitSignsCurrentLineBlame": {
+    "fg": "base5",
+    "italic": true
+  },
+  "GitSignsAddInline": {
+    "bg": "base2"
+  },
+  "GitSignsChangeInline": {
+    "bg": "base2"
+  },
+  "GitSignsDeleteInline": {
+    "bg": "base2"
+  },
+  "GitSignsUntracked": {
+    "fg": "orange"
+  },
+  "GitSignsStagedAdd": {
+    "fg": "green",
+    "italic": true
+  },
+  "GitSignsStagedChange": {
+    "fg": "yellow",
+    "italic": true
+  },
+  "GitSignsStagedDelete": {
+    "fg": "red",
+    "italic": true
+  },
+  "NotifyERRORBorder": {
+    "fg": "red"
+  },
+  "NotifyWARNBorder": {
+    "fg": "orange"
+  },
+  "NotifyINFOBorder": {
+    "fg": "blue"
+  },
+  "NotifyDEBUGBorder": {
+    "fg": "base5"
+  },
+  "NotifyTRACEBorder": {
+    "fg": "violet"
+  },
+  "NotifyERRORIcon": {
+    "fg": "red"
+  },
+  "NotifyWARNIcon": {
+    "fg": "orange"
+  },
+  "NotifyINFOIcon": {
+    "fg": "blue"
+  },
+  "NotifyDEBUGIcon": {
+    "fg": "base5"
+  },
+  "NotifyTRACEIcon": {
+    "fg": "violet"
+  },
+  "NotifyERRORTitle": {
+    "fg": "red",
+    "bold": true
+  },
+  "NotifyWARNTitle": {
+    "fg": "orange",
+    "bold": true
+  },
+  "NotifyINFOTitle": {
+    "fg": "blue",
+    "bold": true
+  },
+  "NotifyDEBUGTitle": {
+    "fg": "base5",
+    "bold": true
+  },
+  "NotifyTRACETitle": {
+    "fg": "violet",
+    "bold": true
+  },
+  "NotifyERRORBody": {
+    "fg": "fg"
+  },
+  "NotifyWARNBody": {
+    "fg": "fg"
+  },
+  "NotifyINFOBody": {
+    "fg": "fg"
+  },
+  "NotifyDEBUGBody": {
+    "fg": "fg"
+  },
+  "NotifyTRACEBody": {
+    "fg": "fg"
+  },
+  "markdownH4": {
+    "fg": "orange",
+    "bold": true
+  },
+  "markdownH5": {
+    "fg": "magenta",
+    "bold": true
+  },
+  "markdownH6": {
+    "fg": "violet",
+    "bold": true
+  },
+  "markdownBlockquote": {
+    "fg": "fg-alt",
+    "italic": true
+  },
+  "markdownBold": {
+    "fg": "fg",
+    "bold": true
+  },
+  "markdownItalic": {
+    "fg": "fg",
+    "italic": true
+  },
+  "markdownBoldItalic": {
+    "fg": "fg",
+    "bold": true,
+    "italic": true
+  },
+  "markdownCodeBlock": {
+    "fg": "orange"
+  },
+  "markdownListMarker": {
+    "fg": "schema.lead"
+  },
+  "markdownOrderedListMarker": {
+    "fg": "schema.lead"
+  },
+  "markdownRule": {
+    "fg": "base3"
+  },
+  "markdownUrl": {
+    "fg": "blue",
+    "underline": true
+  },
+  "markdownLinkText": {
+    "fg": "schema.lead",
+    "underline": true
+  },
+  "helpHyperTextEntry": {
+    "fg": "schema.lead"
+  },
+  "helpHyperTextJump": {
+    "fg": "blue",
+    "underline": true
+  },
+  "helpCommand": {
+    "fg": "violet"
+  },
+  "helpExample": {
+    "fg": "orange"
+  },
+  "helpSpecial": {
+    "fg": "magenta"
+  },
+  "helpNote": {
+    "fg": "yellow"
+  },
+  "helpHeader": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "helpSectionDelim": {
+    "fg": "base5"
+  },
+  "DiagnosticSignError": {
+    "fg": "red"
+  },
+  "DiagnosticSignWarn": {
+    "fg": "orange"
+  },
+  "DiagnosticSignInfo": {
+    "fg": "blue"
+  },
+  "DiagnosticSignHint": {
+    "fg": "cyan"
+  },
+  "DiagnosticSignOk": {
+    "fg": "green"
+  },
+  "DiagnosticDeprecated": {
+    "strikethrough": true,
+    "fg": "base5"
+  },
+  "DiagnosticUnnecessary": {
+    "italic": true,
+    "fg": "base5"
+  },
+  "DiagnosticVirtualLines": {
+    "fg": "base5",
+    "italic": true
+  }
 }

@@ -1,0 +1,26 @@
+# lumina-eclipse-light -- Lumina (eclipse, light)
+# Generated from spec/lumina.json. Do not edit by hand.
+[colors]
+foreground   = "#1A1B26"
+background   = "#F2F1ED"
+cursor_bg    = "#1A1B26"
+cursor_fg    = "#F2F1ED"
+cursor_border = "#1A1B26"
+selection_bg = "#E0DCC8"
+selection_fg = "#1A1B26"
+scrollbar_thumb = "#9A9588"
+split = "#C8C2B0"
+ansi = ["#E8E6DC", "#A03838", "#4E6855", "#8A6018", "#34516A", "#6E3858", "#34586A", "#34384E"]
+brights = ["#6E6C7A", "#925810", "#3E6A4A", "#8A6018", "#1E2840", "#4A3868", "#34586A", "#1A1B26"]
+
+[colors.tab_bar]
+background = "#E8E6DC"
+[colors.tab_bar.active_tab]
+bg_color = "#F2F1ED"
+fg_color = "#1A1B26"
+[colors.tab_bar.inactive_tab]
+bg_color = "#E8E6DC"
+fg_color = "#52546B"
+
+[metadata]
+name = "lumina-eclipse-light"

@@ -1,10 +1,14 @@
-.PHONY: build verify clean
+.PHONY: build verify clean extract
 
 build:
-	python3 generators/lumina_gen.py all
+	python3 generators/lumina_gen.py build
+
+extract:
+	python3 generators/lumina_gen.py extract
 
 verify: build
-	@d=0; for f in emacs/themes/lumina-*-theme.el; do \
+	@d=0; n=0; for f in emacs/themes/lumina-*-theme.el; do \
+	  n=$$((n+1)); \
 	  t=$$(basename "$$f" -theme.el); \
 	  r=$$(emacs -Q --batch \
 	    --eval "(setq custom-theme-load-path (list \"$(CURDIR)/emacs/themes\"))" \
@@ -14,7 +18,7 @@ verify: build
 	  case "$$r" in FAIL*) d=1 ;; esac; \
 	done; \
 	if [ $$d -eq 0 ]; then \
-	  echo "OK: all 14 themes load on pure vanilla Emacs"; \
+	  echo "OK: all $$n themes load on pure vanilla Emacs"; \
 	else echo "FAIL: see above"; exit 1; fi
 
 clean:

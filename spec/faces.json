@@ -1,193 +1,1393 @@
 {
   "_schema": "name -> {fg, bg, bold, italic, underline, weight, slant, extend, inherit, height}. Color refs: palette/helper name (bg, base1, blue, comments, region, variables, ...), schema slot (schema.lead, schema.modeline_bg, ...), schema array slot (schema.rainbow[0], schema.outline[2], ...).",
-
-  "default":                            {"fg": "fg", "bg": "bg"},
-  "fringe":                             {"fg": "base5", "bg": "bg"},
-  "mode-line":                          {"fg": "fg-alt", "bg": "schema.modeline_bg"},
-  "mode-line-inactive":                 {"fg": "base5", "bg": "schema.modeline_bg"},
-  "mode-line-buffer-id":                {"fg": "schema.lead", "bold": true},
-  "header-line":                        {"fg": "base6", "bg": "bg-alt"},
-  "header-line-inactive":               {"fg": "base5", "bg": "bg-alt"},
-  "header-line-highlight":              {"fg": "schema.lead"},
-  "cursor":                             {"bg": "schema.lead"},
-  "region":                             {"bg": "region", "extend": true},
-  "secondary-selection":                {"bg": "base2"},
-  "hl-line":                            {"bg": "base1", "extend": true},
-  "highlight":                          {"bg": "base2"},
-  "vertical-border":                    {"fg": "base3"},
-  "window-divider":                     {"fg": "base3"},
-  "window-divider-first-pixel":         {"fg": "base3"},
-  "window-divider-last-pixel":          {"fg": "base3"},
-  "internal-border":                    {"bg": "bg"},
-  "line-number":                        {"fg": "base4", "bg": "bg"},
-  "line-number-current-line":           {"fg": "schema.lead", "bg": "base1", "bold": true},
-  "minibuffer-prompt":                  {"fg": "schema.lead", "bold": true},
-  "isearch":                            {"fg": "bg", "bg": "schema.lead", "bold": true},
-  "isearch-fail":                       {"fg": "red", "bg": "bg"},
-  "lazy-highlight":                     {"fg": "bg", "bg": "yellow"},
-  "match":                              {"fg": "bg", "bg": "green"},
-  "show-paren-match":                   {"fg": "green", "bold": true},
-  "show-paren-mismatch":                {"fg": "red", "bold": true},
-  "link":                               {"fg": "blue", "underline": true},
-  "link-visited":                       {"fg": "violet", "underline": true},
-  "button":                             {"inherit": "link"},
-  "error":                              {"fg": "red", "bold": true},
-  "warning":                            {"fg": "orange", "bold": true},
-  "success":                            {"fg": "green", "bold": true},
-  "escape-glyph":                       {"fg": "orange"},
-  "nobreak-space":                      {"inherit": "escape-glyph"},
-  "shadow":                             {"fg": "base5"},
-  "trailing-whitespace":                {"bg": "red"},
-
-  "font-lock-keyword-face":             {"fg": "keywords", "bold": true},
-  "font-lock-comment-face":             {"fg": "comments", "italic": true},
-  "font-lock-comment-delimiter-face":   {"inherit": "font-lock-comment-face"},
-  "font-lock-doc-face":                 {"fg": "doc-comments", "italic": true},
-  "font-lock-string-face":              {"fg": "strings"},
-  "font-lock-function-name-face":       {"fg": "functions"},
-  "font-lock-variable-name-face":       {"fg": "variables"},
-  "font-lock-type-face":                {"fg": "type", "italic": true},
-  "font-lock-constant-face":            {"fg": "constants", "bold": true},
-  "font-lock-builtin-face":             {"fg": "builtin"},
-  "font-lock-preprocessor-face":        {"fg": "schema.preprocessor"},
-  "font-lock-negation-char-face":       {"fg": "red"},
-  "font-lock-warning-face":             {"inherit": "warning"},
-  "font-lock-function-call-face":       {"fg": "schema.function_call"},
-  "font-lock-property-name-face":       {"fg": "schema.property"},
-  "font-lock-property-use-face":        {"fg": "schema.property"},
-  "font-lock-number-face":              {"fg": "numbers"},
-  "font-lock-operator-face":            {"fg": "operators"},
-  "font-lock-escape-face":              {"fg": "schema.escape"},
-
-  "tab-bar":                            {"fg": "fg-alt", "bg": "bg-alt"},
-  "tab-bar-tab":                        {"fg": "schema.lead", "bg": "bg", "bold": true},
-  "tab-bar-tab-inactive":               {"fg": "base5", "bg": "bg-alt"},
-
-  "outline-1":                          {"fg": "schema.outline[0]", "bold": true},
-  "outline-2":                          {"fg": "schema.outline[1]"},
-  "outline-3":                          {"fg": "schema.outline[2]"},
-  "outline-4":                          {"fg": "schema.outline[3]"},
-  "outline-5":                          {"fg": "schema.outline[0]"},
-  "outline-6":                          {"fg": "schema.outline[1]"},
-  "outline-7":                          {"fg": "schema.outline[2]"},
-  "outline-8":                          {"fg": "schema.outline[3]"},
-
-  "org-level-1":                        {"inherit": "outline-1"},
-  "org-level-2":                        {"inherit": "outline-2"},
-  "org-level-3":                        {"inherit": "outline-3"},
-  "org-level-4":                        {"inherit": "outline-4"},
-  "org-level-5":                        {"inherit": "outline-5"},
-  "org-level-6":                        {"inherit": "outline-6"},
-  "org-level-7":                        {"inherit": "outline-7"},
-  "org-level-8":                        {"inherit": "outline-8"},
-  "org-document-title":                 {"fg": "schema.lead", "bold": true, "height": 1.3},
-  "org-block":                          {"bg": "bg-alt", "extend": true},
-  "org-block-begin-line":               {"fg": "comments", "bg": "bg-alt", "italic": true, "extend": true},
-  "org-block-end-line":                 {"inherit": "org-block-begin-line"},
-  "org-todo":                           {"fg": "schema.org_todo", "bold": true},
-  "org-done":                           {"fg": "schema.org_done", "bold": true},
-  "org-table":                          {"fg": "fg"},
-  "org-link":                           {"inherit": "link"},
-  "org-date":                           {"fg": "violet", "underline": true},
-  "org-code":                           {"fg": "orange"},
-  "org-verbatim":                       {"fg": "green"},
-  "org-special-keyword":                {"fg": "violet"},
-  "org-drawer":                         {"fg": "base5"},
-  "org-meta-line":                      {"fg": "base5"},
-
-  "markdown-header-face":               {"fg": "schema.lead", "inherit": "bold"},
-  "markdown-header-face-1":             {"inherit": "markdown-header-face"},
-  "markdown-header-face-2":             {"inherit": "markdown-header-face"},
-  "markdown-header-face-3":             {"inherit": "markdown-header-face"},
-  "markdown-header-face-4":             {"inherit": "markdown-header-face"},
-  "markdown-code-face":                 {"inherit": "org-block"},
-  "markdown-link-face":                 {"inherit": "link"},
-
-  "magit-section-heading":              {"fg": "schema.lead", "bold": true},
-  "magit-section-highlight":            {"bg": "base1"},
-  "magit-branch-local":                 {"fg": "schema.magit_branch_local"},
-  "magit-branch-remote":                {"fg": "schema.magit_branch_remote"},
-  "magit-diff-added":                   {"fg": "green"},
-  "magit-diff-removed":                 {"fg": "red"},
-  "magit-diff-context":                 {"fg": "base5"},
-  "magit-hash":                         {"fg": "violet"},
-  "diff-added":                         {"fg": "green"},
-  "diff-removed":                       {"fg": "red"},
-  "diff-changed":                       {"fg": "yellow"},
-  "diff-hunk-header":                   {"fg": "schema.lead"},
-
-  "dired-directory":                    {"fg": "schema.lead", "bold": true},
-  "dired-symlink":                      {"fg": "cyan", "italic": true},
-  "dired-broken-symlink":               {"fg": "red", "italic": true, "underline": true},
-  "dired-header":                       {"fg": "fg-alt", "italic": true},
-  "dired-mark":                         {"fg": "orange"},
-  "dired-marked":                       {"fg": "orange", "bold": true},
-  "dired-flagged":                      {"fg": "red", "bold": true},
-  "dired-warning":                      {"fg": "orange"},
-  "dired-ignored":                      {"fg": "base5"},
-  "dired-perm-write":                   {"fg": "yellow"},
-  "dired-set-id":                       {"fg": "magenta"},
-  "dired-special":                      {"fg": "violet"},
-
-  "diredfl-dir-heading":                {"fg": "fg-alt", "bg": "bg-alt", "italic": true},
-  "diredfl-dir-name":                   {"fg": "schema.lead", "bold": true},
-  "diredfl-file-name":                  {"fg": "fg"},
-  "diredfl-file-suffix":                {"fg": "base5"},
-  "diredfl-symlink":                    {"fg": "cyan", "italic": true},
-  "diredfl-executable-tag":             {"fg": "green"},
-  "diredfl-date-time":                  {"fg": "base5", "italic": true},
-  "diredfl-number":                     {"fg": "orange"},
-  "diredfl-no-priv":                    {"fg": "base5"},
-  "diredfl-read-priv":                  {"fg": "green"},
-  "diredfl-write-priv":                 {"fg": "yellow"},
-  "diredfl-exec-priv":                  {"fg": "red"},
-  "diredfl-dir-priv":                   {"fg": "schema.lead", "bold": true},
-  "diredfl-link-priv":                  {"fg": "cyan"},
-  "diredfl-rare-priv":                  {"fg": "magenta"},
-  "diredfl-other-priv":                 {"fg": "violet"},
-  "diredfl-flag-mark":                  {"fg": "orange", "bold": true},
-  "diredfl-flag-mark-line":             {"bg": "base1"},
-  "diredfl-deletion":                   {"fg": "red", "bold": true},
-  "diredfl-deletion-file-name":         {"fg": "red", "italic": true},
-  "diredfl-compressed-file-name":       {"fg": "orange"},
-  "diredfl-compressed-file-suffix":     {"fg": "base5"},
-  "diredfl-ignored-file-name":          {"fg": "base5"},
-  "diredfl-autofile-name":              {"fg": "teal"},
-  "dired-dirname":                      {"fg": "schema.lead", "bold": true},
-
-  "dirvish-hl-line":                    {"bg": "base2", "extend": true},
-  "dirvish-subtree-state":              {"fg": "base5"},
-  "dirvish-yank-overlay":               {"bg": "base2"},
-  "dirvish-quick-access-entry":         {"fg": "cyan"},
-  "dirvish-emerge-group-title":         {"fg": "schema.lead", "bold": true},
-  "dirvish-header-line":                {"fg": "base6", "bg": "bg-alt"},
-  "dirvish-header-line-face":           {"fg": "base6", "bg": "bg-alt"},
-  "dirvish-vc-needs-merge-face":        {"fg": "orange"},
-  "all-the-icons-dired-dir-face":       {"fg": "schema.lead"},
-
-  "vertico-current":                    {"bg": "schema.vertico_bg", "extend": true},
-  "corfu-current":                      {"fg": "fg", "bg": "schema.vertico_bg"},
-  "corfu-default":                      {"fg": "fg", "bg": "bg-alt"},
-  "corfu-border":                       {"fg": "base3"},
-  "corfu-bar":                          {"bg": "schema.lead"},
-  "orderless-match-face-0":             {"fg": "schema.orderless[0]", "bold": true},
-  "orderless-match-face-1":             {"fg": "schema.orderless[1]", "bold": true},
-  "orderless-match-face-2":             {"fg": "schema.orderless[2]", "bold": true},
-  "orderless-match-face-3":             {"fg": "green", "bold": true},
-
-  "doom-modeline-bar":                  {"bg": "schema.lead"},
-  "doom-modeline-buffer-path":          {"fg": "schema.lead", "bold": true},
-  "doom-modeline-buffer-modified":      {"fg": "schema.modeline_modified", "bold": true},
-  "doom-modeline-buffer-major-mode":    {"fg": "green"},
-  "doom-modeline-info":                 {"fg": "green"},
-  "doom-modeline-warning":              {"fg": "orange"},
-  "doom-modeline-error":                {"fg": "red"},
-
-  "rainbow-delimiters-depth-1-face":    {"fg": "schema.rainbow[0]"},
-  "rainbow-delimiters-depth-2-face":    {"fg": "schema.rainbow[1]"},
-  "rainbow-delimiters-depth-3-face":    {"fg": "schema.rainbow[2]"},
-  "rainbow-delimiters-depth-4-face":    {"fg": "schema.rainbow[3]"},
-  "rainbow-delimiters-depth-5-face":    {"fg": "schema.rainbow[4]"},
-  "rainbow-delimiters-depth-6-face":    {"fg": "schema.rainbow[5]"},
-  "rainbow-delimiters-unmatched-face":  {"fg": "red", "bold": true}
+  "default": {
+    "fg": "fg",
+    "bg": "bg"
+  },
+  "fringe": {
+    "fg": "base5",
+    "bg": "bg"
+  },
+  "mode-line": {
+    "fg": "fg-alt",
+    "bg": "schema.modeline_bg"
+  },
+  "mode-line-inactive": {
+    "fg": "base5",
+    "bg": "schema.modeline_bg"
+  },
+  "mode-line-buffer-id": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "header-line": {
+    "fg": "base6",
+    "bg": "bg-alt"
+  },
+  "header-line-inactive": {
+    "fg": "base5",
+    "bg": "bg-alt"
+  },
+  "header-line-highlight": {
+    "fg": "schema.lead"
+  },
+  "cursor": {
+    "bg": "schema.lead"
+  },
+  "region": {
+    "bg": "region",
+    "extend": true
+  },
+  "secondary-selection": {
+    "bg": "base2"
+  },
+  "hl-line": {
+    "bg": "base1",
+    "extend": true
+  },
+  "highlight": {
+    "bg": "base2"
+  },
+  "vertical-border": {
+    "fg": "base3"
+  },
+  "window-divider": {
+    "fg": "base3"
+  },
+  "window-divider-first-pixel": {
+    "fg": "base3"
+  },
+  "window-divider-last-pixel": {
+    "fg": "base3"
+  },
+  "internal-border": {
+    "bg": "bg"
+  },
+  "line-number": {
+    "fg": "base4",
+    "bg": "bg"
+  },
+  "line-number-current-line": {
+    "fg": "schema.lead",
+    "bg": "base1",
+    "bold": true
+  },
+  "minibuffer-prompt": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "isearch": {
+    "fg": "bg",
+    "bg": "schema.lead",
+    "bold": true
+  },
+  "isearch-fail": {
+    "fg": "red",
+    "bg": "bg"
+  },
+  "lazy-highlight": {
+    "fg": "bg",
+    "bg": "yellow"
+  },
+  "match": {
+    "fg": "bg",
+    "bg": "green"
+  },
+  "show-paren-match": {
+    "fg": "green",
+    "bold": true
+  },
+  "show-paren-mismatch": {
+    "fg": "red",
+    "bold": true
+  },
+  "link": {
+    "fg": "blue",
+    "underline": true
+  },
+  "link-visited": {
+    "fg": "violet",
+    "underline": true
+  },
+  "button": {
+    "inherit": "link"
+  },
+  "error": {
+    "fg": "red",
+    "bold": true
+  },
+  "warning": {
+    "fg": "orange",
+    "bold": true
+  },
+  "success": {
+    "fg": "green",
+    "bold": true
+  },
+  "escape-glyph": {
+    "fg": "orange"
+  },
+  "nobreak-space": {
+    "inherit": "escape-glyph"
+  },
+  "shadow": {
+    "fg": "base5"
+  },
+  "trailing-whitespace": {
+    "bg": "red"
+  },
+  "font-lock-keyword-face": {
+    "fg": "keywords",
+    "bold": true
+  },
+  "font-lock-comment-face": {
+    "fg": "comments",
+    "italic": true
+  },
+  "font-lock-comment-delimiter-face": {
+    "inherit": "font-lock-comment-face"
+  },
+  "font-lock-doc-face": {
+    "fg": "doc-comments",
+    "italic": true
+  },
+  "font-lock-string-face": {
+    "fg": "strings"
+  },
+  "font-lock-function-name-face": {
+    "fg": "functions",
+    "weight": "semi-bold"
+  },
+  "font-lock-variable-name-face": {
+    "fg": "variables"
+  },
+  "font-lock-type-face": {
+    "fg": "type",
+    "italic": true
+  },
+  "font-lock-constant-face": {
+    "fg": "constants",
+    "bold": true
+  },
+  "font-lock-builtin-face": {
+    "fg": "builtin"
+  },
+  "font-lock-preprocessor-face": {
+    "fg": "schema.preprocessor"
+  },
+  "font-lock-negation-char-face": {
+    "fg": "red"
+  },
+  "font-lock-warning-face": {
+    "inherit": "warning"
+  },
+  "font-lock-function-call-face": {
+    "fg": "schema.function_call"
+  },
+  "font-lock-property-name-face": {
+    "fg": "schema.property"
+  },
+  "font-lock-property-use-face": {
+    "fg": "schema.property"
+  },
+  "font-lock-number-face": {
+    "fg": "numbers"
+  },
+  "font-lock-operator-face": {
+    "fg": "operators"
+  },
+  "font-lock-escape-face": {
+    "fg": "schema.escape"
+  },
+  "tab-bar": {
+    "fg": "fg-alt",
+    "bg": "bg-alt"
+  },
+  "tab-bar-tab": {
+    "fg": "schema.lead",
+    "bg": "bg",
+    "bold": true
+  },
+  "tab-bar-tab-inactive": {
+    "fg": "base5",
+    "bg": "bg-alt"
+  },
+  "outline-1": {
+    "fg": "schema.outline[0]",
+    "bold": true
+  },
+  "outline-2": {
+    "fg": "schema.outline[1]"
+  },
+  "outline-3": {
+    "fg": "schema.outline[2]"
+  },
+  "outline-4": {
+    "fg": "schema.outline[3]"
+  },
+  "outline-5": {
+    "fg": "schema.outline[0]"
+  },
+  "outline-6": {
+    "fg": "schema.outline[1]"
+  },
+  "outline-7": {
+    "fg": "schema.outline[2]"
+  },
+  "outline-8": {
+    "fg": "schema.outline[3]"
+  },
+  "org-level-1": {
+    "inherit": "outline-1"
+  },
+  "org-level-2": {
+    "inherit": "outline-2"
+  },
+  "org-level-3": {
+    "inherit": "outline-3"
+  },
+  "org-level-4": {
+    "inherit": "outline-4"
+  },
+  "org-level-5": {
+    "inherit": "outline-5"
+  },
+  "org-level-6": {
+    "inherit": "outline-6"
+  },
+  "org-level-7": {
+    "inherit": "outline-7"
+  },
+  "org-level-8": {
+    "inherit": "outline-8"
+  },
+  "org-document-title": {
+    "fg": "schema.lead",
+    "bold": true,
+    "height": 1.3
+  },
+  "org-block": {
+    "bg": "bg-alt",
+    "extend": true
+  },
+  "org-block-begin-line": {
+    "fg": "comments",
+    "bg": "bg-alt",
+    "italic": true,
+    "extend": true
+  },
+  "org-block-end-line": {
+    "inherit": "org-block-begin-line"
+  },
+  "org-todo": {
+    "fg": "schema.org_todo",
+    "bold": true
+  },
+  "org-done": {
+    "fg": "schema.org_done",
+    "bold": true
+  },
+  "org-table": {
+    "fg": "fg"
+  },
+  "org-link": {
+    "inherit": "link"
+  },
+  "org-date": {
+    "fg": "violet",
+    "underline": true
+  },
+  "org-code": {
+    "fg": "orange"
+  },
+  "org-verbatim": {
+    "fg": "green"
+  },
+  "org-special-keyword": {
+    "fg": "violet"
+  },
+  "org-drawer": {
+    "fg": "base5"
+  },
+  "org-meta-line": {
+    "fg": "base5"
+  },
+  "org-document-info": {
+    "fg": "fg-alt"
+  },
+  "org-document-info-keyword": {
+    "fg": "base5"
+  },
+  "org-property-value": {
+    "fg": "fg"
+  },
+  "org-priority": {
+    "fg": "red",
+    "bold": true
+  },
+  "org-tag": {
+    "fg": "green",
+    "italic": true
+  },
+  "org-quote": {
+    "fg": "fg-alt",
+    "italic": true
+  },
+  "org-verse": {
+    "inherit": "org-quote"
+  },
+  "org-warning": {
+    "fg": "orange",
+    "bold": true
+  },
+  "org-checkbox": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "org-checkbox-statistics-todo": {
+    "fg": "schema.org_todo",
+    "bold": true
+  },
+  "org-checkbox-statistics-done": {
+    "fg": "schema.org_done",
+    "bold": true
+  },
+  "org-headline-done": {
+    "fg": "base5",
+    "strike-through": true
+  },
+  "org-footnote": {
+    "fg": "cyan",
+    "underline": true
+  },
+  "org-ellipsis": {
+    "fg": "base5"
+  },
+  "org-formula": {
+    "fg": "magenta"
+  },
+  "org-agenda-date": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "org-agenda-date-today": {
+    "fg": "schema.lead",
+    "bg": "base1",
+    "bold": true
+  },
+  "org-agenda-date-weekend": {
+    "fg": "violet"
+  },
+  "org-agenda-structure": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "org-agenda-current-time": {
+    "fg": "schema.lead"
+  },
+  "org-scheduled": {
+    "fg": "fg"
+  },
+  "org-scheduled-today": {
+    "fg": "schema.lead"
+  },
+  "org-scheduled-previously": {
+    "fg": "orange"
+  },
+  "org-deadline-announce": {
+    "fg": "orange"
+  },
+  "org-upcoming-deadline": {
+    "fg": "yellow"
+  },
+  "markdown-header-face": {
+    "fg": "schema.lead",
+    "inherit": "bold"
+  },
+  "markdown-header-face-1": {
+    "inherit": "markdown-header-face"
+  },
+  "markdown-header-face-2": {
+    "inherit": "markdown-header-face"
+  },
+  "markdown-header-face-3": {
+    "inherit": "markdown-header-face"
+  },
+  "markdown-header-face-4": {
+    "inherit": "markdown-header-face"
+  },
+  "markdown-code-face": {
+    "inherit": "org-block"
+  },
+  "markdown-link-face": {
+    "inherit": "link"
+  },
+  "magit-section-heading": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "magit-section-heading-selection": {
+    "fg": "schema.lead",
+    "bg": "base1",
+    "bold": true
+  },
+  "magit-section-highlight": {
+    "bg": "base1"
+  },
+  "magit-branch-local": {
+    "fg": "schema.magit_branch_local"
+  },
+  "magit-branch-remote": {
+    "fg": "schema.magit_branch_remote"
+  },
+  "magit-branch-current": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "magit-branch-upstream": {
+    "fg": "schema.magit_branch_remote",
+    "italic": true
+  },
+  "magit-tag": {
+    "fg": "yellow"
+  },
+  "magit-hash": {
+    "fg": "violet"
+  },
+  "magit-log-author": {
+    "fg": "violet"
+  },
+  "magit-log-date": {
+    "fg": "base5"
+  },
+  "magit-log-graph": {
+    "fg": "base5"
+  },
+  "magit-diff-added": {
+    "fg": "green"
+  },
+  "magit-diff-added-highlight": {
+    "fg": "green",
+    "bg": "base1"
+  },
+  "magit-diff-removed": {
+    "fg": "red"
+  },
+  "magit-diff-removed-highlight": {
+    "fg": "red",
+    "bg": "base1"
+  },
+  "magit-diff-context": {
+    "fg": "base5"
+  },
+  "magit-diff-context-highlight": {
+    "fg": "base6",
+    "bg": "base1"
+  },
+  "magit-diff-file-heading": {
+    "fg": "fg",
+    "bold": true
+  },
+  "magit-diff-file-heading-highlight": {
+    "fg": "fg",
+    "bg": "base1",
+    "bold": true
+  },
+  "magit-diff-hunk-heading": {
+    "fg": "fg-alt",
+    "bg": "base2"
+  },
+  "magit-diff-hunk-heading-highlight": {
+    "fg": "fg",
+    "bg": "base2",
+    "bold": true
+  },
+  "magit-diff-lines-heading": {
+    "fg": "schema.lead",
+    "bg": "base2",
+    "bold": true
+  },
+  "magit-diffstat-added": {
+    "fg": "green"
+  },
+  "magit-diffstat-removed": {
+    "fg": "red"
+  },
+  "magit-process-ok": {
+    "fg": "green",
+    "bold": true
+  },
+  "magit-process-ng": {
+    "fg": "red",
+    "bold": true
+  },
+  "magit-blame-heading": {
+    "fg": "fg-alt",
+    "bg": "base1"
+  },
+  "magit-blame-summary": {
+    "fg": "fg-alt",
+    "italic": true
+  },
+  "magit-blame-date": {
+    "fg": "base5"
+  },
+  "magit-blame-name": {
+    "fg": "violet"
+  },
+  "magit-blame-hash": {
+    "fg": "violet"
+  },
+  "magit-bisect-good": {
+    "fg": "green"
+  },
+  "magit-bisect-bad": {
+    "fg": "red"
+  },
+  "magit-bisect-skip": {
+    "fg": "yellow"
+  },
+  "magit-cherry-equivalent": {
+    "fg": "magenta"
+  },
+  "magit-cherry-unmatched": {
+    "fg": "cyan"
+  },
+  "magit-reflog-amend": {
+    "fg": "magenta"
+  },
+  "magit-reflog-cherry-pick": {
+    "fg": "green"
+  },
+  "magit-reflog-checkout": {
+    "fg": "blue"
+  },
+  "magit-reflog-commit": {
+    "fg": "green"
+  },
+  "magit-reflog-merge": {
+    "fg": "green"
+  },
+  "magit-reflog-other": {
+    "fg": "cyan"
+  },
+  "magit-reflog-rebase": {
+    "fg": "magenta"
+  },
+  "magit-reflog-remote": {
+    "fg": "cyan"
+  },
+  "magit-reflog-reset": {
+    "fg": "red"
+  },
+  "magit-signature-good": {
+    "fg": "green"
+  },
+  "magit-signature-bad": {
+    "fg": "red"
+  },
+  "magit-signature-untrusted": {
+    "fg": "yellow"
+  },
+  "magit-signature-expired": {
+    "fg": "orange"
+  },
+  "magit-signature-revoked": {
+    "fg": "magenta"
+  },
+  "magit-signature-error": {
+    "fg": "red"
+  },
+  "diff-added": {
+    "fg": "green"
+  },
+  "diff-removed": {
+    "fg": "red"
+  },
+  "diff-changed": {
+    "fg": "yellow"
+  },
+  "diff-hunk-header": {
+    "fg": "schema.lead"
+  },
+  "dired-directory": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "dired-symlink": {
+    "fg": "cyan",
+    "italic": true
+  },
+  "dired-broken-symlink": {
+    "fg": "red",
+    "italic": true,
+    "underline": true
+  },
+  "dired-header": {
+    "fg": "fg-alt",
+    "italic": true
+  },
+  "dired-mark": {
+    "fg": "orange"
+  },
+  "dired-marked": {
+    "fg": "orange",
+    "bold": true
+  },
+  "dired-flagged": {
+    "fg": "red",
+    "bold": true
+  },
+  "dired-warning": {
+    "fg": "orange"
+  },
+  "dired-ignored": {
+    "fg": "base5"
+  },
+  "dired-perm-write": {
+    "fg": "yellow"
+  },
+  "dired-set-id": {
+    "fg": "magenta"
+  },
+  "dired-special": {
+    "fg": "violet"
+  },
+  "diredfl-dir-heading": {
+    "fg": "fg-alt",
+    "bg": "bg-alt",
+    "italic": true
+  },
+  "diredfl-dir-name": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "diredfl-file-name": {
+    "fg": "fg"
+  },
+  "diredfl-file-suffix": {
+    "fg": "base5"
+  },
+  "diredfl-symlink": {
+    "fg": "cyan",
+    "italic": true
+  },
+  "diredfl-executable-tag": {
+    "fg": "green"
+  },
+  "diredfl-date-time": {
+    "fg": "base5",
+    "italic": true
+  },
+  "diredfl-number": {
+    "fg": "orange"
+  },
+  "diredfl-no-priv": {
+    "fg": "base5"
+  },
+  "diredfl-read-priv": {
+    "fg": "green"
+  },
+  "diredfl-write-priv": {
+    "fg": "yellow"
+  },
+  "diredfl-exec-priv": {
+    "fg": "red"
+  },
+  "diredfl-dir-priv": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "diredfl-link-priv": {
+    "fg": "cyan"
+  },
+  "diredfl-rare-priv": {
+    "fg": "magenta"
+  },
+  "diredfl-other-priv": {
+    "fg": "violet"
+  },
+  "diredfl-flag-mark": {
+    "fg": "orange",
+    "bold": true
+  },
+  "diredfl-flag-mark-line": {
+    "bg": "base1"
+  },
+  "diredfl-deletion": {
+    "fg": "red",
+    "bold": true
+  },
+  "diredfl-deletion-file-name": {
+    "fg": "red",
+    "italic": true
+  },
+  "diredfl-compressed-file-name": {
+    "fg": "orange"
+  },
+  "diredfl-compressed-file-suffix": {
+    "fg": "base5"
+  },
+  "diredfl-ignored-file-name": {
+    "fg": "base5"
+  },
+  "diredfl-autofile-name": {
+    "fg": "teal"
+  },
+  "dired-dirname": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "dirvish-hl-line": {
+    "bg": "base2",
+    "extend": true
+  },
+  "dirvish-subtree-state": {
+    "fg": "base5"
+  },
+  "dirvish-yank-overlay": {
+    "bg": "base2"
+  },
+  "dirvish-quick-access-entry": {
+    "fg": "cyan"
+  },
+  "dirvish-emerge-group-title": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "dirvish-header-line": {
+    "fg": "base6",
+    "bg": "bg-alt"
+  },
+  "dirvish-header-line-face": {
+    "fg": "base6",
+    "bg": "bg-alt"
+  },
+  "dirvish-vc-needs-merge-face": {
+    "fg": "orange"
+  },
+  "all-the-icons-dired-dir-face": {
+    "fg": "schema.lead"
+  },
+  "vertico-current": {
+    "bg": "schema.vertico_bg",
+    "extend": true
+  },
+  "vertico-group-title": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "vertico-group-separator": {
+    "fg": "base4",
+    "strike-through": true
+  },
+  "vertico-multiline": {
+    "fg": "base5"
+  },
+  "vertico-quick1": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "vertico-quick2": {
+    "fg": "orange",
+    "bold": true
+  },
+  "consult-preview-cursor": {
+    "bg": "schema.lead"
+  },
+  "consult-preview-line": {
+    "bg": "base1",
+    "extend": true
+  },
+  "consult-preview-error": {
+    "fg": "red",
+    "bg": "base1"
+  },
+  "consult-preview-insertion": {
+    "bg": "base2"
+  },
+  "consult-preview-yank": {
+    "bg": "base2"
+  },
+  "consult-async-failed": {
+    "fg": "red"
+  },
+  "consult-async-running": {
+    "fg": "yellow"
+  },
+  "consult-async-finished": {
+    "fg": "green"
+  },
+  "consult-async-split": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "consult-narrow-indicator": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "consult-bookmark": {
+    "fg": "violet"
+  },
+  "consult-buffer": {
+    "fg": "fg"
+  },
+  "consult-file": {
+    "fg": "fg-alt"
+  },
+  "consult-grep-context": {
+    "fg": "base5"
+  },
+  "consult-line-number-prefix": {
+    "fg": "base5"
+  },
+  "consult-line-number-wrapped": {
+    "fg": "orange"
+  },
+  "consult-key": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "consult-imenu-prefix": {
+    "fg": "base5"
+  },
+  "consult-separator": {
+    "fg": "base4"
+  },
+  "consult-help": {
+    "fg": "base6"
+  },
+  "marginalia-key": {
+    "fg": "schema.lead"
+  },
+  "marginalia-mode": {
+    "fg": "violet"
+  },
+  "marginalia-modified": {
+    "fg": "schema.modeline_modified"
+  },
+  "marginalia-file-name": {
+    "fg": "fg-alt"
+  },
+  "marginalia-file-priv-no": {
+    "fg": "base5"
+  },
+  "marginalia-file-priv-dir": {
+    "fg": "schema.lead"
+  },
+  "marginalia-file-priv-read": {
+    "fg": "green"
+  },
+  "marginalia-file-priv-write": {
+    "fg": "yellow"
+  },
+  "marginalia-file-priv-exec": {
+    "fg": "red"
+  },
+  "marginalia-date": {
+    "fg": "base5",
+    "italic": true
+  },
+  "marginalia-documentation": {
+    "fg": "doc-comments",
+    "italic": true
+  },
+  "marginalia-size": {
+    "fg": "orange"
+  },
+  "marginalia-number": {
+    "fg": "orange"
+  },
+  "marginalia-string": {
+    "fg": "strings"
+  },
+  "marginalia-symbol": {
+    "fg": "violet"
+  },
+  "marginalia-list": {
+    "fg": "base6"
+  },
+  "marginalia-type": {
+    "fg": "type"
+  },
+  "marginalia-value": {
+    "fg": "fg"
+  },
+  "marginalia-version": {
+    "fg": "cyan"
+  },
+  "marginalia-true": {
+    "fg": "green"
+  },
+  "marginalia-null": {
+    "fg": "base5"
+  },
+  "corfu-current": {
+    "fg": "fg",
+    "bg": "schema.vertico_bg"
+  },
+  "corfu-default": {
+    "fg": "fg",
+    "bg": "bg-alt"
+  },
+  "corfu-border": {
+    "fg": "base3"
+  },
+  "corfu-bar": {
+    "bg": "schema.lead"
+  },
+  "corfu-popupinfo": {
+    "bg": "bg-alt"
+  },
+  "corfu-deprecated": {
+    "fg": "base5",
+    "strike-through": true
+  },
+  "orderless-match-face-0": {
+    "fg": "schema.orderless[0]",
+    "bold": true
+  },
+  "orderless-match-face-1": {
+    "fg": "schema.orderless[1]",
+    "bold": true
+  },
+  "orderless-match-face-2": {
+    "fg": "schema.orderless[2]",
+    "bold": true
+  },
+  "orderless-match-face-3": {
+    "fg": "green",
+    "bold": true
+  },
+  "company-tooltip": {
+    "fg": "fg",
+    "bg": "bg-alt"
+  },
+  "company-tooltip-common": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "company-tooltip-common-selection": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "company-tooltip-selection": {
+    "bg": "schema.vertico_bg"
+  },
+  "company-tooltip-annotation": {
+    "fg": "violet",
+    "italic": true
+  },
+  "company-tooltip-annotation-selection": {
+    "fg": "violet",
+    "italic": true
+  },
+  "company-scrollbar-bg": {
+    "bg": "base2"
+  },
+  "company-scrollbar-fg": {
+    "bg": "schema.lead"
+  },
+  "company-preview": {
+    "fg": "fg",
+    "bg": "base1"
+  },
+  "company-preview-common": {
+    "fg": "schema.lead"
+  },
+  "eldoc-highlight-function-argument": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "flycheck-error": {
+    "underline": true,
+    "fg": "red"
+  },
+  "flycheck-warning": {
+    "underline": true,
+    "fg": "orange"
+  },
+  "flycheck-info": {
+    "underline": true,
+    "fg": "blue"
+  },
+  "flycheck-fringe-error": {
+    "fg": "red"
+  },
+  "flycheck-fringe-warning": {
+    "fg": "orange"
+  },
+  "flycheck-fringe-info": {
+    "fg": "blue"
+  },
+  "flycheck-error-list-error": {
+    "fg": "red",
+    "bold": true
+  },
+  "flycheck-error-list-warning": {
+    "fg": "orange"
+  },
+  "flycheck-error-list-info": {
+    "fg": "blue"
+  },
+  "flycheck-error-list-line-number": {
+    "fg": "base5"
+  },
+  "flycheck-error-list-filename": {
+    "fg": "fg-alt"
+  },
+  "flycheck-error-list-highlight": {
+    "bg": "base1"
+  },
+  "flymake-error": {
+    "underline": true,
+    "fg": "red"
+  },
+  "flymake-warning": {
+    "underline": true,
+    "fg": "orange"
+  },
+  "flymake-note": {
+    "underline": true,
+    "fg": "blue"
+  },
+  "compilation-mode-line-fail": {
+    "fg": "red",
+    "bold": true
+  },
+  "compilation-mode-line-exit": {
+    "fg": "green",
+    "bold": true
+  },
+  "compilation-mode-line-run": {
+    "fg": "yellow",
+    "bold": true
+  },
+  "compilation-error": {
+    "fg": "red",
+    "bold": true
+  },
+  "compilation-warning": {
+    "fg": "orange",
+    "bold": true
+  },
+  "compilation-info": {
+    "fg": "blue"
+  },
+  "compilation-line-number": {
+    "fg": "base5"
+  },
+  "compilation-column-number": {
+    "fg": "base5"
+  },
+  "eshell-prompt": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "eshell-ls-directory": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "eshell-ls-executable": {
+    "fg": "green"
+  },
+  "eshell-ls-symlink": {
+    "fg": "cyan",
+    "italic": true
+  },
+  "eshell-ls-special": {
+    "fg": "violet"
+  },
+  "eshell-ls-archive": {
+    "fg": "orange"
+  },
+  "eshell-ls-backup": {
+    "fg": "base5"
+  },
+  "eshell-ls-product": {
+    "fg": "yellow"
+  },
+  "eshell-ls-readonly": {
+    "fg": "red"
+  },
+  "eshell-ls-missing": {
+    "fg": "red",
+    "italic": true
+  },
+  "eshell-ls-unreadable": {
+    "fg": "base5"
+  },
+  "eshell-ls-clutter": {
+    "fg": "base5"
+  },
+  "tab-line": {
+    "fg": "fg-alt",
+    "bg": "bg-alt"
+  },
+  "tab-line-tab": {
+    "fg": "schema.lead",
+    "bg": "bg",
+    "bold": true
+  },
+  "tab-line-tab-current": {
+    "fg": "schema.lead",
+    "bg": "bg",
+    "bold": true
+  },
+  "tab-line-tab-inactive": {
+    "fg": "base5",
+    "bg": "bg-alt"
+  },
+  "tab-line-tab-modified": {
+    "fg": "schema.modeline_modified",
+    "italic": true
+  },
+  "tab-line-highlight": {
+    "fg": "schema.lead",
+    "bg": "bg"
+  },
+  "tab-line-close-highlight": {
+    "fg": "red"
+  },
+  "helpful-heading": {
+    "fg": "schema.lead",
+    "bold": true,
+    "height": 1.15
+  },
+  "which-key-key-face": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "which-key-separator-face": {
+    "fg": "base5"
+  },
+  "which-key-note-face": {
+    "fg": "base5",
+    "italic": true
+  },
+  "which-key-command-description-face": {
+    "fg": "fg"
+  },
+  "which-key-local-map-description-face": {
+    "fg": "violet"
+  },
+  "which-key-group-description-face": {
+    "fg": "schema.lead",
+    "italic": true
+  },
+  "which-key-special-key-face": {
+    "fg": "orange",
+    "bold": true
+  },
+  "treemacs-root-face": {
+    "fg": "schema.lead",
+    "bold": true,
+    "height": 1.1
+  },
+  "treemacs-directory-face": {
+    "fg": "schema.lead"
+  },
+  "treemacs-file-face": {
+    "fg": "fg"
+  },
+  "treemacs-git-modified-face": {
+    "fg": "schema.modeline_modified"
+  },
+  "treemacs-git-added-face": {
+    "fg": "green"
+  },
+  "treemacs-git-untracked-face": {
+    "fg": "orange",
+    "italic": true
+  },
+  "treemacs-git-conflict-face": {
+    "fg": "red",
+    "bold": true
+  },
+  "treemacs-git-renamed-face": {
+    "fg": "violet"
+  },
+  "treemacs-git-ignored-face": {
+    "fg": "base5"
+  },
+  "treemacs-tags-face": {
+    "fg": "yellow"
+  },
+  "treemacs-on-success-pulse-face": {
+    "bg": "schema.lead"
+  },
+  "imenu-list-entry-face-0": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "imenu-list-entry-face-1": {
+    "fg": "fg"
+  },
+  "imenu-list-entry-face-2": {
+    "fg": "fg-alt"
+  },
+  "imenu-list-entry-face-3": {
+    "fg": "base6"
+  },
+  "ansi-color-black": {
+    "fg": "base0"
+  },
+  "ansi-color-red": {
+    "fg": "red"
+  },
+  "ansi-color-green": {
+    "fg": "green"
+  },
+  "ansi-color-yellow": {
+    "fg": "yellow"
+  },
+  "ansi-color-blue": {
+    "fg": "blue"
+  },
+  "ansi-color-magenta": {
+    "fg": "magenta"
+  },
+  "ansi-color-cyan": {
+    "fg": "cyan"
+  },
+  "ansi-color-white": {
+    "fg": "base8"
+  },
+  "ansi-color-bright-black": {
+    "fg": "base5"
+  },
+  "ansi-color-bright-red": {
+    "fg": "red"
+  },
+  "ansi-color-bright-green": {
+    "fg": "green"
+  },
+  "ansi-color-bright-yellow": {
+    "fg": "yellow"
+  },
+  "ansi-color-bright-blue": {
+    "fg": "blue"
+  },
+  "ansi-color-bright-magenta": {
+    "fg": "magenta"
+  },
+  "ansi-color-bright-cyan": {
+    "fg": "cyan"
+  },
+  "ansi-color-bright-white": {
+    "fg": "fg"
+  },
+  "doom-modeline-bar": {
+    "bg": "schema.lead"
+  },
+  "doom-modeline-buffer-path": {
+    "fg": "schema.lead",
+    "bold": true
+  },
+  "doom-modeline-buffer-modified": {
+    "fg": "schema.modeline_modified",
+    "bold": true
+  },
+  "doom-modeline-buffer-major-mode": {
+    "fg": "green"
+  },
+  "doom-modeline-info": {
+    "fg": "green"
+  },
+  "doom-modeline-warning": {
+    "fg": "orange"
+  },
+  "doom-modeline-error": {
+    "fg": "red"
+  },
+  "rainbow-delimiters-depth-1-face": {
+    "fg": "schema.rainbow[0]"
+  },
+  "rainbow-delimiters-depth-2-face": {
+    "fg": "schema.rainbow[1]"
+  },
+  "rainbow-delimiters-depth-3-face": {
+    "fg": "schema.rainbow[2]"
+  },
+  "rainbow-delimiters-depth-4-face": {
+    "fg": "schema.rainbow[3]"
+  },
+  "rainbow-delimiters-depth-5-face": {
+    "fg": "schema.rainbow[4]"
+  },
+  "rainbow-delimiters-depth-6-face": {
+    "fg": "schema.rainbow[5]"
+  },
+  "rainbow-delimiters-unmatched-face": {
+    "fg": "red",
+    "bold": true
+  },
+  "font-latex-sectioning-0-face": {
+    "fg": "schema.lead",
+    "bold": true,
+    "height": 1.3
+  },
+  "font-latex-sectioning-1-face": {
+    "fg": "schema.outline[2]",
+    "bold": true,
+    "height": 1.2
+  },
+  "font-latex-sectioning-2-face": {
+    "fg": "schema.outline[2]",
+    "bold": true,
+    "height": 1.15
+  },
+  "font-latex-sectioning-3-face": {
+    "fg": "schema.outline[1]",
+    "bold": true
+  },
+  "font-latex-sectioning-4-face": {
+    "fg": "schema.outline[3]",
+    "bold": true
+  },
+  "font-latex-sectioning-5-face": {
+    "fg": "schema.outline[1]"
+  },
+  "font-latex-bold-face": {
+    "inherit": "bold"
+  },
+  "font-latex-italic-face": {
+    "inherit": "italic"
+  },
+  "font-latex-string-face": {
+    "fg": "strings"
+  },
+  "font-latex-warning-face": {
+    "fg": "red",
+    "bold": true
+  },
+  "font-latex-verbatim-face": {
+    "fg": "orange"
+  },
+  "font-latex-math-face": {
+    "fg": "violet"
+  },
+  "font-latex-sedate-face": {
+    "fg": "fg-alt"
+  },
+  "font-latex-script-char-face": {
+    "fg": "schema.escape"
+  },
+  "font-latex-doctex-preprocessor-face": {
+    "fg": "schema.preprocessor"
+  },
+  "font-latex-doctex-documentation-face": {
+    "fg": "doc-comments"
+  },
+  "TeX-error-description-error": {
+    "fg": "red",
+    "bold": true
+  },
+  "TeX-error-description-warning": {
+    "fg": "orange",
+    "bold": true
+  },
+  "TeX-error-description-tip": {
+    "fg": "blue"
+  }
 }

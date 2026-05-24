@@ -1,0 +1,26 @@
+# lumina-petrichor-light -- Lumina (petrichor, light)
+# Generated from spec/lumina.json. Do not edit by hand.
+[colors]
+foreground   = "#1F2528"
+background   = "#F4EFE5"
+cursor_bg    = "#1F2528"
+cursor_fg    = "#F4EFE5"
+cursor_border = "#1F2528"
+selection_bg = "#E0D6BE"
+selection_fg = "#1F2528"
+scrollbar_thumb = "#A6A092"
+split = "#CFC5AE"
+ansi = ["#EBE5D8", "#8A4828", "#48705C", "#7A6018", "#385868", "#7A3858", "#385E70", "#34403E"]
+brights = ["#7A7670", "#8A6418", "#2E6E4A", "#7A6018", "#1E3848", "#5C4878", "#385E70", "#1F2528"]
+
+[colors.tab_bar]
+background = "#EBE5D8"
+[colors.tab_bar.active_tab]
+bg_color = "#F4EFE5"
+fg_color = "#1F2528"
+[colors.tab_bar.inactive_tab]
+bg_color = "#EBE5D8"
+fg_color = "#52605C"
+
+[metadata]
+name = "lumina-petrichor-light"
