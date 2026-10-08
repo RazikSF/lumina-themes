@@ -1,0 +1,26 @@
+# lumina-amethyst-light -- Lumina (amethyst, light)
+# Generated from spec/lumina.json. Do not edit by hand.
+[colors]
+foreground   = "#342C3E"
+background   = "#F6F3FB"
+cursor_bg    = "#342C3E"
+cursor_fg    = "#F6F3FB"
+cursor_border = "#342C3E"
+selection_bg = "#D4CFBE"
+selection_fg = "#342C3E"
+scrollbar_thumb = "#B6ACC3"
+split = "#D7CDE4"
+ansi = ["#F3E9FF", "#B32D37", "#007D50", "#7A6E00", "#3357B1", "#A42C71", "#00728D", "#4C4357"]
+brights = ["#8B8197", "#A55115", "#087970", "#7A6E00", "#24418D", "#6D41A9", "#00728D", "#342C3E"]
+
+[colors.tab_bar]
+background = "#F0E5FD"
+[colors.tab_bar.active_tab]
+bg_color = "#F6F3FB"
+fg_color = "#342C3E"
+[colors.tab_bar.inactive_tab]
+bg_color = "#F0E5FD"
+fg_color = "#685F73"
+
+[metadata]
+name = "lumina-amethyst-light"

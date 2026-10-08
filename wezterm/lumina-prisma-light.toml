@@ -1,0 +1,26 @@
+# lumina-prisma-light -- Lumina (prisma, light)
+# Generated from spec/lumina.json. Do not edit by hand.
+[colors]
+foreground   = "#323336"
+background   = "#F9FAFC"
+cursor_bg    = "#323336"
+cursor_fg    = "#F9FAFC"
+cursor_border = "#323336"
+selection_bg = "#BBBCC3"
+selection_fg = "#323336"
+scrollbar_thumb = "#B0B1B6"
+split = "#D6D7DC"
+ansi = ["#F2F3F8", "#B7262B", "#007C2E", "#876700", "#1554B8", "#A01F81", "#00708E", "#46474C"]
+brights = ["#85868A", "#A75000", "#00786E", "#876700", "#0B4196", "#6A39B0", "#00708E", "#323336"]
+
+[colors.tab_bar]
+background = "#EFF0F5"
+[colors.tab_bar.active_tab]
+bg_color = "#F9FAFC"
+fg_color = "#323336"
+[colors.tab_bar.inactive_tab]
+bg_color = "#EFF0F5"
+fg_color = "#626367"
+
+[metadata]
+name = "lumina-prisma-light"

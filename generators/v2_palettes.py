@@ -205,6 +205,124 @@ PALETTES = {
 }
 
 
+def field(dark, h, c, bg=None, fg=None, fgh=None):
+    """Ground, greys and text of a flavor from one hue and one chroma."""
+    fgh = h if fgh is None else fgh
+    if dark:
+        b = bg or .21
+        steps = {"bg": b, "bg-alt": b - .025, "base0": b - .05, "base1": b + .02, "surface": b + .03,
+                 "base2": b + .06, "base3": b + .10, "base4": .40, "base5": .52, "base6": .63, "base7": .76}
+        out = {k: (L, c * (1.1 if L > b else .9), h) for k, L in steps.items()}
+        out["base7"] = (.76, c * .7, fgh)
+        f = fg or .88
+    else:
+        b = bg or .968
+        steps = {"bg": b, "bg-alt": b - .03, "base0": min(b + .025, 1), "base1": b - .02, "surface": b - .02,
+                 "base2": b - .055, "base3": b - .105, "base4": .76, "base5": .62, "base6": .50, "base7": .40}
+        out = {k: (L, c * (1.4 if L < b else .5), h) for k, L in steps.items()}
+        f = fg or .31
+    out["fg"] = out["base8"] = (f, c * (.45 if dark else 1.4), fgh)
+    out["fg-alt"] = ((f - .13) if dark else (f + .11), c * (.9 if dark else 1.3), fgh)
+    return out
+
+
+def diffs(dark, add=150, rem=22, chg=92):
+    if dark:
+        return {"diff-added-bg": (.28, .04, add), "diff-removed-bg": (.28, .05, rem), "diff-changed-bg": (.28, .04, chg),
+                "diff-added-refine": (.36, .07, add), "diff-removed-refine": (.36, .085, rem)}
+    return {"diff-added-bg": (.93, .035, add), "diff-removed-bg": (.93, .035, rem), "diff-changed-bg": (.93, .04, chg),
+            "diff-added-refine": (.87, .07, add), "diff-removed-refine": (.87, .07, rem)}
+
+
+VIVID = {
+    "nocturne": {
+        "dark": {**field(True, 268, .038), **diffs(True),
+                 "orange": (.78, .15, 58), "red": (.71, .16, 22), "yellow": (.77, .13, 95), "green": (.76, .15, 150),
+                 "teal": (.75, .11, 185), "cyan": (.75, .12, 215), "blue": (.72, .15, 258), "violet": (.72, .15, 295),
+                 "magenta": (.72, .16, 345), "dark-blue": (.60, .13, 258), "dark-cyan": (.62, .10, 215),
+                 "comments": (.60, .04, 265), "doc-comments": (.66, .045, 265)},
+        "light": {**field(False, 265, .012), **diffs(False),
+                  "orange": (.545, .16, 50), "red": (.51, .17, 22), "yellow": (.53, .12, 90), "green": (.52, .14, 150),
+                  "teal": (.52, .10, 185), "cyan": (.51, .11, 220), "blue": (.48, .17, 262), "violet": (.49, .17, 295),
+                  "magenta": (.50, .18, 345), "dark-blue": (.40, .15, 262), "dark-cyan": (.42, .09, 220),
+                  "comments": (.535, .035, 265), "doc-comments": (.48, .04, 265)},
+        "refs": {"grey": "base5", "highlight": "orange", "vertical-bar": "base3", "builtin": "cyan",
+                 "constants": "magenta", "functions": "orange", "keywords": "violet", "methods": "blue",
+                 "operators": "base6", "type": "teal", "variables": "fg", "numbers": "red", "strings": "green",
+                 "error": "red", "warning": "yellow", "success": "green", "vc-modified": "yellow",
+                 "vc-added": "green", "vc-deleted": "red"},
+        "commentary": {
+            "dark": "Lumina Nocturne, dark variant.\nA city at night under a deep indigo sky, lit by one sodium streetlamp; neon violet, cobalt, jade and rose at equal weight.",
+            "light": "Lumina Nocturne, light variant.\nMoonlit blue-white paper under the same sodium lamp; vivid inks of violet, cobalt, jade and rose at equal weight.",
+        },
+    },
+    "amethyst": {
+        "dark": {**field(True, 305, .05), **diffs(True),
+                 "yellow": (.85, .13, 98), "magenta": (.74, .16, 350), "red": (.70, .16, 20), "orange": (.76, .13, 55),
+                 "green": (.78, .14, 160), "teal": (.77, .11, 185), "cyan": (.76, .11, 215), "blue": (.73, .13, 265),
+                 "violet": (.72, .14, 300), "dark-blue": (.62, .12, 265), "dark-cyan": (.62, .09, 215),
+                 "comments": (.61, .05, 300), "doc-comments": (.67, .055, 300)},
+        "light": {**field(False, 305, .024), **diffs(False),
+                  "yellow": (.53, .125, 103), "magenta": (.50, .17, 350), "red": (.51, .17, 22), "orange": (.53, .13, 50),
+                  "green": (.52, .12, 160), "teal": (.52, .09, 185), "cyan": (.51, .10, 220), "blue": (.48, .15, 265),
+                  "violet": (.48, .16, 300), "dark-blue": (.40, .13, 265), "dark-cyan": (.42, .08, 220),
+                  "comments": (.535, .04, 305), "doc-comments": (.48, .045, 305)},
+        "refs": {"grey": "base5", "highlight": "yellow", "vertical-bar": "base3", "builtin": "blue",
+                 "constants": "violet", "functions": "yellow", "keywords": "magenta", "methods": "cyan",
+                 "operators": "base6", "type": "cyan", "variables": "fg", "numbers": "orange", "strings": "green",
+                 "error": "red", "warning": "orange", "success": "green", "vc-modified": "orange",
+                 "vc-added": "green", "vc-deleted": "red"},
+        "commentary": {
+            "dark": "Lumina Amethyst, dark variant.\nInside a split amethyst geode, one shard of citrine catching the light; orchid, mint, ice blue and lilac at equal weight.",
+            "light": "Lumina Amethyst, light variant.\nLilac paper under the same citrine light; vivid inks of orchid, mint, ice blue and lilac at equal weight.",
+        },
+    },
+    "obsidian": {
+        "dark": {**field(True, 285, .008, bg=.165), **diffs(True),
+                 "orange": (.72, .19, 34), "red": (.70, .18, 8), "yellow": (.78, .13, 92), "green": (.77, .16, 148),
+                 "teal": (.76, .12, 185), "cyan": (.76, .12, 215), "blue": (.72, .15, 262), "violet": (.72, .15, 300),
+                 "magenta": (.72, .17, 345), "dark-blue": (.60, .13, 262), "dark-cyan": (.62, .10, 215),
+                 "comments": (.60, .015, 285), "doc-comments": (.66, .018, 285)},
+        "light": {**field(False, 285, .004, bg=.985, fg=.30), **diffs(False),
+                  "orange": (.53, .19, 33), "red": (.50, .19, 8), "yellow": (.52, .12, 85), "green": (.51, .15, 148),
+                  "teal": (.51, .10, 185), "cyan": (.50, .11, 220), "blue": (.47, .17, 262), "violet": (.47, .17, 300),
+                  "magenta": (.49, .19, 345), "dark-blue": (.40, .15, 262), "dark-cyan": (.41, .09, 220),
+                  "comments": (.53, .012, 285), "doc-comments": (.47, .014, 285)},
+        "refs": {"grey": "base5", "highlight": "orange", "vertical-bar": "base3", "builtin": "violet",
+                 "constants": "magenta", "functions": "orange", "keywords": "teal", "methods": "cyan",
+                 "operators": "base6", "type": "blue", "variables": "fg", "numbers": "yellow", "strings": "green",
+                 "error": "red", "warning": "yellow", "success": "green", "vc-modified": "yellow",
+                 "vc-added": "green", "vc-deleted": "red"},
+        "commentary": {
+            "dark": "Lumina Obsidian, dark variant.\nVolcanic glass, near-black, split by a single seam of molten lava; glacier teal, cobalt, jade and magenta at equal weight.",
+            "light": "Lumina Obsidian, light variant.\nWhite marble veined with the same lava; vivid inks of glacier teal, cobalt, jade and magenta at equal weight.",
+        },
+    },
+    "prisma": {
+        "dark": {**field(True, 275, .014, bg=.22), **diffs(True),
+                 "spark": (.97, .015, 95), "red": (.71, .16, 25), "orange": (.75, .15, 58), "yellow": (.78, .14, 98),
+                 "green": (.76, .16, 148), "teal": (.76, .12, 185), "cyan": (.75, .12, 218), "blue": (.72, .15, 258),
+                 "violet": (.71, .16, 298), "magenta": (.72, .17, 340), "dark-blue": (.62, .13, 258),
+                 "dark-cyan": (.62, .10, 218), "comments": (.60, .02, 275), "doc-comments": (.66, .025, 275)},
+        "light": {**field(False, 275, .005, bg=.985, fg=.32), **diffs(False),
+                  "spark": (.26, .03, 280), "red": (.51, .18, 25), "orange": (.53, .14, 55), "yellow": (.53, .12, 90),
+                  "green": (.51, .15, 148), "teal": (.51, .10, 185), "cyan": (.50, .11, 220), "blue": (.47, .17, 260),
+                  "violet": (.47, .18, 298), "magenta": (.49, .19, 340), "dark-blue": (.40, .15, 260),
+                  "dark-cyan": (.41, .09, 220), "comments": (.53, .015, 275), "doc-comments": (.47, .018, 275)},
+        "refs": {"grey": "base5", "highlight": "spark", "vertical-bar": "base3", "builtin": "magenta",
+                 "constants": "orange", "functions": "blue", "keywords": "violet", "methods": "cyan",
+                 "operators": "base6", "type": "yellow", "variables": "fg", "numbers": "red", "strings": "green",
+                 "error": "red", "warning": "orange", "success": "green", "vc-modified": "yellow",
+                 "vc-added": "green", "vc-deleted": "red"},
+        "commentary": {
+            "dark": "Lumina Prisma, dark variant.\nA single white ray enters a glass prism: the ray is the lamp, the code is its spectrum, every hue at equal weight.",
+            "light": "Lumina Prisma, light variant.\nWhite paper and one stroke of ink; the code is a full spectrum of vivid inks at equal weight.",
+        },
+    },
+}
+PALETTES.update(VIVID)
+
+
 ACCENT_KEYS = ["red", "orange", "yellow", "green", "teal", "cyan", "blue", "violet", "magenta"]
 ANSI = {"red": "red", "orange": "brightred", "yellow": "yellow", "green": "green", "teal": "brightgreen",
         "cyan": "cyan", "blue": "blue", "violet": "brightmagenta", "magenta": "magenta",
