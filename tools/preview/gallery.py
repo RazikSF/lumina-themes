@@ -98,7 +98,7 @@ figure{{margin:0;border-radius:10px;overflow:hidden}}
 .r{{white-space:pre;padding:0 10px}} .ml{{display:flex;gap:8px;align-items:center;font:12px "Zed Mono",Menlo,monospace;padding:6px 10px 6px 0}}
 .bar{{width:3px;align-self:stretch}}
 @media (max-width:500px){{.grid{{grid-template-columns:1fr}} .code{{overflow-x:auto}}}}
-</style></head><body><h1>Lumina</h1><p>Neuf saveurs, chacune en sombre, clair et contraste élevé ; Prisma a aussi un clair noir et blanc. Rendu exporté depuis GNU Emacs 30.2.</p>
+</style></head><body><h1>Lumina</h1><p>Neuf saveurs, chacune en sombre, clair et contraste élevé ; Prisma a aussi des jumeaux noir et blanc. Rendu exporté depuis GNU Emacs 30.2.</p>
 {"".join(sections)}</body></html>"""
 (ROOT / "docs" / "gallery.html").write_text(page)
 shots = ROOT / "assets" / "screens"

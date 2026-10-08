@@ -8327,8 +8327,8 @@
             "black"
           ],
           "spark": [
-            "#F8F5EA",
-            "#f8f5ea",
+            "#C3B4FF",
+            "#c3b4ff",
             "black"
           ],
           "red": [
@@ -8362,18 +8362,18 @@
             "cyan"
           ],
           "blue": [
-            "#66A5FF",
-            "#66a5ff",
+            "#5FA7FF",
+            "#5fa7ff",
             "blue"
           ],
           "violet": [
-            "#AE89F7",
-            "#ae89f7",
+            "#CF7CDC",
+            "#cf7cdc",
             "brightmagenta"
           ],
           "magenta": [
-            "#E875C6",
-            "#e875c6",
+            "#EA75C2",
+            "#ea75c2",
             "magenta"
           ],
           "dark-blue": [
@@ -8397,28 +8397,28 @@
             "black"
           ],
           "halo": [
-            "#26282D",
-            "#26282d",
+            "#232430",
+            "#232430",
             "black"
           ],
           "halo2": [
-            "#333439",
-            "#333439",
+            "#2D2D3E",
+            "#2d2d3e",
             "black"
           ],
           "region": [
-            "#47474B",
-            "#47474b",
+            "#3C3B54",
+            "#3c3b54",
             "black"
           ],
           "selection": [
-            "#47474B",
-            "#47474b",
+            "#3C3B54",
+            "#3c3b54",
             "black"
           ],
           "glow": [
-            "#6D6D6E",
-            "#6d6d6e",
+            "#5A557E",
+            "#5a557e",
             "black"
           ],
           "dim": [
@@ -8484,7 +8484,7 @@
             "ref": "red"
           }
         },
-        "commentary": "Lumina Prisma, dark variant.\nA single white ray enters a glass prism: the ray is the lamp, the code is its spectrum, every hue at equal weight."
+        "commentary": "Lumina Prisma, dark variant.\nBlack light: the lamp is ultraviolet, glowing just beyond the spectrum, and the code fluoresces in a full spectrum at equal weight."
       },
       "light": {
         "theme": "lumina-prisma-light",
@@ -8745,6 +8745,266 @@
           }
         },
         "commentary": "Lumina Prisma, light variant.\nWhite paper in daylight; the lamp turns ultraviolet, the light just beyond the spectrum, and the code is a full spectrum of vivid inks at equal weight."
+      },
+      "dark-ink": {
+        "theme": "lumina-prisma-dark-ink",
+        "background": "dark",
+        "schema": "prisma",
+        "colors": {
+          "bg": [
+            "#191A21",
+            "#191a21",
+            "black"
+          ],
+          "bg-alt": [
+            "#13151B",
+            "#13151b",
+            "black"
+          ],
+          "base0": [
+            "#0E0F15",
+            "#0e0f15",
+            "black"
+          ],
+          "base1": [
+            "#1D1F27",
+            "#1d1f27",
+            "black"
+          ],
+          "surface": [
+            "#1F2129",
+            "#1f2129",
+            "black"
+          ],
+          "base2": [
+            "#262831",
+            "#262831",
+            "black"
+          ],
+          "base3": [
+            "#30323B",
+            "#30323b",
+            "black"
+          ],
+          "base4": [
+            "#454750",
+            "#454750",
+            "black"
+          ],
+          "base5": [
+            "#666872",
+            "#666872",
+            "black"
+          ],
+          "base6": [
+            "#868993",
+            "#868993",
+            "black"
+          ],
+          "base7": [
+            "#AFB1B7",
+            "#afb1b7",
+            "black"
+          ],
+          "fg": [
+            "#D6D7DC",
+            "#d6d7dc",
+            "white"
+          ],
+          "base8": [
+            "#D6D7DC",
+            "#d6d7dc",
+            "black"
+          ],
+          "fg-alt": [
+            "#ABADB6",
+            "#abadb6",
+            "black"
+          ],
+          "diff-added-bg": [
+            "#1A2E1E",
+            "#1a2e1e",
+            "black"
+          ],
+          "diff-removed-bg": [
+            "#3E1E1E",
+            "#3e1e1e",
+            "black"
+          ],
+          "diff-changed-bg": [
+            "#302810",
+            "#302810",
+            "black"
+          ],
+          "diff-added-refine": [
+            "#1E4729",
+            "#1e4729",
+            "black"
+          ],
+          "diff-removed-refine": [
+            "#622828",
+            "#622828",
+            "black"
+          ],
+          "spark": [
+            "#F8F5EA",
+            "#f8f5ea",
+            "black"
+          ],
+          "red": [
+            "#F5746D",
+            "#f5746d",
+            "red"
+          ],
+          "orange": [
+            "#F39340",
+            "#f39340",
+            "brightred"
+          ],
+          "yellow": [
+            "#CFB83D",
+            "#cfb83d",
+            "yellow"
+          ],
+          "green": [
+            "#5FCC74",
+            "#5fcc74",
+            "green"
+          ],
+          "teal": [
+            "#3BCABB",
+            "#3bcabb",
+            "brightgreen"
+          ],
+          "cyan": [
+            "#3AC0E0",
+            "#3ac0e0",
+            "cyan"
+          ],
+          "blue": [
+            "#66A5FF",
+            "#66a5ff",
+            "blue"
+          ],
+          "violet": [
+            "#AE89F7",
+            "#ae89f7",
+            "brightmagenta"
+          ],
+          "magenta": [
+            "#E875C6",
+            "#e875c6",
+            "magenta"
+          ],
+          "dark-blue": [
+            "#5286D3",
+            "#5286d3",
+            "brightblue"
+          ],
+          "dark-cyan": [
+            "#2994AE",
+            "#2994ae",
+            "brightcyan"
+          ],
+          "comments": [
+            "#7C808D",
+            "#7c808d",
+            "black"
+          ],
+          "doc-comments": [
+            "#8D91A2",
+            "#8d91a2",
+            "black"
+          ],
+          "halo": [
+            "#26282D",
+            "#26282d",
+            "black"
+          ],
+          "halo2": [
+            "#333439",
+            "#333439",
+            "black"
+          ],
+          "region": [
+            "#47474B",
+            "#47474b",
+            "black"
+          ],
+          "selection": [
+            "#47474B",
+            "#47474b",
+            "black"
+          ],
+          "glow": [
+            "#6D6D6E",
+            "#6d6d6e",
+            "black"
+          ],
+          "dim": [
+            "#121418",
+            "#121418",
+            "black"
+          ],
+          "grey": {
+            "ref": "base5"
+          },
+          "highlight": {
+            "ref": "spark"
+          },
+          "vertical-bar": {
+            "ref": "base3"
+          },
+          "builtin": {
+            "ref": "magenta"
+          },
+          "constants": {
+            "ref": "orange"
+          },
+          "functions": {
+            "ref": "blue"
+          },
+          "keywords": {
+            "ref": "violet"
+          },
+          "methods": {
+            "ref": "cyan"
+          },
+          "operators": {
+            "ref": "base6"
+          },
+          "type": {
+            "ref": "yellow"
+          },
+          "variables": {
+            "ref": "fg"
+          },
+          "numbers": {
+            "ref": "red"
+          },
+          "strings": {
+            "ref": "green"
+          },
+          "error": {
+            "ref": "red"
+          },
+          "warning": {
+            "ref": "orange"
+          },
+          "success": {
+            "ref": "green"
+          },
+          "vc-modified": {
+            "ref": "yellow"
+          },
+          "vc-added": {
+            "ref": "green"
+          },
+          "vc-deleted": {
+            "ref": "red"
+          }
+        },
+        "commentary": "Lumina Prisma, dark ink variant.\nBlack and white: a single white ray enters a glass prism; the ray is the lamp, the code is its spectrum, every hue at equal weight."
       },
       "light-ink": {
         "theme": "lumina-prisma-light-ink",
@@ -9107,8 +9367,8 @@
             "black"
           ],
           "spark": [
-            "#F8F5EA",
-            "#f8f5ea",
+            "#C3B4FF",
+            "#c3b4ff",
             "black"
           ],
           "red": [
@@ -9142,18 +9402,18 @@
             "cyan"
           ],
           "blue": [
-            "#79B8FF",
-            "#79b8ff",
+            "#72BAFF",
+            "#72baff",
             "blue"
           ],
           "violet": [
-            "#C49FFF",
-            "#c49fff",
+            "#E692F4",
+            "#e692f4",
             "brightmagenta"
           ],
           "magenta": [
-            "#FD88D9",
-            "#fd88d9",
+            "#FF88D6",
+            "#ff88d6",
             "magenta"
           ],
           "dark-blue": [
@@ -9177,28 +9437,28 @@
             "black"
           ],
           "halo": [
-            "#1A1C21",
-            "#1a1c21",
+            "#171823",
+            "#171823",
             "black"
           ],
           "halo2": [
-            "#27282D",
-            "#27282d",
+            "#212131",
+            "#212131",
             "black"
           ],
           "region": [
-            "#3C3C40",
-            "#3c3c40",
+            "#323048",
+            "#323048",
             "black"
           ],
           "selection": [
-            "#3C3C40",
-            "#3c3c40",
+            "#323048",
+            "#323048",
             "black"
           ],
           "glow": [
-            "#646465",
-            "#646465",
+            "#514C75",
+            "#514c75",
             "black"
           ],
           "dim": [
@@ -9264,7 +9524,7 @@
             "ref": "red"
           }
         },
-        "commentary": "Lumina Prisma, dark variant, high contrast.\nA single white ray enters a glass prism: the ray is the lamp, the code is its spectrum, every hue at equal weight."
+        "commentary": "Lumina Prisma, dark variant, high contrast.\nBlack light: the lamp is ultraviolet, glowing just beyond the spectrum, and the code fluoresces in a full spectrum at equal weight."
       },
       "light-contrast": {
         "theme": "lumina-prisma-light-contrast",
@@ -9525,6 +9785,266 @@
           }
         },
         "commentary": "Lumina Prisma, light variant, high contrast.\nWhite paper in daylight; the lamp turns ultraviolet, the light just beyond the spectrum, and the code is a full spectrum of vivid inks at equal weight."
+      },
+      "dark-ink-contrast": {
+        "theme": "lumina-prisma-dark-ink-contrast",
+        "background": "dark",
+        "schema": "prisma",
+        "colors": {
+          "bg": [
+            "#0D0E14",
+            "#0d0e14",
+            "black"
+          ],
+          "bg-alt": [
+            "#08090E",
+            "#08090e",
+            "black"
+          ],
+          "base0": [
+            "#05050A",
+            "#05050a",
+            "black"
+          ],
+          "base1": [
+            "#12131B",
+            "#12131b",
+            "black"
+          ],
+          "surface": [
+            "#14161D",
+            "#14161d",
+            "black"
+          ],
+          "base2": [
+            "#1C1E25",
+            "#1c1e25",
+            "black"
+          ],
+          "base3": [
+            "#292B33",
+            "#292b33",
+            "black"
+          ],
+          "base4": [
+            "#4A4D56",
+            "#4a4d56",
+            "black"
+          ],
+          "base5": [
+            "#777A84",
+            "#777a84",
+            "black"
+          ],
+          "base6": [
+            "#9B9EA8",
+            "#9b9ea8",
+            "black"
+          ],
+          "base7": [
+            "#C2C4CB",
+            "#c2c4cb",
+            "black"
+          ],
+          "fg": [
+            "#EDEEF3",
+            "#edeef3",
+            "white"
+          ],
+          "base8": [
+            "#EDEEF3",
+            "#edeef3",
+            "black"
+          ],
+          "fg-alt": [
+            "#CED0D9",
+            "#ced0d9",
+            "black"
+          ],
+          "diff-added-bg": [
+            "#092310",
+            "#092310",
+            "black"
+          ],
+          "diff-removed-bg": [
+            "#340F10",
+            "#340f10",
+            "black"
+          ],
+          "diff-changed-bg": [
+            "#251C00",
+            "#251c00",
+            "black"
+          ],
+          "diff-added-refine": [
+            "#013B17",
+            "#013b17",
+            "black"
+          ],
+          "diff-removed-refine": [
+            "#591217",
+            "#591217",
+            "black"
+          ],
+          "spark": [
+            "#F8F5EA",
+            "#f8f5ea",
+            "black"
+          ],
+          "red": [
+            "#FF8A82",
+            "#ff8a82",
+            "red"
+          ],
+          "orange": [
+            "#FE9D4A",
+            "#fe9d4a",
+            "brightred"
+          ],
+          "yellow": [
+            "#CFB83D",
+            "#cfb83d",
+            "yellow"
+          ],
+          "green": [
+            "#66D37A",
+            "#66d37a",
+            "green"
+          ],
+          "teal": [
+            "#44D0C1",
+            "#44d0c1",
+            "brightgreen"
+          ],
+          "cyan": [
+            "#47CAEA",
+            "#47caea",
+            "cyan"
+          ],
+          "blue": [
+            "#79B8FF",
+            "#79b8ff",
+            "blue"
+          ],
+          "violet": [
+            "#C49FFF",
+            "#c49fff",
+            "brightmagenta"
+          ],
+          "magenta": [
+            "#FD88D9",
+            "#fd88d9",
+            "magenta"
+          ],
+          "dark-blue": [
+            "#5286D3",
+            "#5286d3",
+            "brightblue"
+          ],
+          "dark-cyan": [
+            "#2994AE",
+            "#2994ae",
+            "brightcyan"
+          ],
+          "comments": [
+            "#8E929F",
+            "#8e929f",
+            "black"
+          ],
+          "doc-comments": [
+            "#9599AA",
+            "#9599aa",
+            "black"
+          ],
+          "halo": [
+            "#1A1C21",
+            "#1a1c21",
+            "black"
+          ],
+          "halo2": [
+            "#27282D",
+            "#27282d",
+            "black"
+          ],
+          "region": [
+            "#3C3C40",
+            "#3c3c40",
+            "black"
+          ],
+          "selection": [
+            "#3C3C40",
+            "#3c3c40",
+            "black"
+          ],
+          "glow": [
+            "#646465",
+            "#646465",
+            "black"
+          ],
+          "dim": [
+            "#07080C",
+            "#07080c",
+            "black"
+          ],
+          "grey": {
+            "ref": "base5"
+          },
+          "highlight": {
+            "ref": "spark"
+          },
+          "vertical-bar": {
+            "ref": "base3"
+          },
+          "builtin": {
+            "ref": "magenta"
+          },
+          "constants": {
+            "ref": "orange"
+          },
+          "functions": {
+            "ref": "blue"
+          },
+          "keywords": {
+            "ref": "violet"
+          },
+          "methods": {
+            "ref": "cyan"
+          },
+          "operators": {
+            "ref": "base6"
+          },
+          "type": {
+            "ref": "yellow"
+          },
+          "variables": {
+            "ref": "fg"
+          },
+          "numbers": {
+            "ref": "red"
+          },
+          "strings": {
+            "ref": "green"
+          },
+          "error": {
+            "ref": "red"
+          },
+          "warning": {
+            "ref": "orange"
+          },
+          "success": {
+            "ref": "green"
+          },
+          "vc-modified": {
+            "ref": "yellow"
+          },
+          "vc-added": {
+            "ref": "green"
+          },
+          "vc-deleted": {
+            "ref": "red"
+          }
+        },
+        "commentary": "Lumina Prisma, dark ink variant, high contrast.\nBlack and white: a single white ray enters a glass prism; the ray is the lamp, the code is its spectrum, every hue at equal weight."
       },
       "light-ink-contrast": {
         "theme": "lumina-prisma-light-ink-contrast",

@@ -300,9 +300,9 @@ VIVID = {
     },
     "prisma": {
         "dark": {**field(True, 275, .014, bg=.22), **diffs(True),
-                 "spark": (.97, .015, 95), "red": (.71, .16, 25), "orange": (.75, .15, 58), "yellow": (.78, .14, 98),
-                 "green": (.76, .16, 148), "teal": (.76, .12, 185), "cyan": (.75, .12, 218), "blue": (.72, .15, 258),
-                 "violet": (.71, .16, 298), "magenta": (.72, .17, 340), "dark-blue": (.62, .13, 258),
+                 "spark": (.82, .14, 290), "red": (.71, .16, 25), "orange": (.75, .15, 58), "yellow": (.78, .14, 98),
+                 "green": (.76, .16, 148), "teal": (.76, .12, 185), "cyan": (.75, .12, 218), "blue": (.72, .15, 255),
+                 "violet": (.71, .16, 322), "magenta": (.72, .17, 342), "dark-blue": (.62, .13, 258),
                  "dark-cyan": (.62, .10, 218), "comments": (.60, .02, 275), "doc-comments": (.66, .025, 275)},
         "light": {**field(False, 275, .005, bg=.985, fg=.32), **diffs(False),
                   "spark": (.37, .21, 276), "red": (.51, .18, 25), "orange": (.53, .14, 55), "yellow": (.53, .12, 90),
@@ -315,11 +315,14 @@ VIVID = {
                  "error": "red", "warning": "orange", "success": "green", "vc-modified": "yellow",
                  "vc-added": "green", "vc-deleted": "red"},
         "commentary": {
-            "dark": "Lumina Prisma, dark variant.\nA single white ray enters a glass prism: the ray is the lamp, the code is its spectrum, every hue at equal weight.",
+            "dark": "Lumina Prisma, dark variant.\nBlack light: the lamp is ultraviolet, glowing just beyond the spectrum, and the code fluoresces in a full spectrum at equal weight.",
+            "dark-ink": "Lumina Prisma, dark ink variant.\nBlack and white: a single white ray enters a glass prism; the ray is the lamp, the code is its spectrum, every hue at equal weight.",
             "light": "Lumina Prisma, light variant.\nWhite paper in daylight; the lamp turns ultraviolet, the light just beyond the spectrum, and the code is a full spectrum of vivid inks at equal weight.",
             "light-ink": "Lumina Prisma, light ink variant.\nBlack and white: white paper, one lamp of black ink, and the code as a full spectrum of vivid inks at equal weight.",
         },
         "variants": {
+            "dark-ink": ("dark", {"spark": (.97, .015, 95), "blue": (.72, .15, 258),
+                                  "violet": (.71, .16, 298), "magenta": (.72, .17, 340)}),
             "light-ink": ("light", {"spark": (.26, .03, 280), "violet": (.47, .18, 298)}),
         },
     },

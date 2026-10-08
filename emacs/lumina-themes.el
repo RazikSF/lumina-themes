@@ -10,8 +10,8 @@
 ;;; Commentary:
 ;;
 ;; Lumina is a family of nine flavors, each in a dark, a light and
-;; two high-contrast variants, plus a black-and-white Prisma light --
-;; 38 themes in total.  Pure `deftheme'
+;; two high-contrast variants, plus black-and-white Prisma twins --
+;; 40 themes in total.  Pure `deftheme'
 ;; files, no external dependency.
 ;;
 ;; M-x load-theme RET lumina-dawn-dark RET to load any of them.
