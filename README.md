@@ -2,42 +2,118 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-A family of five themes for code editors and terminals.
+**One lamp lights the room.** Lumina is a family of themes for Emacs,
+Neovim, VS Code, WezTerm and the terminal, built on a single idea: in
+every flavor, one colour is the light (the cursor, the definition you
+are reading, the current line, the heading you are in) and everything
+else sits in the room at equal weight, never louder than the lamp.
 
-Each flavor is anchored in a specific material, pigment or scene and
-rendered with a single dominant lead across a tightly disciplined
-cascade of supporting hues. The light variants are not negatives of the
-darks: each is a complete companion in its own register.
+Nine flavors in two ranges, each in dark, light and high contrast:
+36 themes.
+
+<img src="assets/screens/lumina-dawn-dark.svg" width="49%"> <img src="assets/screens/lumina-dawn-light.svg" width="49%">
+
+## What makes it different
+
+- **One lamp.** Each flavor has one lead colour, and only the lamp
+  glows: cursor, current line number, function definitions, headings,
+  mode-line bar, search. Keywords never shout.
+- **Equal lightness.** Accents are tuned in OKLCH so that every
+  non-lamp accent sits within 0.08 lightness of the others. Vivid or
+  muted, nothing jumps out by accident; that is what keeps even the
+  vivid range elegant instead of garish.
+- **Light that follows you.** The lamp tints the current line, the
+  selection and the completion candidate, and flashes on every jump.
+  With [auto-dim-other-buffers](https://github.com/mina86/auto-dim-other-buffers.el)
+  the windows you are not working in fall into shade.
+- **Measured, not guessed.** Text sits at 10.8 to 13.4:1, comments at
+  4.4:1 or more, every accent at 4.5:1 or more. `make check` refuses a
+  palette that drifts.
+- **High contrast built in.** Every theme ships a `-contrast` twin:
+  text 15:1 or more, comments 6:1, every accent 7:1 (WCAG AAA), same
+  lamp, same hues.
+- **Readable diffs.** Added, removed and changed lines sit on tinted
+  grounds in magit, diff, smerge and ediff.
 
 ## Flavors
 
-Five flavors, each in a dark and a light variant, ten themes in all. Fifteen
-earlier flavors are kept, unmaintained, in `archive/`.
+### Muted
 
-| Flavor | Lead | Description |
+Quiet rooms for long sessions.
+
+| Flavor | Lamp | Scene |
 |---|---|---|
-| **Dawn**       | amber lamp      | warm sepia room lit by a single amber lamp; muted inks of rust, olive, sage, slate and plum |
-| **Oxblood**    | gilt yellow     | theatre after the curtain falls; oxblood-velvet drape, a single overhead spot on the gilt frame |
-| **Tide**       | biolum green    | deep ocean at night, lit from within by a bioluminescent jellyfish |
-| **Canopy**     | sun yellow      | pine forest at noon; one shaft of sun through the leaves |
-| **Slate**      | steel blue      | cold graphite ground; near-achromatic with one steel-blue voice |
+| **Dawn** | amber | warm sepia room lit by a single candle |
+| **Oxblood** | rose spotlight | a theatre after the curtain falls; oxblood velvet, plum and gilt |
+| **Tide** | bioluminescence | deep ocean at night, lit from within |
+| **Canopy** | leaf-filtered sun | pine forest at noon; chlorophyll keywords, russet types |
+| **Slate** | steel blue | cold graphite; near-achromatic, one steel voice |
+
+### Vivid
+
+Saturated colour, still at equal lightness and still under one lamp.
+
+| Flavor | Lamp | Scene |
+|---|---|---|
+| **Nocturne** | sodium streetlamp | a city at night under an indigo sky; neon violet, cobalt, jade |
+| **Amethyst** | citrine | inside a split amethyst geode; orchid, mint, ice blue |
+| **Obsidian** | molten lava | near-black volcanic glass; glacier teal, cobalt, magenta |
+| **Prisma** | the white ray | white light through a prism; the code is the full spectrum |
+
+### Gallery
+
+**Oxblood**
+
+<img src="assets/screens/lumina-oxblood-dark.svg" width="49%"> <img src="assets/screens/lumina-oxblood-light.svg" width="49%">
+
+**Tide**
+
+<img src="assets/screens/lumina-tide-dark.svg" width="49%"> <img src="assets/screens/lumina-tide-light.svg" width="49%">
+
+**Canopy**
+
+<img src="assets/screens/lumina-canopy-dark.svg" width="49%"> <img src="assets/screens/lumina-canopy-light.svg" width="49%">
+
+**Slate**
+
+<img src="assets/screens/lumina-slate-dark.svg" width="49%"> <img src="assets/screens/lumina-slate-light.svg" width="49%">
+
+**Nocturne**
+
+<img src="assets/screens/lumina-nocturne-dark.svg" width="49%"> <img src="assets/screens/lumina-nocturne-light.svg" width="49%">
+
+**Amethyst**
+
+<img src="assets/screens/lumina-amethyst-dark.svg" width="49%"> <img src="assets/screens/lumina-amethyst-light.svg" width="49%">
+
+**Obsidian**
+
+<img src="assets/screens/lumina-obsidian-dark.svg" width="49%"> <img src="assets/screens/lumina-obsidian-light.svg" width="49%">
+
+**Prisma**
+
+<img src="assets/screens/lumina-prisma-dark.svg" width="49%"> <img src="assets/screens/lumina-prisma-light.svg" width="49%">
+
+### Names
+
+`lumina-<flavor>-<dark|light>` and `lumina-<flavor>-<dark|light>-contrast`,
+for example `lumina-nocturne-dark` or `lumina-dawn-light-contrast`.
 
 ## Supported targets
 
 | Target | Output |
 |---|---|
-| **Emacs** (vanilla `deftheme`)  | `emacs/themes/*.el` (10) |
-| **Neovim** (Lua colorscheme)    | `nvim/colors/*.lua` (10) |
-| **VS Code** (extension)         | `vscode/themes/*.json` (10) + `package.json` |
-| **WezTerm** (color scheme)      | `wezterm/*.toml` (10) |
-| **base24** (tinted-theming)     | `base24/*.yaml` (10) |
+| **Emacs** (vanilla `deftheme`)  | `emacs/themes/*.el` (36) |
+| **Neovim** (Lua colorscheme)    | `nvim/colors/*.lua` (36) |
+| **VS Code** (extension)         | `vscode/themes/*.json` (36) + `package.json` |
+| **WezTerm** (color scheme)      | `wezterm/*.toml` (36) |
+| **base24** (tinted-theming)     | `base24/*.yaml` (36) |
 
-The Emacs files require no external dependency: they set a comprehensive
-face surface — modeline, completion, syntax, outline, org, magit, diff,
-dired, dirvish, vertico, consult, marginalia, corfu, eldoc, flycheck,
-flymake, eshell, compilation, tab-bar, tab-line, helpful, which-key,
-treemacs — so the look is consistent without requiring any particular
-package to be present.
+The Emacs files require no external dependency and load on a bare
+`emacs -Q`. They style the core UI, syntax, org, magit, diff, smerge,
+ediff, dired, vertico, consult, marginalia, corfu, eglot, flycheck,
+flymake, which-key, treemacs, and Doom's modeline and dashboard; faces
+of packages you do not use are simply ignored.
 
 ## Install
 
@@ -93,8 +169,8 @@ Six optional variables, set them before loading a theme or call
 (setq lumina-themes-comment-bg         nil)  ; tinted comment background
 (setq lumina-themes-padded-modeline    nil)  ; t, or integer pixel width
 (setq lumina-themes-italic-comments    t)    ; italic on comments
-(setq lumina-themes-italic-types       t)    ; italic on type names
-(setq lumina-themes-bold-keywords      t)    ; bold on keywords
+(setq lumina-themes-italic-types       nil)  ; italic on type names
+(setq lumina-themes-bold-keywords      nil)  ; bold on keywords
 ```
 
 `M-x lumina-themes-load-random` loads a random Lumina theme.  Prefix
@@ -158,8 +234,10 @@ of the CLI from a single source.
 ## Architecture
 
 ```
-spec/lumina.json            single source of truth (palette per flavor/mode)
+generators/v2_palettes.py   OKLCH palettes; derives signature and -contrast
+spec/lumina.json            generated palettes (one per flavor/variant)
 spec/faces.json             declarative face mapping (~390 faces)
+spec/faces_v2.json          Lumina 2 overlay (lamp, halo, diffs, headings)
 spec/nvim_highlights.json   declarative Neovim highlight mapping
 spec/vscode.json            declarative VS Code workbench + tokens
 generators/lumina_gen.py    spec -> all targets; embeds per-flavor schemas
@@ -170,7 +248,10 @@ vscode/themes/*.json        generated
 vscode/package.json         generated; bundles all flavors
 wezterm/*.toml              generated
 base24/*.yaml               generated
-Makefile                    make build / make verify / make extract
+tools/preview/              Emacs batch renderer, comparison pages, gallery
+tools/distance.py           perceptual distance between flavors
+archive/                    fifteen retired flavors, restorable
+Makefile                    make build / make check / make verify
 ```
 
 Lumina is palette-first. `spec/lumina.json` carries one palette per
@@ -190,7 +271,10 @@ Requires Python 3.11+.
 
 ```sh
 make build       # spec -> all targets
-make verify      # rebuild and smoke-test all themes load on vanilla Emacs
+python3 generators/v2_palettes.py   # OKLCH -> spec/lumina.json
+make check       # contrast and lightness gate
+make verify      # rebuild, check, and smoke-test every theme on vanilla Emacs
+tools/preview/gallery.sh            # re-render assets/screens/*.svg
 make extract     # one-time bootstrap from existing .el files (rarely needed)
 ```
 

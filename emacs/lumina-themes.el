@@ -9,9 +9,9 @@
 ;;
 ;;; Commentary:
 ;;
-;; Lumina is a family of twenty themes, each in a dark and a light
-;; variant -- forty themes in total.  Pure `deftheme' files, no
-;; external dependency.
+;; Lumina is a family of nine flavors, each in a dark, a light and
+;; two high-contrast variants -- 36 themes in total.  Pure `deftheme'
+;; files, no external dependency.
 ;;
 ;; M-x load-theme RET lumina-dawn-dark RET to load any of them.
 ;;
@@ -22,8 +22,8 @@
 ;;   (setq lumina-themes-comment-bg         nil)  ; tinted comment bg
 ;;   (setq lumina-themes-padded-modeline    nil)  ; extra modeline padding
 ;;   (setq lumina-themes-italic-comments    t)    ; italic on comments
-;;   (setq lumina-themes-italic-types       t)    ; italic on types
-;;   (setq lumina-themes-bold-keywords      t)    ; bold on keywords
+;;   (setq lumina-themes-italic-types       nil)  ; italic on types
+;;   (setq lumina-themes-bold-keywords      nil)  ; bold on keywords
 ;;
 ;;; Code:
 
@@ -59,18 +59,15 @@ variant or you find italics distracting."
   :type 'boolean
   :group 'lumina-themes)
 
-(defcustom lumina-themes-italic-types t
+(defcustom lumina-themes-italic-types nil
   "When non-nil, render type names in italic.
-Default in the Lumina family, following classical typographic
-practice for proper nouns / type identifiers."
+Off by default: Lumina keeps italics for comments only."
   :type 'boolean
   :group 'lumina-themes)
 
-(defcustom lumina-themes-bold-keywords t
+(defcustom lumina-themes-bold-keywords nil
   "When non-nil, render keywords in bold.
-Default in the Lumina family.  The single-light philosophy puts
-keywords on the lead colour with bold weight; disable for a quieter
-syntax surface."
+Off by default: Lumina sets hierarchy with one lamp colour, not weight."
   :type 'boolean
   :group 'lumina-themes)
 
@@ -90,34 +87,28 @@ syntax surface."
 
 (defun lumina-themes--apply-customizations (&optional theme)
   "Apply user customisation variables to the current Lumina theme.
-THEME defaults to the currently enabled Lumina theme."
+THEME defaults to the currently enabled Lumina theme.  Only options
+that depart from the theme's own design touch a face."
   (let ((theme (or theme (lumina-themes--current-lumina-theme))))
     (when theme
-      ;; comment brightness + bg + italic
-      (let ((comment-fg
-             (when lumina-themes-brighter-comments
-               (face-attribute 'font-lock-doc-face :foreground nil t))))
+      (when lumina-themes-brighter-comments
         (set-face-attribute 'font-lock-comment-face nil
-                            :foreground (or comment-fg 'unspecified)
-                            :background (if lumina-themes-comment-bg
-                                            (face-attribute 'highlight :background nil t)
-                                          'unspecified)
-                            :slant (if lumina-themes-italic-comments 'italic 'normal)))
-      ;; italic types
-      (set-face-attribute 'font-lock-type-face nil
-                          :slant (if lumina-themes-italic-types 'italic 'normal))
-      ;; bold keywords
-      (set-face-attribute 'font-lock-keyword-face nil
-                          :weight (if lumina-themes-bold-keywords 'bold 'normal))
-      ;; padded modeline
+                            :foreground (face-attribute 'font-lock-doc-face :foreground nil t)))
+      (when lumina-themes-comment-bg
+        (set-face-attribute 'font-lock-comment-face nil
+                            :background (face-attribute 'highlight :background nil t)))
+      (unless lumina-themes-italic-comments
+        (set-face-attribute 'font-lock-comment-face nil :slant 'normal))
+      (when lumina-themes-italic-types
+        (set-face-attribute 'font-lock-type-face nil :slant 'italic))
+      (when lumina-themes-bold-keywords
+        (set-face-attribute 'font-lock-keyword-face nil :weight 'bold))
       (let ((pad lumina-themes-padded-modeline))
         (when pad
-          (let ((width (if (integerp pad) pad 4))
-                (mlbg (face-attribute 'mode-line :background nil t)))
-            (set-face-attribute 'mode-line nil
-                                :box `(:line-width ,width :color ,mlbg))
-            (set-face-attribute 'mode-line-inactive nil
-                                :box `(:line-width ,width :color ,mlbg))))))))
+          (let ((width (if (integerp pad) pad 4)))
+            (dolist (f '(mode-line mode-line-inactive))
+              (set-face-attribute f nil :box `(:line-width ,width
+                                               :color ,(face-attribute f :background nil t))))))))))
 
 ;;;###autoload
 (defun lumina-themes-reapply ()
