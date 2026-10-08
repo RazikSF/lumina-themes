@@ -44,7 +44,7 @@ SCHEMAS = {
     "dawn": {
         "v2": True,
         "lead": "yellow",
-        "modeline_bg": "bg-alt", "vertico_bg": "base2",
+        "modeline_bg": "bg-alt", "vertico_bg": "halo2",
         "function_call": "blue", "property": "cyan",
         "preprocessor": "orange", "escape": "yellow",
         "modeline_modified": "orange",
@@ -56,21 +56,21 @@ SCHEMAS = {
     },
     "oxblood": {
         "v2": True,
-        "lead": "yellow",
-        "modeline_bg": "bg-alt", "vertico_bg": "base2",
-        "function_call": "orange", "property": "teal",
-        "preprocessor": "magenta", "escape": "red",
+        "lead": "magenta",
+        "modeline_bg": "bg-alt", "vertico_bg": "halo2",
+        "function_call": "yellow", "property": "teal",
+        "preprocessor": "violet", "escape": "magenta",
         "modeline_modified": "orange",
-        "rainbow":   ["yellow", "magenta", "orange", "green", "blue", "violet"],
-        "outline":   ["yellow", "orange", "magenta", "green"],
-        "orderless": ["yellow", "magenta", "green"],
-        "magit_branch_local": "orange", "magit_branch_remote": "green",
+        "rainbow":   ["magenta", "yellow", "violet", "green", "blue", "orange"],
+        "outline":   ["magenta", "yellow", "violet", "green"],
+        "orderless": ["magenta", "yellow", "green"],
+        "magit_branch_local": "yellow", "magit_branch_remote": "green",
         "org_todo": "red", "org_done": "green",
     },
     "tide": {
         "v2": True,
         "lead": "teal",
-        "modeline_bg": "bg-alt", "vertico_bg": "base2",
+        "modeline_bg": "bg-alt", "vertico_bg": "halo2",
         "function_call": "blue", "property": "green",
         "preprocessor": "violet", "escape": "teal",
         "modeline_modified": "orange",
@@ -83,7 +83,7 @@ SCHEMAS = {
     "canopy": {
         "v2": True,
         "lead": "yellow",
-        "modeline_bg": "bg-alt", "vertico_bg": "base2",
+        "modeline_bg": "bg-alt", "vertico_bg": "halo2",
         "function_call": "cyan", "property": "teal",
         "preprocessor": "green", "escape": "yellow",
         "modeline_modified": "orange",
@@ -96,12 +96,12 @@ SCHEMAS = {
     "slate": {
         "v2": True,
         "lead": "blue",
-        "modeline_bg": "bg-alt", "vertico_bg": "base2",
-        "function_call": "teal", "property": "cyan",
-        "preprocessor": "violet", "escape": "orange",
+        "modeline_bg": "bg-alt", "vertico_bg": "halo2",
+        "function_call": "teal", "property": "violet",
+        "preprocessor": "cyan", "escape": "orange",
         "modeline_modified": "orange",
         "rainbow":   ["blue", "teal", "violet", "orange", "green", "magenta"],
-        "outline":   ["blue", "teal", "violet", "cyan"],
+        "outline":   ["blue", "cyan", "violet", "teal"],
         "orderless": ["blue", "teal", "violet"],
         "magit_branch_local": "teal", "magit_branch_remote": "cyan",
         "org_todo": "orange", "org_done": "green",
@@ -246,6 +246,11 @@ def resolve_ref(ref, colors, schema):
 # ---------------------------------------------------------------------------
 # Emacs deftheme emitter (declarative, fed by spec/faces.json).
 # ---------------------------------------------------------------------------
+def pretty(theme: str) -> str:
+    """lumina-dawn-dark-contrast -> Lumina Dawn Dark Contrast."""
+    return " ".join(w.capitalize() for w in theme.split("-"))
+
+
 def emit_face(name: str, attrs: list) -> str:
     body = " ".join(f"{k} {v}" for k, v in attrs)
     return f" '({name} ((t ({body}))))"
@@ -341,7 +346,7 @@ def build_emacs(spec: dict):
             c = d["colors"]
             theme = d["theme"]
             mode = d["background"]
-            short = f"Lumina {flavor.capitalize()}, {mode}"
+            short = pretty(theme)
             commentary = "\n".join(f";; {ln}" if ln else ";;"
                                    for ln in d["commentary"].split("\n"))
             docstring = (commentary.split("\n")[0].lstrip("; ").strip()
@@ -439,7 +444,7 @@ def build_base24(spec: dict):
             sysmode = d["background"]
             yaml = (
                 f'system: "base24"\n'
-                f'name: "Lumina {flavor.capitalize()} {sysmode.capitalize()}"\n'
+                f'name: "{pretty(name)}"\n'
                 f'author: "razik (https://github.com/RazikSF)"\n'
                 f'variant: "{sysmode}"\n'
                 f'palette:\n{body}\n'
@@ -486,7 +491,7 @@ def build_vscode(spec: dict):
                     entry["fontStyle"] = rspec["fontStyle"]
                 semantic[role] = entry
             theme_obj = {
-                "name": f"Lumina {flavor.capitalize()} {mode.capitalize()}",
+                "name": pretty(theme),
                 "type": mode,
                 "semanticHighlighting": True,
                 "colors": workbench,
@@ -513,10 +518,10 @@ def build_vscode(spec: dict):
                        "url": "https://github.com/RazikSF/lumina-themes.git"},
         "contributes": {
             "themes": [
-                {"label": f"Lumina {f.capitalize()} {m.capitalize()}",
-                 "uiTheme": "vs-dark" if m == "dark" else "vs",
-                 "path": f"./themes/lumina-{f}-{m}-color-theme.json"}
-                for f in spec["flavors"] for m in ("dark", "light")
+                {"label": pretty(d["theme"]),
+                 "uiTheme": "vs-dark" if d["background"] == "dark" else "vs",
+                 "path": f"./themes/{d['theme']}-color-theme.json"}
+                for modes in spec["flavors"].values() for d in modes.values()
             ]
         },
     }
@@ -581,7 +586,12 @@ ACCENTS = ["red", "orange", "yellow", "green", "teal",
 
 
 def check(spec: dict) -> bool:
-    """Lumina 2 legibility gate, applied to flavors whose schema sets v2."""
+    """Lumina 2 legibility gate, applied to flavors whose schema sets v2.
+
+    Standard variants: fg 10-12.5:1 (fg_max per schema), comments >= 4.3,
+    accents >= 4.5.  -contrast variants: fg >= 15, comments >= 6, accents >= 7.
+    Both: non-lead accents within 0.08 OKLCH lightness.
+    """
     from oklch import contrast, from_hex
     ok = True
     for flavor, modes in spec["flavors"].items():
@@ -591,16 +601,18 @@ def check(spec: dict) -> bool:
         for d in modes.values():
             c = d["colors"]
             bg = C(c, "bg")
+            hc = d["theme"].endswith("-contrast")
             fails = []
             fg = contrast(C(c, "fg"), bg)
-            if not 10 <= fg <= 12.5:
-                fails.append(f"fg {fg:.1f} outside 10-12.5")
+            lo, hi = (15, 21) if hc else (10, sch.get("fg_max", 12.5))
+            if not lo <= fg <= hi:
+                fails.append(f"fg {fg:.1f} outside {lo}-{hi}")
             for k in ("comments", "doc-comments"):
-                if contrast(C(c, k), bg) < 4.3:
-                    fails.append(f"{k} {contrast(C(c, k), bg):.1f} < 4.3")
+                if contrast(C(c, k), bg) < (6 if hc else 4.3):
+                    fails.append(f"{k} {contrast(C(c, k), bg):.1f}")
             for k in ACCENTS:
-                if contrast(C(c, k), bg) < 4.5:
-                    fails.append(f"{k} {contrast(C(c, k), bg):.1f} < 4.5")
+                if contrast(C(c, k), bg) < (7 if hc else 4.5):
+                    fails.append(f"{k} {contrast(C(c, k), bg):.1f}")
             lead = sch["lead"]
             ls = [from_hex(C(c, k))[0] for k in ACCENTS if k != lead]
             if max(ls) - min(ls) > 0.08:

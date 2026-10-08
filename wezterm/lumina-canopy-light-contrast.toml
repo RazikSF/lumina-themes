@@ -1,0 +1,26 @@
+# lumina-canopy-light-contrast -- Lumina (canopy, light)
+# Generated from spec/lumina.json. Do not edit by hand.
+[colors]
+foreground   = "#07120A"
+background   = "#FAFFF6"
+cursor_bg    = "#07120A"
+cursor_fg    = "#FAFFF6"
+cursor_border = "#07120A"
+selection_bg = "#CDCEB2"
+selection_fg = "#07120A"
+scrollbar_thumb = "#A2AFA0"
+split = "#D4DED0"
+ansi = ["#F3F9EE", "#843825", "#2F5F32", "#594A00", "#2D557D", "#773C59", "#235C65", "#273429"]
+brights = ["#687667", "#7A4306", "#1E5F50", "#594A00", "#254D74", "#56497A", "#235C65", "#07120A"]
+
+[colors.tab_bar]
+background = "#EFF6EA"
+[colors.tab_bar.active_tab]
+bg_color = "#FAFFF6"
+fg_color = "#07120A"
+[colors.tab_bar.inactive_tab]
+bg_color = "#EFF6EA"
+fg_color = "#435144"
+
+[metadata]
+name = "lumina-canopy-light-contrast"

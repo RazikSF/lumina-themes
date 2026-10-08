@@ -5,6 +5,7 @@ Usage:
     python3 generators/v2_palettes.py [flavor ...]   # default: every flavor below
 """
 import json
+import math
 import sys
 from pathlib import Path
 
@@ -24,7 +25,6 @@ PALETTES = {
             "teal": (.72, .055, 160), "cyan": (.71, .05, 205), "blue": (.71, .05, 240), "dark-blue": (.60, .05, 240),
             "violet": (.70, .05, 295), "magenta": (.69, .065, 350), "dark-cyan": (.60, .045, 205),
             "comments": (.60, .025, 72), "doc-comments": (.66, .03, 75), "strings": (.73, .075, 120),
-            "region": (.32, .035, 70), "selection": (.32, .035, 70),
             "diff-added-bg": (.27, .03, 135), "diff-removed-bg": (.27, .035, 28), "diff-changed-bg": (.27, .035, 80),
             "diff-added-refine": (.34, .06, 135), "diff-removed-refine": (.34, .07, 28),
         },
@@ -37,7 +37,6 @@ PALETTES = {
             "teal": (.52, .07, 165), "cyan": (.52, .06, 210), "blue": (.51, .07, 245), "dark-blue": (.42, .07, 245),
             "violet": (.51, .07, 295), "magenta": (.50, .08, 350), "dark-cyan": (.42, .06, 210),
             "comments": (.535, .025, 70), "doc-comments": (.48, .025, 70), "strings": (.52, .09, 125),
-            "region": (.89, .04, 80), "selection": (.89, .04, 80),
             "diff-added-bg": (.93, .03, 135), "diff-removed-bg": (.93, .03, 28), "diff-changed-bg": (.93, .04, 85),
             "diff-added-refine": (.87, .07, 135), "diff-removed-refine": (.87, .07, 28),
         },
@@ -63,12 +62,11 @@ PALETTES = {
             "dark-blue": (.60, .07, 240), "violet": (.71, .075, 295), "magenta": (.70, .075, 340),
             "red": (.68, .10, 18), "orange": (.73, .085, 45), "yellow": (.74, .065, 90), "dark-cyan": (.60, .06, 210),
             "comments": (.60, .03, 200), "doc-comments": (.66, .035, 195), "strings": (.74, .045, 185),
-            "region": (.34, .045, 215), "selection": (.34, .045, 215),
             "diff-added-bg": (.28, .03, 150), "diff-removed-bg": (.28, .035, 20), "diff-changed-bg": (.28, .03, 90),
             "diff-added-refine": (.35, .055, 150), "diff-removed-refine": (.35, .065, 20),
         },
         "light": {
-            "bg": (.965, .008, 195), "bg-alt": (.935, .012, 195), "fg": (.33, .025, 215), "fg-alt": (.42, .025, 210),
+            "bg": (.965, .014, 188), "bg-alt": (.935, .018, 190), "fg": (.33, .025, 215), "fg-alt": (.42, .025, 210),
             "base0": (.99, .004, 195), "base1": (.945, .01, 195), "base2": (.91, .014, 198), "base3": (.86, .016, 200),
             "base4": (.76, .02, 202), "base5": (.62, .025, 205), "base6": (.50, .028, 208), "base7": (.40, .028, 212),
             "base8": (.33, .025, 215), "surface": (.945, .01, 195),
@@ -76,7 +74,6 @@ PALETTES = {
             "dark-blue": (.42, .085, 245), "violet": (.50, .09, 295), "magenta": (.50, .09, 345),
             "red": (.51, .12, 18), "orange": (.53, .10, 45), "yellow": (.52, .09, 90), "dark-cyan": (.42, .06, 220),
             "comments": (.535, .03, 200), "doc-comments": (.48, .03, 200), "strings": (.52, .05, 190),
-            "region": (.89, .035, 200), "selection": (.89, .035, 200),
             "diff-added-bg": (.93, .03, 150), "diff-removed-bg": (.93, .03, 20), "diff-changed-bg": (.93, .035, 90),
             "diff-added-refine": (.87, .06, 150), "diff-removed-refine": (.87, .06, 20),
         },
@@ -94,41 +91,39 @@ PALETTES = {
     },
     "oxblood": {
         "dark": {
-            "bg": (.215, .025, 355), "bg-alt": (.19, .024, 355), "fg": (.86, .035, 80), "fg-alt": (.74, .035, 70),
-            "base0": (.165, .02, 355), "base1": (.235, .027, 355), "base2": (.27, .029, 355), "base3": (.31, .031, 355),
-            "base4": (.40, .033, 0), "base5": (.52, .035, 10), "base6": (.63, .035, 25), "base7": (.75, .035, 55),
-            "base8": (.86, .035, 80), "surface": (.245, .028, 355),
-            "yellow": (.78, .11, 82), "orange": (.72, .09, 58), "red": (.67, .11, 15), "magenta": (.69, .08, 355),
-            "violet": (.69, .06, 325), "green": (.72, .05, 170), "teal": (.71, .045, 185), "cyan": (.72, .04, 200),
-            "blue": (.70, .06, 255), "dark-blue": (.60, .06, 255), "dark-cyan": (.60, .04, 200),
-            "comments": (.60, .03, 15), "doc-comments": (.66, .035, 30), "strings": (.75, .04, 80),
-            "region": (.33, .045, 0), "selection": (.33, .045, 0),
-            "diff-added-bg": (.27, .03, 160), "diff-removed-bg": (.27, .04, 20), "diff-changed-bg": (.27, .035, 75),
-            "diff-added-refine": (.34, .055, 160), "diff-removed-refine": (.34, .07, 20),
+            "bg": (.215, .035, 8), "bg-alt": (.19, .032, 8), "fg": (.87, .025, 60), "fg-alt": (.74, .03, 40),
+            "base0": (.165, .028, 8), "base1": (.235, .036, 8), "base2": (.27, .038, 8), "base3": (.31, .04, 8),
+            "base4": (.40, .04, 10), "base5": (.52, .04, 15), "base6": (.63, .035, 30), "base7": (.75, .03, 50),
+            "base8": (.87, .025, 60), "surface": (.245, .037, 8),
+            "magenta": (.77, .11, 5), "red": (.68, .12, 22), "orange": (.72, .08, 60), "yellow": (.74, .09, 88),
+            "green": (.72, .05, 165), "teal": (.71, .045, 190), "cyan": (.71, .04, 215), "blue": (.70, .06, 260),
+            "violet": (.69, .07, 320), "dark-blue": (.60, .06, 260), "dark-cyan": (.60, .04, 215),
+            "comments": (.60, .035, 15), "doc-comments": (.66, .035, 30), "strings": (.76, .035, 75),
+            "diff-added-bg": (.27, .03, 160), "diff-removed-bg": (.27, .045, 25), "diff-changed-bg": (.27, .035, 80),
+            "diff-added-refine": (.34, .055, 160), "diff-removed-refine": (.34, .075, 25),
         },
         "light": {
-            "bg": (.965, .015, 75), "bg-alt": (.935, .02, 72), "fg": (.33, .03, 0), "fg-alt": (.43, .03, 5),
-            "base0": (.99, .008, 80), "base1": (.945, .018, 72), "base2": (.91, .022, 70), "base3": (.86, .025, 65),
-            "base4": (.76, .028, 50), "base5": (.62, .03, 30), "base6": (.50, .032, 10), "base7": (.40, .032, 5),
-            "base8": (.33, .03, 0), "surface": (.945, .018, 72),
-            "yellow": (.53, .10, 72), "orange": (.53, .10, 55), "red": (.49, .13, 15), "magenta": (.49, .10, 355),
-            "violet": (.49, .07, 325), "green": (.51, .06, 170), "teal": (.51, .055, 185), "cyan": (.51, .05, 205),
-            "blue": (.49, .08, 255), "dark-blue": (.41, .08, 255), "dark-cyan": (.41, .05, 205),
-            "comments": (.535, .03, 25), "doc-comments": (.48, .03, 20), "strings": (.50, .05, 70),
-            "region": (.89, .035, 30), "selection": (.89, .035, 30),
-            "diff-added-bg": (.93, .03, 160), "diff-removed-bg": (.93, .03, 20), "diff-changed-bg": (.93, .035, 80),
-            "diff-added-refine": (.87, .06, 160), "diff-removed-refine": (.87, .06, 20),
+            "bg": (.965, .018, 15), "bg-alt": (.935, .024, 15), "fg": (.33, .035, 0), "fg-alt": (.43, .035, 5),
+            "base0": (.99, .008, 15), "base1": (.945, .02, 15), "base2": (.91, .024, 15), "base3": (.86, .026, 15),
+            "base4": (.76, .028, 15), "base5": (.62, .03, 10), "base6": (.50, .032, 5), "base7": (.40, .034, 0),
+            "base8": (.33, .035, 0), "surface": (.945, .02, 15),
+            "magenta": (.50, .14, 5), "red": (.50, .12, 25), "orange": (.53, .10, 55), "yellow": (.53, .09, 85),
+            "green": (.51, .06, 165), "teal": (.51, .055, 190), "cyan": (.51, .05, 215), "blue": (.49, .08, 260),
+            "violet": (.49, .08, 320), "dark-blue": (.41, .08, 260), "dark-cyan": (.41, .05, 215),
+            "comments": (.535, .03, 10), "doc-comments": (.48, .03, 5), "strings": (.50, .045, 60),
+            "diff-added-bg": (.93, .03, 160), "diff-removed-bg": (.93, .03, 25), "diff-changed-bg": (.93, .035, 80),
+            "diff-added-refine": (.87, .06, 160), "diff-removed-refine": (.87, .06, 25),
         },
         "refs": {
-            "grey": "base5", "highlight": "yellow", "vertical-bar": "base3", "builtin": "violet",
-            "constants": "red", "functions": "yellow", "keywords": "magenta", "methods": "orange",
-            "operators": "base6", "type": "green", "variables": "fg", "numbers": "red", "error": "red",
+            "grey": "base5", "highlight": "magenta", "vertical-bar": "base3", "builtin": "blue",
+            "constants": "orange", "functions": "magenta", "keywords": "violet", "methods": "yellow",
+            "operators": "base6", "type": "green", "variables": "fg", "numbers": "orange", "error": "red",
             "warning": "orange", "success": "green", "vc-modified": "yellow", "vc-added": "green",
             "vc-deleted": "red",
         },
         "commentary": {
-            "dark": "Lumina Oxblood, dark variant.\nA theatre after the curtain falls: oxblood-velvet drape in shadow, a single overhead spot on the gilt frame. Velvet rose, brass and wine at equal weight, sage relief, cream-parchment strings.",
-            "light": "Lumina Oxblood, light variant.\nWarm programme paper under the same gilt spot; deep inks of velvet rose, brass, wine and sage at equal weight.",
+            "dark": "Lumina Oxblood, dark variant.\nA theatre after the curtain falls: oxblood velvet in shadow, one rose spotlight on the stage. Plum, gilt, brass and sage at equal weight, cream-parchment strings.",
+            "light": "Lumina Oxblood, light variant.\nBlush programme paper under the same rose spotlight; deep inks of plum, gilt, brass and sage at equal weight.",
         },
     },
     "canopy": {
@@ -137,11 +132,10 @@ PALETTES = {
             "base0": (.165, .016, 148), "base1": (.235, .022, 148), "base2": (.27, .024, 146), "base3": (.31, .026, 145),
             "base4": (.40, .028, 145), "base5": (.52, .03, 140), "base6": (.63, .03, 135), "base7": (.75, .03, 128),
             "base8": (.86, .025, 120), "surface": (.245, .023, 148),
-            "yellow": (.79, .11, 88), "green": (.74, .085, 140), "teal": (.71, .06, 175), "cyan": (.71, .05, 205),
+            "yellow": (.81, .12, 106), "green": (.74, .085, 140), "teal": (.71, .06, 175), "cyan": (.71, .05, 205),
             "blue": (.70, .06, 250), "dark-blue": (.60, .06, 250), "violet": (.70, .06, 295), "magenta": (.69, .07, 350),
             "red": (.68, .10, 35), "orange": (.73, .09, 62), "dark-cyan": (.60, .05, 205),
-            "comments": (.60, .035, 140), "doc-comments": (.66, .04, 135), "strings": (.73, .045, 115),
-            "region": (.33, .04, 110), "selection": (.33, .04, 110),
+            "comments": (.60, .035, 140), "doc-comments": (.66, .04, 135), "strings": (.74, .04, 70),
             "diff-added-bg": (.28, .045, 145), "diff-removed-bg": (.27, .04, 25), "diff-changed-bg": (.27, .035, 85),
             "diff-added-refine": (.35, .07, 145), "diff-removed-refine": (.34, .07, 25),
         },
@@ -150,11 +144,10 @@ PALETTES = {
             "base0": (.99, .006, 130), "base1": (.945, .016, 132), "base2": (.91, .02, 134), "base3": (.86, .023, 136),
             "base4": (.76, .026, 140), "base5": (.62, .028, 144), "base6": (.50, .028, 147), "base7": (.40, .027, 150),
             "base8": (.33, .025, 150), "surface": (.945, .016, 132),
-            "yellow": (.53, .10, 80), "green": (.51, .09, 145), "teal": (.51, .07, 175), "cyan": (.51, .06, 210),
+            "yellow": (.53, .11, 100), "green": (.51, .09, 145), "teal": (.51, .07, 175), "cyan": (.51, .06, 210),
             "blue": (.49, .08, 250), "dark-blue": (.41, .08, 250), "violet": (.49, .08, 295), "magenta": (.49, .09, 350),
             "red": (.50, .11, 35), "orange": (.53, .10, 60), "dark-cyan": (.41, .05, 210),
-            "comments": (.535, .03, 140), "doc-comments": (.48, .03, 140), "strings": (.51, .05, 115),
-            "region": (.89, .04, 120), "selection": (.89, .04, 120),
+            "comments": (.535, .03, 140), "doc-comments": (.48, .03, 140), "strings": (.50, .045, 65),
             "diff-added-bg": (.92, .045, 145), "diff-removed-bg": (.93, .03, 25), "diff-changed-bg": (.93, .035, 85),
             "diff-added-refine": (.86, .07, 145), "diff-removed-refine": (.87, .06, 25),
         },
@@ -166,7 +159,7 @@ PALETTES = {
             "vc-deleted": "red",
         },
         "commentary": {
-            "dark": "Lumina Canopy, dark variant.\nA pine forest at noon: a single shaft of sun pierces the canopy. Chlorophyll, pine, russet and heather at equal weight in the shade, moss-bark strings.",
+            "dark": "Lumina Canopy, dark variant.\nA pine forest at noon: a single shaft of leaf-filtered sun, chartreuse gold, pierces the canopy. Chlorophyll, pine, russet and heather at equal weight in the shade, bark-brown strings.",
             "light": "Lumina Canopy, light variant.\nLeaf-tinted paper under the same shaft of sun; deep inks of chlorophyll, pine, russet and heather at equal weight.",
         },
     },
@@ -181,7 +174,6 @@ PALETTES = {
             "yellow": (.74, .06, 92), "dark-blue": (.62, .07, 245), "dark-cyan": (.60, .045, 215),
             "comments": (.60, .018, 258), "doc-comments": (.66, .02, 258), "strings": (.76, .015, 250),
             "variables": (.81, .01, 262),
-            "region": (.33, .03, 250), "selection": (.33, .03, 250),
             "diff-added-bg": (.27, .03, 150), "diff-removed-bg": (.27, .035, 20), "diff-changed-bg": (.27, .03, 85),
             "diff-added-refine": (.34, .055, 150), "diff-removed-refine": (.34, .065, 20),
         },
@@ -195,46 +187,137 @@ PALETTES = {
             "yellow": (.52, .08, 90), "dark-blue": (.42, .10, 250), "dark-cyan": (.42, .05, 220),
             "comments": (.535, .015, 258), "doc-comments": (.48, .015, 258), "strings": (.47, .012, 258),
             "variables": (.39, .015, 258),
-            "region": (.88, .03, 250), "selection": (.88, .03, 250),
             "diff-added-bg": (.93, .03, 150), "diff-removed-bg": (.93, .03, 20), "diff-changed-bg": (.93, .035, 85),
             "diff-added-refine": (.87, .06, 150), "diff-removed-refine": (.87, .06, 20),
         },
         "refs": {
             "grey": "base5", "highlight": "blue", "vertical-bar": "base3", "builtin": "cyan",
-            "constants": "magenta", "functions": "blue", "keywords": "violet", "methods": "teal",
-            "operators": "base6", "type": "cyan", "numbers": "orange", "error": "red",
+            "constants": "magenta", "functions": "blue", "keywords": "cyan", "methods": "teal",
+            "operators": "base6", "type": "violet", "numbers": "orange", "error": "red",
             "warning": "orange", "success": "green", "vc-modified": "yellow", "vc-added": "green",
             "vc-deleted": "red",
         },
         "commentary": {
-            "dark": "Lumina Slate, dark variant.\nCold graphite ground; near-achromatic text and strings, one steel-blue lamp, muted violet, teal and sage at equal weight, a single warm note of brass in numbers.",
-            "light": "Lumina Slate, light variant.\nCool grey paper under the same steel-blue lamp; near-achromatic inks with muted violet, teal and sage at equal weight.",
+            "dark": "Lumina Slate, dark variant.\nCold graphite ground; near-achromatic text and strings, one steel-blue lamp, steel cyan, muted violet, teal and sage at equal weight, a single warm note of brass in numbers.",
+            "light": "Lumina Slate, light variant.\nCool grey paper under the same steel-blue lamp; near-achromatic inks with steel cyan, muted violet, teal and sage at equal weight.",
         },
     },
 }
 
 
+ACCENT_KEYS = ["red", "orange", "yellow", "green", "teal", "cyan", "blue", "violet", "magenta"]
+ANSI = {"red": "red", "orange": "brightred", "yellow": "yellow", "green": "green", "teal": "brightgreen",
+        "cyan": "cyan", "blue": "blue", "violet": "brightmagenta", "magenta": "magenta",
+        "dark-blue": "brightblue", "dark-cyan": "brightcyan", "fg": "white", "bg": "black"}
+
+
+def _lab(c):
+    L, C, h = c
+    return L, C * math.cos(math.radians(h)), C * math.sin(math.radians(h))
+
+
+def _lch(L, a, b):
+    return L, math.hypot(a, b), math.degrees(math.atan2(b, a)) % 360
+
+
+def mix(c1, c2, t):
+    """Mix two OKLCH colours in OKLab; t = share of c2."""
+    a, b = _lab(c1), _lab(c2)
+    return _lch(*[x + (y - x) * t for x, y in zip(a, b)])
+
+
+def lift(c, bg, target, step):
+    """Move lightness of c (by step per iteration) until contrast with bg >= target."""
+    L, C, h = c
+    while contrast(to_hex(L, C, h), to_hex(*bg)) < target and 0 < L < 1:
+        L += step
+    return min(max(L, 0), 1)
+
+
+def signature(pal, lead, dark):
+    """Lumina light signature: the lamp tints the current line, the selection and jumps."""
+    bg, lamp = pal["bg"], pal[lead]
+    out = dict(pal)
+    out["halo"] = mix(bg, lamp, .075 if dark else .10)
+    out["halo2"] = mix(bg, lamp, .14 if dark else .17)
+    out["region"] = out["selection"] = mix(bg, lamp, .24 if dark else .26)
+    out["glow"] = mix(bg, lamp, .42 if dark else .40)
+    L, C, h = bg
+    out["dim"] = (L - .03, C * .8, h) if dark else (L - .025, C * 1.2, h)
+    return out
+
+
+def high_contrast(pal, lead, dark):
+    """Derive the -contrast variant: fg >= 15:1, comments >= 6:1, accents >= 7:1 (AAA)."""
+    q = dict(pal)
+    if dark:
+        for k, L in {"bg": .165, "bg-alt": .14, "base0": .12, "base1": .19, "surface": .20,
+                     "base2": .235, "base3": .29, "base4": .42, "base5": .58, "base6": .70,
+                     "base7": .82, "fg": .95, "fg-alt": .86, "base8": .95}.items():
+            q[k] = (L, q[k][1], q[k][2])
+    else:
+        for k, L in {"bg": .995, "bg-alt": .965, "base0": 1.0, "base1": .975, "surface": .975,
+                     "base2": .94, "base3": .89, "base4": .74, "base5": .55, "base6": .42,
+                     "base7": .31, "fg": .17, "fg-alt": .29, "base8": .17}.items():
+            q[k] = (L, q[k][1], q[k][2])
+    bg, step = q["bg"], (.005 if dark else -.005)
+    accents = [k for k in ACCENT_KEYS if k != lead]
+    Lacc = max(lift(q[k], bg, 7.2, step) for k in accents) if dark else \
+        min(lift(q[k], bg, 7.2, step) for k in accents)
+    for k in accents:
+        q[k] = (Lacc, q[k][1], q[k][2])
+    if lead in q:
+        q[lead] = (lift(q[lead], bg, 8.5, step), q[lead][1], q[lead][2])
+    for k, target in (("comments", 6.2), ("doc-comments", 6.8), ("strings", 7.2),
+                      ("variables", 12.0), ("dark-blue", 4.5), ("dark-cyan", 4.5)):
+        if k in q:
+            q[k] = (lift(q[k], bg, target, step), q[k][1], q[k][2])
+    for k in ("diff-added-bg", "diff-removed-bg", "diff-changed-bg",
+              "diff-added-refine", "diff-removed-refine"):
+        if k in q:
+            L, C, h = q[k]
+            q[k] = ((L - .05, C * 1.2, h) if dark else (L + .02, C * 1.2, h))
+    return q
+
+
 def write(flavors):
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from lumina_gen import SCHEMAS
     spec = json.loads(SPEC.read_text())
     for flavor in flavors:
         pal = PALETTES[flavor]
+        lead = SCHEMAS[flavor]["lead"]
+        modes = spec["flavors"].setdefault(flavor, {})
         for mode in ("dark", "light"):
-            t = spec["flavors"][flavor][mode]
-            old = t["colors"]
-            colors = {}
-            for k, v in pal[mode].items():
-                h = to_hex(*v)
-                ansi = old[k][2] if isinstance(old.get(k), list) else ("black" if mode == "dark" else "white")
-                colors[k] = [h, h.lower(), ansi]
-            for k, r in pal["refs"].items():
-                colors[k] = {"ref": r}
-            t["colors"] = colors
-            t["commentary"] = pal["commentary"][mode]
-            bg = colors["bg"][0]
-            print(f"{flavor}-{mode}: " + " ".join(
-                f"{k} {contrast(colors[k][0], bg):.1f}" for k in
-                ("fg", "comments", "red", "orange", "yellow", "green", "teal",
-                 "cyan", "blue", "violet", "magenta")))
+            dark = mode == "dark"
+            base = pal[mode]
+            variants = {mode: signature(base, lead, dark),
+                        f"{mode}-contrast": signature(high_contrast(base, lead, dark), lead, dark)}
+            for vname, vpal in variants.items():
+                t = modes.setdefault(vname, {})
+                old = t.get("colors", {})
+                colors = {}
+                for k, v in vpal.items():
+                    h = to_hex(*v)
+                    ansi = old[k][2] if isinstance(old.get(k), list) else ANSI.get(k, "black" if dark else "white")
+                    colors[k] = [h, h.lower(), ansi]
+                for k, r in pal["refs"].items():
+                    if k not in vpal:
+                        colors[k] = {"ref": r}
+                t["theme"] = f"lumina-{flavor}-{vname}"
+                t["background"] = mode
+                t["schema"] = flavor
+                t["colors"] = colors
+                text = pal["commentary"][mode]
+                if vname.endswith("contrast"):
+                    first, rest = text.split("\n", 1)
+                    text = first.replace("variant.", "variant, high contrast.") + "\n" + rest
+                t["commentary"] = text
+                bg = colors["bg"][0]
+                print(f"{flavor}-{vname}: " + " ".join(
+                    f"{k} {contrast(colors[k][0], bg):.1f}" for k in
+                    ["fg", "comments", lead] + [a for a in ACCENT_KEYS if a != lead]))
+        spec["flavors"][flavor] = {k: modes[k] for k in ("dark", "light", "dark-contrast", "light-contrast")}
     SPEC.write_text(json.dumps(spec, indent=2, ensure_ascii=False) + "\n")
 
 

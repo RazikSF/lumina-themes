@@ -61,7 +61,7 @@
     "extend": true
   },
   "hl-line": {
-    "bg": "base1",
+    "bg": "halo",
     "extend": true
   },
   "highlight": {
@@ -85,7 +85,7 @@
   },
   "line-number-current-line": {
     "fg": "schema.lead",
-    "bg": "base1"
+    "bg": "halo"
   },
   "line-number-major-tick": {
     "fg": "base5",
@@ -119,7 +119,7 @@
   },
   "show-paren-match": {
     "fg": "schema.lead",
-    "bg": "base3"
+    "bg": "halo2"
   },
   "show-paren-mismatch": {
     "fg": "red",
@@ -410,7 +410,7 @@
   },
   "org-agenda-date-today": {
     "fg": "schema.lead",
-    "bg": "base1",
+    "bg": "halo",
     "weight": "semi-bold",
     "extend": true
   },
@@ -476,7 +476,7 @@
     "bg": "base1"
   },
   "magit-section-highlight": {
-    "bg": "base1",
+    "bg": "halo",
     "extend": true
   },
   "magit-branch-current": {
@@ -531,7 +531,7 @@
   },
   "magit-diff-context-highlight": {
     "fg": "fg-alt",
-    "bg": "base1",
+    "bg": "halo",
     "extend": true
   },
   "magit-diff-file-heading": {
@@ -724,7 +724,7 @@
     "fg": "red"
   },
   "vertico-current": {
-    "bg": "base2",
+    "bg": "halo2",
     "extend": true
   },
   "vertico-group-title": {
@@ -775,7 +775,7 @@
   },
   "corfu-current": {
     "fg": "fg",
-    "bg": "base3"
+    "bg": "halo2"
   },
   "corfu-border": {
     "bg": "base3"
@@ -858,14 +858,14 @@
     "weight": "semi-bold"
   },
   "pulse-highlight-start-face": {
-    "bg": "region"
+    "bg": "glow"
   },
   "pulse-highlight-face": {
-    "bg": "region",
+    "bg": "glow",
     "extend": true
   },
   "nav-flash-face": {
-    "bg": "region",
+    "bg": "glow",
     "extend": true
   },
   "solaire-default-face": {
@@ -881,7 +881,7 @@
     "bg": "bg-alt"
   },
   "solaire-hl-line-face": {
-    "bg": "bg",
+    "bg": "halo",
     "extend": true
   },
   "solaire-org-hide-face": {
@@ -1055,7 +1055,7 @@
     "fg": "schema.lead"
   },
   "dirvish-hl-line": {
-    "bg": "base2",
+    "bg": "halo2",
     "extend": true
   },
   "eshell-prompt": {
@@ -1087,12 +1087,32 @@
     "bg": "surface"
   },
   "company-tooltip-selection": {
-    "bg": "base3"
+    "bg": "halo2"
   },
   "company-tooltip-common": {
     "fg": "schema.lead"
   },
   "company-tooltip-common-selection": {
     "fg": "schema.lead"
+  },
+  "auto-dim-other-buffers-face": {
+    "bg": "dim"
+  },
+  "auto-dim-other-buffers-hide-face": {
+    "fg": "dim",
+    "bg": "dim"
+  },
+  "goggles-added": {
+    "bg": "diff-added-refine"
+  },
+  "goggles-removed": {
+    "bg": "diff-removed-refine",
+    "extend": true
+  },
+  "goggles-changed": {
+    "bg": "glow"
+  },
+  "evil-goggles-default-face": {
+    "bg": "glow"
   }
 }

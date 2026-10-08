@@ -1,0 +1,26 @@
+# lumina-dawn-light-contrast -- Lumina (dawn, light)
+# Generated from spec/lumina.json. Do not edit by hand.
+[colors]
+foreground   = "#160D07"
+background   = "#FFFDF5"
+cursor_bg    = "#160D07"
+cursor_fg    = "#FFFDF5"
+cursor_border = "#160D07"
+selection_bg = "#DBC9B2"
+selection_fg = "#160D07"
+scrollbar_thumb = "#B2A99D"
+split = "#E1DACE"
+ansi = ["#FCF6ED", "#8E2F28", "#485C1F", "#703E00", "#305878", "#75405A", "#255D66", "#382E26"]
+brights = ["#797065", "#843C17", "#28604A", "#703E00", "#295171", "#574C77", "#255D66", "#160D07"]
+
+[colors.tab_bar]
+background = "#F9F3E8"
+[colors.tab_bar.active_tab]
+bg_color = "#FFFDF5"
+fg_color = "#160D07"
+[colors.tab_bar.inactive_tab]
+bg_color = "#F9F3E8"
+fg_color = "#554B42"
+
+[metadata]
+name = "lumina-dawn-light-contrast"

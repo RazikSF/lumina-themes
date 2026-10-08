@@ -1,0 +1,26 @@
+# lumina-tide-light-contrast -- Lumina (tide, light)
+# Generated from spec/lumina.json. Do not edit by hand.
+[colors]
+foreground   = "#031216"
+background   = "#F4FFFF"
+cursor_bg    = "#031216"
+cursor_fg    = "#F4FFFF"
+cursor_border = "#031216"
+selection_bg = "#B3D2CB"
+selection_fg = "#031216"
+scrollbar_thumb = "#9DAFB0"
+split = "#CFDEDF"
+ansi = ["#F0F9F9", "#883039", "#2F5F32", "#664F00", "#24577E", "#753C5E", "#0F5C6F", "#1F3439"]
+brights = ["#617678", "#7E3E1E", "#005546", "#664F00", "#1D5178", "#56477F", "#0F5C6F", "#031216"]
+
+[colors.tab_bar]
+background = "#E7F8F6"
+[colors.tab_bar.active_tab]
+bg_color = "#F4FFFF"
+fg_color = "#031216"
+[colors.tab_bar.inactive_tab]
+bg_color = "#E7F8F6"
+fg_color = "#3B5255"
+
+[metadata]
+name = "lumina-tide-light-contrast"
