@@ -131,6 +131,45 @@ PALETTES = {
             "light": "Lumina Oxblood, light variant.\nWarm programme paper under the same gilt spot; deep inks of velvet rose, brass, wine and sage at equal weight.",
         },
     },
+    "canopy": {
+        "dark": {
+            "bg": (.215, .02, 148), "bg-alt": (.19, .018, 148), "fg": (.86, .025, 120), "fg-alt": (.74, .03, 125),
+            "base0": (.165, .016, 148), "base1": (.235, .022, 148), "base2": (.27, .024, 146), "base3": (.31, .026, 145),
+            "base4": (.40, .028, 145), "base5": (.52, .03, 140), "base6": (.63, .03, 135), "base7": (.75, .03, 128),
+            "base8": (.86, .025, 120), "surface": (.245, .023, 148),
+            "yellow": (.79, .11, 88), "green": (.74, .085, 140), "teal": (.71, .06, 175), "cyan": (.71, .05, 205),
+            "blue": (.70, .06, 250), "dark-blue": (.60, .06, 250), "violet": (.70, .06, 295), "magenta": (.69, .07, 350),
+            "red": (.68, .10, 35), "orange": (.73, .09, 62), "dark-cyan": (.60, .05, 205),
+            "comments": (.60, .035, 140), "doc-comments": (.66, .04, 135), "strings": (.73, .045, 115),
+            "region": (.33, .04, 110), "selection": (.33, .04, 110),
+            "diff-added-bg": (.28, .045, 145), "diff-removed-bg": (.27, .04, 25), "diff-changed-bg": (.27, .035, 85),
+            "diff-added-refine": (.35, .07, 145), "diff-removed-refine": (.34, .07, 25),
+        },
+        "light": {
+            "bg": (.965, .014, 130), "bg-alt": (.935, .018, 132), "fg": (.33, .025, 150), "fg-alt": (.43, .028, 148),
+            "base0": (.99, .006, 130), "base1": (.945, .016, 132), "base2": (.91, .02, 134), "base3": (.86, .023, 136),
+            "base4": (.76, .026, 140), "base5": (.62, .028, 144), "base6": (.50, .028, 147), "base7": (.40, .027, 150),
+            "base8": (.33, .025, 150), "surface": (.945, .016, 132),
+            "yellow": (.53, .10, 80), "green": (.51, .09, 145), "teal": (.51, .07, 175), "cyan": (.51, .06, 210),
+            "blue": (.49, .08, 250), "dark-blue": (.41, .08, 250), "violet": (.49, .08, 295), "magenta": (.49, .09, 350),
+            "red": (.50, .11, 35), "orange": (.53, .10, 60), "dark-cyan": (.41, .05, 210),
+            "comments": (.535, .03, 140), "doc-comments": (.48, .03, 140), "strings": (.51, .05, 115),
+            "region": (.89, .04, 120), "selection": (.89, .04, 120),
+            "diff-added-bg": (.92, .045, 145), "diff-removed-bg": (.93, .03, 25), "diff-changed-bg": (.93, .035, 85),
+            "diff-added-refine": (.86, .07, 145), "diff-removed-refine": (.87, .06, 25),
+        },
+        "refs": {
+            "grey": "base5", "highlight": "yellow", "vertical-bar": "base3", "builtin": "violet",
+            "constants": "red", "functions": "yellow", "keywords": "green", "methods": "cyan",
+            "operators": "base6", "type": "orange", "variables": "fg", "numbers": "red", "error": "red",
+            "warning": "orange", "success": "green", "vc-modified": "yellow", "vc-added": "green",
+            "vc-deleted": "red",
+        },
+        "commentary": {
+            "dark": "Lumina Canopy, dark variant.\nA pine forest at noon: a single shaft of sun pierces the canopy. Chlorophyll, pine, russet and heather at equal weight in the shade, moss-bark strings.",
+            "light": "Lumina Canopy, light variant.\nLeaf-tinted paper under the same shaft of sun; deep inks of chlorophyll, pine, russet and heather at equal weight.",
+        },
+    },
 }
 
 

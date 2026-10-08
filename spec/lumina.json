@@ -960,191 +960,219 @@
         "schema": "canopy",
         "colors": {
           "bg": [
-            "#0F1810",
-            "#1c1c1c",
+            "#131C14",
+            "#131c14",
+            "black"
+          ],
+          "bg-alt": [
+            "#0E160F",
+            "#0e160f",
             "black"
           ],
           "fg": [
-            "#D5DDCA",
-            "#dfdfdf",
+            "#CFD4C2",
+            "#cfd4c2",
             "white"
           ],
-          "bg-alt": [
-            "#0A100B",
-            "#262626",
-            "black"
-          ],
           "fg-alt": [
-            "#8AA08A",
-            "#bcbcbc",
+            "#A6AE9A",
+            "#a6ae9a",
             "brightwhite"
           ],
           "base0": [
-            "#070D08",
-            "#121212",
+            "#0A100A",
+            "#0a100a",
             "black"
           ],
           "base1": [
-            "#152018",
-            "#1c1c1c",
+            "#172118",
+            "#172118",
             "brightblack"
           ],
           "base2": [
-            "#1E2A20",
-            "#262626",
+            "#1F2A1F",
+            "#1f2a1f",
             "brightblack"
           ],
           "base3": [
-            "#2A372C",
-            "#303030",
+            "#283428",
+            "#283428",
             "brightblack"
           ],
           "base4": [
-            "#3D4F40",
-            "#4e4e4e",
+            "#3F4C3E",
+            "#3f4c3e",
             "brightblack"
           ],
           "base5": [
-            "#62785F",
-            "#6c6c6c",
+            "#606D5D",
+            "#606d5d",
             "brightblack"
           ],
           "base6": [
-            "#8AA08A",
-            "#8a8a8a",
+            "#818E7B",
+            "#818e7b",
             "brightblack"
           ],
           "base7": [
-            "#B2C2B0",
-            "#b2b2b2",
+            "#A8B29E",
+            "#a8b29e",
             "brightblack"
           ],
           "base8": [
-            "#D5DDCA",
-            "#dfdfdf",
+            "#CFD4C2",
+            "#cfd4c2",
             "white"
+          ],
+          "surface": [
+            "#19241A",
+            "#19241a",
+            "black"
+          ],
+          "yellow": [
+            "#D8B763",
+            "#d8b763",
+            "yellow"
+          ],
+          "green": [
+            "#8EB885",
+            "#8eb885",
+            "green"
+          ],
+          "teal": [
+            "#79AE9F",
+            "#79ae9f",
+            "brightgreen"
+          ],
+          "cyan": [
+            "#7DABB0",
+            "#7dabb0",
+            "brightcyan"
+          ],
+          "blue": [
+            "#82A2C3",
+            "#82a2c3",
+            "brightblue"
+          ],
+          "dark-blue": [
+            "#6583A3",
+            "#6583a3",
+            "blue"
+          ],
+          "violet": [
+            "#A197C0",
+            "#a197c0",
+            "brightmagenta"
+          ],
+          "magenta": [
+            "#BD8AA1",
+            "#bd8aa1",
+            "magenta"
+          ],
+          "red": [
+            "#CE816E",
+            "#ce816e",
+            "red"
+          ],
+          "orange": [
+            "#D19B6C",
+            "#d19b6c",
+            "brightred"
+          ],
+          "dark-cyan": [
+            "#5C898E",
+            "#5c898e",
+            "cyan"
+          ],
+          "comments": [
+            "#758672",
+            "#758672",
+            "brightblack"
+          ],
+          "doc-comments": [
+            "#889880",
+            "#889880",
+            "brightblack"
+          ],
+          "strings": [
+            "#A6AB8B",
+            "#a6ab8b",
+            "white"
+          ],
+          "region": [
+            "#36371F",
+            "#36371f",
+            "brightblack"
+          ],
+          "selection": [
+            "#36371F",
+            "#36371f",
+            "brightblack"
+          ],
+          "diff-added-bg": [
+            "#1A2F1B",
+            "#1a2f1b",
+            "black"
+          ],
+          "diff-removed-bg": [
+            "#381E1C",
+            "#381e1c",
+            "black"
+          ],
+          "diff-changed-bg": [
+            "#2E2511",
+            "#2e2511",
+            "black"
+          ],
+          "diff-added-refine": [
+            "#214423",
+            "#214423",
+            "black"
+          ],
+          "diff-removed-refine": [
+            "#572825",
+            "#572825",
+            "black"
           ],
           "grey": {
             "ref": "base5"
           },
-          "yellow": [
-            "#EAC560",
-            "#eac560",
-            "yellow"
-          ],
-          "orange": [
-            "#D89058",
-            "#d89058",
-            "brightred"
-          ],
-          "red": [
-            "#C46A50",
-            "#c46a50",
-            "red"
-          ],
-          "green": [
-            "#80B87C",
-            "#80b87c",
-            "green"
-          ],
-          "teal": [
-            "#4C9C84",
-            "#4c9c84",
-            "brightgreen"
-          ],
-          "blue": [
-            "#6088C0",
-            "#6088c0",
-            "brightblue"
-          ],
-          "dark-blue": [
-            "#385468",
-            "#385468",
-            "blue"
-          ],
-          "cyan": [
-            "#6CA098",
-            "#6ca098",
-            "brightcyan"
-          ],
-          "violet": [
-            "#968AC0",
-            "#968ac0",
-            "brightmagenta"
-          ],
-          "magenta": [
-            "#B07895",
-            "#b07895",
-            "magenta"
-          ],
-          "dark-cyan": [
-            "#3F6868",
-            "#3f6868",
-            "cyan"
-          ],
           "highlight": {
             "ref": "yellow"
           },
           "vertical-bar": {
             "ref": "base3"
           },
-          "selection": [
-            "#243424",
-            "#303030",
-            "brightblack"
-          ],
           "builtin": {
-            "ref": "yellow"
+            "ref": "violet"
           },
-          "comments": [
-            "#62785F",
-            "#62785f",
-            "brightblack"
-          ],
-          "doc-comments": [
-            "#728A6E",
-            "#728a6e",
-            "brightblack"
-          ],
           "constants": {
-            "ref": "orange"
+            "ref": "red"
           },
           "functions": {
-            "ref": "green"
-          },
-          "keywords": {
             "ref": "yellow"
           },
+          "keywords": {
+            "ref": "green"
+          },
           "methods": {
-            "ref": "teal"
+            "ref": "cyan"
           },
           "operators": {
             "ref": "base6"
           },
           "type": {
-            "ref": "teal"
+            "ref": "orange"
           },
-          "strings": [
-            "#8E9C7C",
-            "#8e9c7c",
-            "white"
-          ],
           "variables": {
             "ref": "fg"
           },
           "numbers": {
-            "ref": "orange"
+            "ref": "red"
           },
-          "region": [
-            "#243424",
-            "#303030",
-            "brightblack"
-          ],
-          "error": [
-            "#FF4860",
-            "#ff4860",
-            "red"
-          ],
+          "error": {
+            "ref": "red"
+          },
           "warning": {
             "ref": "orange"
           },
@@ -1157,13 +1185,11 @@
           "vc-added": {
             "ref": "green"
           },
-          "vc-deleted": [
-            "#E04050",
-            "#e04050",
-            "red"
-          ]
+          "vc-deleted": {
+            "ref": "red"
+          }
         },
-        "commentary": "Lumina Canopy, dark variant.\nA pine forest at noon: a single shaft of sun pierces the canopy. Autumn russet and amber in the lit leaves, chlorophyll and pine in shadow, moss-bark strings."
+        "commentary": "Lumina Canopy, dark variant.\nA pine forest at noon: a single shaft of sun pierces the canopy. Chlorophyll, pine, russet and heather at equal weight in the shade, moss-bark strings."
       },
       "light": {
         "theme": "lumina-canopy-light",
@@ -1171,191 +1197,219 @@
         "schema": "canopy",
         "colors": {
           "bg": [
-            "#EEF5EA",
-            "#ffffff",
+            "#F0F5EC",
+            "#f0f5ec",
+            "white"
+          ],
+          "bg-alt": [
+            "#E5ECE0",
+            "#e5ece0",
             "white"
           ],
           "fg": [
-            "#1F2A20",
-            "#1e1e1e",
+            "#2C392F",
+            "#2c392f",
             "black"
           ],
-          "bg-alt": [
-            "#E2EEDC",
-            "#f0f0f0",
-            "white"
-          ],
           "fg-alt": [
-            "#4C6048",
-            "#4a4a4a",
+            "#465447",
+            "#465447",
             "brightwhite"
           ],
           "base0": [
-            "#FCFFFA",
-            "#ffffff",
+            "#FAFDF8",
+            "#fafdf8",
             "white"
           ],
           "base1": [
-            "#E2EEDC",
-            "#f0f0f0",
+            "#E9EFE4",
+            "#e9efe4",
             "brightblack"
           ],
           "base2": [
-            "#D5E3CC",
-            "#e6e6e6",
+            "#DCE4D7",
+            "#dce4d7",
             "brightblack"
           ],
           "base3": [
-            "#BCCEB2",
-            "#dadada",
+            "#CAD5C6",
+            "#cad5c6",
             "brightblack"
           ],
           "base4": [
-            "#92A88A",
-            "#c2c2c2",
+            "#A9B5A6",
+            "#a9b5a6",
             "brightblack"
           ],
           "base5": [
-            "#687C60",
-            "#9d9d9d",
+            "#7C8B7C",
+            "#7c8b7c",
             "brightblack"
           ],
           "base6": [
-            "#4C6048",
-            "#737373",
+            "#59685A",
+            "#59685a",
             "brightblack"
           ],
           "base7": [
-            "#2D4032",
-            "#565656",
+            "#3E4C40",
+            "#3e4c40",
             "brightblack"
           ],
           "base8": [
-            "#1F2A20",
-            "#2a2a2a",
+            "#2C392F",
+            "#2c392f",
             "black"
+          ],
+          "surface": [
+            "#E9EFE4",
+            "#e9efe4",
+            "white"
+          ],
+          "yellow": [
+            "#8A6419",
+            "#8a6419",
+            "yellow"
+          ],
+          "green": [
+            "#437445",
+            "#437445",
+            "green"
+          ],
+          "teal": [
+            "#347364",
+            "#347364",
+            "brightgreen"
+          ],
+          "cyan": [
+            "#387079",
+            "#387079",
+            "brightcyan"
+          ],
+          "blue": [
+            "#3B638C",
+            "#3b638c",
+            "brightblue"
+          ],
+          "dark-blue": [
+            "#254D74",
+            "#254d74",
+            "blue"
+          ],
+          "violet": [
+            "#645789",
+            "#645789",
+            "brightmagenta"
+          ],
+          "magenta": [
+            "#864A68",
+            "#864a68",
+            "magenta"
+          ],
+          "red": [
+            "#974936",
+            "#974936",
+            "red"
+          ],
+          "orange": [
+            "#955C28",
+            "#955c28",
+            "brightred"
+          ],
+          "dark-cyan": [
+            "#265259",
+            "#265259",
+            "cyan"
+          ],
+          "comments": [
+            "#647261",
+            "#647261",
+            "brightblack"
+          ],
+          "doc-comments": [
+            "#556252",
+            "#556252",
+            "brightblack"
+          ],
+          "strings": [
+            "#656A48",
+            "#656a48",
+            "black"
+          ],
+          "region": [
+            "#D7DFC2",
+            "#d7dfc2",
+            "brightblack"
+          ],
+          "selection": [
+            "#D7DFC2",
+            "#d7dfc2",
+            "brightblack"
+          ],
+          "diff-added-bg": [
+            "#D3EDD3",
+            "#d3edd3",
+            "white"
+          ],
+          "diff-removed-bg": [
+            "#FCE1DE",
+            "#fce1de",
+            "white"
+          ],
+          "diff-changed-bg": [
+            "#F3E7CE",
+            "#f3e7ce",
+            "white"
+          ],
+          "diff-added-refine": [
+            "#B5DEB5",
+            "#b5deb5",
+            "white"
+          ],
+          "diff-removed-refine": [
+            "#FAC6C1",
+            "#fac6c1",
+            "white"
           ],
           "grey": {
             "ref": "base5"
           },
-          "yellow": [
-            "#825818",
-            "#825818",
-            "yellow"
-          ],
-          "orange": [
-            "#94581E",
-            "#94581e",
-            "brightred"
-          ],
-          "red": [
-            "#94422E",
-            "#94422e",
-            "red"
-          ],
-          "green": [
-            "#2A6E3E",
-            "#2a6e3e",
-            "green"
-          ],
-          "teal": [
-            "#1A6E58",
-            "#1a6e58",
-            "brightgreen"
-          ],
-          "blue": [
-            "#2C5878",
-            "#2c5878",
-            "brightblue"
-          ],
-          "dark-blue": [
-            "#1E3E54",
-            "#1e3e54",
-            "blue"
-          ],
-          "cyan": [
-            "#386870",
-            "#386870",
-            "brightcyan"
-          ],
-          "violet": [
-            "#5A4884",
-            "#5a4884",
-            "brightmagenta"
-          ],
-          "magenta": [
-            "#84486A",
-            "#84486a",
-            "magenta"
-          ],
-          "dark-cyan": [
-            "#1E4848",
-            "#1e4848",
-            "cyan"
-          ],
           "highlight": {
             "ref": "yellow"
           },
           "vertical-bar": {
             "ref": "base3"
           },
-          "selection": [
-            "#CFE2C2",
-            "#dadada",
-            "brightblack"
-          ],
           "builtin": {
-            "ref": "yellow"
+            "ref": "violet"
           },
-          "comments": [
-            "#687C60",
-            "#687c60",
-            "brightblack"
-          ],
-          "doc-comments": [
-            "#587050",
-            "#587050",
-            "brightblack"
-          ],
           "constants": {
-            "ref": "orange"
+            "ref": "red"
           },
           "functions": {
-            "ref": "green"
-          },
-          "keywords": {
             "ref": "yellow"
           },
+          "keywords": {
+            "ref": "green"
+          },
           "methods": {
-            "ref": "teal"
+            "ref": "cyan"
           },
           "operators": {
             "ref": "base6"
           },
           "type": {
-            "ref": "teal"
+            "ref": "orange"
           },
-          "strings": [
-            "#4E5E48",
-            "#4e5e48",
-            "black"
-          ],
           "variables": {
             "ref": "fg"
           },
           "numbers": {
-            "ref": "orange"
+            "ref": "red"
           },
-          "region": [
-            "#CFE2C2",
-            "#dadada",
-            "brightblack"
-          ],
-          "error": [
-            "#8A1A30",
-            "#8a1a30",
-            "red"
-          ],
+          "error": {
+            "ref": "red"
+          },
           "warning": {
             "ref": "orange"
           },
@@ -1368,13 +1422,11 @@
           "vc-added": {
             "ref": "green"
           },
-          "vc-deleted": [
-            "#8A1A30",
-            "#8a1a30",
-            "red"
-          ]
+          "vc-deleted": {
+            "ref": "red"
+          }
         },
-        "commentary": "Lumina Canopy, light variant.\nGreen-tinted paper; deep sun-shaft gold ink, autumn russet and amber inks, chlorophyll and pine inks."
+        "commentary": "Lumina Canopy, light variant.\nLeaf-tinted paper under the same shaft of sun; deep inks of chlorophyll, pine, russet and heather at equal weight."
       }
     },
     "slate": {
