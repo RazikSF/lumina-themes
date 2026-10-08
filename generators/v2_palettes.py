@@ -305,9 +305,9 @@ VIVID = {
                  "violet": (.71, .16, 298), "magenta": (.72, .17, 340), "dark-blue": (.62, .13, 258),
                  "dark-cyan": (.62, .10, 218), "comments": (.60, .02, 275), "doc-comments": (.66, .025, 275)},
         "light": {**field(False, 275, .005, bg=.985, fg=.32), **diffs(False),
-                  "spark": (.26, .03, 280), "red": (.51, .18, 25), "orange": (.53, .14, 55), "yellow": (.53, .12, 90),
+                  "spark": (.37, .21, 276), "red": (.51, .18, 25), "orange": (.53, .14, 55), "yellow": (.53, .12, 90),
                   "green": (.51, .15, 148), "teal": (.51, .10, 185), "cyan": (.50, .11, 220), "blue": (.47, .17, 260),
-                  "violet": (.47, .18, 298), "magenta": (.49, .19, 340), "dark-blue": (.40, .15, 260),
+                  "violet": (.47, .18, 310), "magenta": (.49, .19, 340), "dark-blue": (.40, .15, 260),
                   "dark-cyan": (.41, .09, 220), "comments": (.53, .015, 275), "doc-comments": (.47, .018, 275)},
         "refs": {"grey": "base5", "highlight": "spark", "vertical-bar": "base3", "builtin": "magenta",
                  "constants": "orange", "functions": "blue", "keywords": "violet", "methods": "cyan",
@@ -316,7 +316,11 @@ VIVID = {
                  "vc-added": "green", "vc-deleted": "red"},
         "commentary": {
             "dark": "Lumina Prisma, dark variant.\nA single white ray enters a glass prism: the ray is the lamp, the code is its spectrum, every hue at equal weight.",
-            "light": "Lumina Prisma, light variant.\nWhite paper and one stroke of ink; the code is a full spectrum of vivid inks at equal weight.",
+            "light": "Lumina Prisma, light variant.\nWhite paper in daylight; the lamp turns ultraviolet, the light just beyond the spectrum, and the code is a full spectrum of vivid inks at equal weight.",
+            "light-ink": "Lumina Prisma, light ink variant.\nBlack and white: white paper, one lamp of black ink, and the code as a full spectrum of vivid inks at equal weight.",
+        },
+        "variants": {
+            "light-ink": ("light", {"spark": (.26, .03, 280), "violet": (.47, .18, 298)}),
         },
     },
 }
@@ -406,9 +410,9 @@ def write(flavors):
         pal = PALETTES[flavor]
         lead = SCHEMAS[flavor]["lead"]
         modes = spec["flavors"].setdefault(flavor, {})
-        for mode in ("dark", "light"):
-            dark = mode == "dark"
-            base = pal[mode]
+        extra = {name: (src, {**pal[src], **over}) for name, (src, over) in pal.get("variants", {}).items()}
+        for mode, (src, base) in {"dark": ("dark", pal["dark"]), "light": ("light", pal["light"]), **extra}.items():
+            dark = src == "dark"
             variants = {mode: signature(base, lead, dark),
                         f"{mode}-contrast": signature(high_contrast(base, lead, dark), lead, dark)}
             for vname, vpal in variants.items():
@@ -423,10 +427,10 @@ def write(flavors):
                     if k not in vpal:
                         colors[k] = {"ref": r}
                 t["theme"] = f"lumina-{flavor}-{vname}"
-                t["background"] = mode
+                t["background"] = src
                 t["schema"] = flavor
                 t["colors"] = colors
-                text = pal["commentary"][mode]
+                text = pal["commentary"].get(mode, pal["commentary"][src])
                 if vname.endswith("contrast"):
                     first, rest = text.split("\n", 1)
                     text = first.replace("variant.", "variant, high contrast.") + "\n" + rest
@@ -435,7 +439,8 @@ def write(flavors):
                 print(f"{flavor}-{vname}: " + " ".join(
                     f"{k} {contrast(colors[k][0], bg):.1f}" for k in
                     ["fg", "comments", lead] + [a for a in ACCENT_KEYS if a != lead]))
-        spec["flavors"][flavor] = {k: modes[k] for k in ("dark", "light", "dark-contrast", "light-contrast")}
+        order = ["dark", "light", *extra, "dark-contrast", "light-contrast", *(f"{e}-contrast" for e in extra)]
+        spec["flavors"][flavor] = {k: modes[k] for k in order}
     SPEC.write_text(json.dumps(spec, indent=2, ensure_ascii=False) + "\n")
 
 

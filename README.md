@@ -9,9 +9,10 @@ are reading, the current line, the heading you are in) and everything
 else sits in the room at equal weight, never louder than the lamp.
 
 Nine flavors in two ranges, each in dark, light and high contrast:
-36 themes.
+38 themes. The flagship is **Prisma**: a white ray is the lamp, the
+code is its spectrum.
 
-<img src="assets/screens/lumina-dawn-dark.svg" width="49%"> <img src="assets/screens/lumina-dawn-light.svg" width="49%">
+<img src="assets/screens/lumina-prisma-dark.svg" width="49%"> <img src="assets/screens/lumina-prisma-light.svg" width="49%">
 
 ## What makes it different
 
@@ -58,7 +59,7 @@ Saturated colour, still at equal lightness and still under one lamp.
 | **Nocturne** | sodium streetlamp | a city at night under an indigo sky; neon violet, cobalt, jade |
 | **Amethyst** | citrine | inside a split amethyst geode; orchid, mint, ice blue |
 | **Obsidian** | molten lava | near-black volcanic glass; glacier teal, cobalt, magenta |
-| **Prisma** | the white ray | white light through a prism; the code is the full spectrum |
+| **Prisma** | white ray; ultraviolet in light | white light through a prism; the code is the full spectrum. Also `lumina-prisma-light-ink`: black and white, one lamp of black ink |
 
 ### Gallery
 
@@ -90,24 +91,29 @@ Saturated colour, still at equal lightness and still under one lamp.
 
 <img src="assets/screens/lumina-obsidian-dark.svg" width="49%"> <img src="assets/screens/lumina-obsidian-light.svg" width="49%">
 
-**Prisma**
+**Dawn**
 
-<img src="assets/screens/lumina-prisma-dark.svg" width="49%"> <img src="assets/screens/lumina-prisma-light.svg" width="49%">
+<img src="assets/screens/lumina-dawn-dark.svg" width="49%"> <img src="assets/screens/lumina-dawn-light.svg" width="49%">
+
+**Prisma, light ink** (black and white)
+
+<img src="assets/screens/lumina-prisma-light-ink.svg" width="49%">
 
 ### Names
 
 `lumina-<flavor>-<dark|light>` and `lumina-<flavor>-<dark|light>-contrast`,
 for example `lumina-nocturne-dark` or `lumina-dawn-light-contrast`.
+Prisma adds `lumina-prisma-light-ink` and `lumina-prisma-light-ink-contrast`.
 
 ## Supported targets
 
 | Target | Output |
 |---|---|
-| **Emacs** (vanilla `deftheme`)  | `emacs/themes/*.el` (36) |
-| **Neovim** (Lua colorscheme)    | `nvim/colors/*.lua` (36) |
-| **VS Code** (extension)         | `vscode/themes/*.json` (36) + `package.json` |
-| **WezTerm** (color scheme)      | `wezterm/*.toml` (36) |
-| **base24** (tinted-theming)     | `base24/*.yaml` (36) |
+| **Emacs** (vanilla `deftheme`)  | `emacs/themes/*.el` (38) |
+| **Neovim** (Lua colorscheme)    | `nvim/colors/*.lua` (38) |
+| **VS Code** (extension)         | `vscode/themes/*.json` (38) + `package.json` |
+| **WezTerm** (color scheme)      | `wezterm/*.toml` (38) |
+| **base24** (tinted-theming)     | `base24/*.yaml` (38) |
 
 The Emacs files require no external dependency and load on a bare
 `emacs -Q`. They style the core UI, syntax, org, magit, diff, smerge,

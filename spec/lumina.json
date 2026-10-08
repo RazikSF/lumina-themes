@@ -8587,6 +8587,266 @@
             "white"
           ],
           "spark": [
+            "#2F17AA",
+            "#2f17aa",
+            "white"
+          ],
+          "red": [
+            "#B7262B",
+            "#b7262b",
+            "red"
+          ],
+          "orange": [
+            "#A75000",
+            "#a75000",
+            "brightred"
+          ],
+          "yellow": [
+            "#876700",
+            "#876700",
+            "yellow"
+          ],
+          "green": [
+            "#007C2E",
+            "#007c2e",
+            "green"
+          ],
+          "teal": [
+            "#00786E",
+            "#00786e",
+            "brightgreen"
+          ],
+          "cyan": [
+            "#00708E",
+            "#00708e",
+            "cyan"
+          ],
+          "blue": [
+            "#1554B8",
+            "#1554b8",
+            "blue"
+          ],
+          "violet": [
+            "#7931A4",
+            "#7931a4",
+            "brightmagenta"
+          ],
+          "magenta": [
+            "#A01F81",
+            "#a01f81",
+            "magenta"
+          ],
+          "dark-blue": [
+            "#0B4196",
+            "#0b4196",
+            "brightblue"
+          ],
+          "dark-cyan": [
+            "#00556C",
+            "#00556c",
+            "brightcyan"
+          ],
+          "comments": [
+            "#696B75",
+            "#696b75",
+            "white"
+          ],
+          "doc-comments": [
+            "#585A65",
+            "#585a65",
+            "white"
+          ],
+          "halo": [
+            "#E1E5F6",
+            "#e1e5f6",
+            "white"
+          ],
+          "halo2": [
+            "#D0D6F1",
+            "#d0d6f1",
+            "white"
+          ],
+          "region": [
+            "#BBC3EB",
+            "#bbc3eb",
+            "white"
+          ],
+          "selection": [
+            "#BBC3EB",
+            "#bbc3eb",
+            "white"
+          ],
+          "glow": [
+            "#9BA6E1",
+            "#9ba6e1",
+            "white"
+          ],
+          "dim": [
+            "#F1F2F4",
+            "#f1f2f4",
+            "white"
+          ],
+          "grey": {
+            "ref": "base5"
+          },
+          "highlight": {
+            "ref": "spark"
+          },
+          "vertical-bar": {
+            "ref": "base3"
+          },
+          "builtin": {
+            "ref": "magenta"
+          },
+          "constants": {
+            "ref": "orange"
+          },
+          "functions": {
+            "ref": "blue"
+          },
+          "keywords": {
+            "ref": "violet"
+          },
+          "methods": {
+            "ref": "cyan"
+          },
+          "operators": {
+            "ref": "base6"
+          },
+          "type": {
+            "ref": "yellow"
+          },
+          "variables": {
+            "ref": "fg"
+          },
+          "numbers": {
+            "ref": "red"
+          },
+          "strings": {
+            "ref": "green"
+          },
+          "error": {
+            "ref": "red"
+          },
+          "warning": {
+            "ref": "orange"
+          },
+          "success": {
+            "ref": "green"
+          },
+          "vc-modified": {
+            "ref": "yellow"
+          },
+          "vc-added": {
+            "ref": "green"
+          },
+          "vc-deleted": {
+            "ref": "red"
+          }
+        },
+        "commentary": "Lumina Prisma, light variant.\nWhite paper in daylight; the lamp turns ultraviolet, the light just beyond the spectrum, and the code is a full spectrum of vivid inks at equal weight."
+      },
+      "light-ink": {
+        "theme": "lumina-prisma-light-ink",
+        "background": "light",
+        "schema": "prisma",
+        "colors": {
+          "bg": [
+            "#F9FAFC",
+            "#f9fafc",
+            "black"
+          ],
+          "bg-alt": [
+            "#EFF0F5",
+            "#eff0f5",
+            "white"
+          ],
+          "base0": [
+            "#FEFFFF",
+            "#feffff",
+            "white"
+          ],
+          "base1": [
+            "#F2F3F8",
+            "#f2f3f8",
+            "white"
+          ],
+          "surface": [
+            "#F2F3F8",
+            "#f2f3f8",
+            "white"
+          ],
+          "base2": [
+            "#E6E8ED",
+            "#e6e8ed",
+            "white"
+          ],
+          "base3": [
+            "#D6D7DC",
+            "#d6d7dc",
+            "white"
+          ],
+          "base4": [
+            "#B0B1B6",
+            "#b0b1b6",
+            "white"
+          ],
+          "base5": [
+            "#85868A",
+            "#85868a",
+            "white"
+          ],
+          "base6": [
+            "#626367",
+            "#626367",
+            "white"
+          ],
+          "base7": [
+            "#46474C",
+            "#46474c",
+            "white"
+          ],
+          "fg": [
+            "#323336",
+            "#323336",
+            "white"
+          ],
+          "base8": [
+            "#323336",
+            "#323336",
+            "white"
+          ],
+          "fg-alt": [
+            "#4F5053",
+            "#4f5053",
+            "white"
+          ],
+          "diff-added-bg": [
+            "#D8EFDC",
+            "#d8efdc",
+            "white"
+          ],
+          "diff-removed-bg": [
+            "#FFDFDD",
+            "#ffdfdd",
+            "white"
+          ],
+          "diff-changed-bg": [
+            "#F1E8CA",
+            "#f1e8ca",
+            "white"
+          ],
+          "diff-added-refine": [
+            "#B4E2BC",
+            "#b4e2bc",
+            "white"
+          ],
+          "diff-removed-refine": [
+            "#FFC3C0",
+            "#ffc3c0",
+            "white"
+          ],
+          "spark": [
             "#212232",
             "#212232",
             "white"
@@ -8744,7 +9004,7 @@
             "ref": "red"
           }
         },
-        "commentary": "Lumina Prisma, light variant.\nWhite paper and one stroke of ink; the code is a full spectrum of vivid inks at equal weight."
+        "commentary": "Lumina Prisma, light ink variant.\nBlack and white: white paper, one lamp of black ink, and the code as a full spectrum of vivid inks at equal weight."
       },
       "dark-contrast": {
         "theme": "lumina-prisma-dark-contrast",
@@ -9107,6 +9367,266 @@
             "white"
           ],
           "spark": [
+            "#2F17AA",
+            "#2f17aa",
+            "white"
+          ],
+          "red": [
+            "#9B0012",
+            "#9b0012",
+            "red"
+          ],
+          "orange": [
+            "#863200",
+            "#863200",
+            "brightred"
+          ],
+          "yellow": [
+            "#694A00",
+            "#694a00",
+            "yellow"
+          ],
+          "green": [
+            "#006414",
+            "#006414",
+            "green"
+          ],
+          "teal": [
+            "#006157",
+            "#006157",
+            "brightgreen"
+          ],
+          "cyan": [
+            "#005C79",
+            "#005c79",
+            "cyan"
+          ],
+          "blue": [
+            "#0548AB",
+            "#0548ab",
+            "blue"
+          ],
+          "violet": [
+            "#6E2397",
+            "#6e2397",
+            "brightmagenta"
+          ],
+          "magenta": [
+            "#8C006F",
+            "#8c006f",
+            "magenta"
+          ],
+          "dark-blue": [
+            "#0B4196",
+            "#0b4196",
+            "brightblue"
+          ],
+          "dark-cyan": [
+            "#00556C",
+            "#00556c",
+            "brightcyan"
+          ],
+          "comments": [
+            "#5C5F68",
+            "#5c5f68",
+            "white"
+          ],
+          "doc-comments": [
+            "#565964",
+            "#565964",
+            "white"
+          ],
+          "halo": [
+            "#E4E8F9",
+            "#e4e8f9",
+            "white"
+          ],
+          "halo2": [
+            "#D3D9F4",
+            "#d3d9f4",
+            "white"
+          ],
+          "region": [
+            "#BEC6EE",
+            "#bec6ee",
+            "white"
+          ],
+          "selection": [
+            "#BEC6EE",
+            "#bec6ee",
+            "white"
+          ],
+          "glow": [
+            "#9DA8E3",
+            "#9da8e3",
+            "white"
+          ],
+          "dim": [
+            "#F4F5F7",
+            "#f4f5f7",
+            "white"
+          ],
+          "grey": {
+            "ref": "base5"
+          },
+          "highlight": {
+            "ref": "spark"
+          },
+          "vertical-bar": {
+            "ref": "base3"
+          },
+          "builtin": {
+            "ref": "magenta"
+          },
+          "constants": {
+            "ref": "orange"
+          },
+          "functions": {
+            "ref": "blue"
+          },
+          "keywords": {
+            "ref": "violet"
+          },
+          "methods": {
+            "ref": "cyan"
+          },
+          "operators": {
+            "ref": "base6"
+          },
+          "type": {
+            "ref": "yellow"
+          },
+          "variables": {
+            "ref": "fg"
+          },
+          "numbers": {
+            "ref": "red"
+          },
+          "strings": {
+            "ref": "green"
+          },
+          "error": {
+            "ref": "red"
+          },
+          "warning": {
+            "ref": "orange"
+          },
+          "success": {
+            "ref": "green"
+          },
+          "vc-modified": {
+            "ref": "yellow"
+          },
+          "vc-added": {
+            "ref": "green"
+          },
+          "vc-deleted": {
+            "ref": "red"
+          }
+        },
+        "commentary": "Lumina Prisma, light variant, high contrast.\nWhite paper in daylight; the lamp turns ultraviolet, the light just beyond the spectrum, and the code is a full spectrum of vivid inks at equal weight."
+      },
+      "light-ink-contrast": {
+        "theme": "lumina-prisma-light-ink-contrast",
+        "background": "light",
+        "schema": "prisma",
+        "colors": {
+          "bg": [
+            "#FDFDFF",
+            "#fdfdff",
+            "black"
+          ],
+          "bg-alt": [
+            "#F2F3F8",
+            "#f2f3f8",
+            "white"
+          ],
+          "base0": [
+            "#FEFFFF",
+            "#feffff",
+            "white"
+          ],
+          "base1": [
+            "#F5F6FC",
+            "#f5f6fc",
+            "white"
+          ],
+          "surface": [
+            "#F5F6FC",
+            "#f5f6fc",
+            "white"
+          ],
+          "base2": [
+            "#EAEBF0",
+            "#eaebf0",
+            "white"
+          ],
+          "base3": [
+            "#D9DADF",
+            "#d9dadf",
+            "white"
+          ],
+          "base4": [
+            "#A9AAAF",
+            "#a9aaaf",
+            "white"
+          ],
+          "base5": [
+            "#707176",
+            "#707176",
+            "white"
+          ],
+          "base6": [
+            "#4C4D51",
+            "#4c4d51",
+            "white"
+          ],
+          "base7": [
+            "#2F3034",
+            "#2f3034",
+            "white"
+          ],
+          "fg": [
+            "#0E0F13",
+            "#0e0f13",
+            "white"
+          ],
+          "base8": [
+            "#0E0F13",
+            "#0e0f13",
+            "white"
+          ],
+          "fg-alt": [
+            "#2A2B2F",
+            "#2a2b2f",
+            "white"
+          ],
+          "diff-added-bg": [
+            "#DCF7E0",
+            "#dcf7e0",
+            "white"
+          ],
+          "diff-removed-bg": [
+            "#FFE4E2",
+            "#ffe4e2",
+            "white"
+          ],
+          "diff-changed-bg": [
+            "#FAEECB",
+            "#faeecb",
+            "white"
+          ],
+          "diff-added-refine": [
+            "#B3EBBE",
+            "#b3ebbe",
+            "white"
+          ],
+          "diff-removed-refine": [
+            "#FFC5C2",
+            "#ffc5c2",
+            "white"
+          ],
+          "spark": [
             "#212232",
             "#212232",
             "white"
@@ -9264,7 +9784,7 @@
             "ref": "red"
           }
         },
-        "commentary": "Lumina Prisma, light variant, high contrast.\nWhite paper and one stroke of ink; the code is a full spectrum of vivid inks at equal weight."
+        "commentary": "Lumina Prisma, light ink variant, high contrast.\nBlack and white: white paper, one lamp of black ink, and the code as a full spectrum of vivid inks at equal weight."
       }
     }
   }
