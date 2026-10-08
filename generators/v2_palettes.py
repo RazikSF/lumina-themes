@@ -92,6 +92,45 @@ PALETTES = {
             "light": "Lumina Tide, light variant.\nSea-foam paper under the same bioluminescent glow; deep inks of ocean blue, kelp, violet and coral at equal weight.",
         },
     },
+    "oxblood": {
+        "dark": {
+            "bg": (.215, .025, 355), "bg-alt": (.19, .024, 355), "fg": (.86, .035, 80), "fg-alt": (.74, .035, 70),
+            "base0": (.165, .02, 355), "base1": (.235, .027, 355), "base2": (.27, .029, 355), "base3": (.31, .031, 355),
+            "base4": (.40, .033, 0), "base5": (.52, .035, 10), "base6": (.63, .035, 25), "base7": (.75, .035, 55),
+            "base8": (.86, .035, 80), "surface": (.245, .028, 355),
+            "yellow": (.78, .11, 82), "orange": (.72, .09, 58), "red": (.67, .11, 15), "magenta": (.69, .08, 355),
+            "violet": (.69, .06, 325), "green": (.72, .05, 170), "teal": (.71, .045, 185), "cyan": (.72, .04, 200),
+            "blue": (.70, .06, 255), "dark-blue": (.60, .06, 255), "dark-cyan": (.60, .04, 200),
+            "comments": (.60, .03, 15), "doc-comments": (.66, .035, 30), "strings": (.75, .04, 80),
+            "region": (.33, .045, 0), "selection": (.33, .045, 0),
+            "diff-added-bg": (.27, .03, 160), "diff-removed-bg": (.27, .04, 20), "diff-changed-bg": (.27, .035, 75),
+            "diff-added-refine": (.34, .055, 160), "diff-removed-refine": (.34, .07, 20),
+        },
+        "light": {
+            "bg": (.965, .015, 75), "bg-alt": (.935, .02, 72), "fg": (.33, .03, 0), "fg-alt": (.43, .03, 5),
+            "base0": (.99, .008, 80), "base1": (.945, .018, 72), "base2": (.91, .022, 70), "base3": (.86, .025, 65),
+            "base4": (.76, .028, 50), "base5": (.62, .03, 30), "base6": (.50, .032, 10), "base7": (.40, .032, 5),
+            "base8": (.33, .03, 0), "surface": (.945, .018, 72),
+            "yellow": (.53, .10, 72), "orange": (.53, .10, 55), "red": (.49, .13, 15), "magenta": (.49, .10, 355),
+            "violet": (.49, .07, 325), "green": (.51, .06, 170), "teal": (.51, .055, 185), "cyan": (.51, .05, 205),
+            "blue": (.49, .08, 255), "dark-blue": (.41, .08, 255), "dark-cyan": (.41, .05, 205),
+            "comments": (.535, .03, 25), "doc-comments": (.48, .03, 20), "strings": (.50, .05, 70),
+            "region": (.89, .035, 30), "selection": (.89, .035, 30),
+            "diff-added-bg": (.93, .03, 160), "diff-removed-bg": (.93, .03, 20), "diff-changed-bg": (.93, .035, 80),
+            "diff-added-refine": (.87, .06, 160), "diff-removed-refine": (.87, .06, 20),
+        },
+        "refs": {
+            "grey": "base5", "highlight": "yellow", "vertical-bar": "base3", "builtin": "violet",
+            "constants": "red", "functions": "yellow", "keywords": "magenta", "methods": "orange",
+            "operators": "base6", "type": "green", "variables": "fg", "numbers": "red", "error": "red",
+            "warning": "orange", "success": "green", "vc-modified": "yellow", "vc-added": "green",
+            "vc-deleted": "red",
+        },
+        "commentary": {
+            "dark": "Lumina Oxblood, dark variant.\nA theatre after the curtain falls: oxblood-velvet drape in shadow, a single overhead spot on the gilt frame. Velvet rose, brass and wine at equal weight, sage relief, cream-parchment strings.",
+            "light": "Lumina Oxblood, light variant.\nWarm programme paper under the same gilt spot; deep inks of velvet rose, brass, wine and sage at equal weight.",
+        },
+    },
 }
 
 

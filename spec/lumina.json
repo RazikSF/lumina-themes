@@ -1804,160 +1804,200 @@
         "schema": "oxblood",
         "colors": {
           "bg": [
-            "#1B0E13",
-            "#1c1c1c",
+            "#23151A",
+            "#23151a",
+            "black"
+          ],
+          "bg-alt": [
+            "#1C0F14",
+            "#1c0f14",
             "black"
           ],
           "fg": [
-            "#DDCBB0",
-            "#dfdfdf",
+            "#DDCFB8",
+            "#ddcfb8",
             "white"
           ],
-          "bg-alt": [
-            "#16080C",
-            "#262626",
-            "black"
-          ],
           "fg-alt": [
-            "#A89A7E",
-            "#bcbcbc",
+            "#BAA793",
+            "#baa793",
             "brightwhite"
           ],
           "base0": [
-            "#0C0608",
-            "#121212",
+            "#150B0F",
+            "#150b0f",
             "black"
           ],
           "base1": [
-            "#25151A",
-            "#1c1c1c",
+            "#28191F",
+            "#28191f",
             "brightblack"
           ],
           "base2": [
-            "#2E1C22",
-            "#262626",
+            "#322127",
+            "#322127",
             "brightblack"
           ],
           "base3": [
-            "#3A252C",
-            "#303030",
+            "#3D2A31",
+            "#3d2a31",
             "brightblack"
           ],
           "base4": [
-            "#50353D",
-            "#4e4e4e",
+            "#574047",
+            "#574047",
             "brightblack"
           ],
           "base5": [
-            "#6F5057",
-            "#6c6c6c",
+            "#7C6164",
+            "#7c6164",
             "brightblack"
           ],
           "base6": [
-            "#927070",
-            "#8a8a8a",
+            "#9D817F",
+            "#9d817f",
             "brightblack"
           ],
           "base7": [
-            "#B69089",
-            "#b2b2b2",
+            "#C0A999",
+            "#c0a999",
             "brightblack"
           ],
           "base8": [
-            "#DDCBB0",
-            "#dfdfdf",
+            "#DDCFB8",
+            "#ddcfb8",
             "white"
+          ],
+          "surface": [
+            "#2B1B21",
+            "#2b1b21",
+            "black"
+          ],
+          "yellow": [
+            "#DAB060",
+            "#dab060",
+            "yellow"
+          ],
+          "orange": [
+            "#CF976B",
+            "#cf976b",
+            "brightred"
+          ],
+          "red": [
+            "#D0787F",
+            "#d0787f",
+            "red"
+          ],
+          "magenta": [
+            "#C4879E",
+            "#c4879e",
+            "magenta"
+          ],
+          "violet": [
+            "#AF8FB0",
+            "#af8fb0",
+            "brightmagenta"
+          ],
+          "green": [
+            "#86AFA0",
+            "#86afa0",
+            "green"
+          ],
+          "teal": [
+            "#82ABA5",
+            "#82aba5",
+            "brightgreen"
+          ],
+          "cyan": [
+            "#88ADAE",
+            "#88adae",
+            "brightcyan"
+          ],
+          "blue": [
+            "#86A1C4",
+            "#86a1c4",
+            "brightblue"
+          ],
+          "dark-blue": [
+            "#6882A4",
+            "#6882a4",
+            "blue"
+          ],
+          "dark-cyan": [
+            "#64888A",
+            "#64888a",
+            "cyan"
+          ],
+          "comments": [
+            "#91797A",
+            "#91797a",
+            "brightblack"
+          ],
+          "doc-comments": [
+            "#A78B86",
+            "#a78b86",
+            "brightblack"
+          ],
+          "strings": [
+            "#BBAC92",
+            "#bbac92",
+            "white"
+          ],
+          "region": [
+            "#492B34",
+            "#492b34",
+            "brightblack"
+          ],
+          "selection": [
+            "#492B34",
+            "#492b34",
+            "brightblack"
+          ],
+          "diff-added-bg": [
+            "#192B21",
+            "#192b21",
+            "black"
+          ],
+          "diff-removed-bg": [
+            "#381E1E",
+            "#381e1e",
+            "black"
+          ],
+          "diff-changed-bg": [
+            "#302412",
+            "#302412",
+            "black"
+          ],
+          "diff-added-refine": [
+            "#1B412E",
+            "#1b412e",
+            "black"
+          ],
+          "diff-removed-refine": [
+            "#572729",
+            "#572729",
+            "black"
           ],
           "grey": {
             "ref": "base5"
           },
-          "yellow": [
-            "#E5B250",
-            "#e5b250",
-            "yellow"
-          ],
-          "orange": [
-            "#C8865A",
-            "#c8865a",
-            "brightred"
-          ],
-          "red": [
-            "#C04A60",
-            "#c04a60",
-            "red"
-          ],
-          "magenta": [
-            "#A85478",
-            "#a85478",
-            "magenta"
-          ],
-          "violet": [
-            "#8E5878",
-            "#8e5878",
-            "brightmagenta"
-          ],
-          "green": [
-            "#608A82",
-            "#608a82",
-            "green"
-          ],
-          "teal": [
-            "#5A8480",
-            "#5a8480",
-            "brightgreen"
-          ],
-          "cyan": [
-            "#7A9A98",
-            "#7a9a98",
-            "brightcyan"
-          ],
-          "blue": [
-            "#5878A0",
-            "#5878a0",
-            "brightblue"
-          ],
-          "dark-blue": [
-            "#2C4068",
-            "#2c4068",
-            "blue"
-          ],
-          "dark-cyan": [
-            "#2E5868",
-            "#2e5868",
-            "cyan"
-          ],
           "highlight": {
             "ref": "yellow"
           },
           "vertical-bar": {
             "ref": "base3"
           },
-          "selection": [
-            "#3A252C",
-            "#303030",
-            "brightblack"
-          ],
           "builtin": {
-            "ref": "yellow"
+            "ref": "violet"
           },
-          "comments": [
-            "#6F5057",
-            "#6f5057",
-            "brightblack"
-          ],
-          "doc-comments": [
-            "#7F6067",
-            "#7f6067",
-            "brightblack"
-          ],
           "constants": {
             "ref": "red"
           },
           "functions": {
-            "ref": "orange"
+            "ref": "yellow"
           },
           "keywords": {
-            "ref": "yellow"
+            "ref": "magenta"
           },
           "methods": {
             "ref": "orange"
@@ -1968,29 +2008,17 @@
           "type": {
             "ref": "green"
           },
-          "strings": [
-            "#A89880",
-            "#a89880",
-            "white"
-          ],
           "variables": {
             "ref": "fg"
           },
           "numbers": {
             "ref": "red"
           },
-          "region": [
-            "#3A252C",
-            "#303030",
-            "brightblack"
-          ],
-          "error": [
-            "#FF4860",
-            "#ff4860",
-            "red"
-          ],
+          "error": {
+            "ref": "red"
+          },
           "warning": {
-            "ref": "yellow"
+            "ref": "orange"
           },
           "success": {
             "ref": "green"
@@ -2001,13 +2029,11 @@
           "vc-added": {
             "ref": "green"
           },
-          "vc-deleted": [
-            "#DC3F50",
-            "#dc3f50",
-            "red"
-          ]
+          "vc-deleted": {
+            "ref": "red"
+          }
         },
-        "commentary": "Lumina Oxblood, dark variant.\nA theatre after the curtain falls: oxblood-velvet drape in shadow, a single overhead spot on the gilt frame. Brass and wine in cascade, sage relief, cream-parchment strings."
+        "commentary": "Lumina Oxblood, dark variant.\nA theatre after the curtain falls: oxblood-velvet drape in shadow, a single overhead spot on the gilt frame. Velvet rose, brass and wine at equal weight, sage relief, cream-parchment strings."
       },
       "light": {
         "theme": "lumina-oxblood-light",
@@ -2015,193 +2041,221 @@
         "schema": "oxblood",
         "colors": {
           "bg": [
-            "#F8EFE2",
-            "#ffffff",
+            "#FAF2E9",
+            "#faf2e9",
+            "white"
+          ],
+          "bg-alt": [
+            "#F2E8DB",
+            "#f2e8db",
             "white"
           ],
           "fg": [
-            "#1F1015",
-            "#1e1e1e",
+            "#432F35",
+            "#432f35",
             "black"
           ],
-          "bg-alt": [
-            "#EFE2D0",
-            "#f0f0f0",
-            "white"
-          ],
           "fg-alt": [
-            "#5C4248",
-            "#4a4a4a",
+            "#5F494D",
+            "#5f494d",
             "brightwhite"
           ],
           "base0": [
-            "#FFFCF2",
-            "#ffffff",
+            "#FFFBF6",
+            "#fffbf6",
             "white"
           ],
           "base1": [
-            "#EFE2D0",
-            "#f0f0f0",
+            "#F5EBE0",
+            "#f5ebe0",
             "brightblack"
           ],
           "base2": [
-            "#E5D6BE",
-            "#e6e6e6",
+            "#EBDFD2",
+            "#ebdfd2",
             "brightblack"
           ],
           "base3": [
-            "#D5C2AA",
-            "#dadada",
+            "#DDCEC0",
+            "#ddcec0",
             "brightblack"
           ],
           "base4": [
-            "#A8907A",
-            "#c2c2c2",
+            "#C1ACA2",
+            "#c1aca2",
             "brightblack"
           ],
           "base5": [
-            "#7C6058",
-            "#9d9d9d",
+            "#98807C",
+            "#98807c",
             "brightblack"
           ],
           "base6": [
-            "#5C4248",
-            "#737373",
+            "#745C5F",
+            "#745c5f",
             "brightblack"
           ],
           "base7": [
-            "#3A2429",
-            "#565656",
+            "#574145",
+            "#574145",
             "brightblack"
           ],
           "base8": [
-            "#1F1015",
-            "#2a2a2a",
+            "#432F35",
+            "#432f35",
             "black"
+          ],
+          "surface": [
+            "#F5EBE0",
+            "#f5ebe0",
+            "white"
+          ],
+          "yellow": [
+            "#8F611E",
+            "#8f611e",
+            "yellow"
+          ],
+          "orange": [
+            "#985B2D",
+            "#985b2d",
+            "brightred"
+          ],
+          "red": [
+            "#9C3B48",
+            "#9c3b48",
+            "red"
+          ],
+          "magenta": [
+            "#8C4663",
+            "#8c4663",
+            "magenta"
+          ],
+          "violet": [
+            "#755276",
+            "#755276",
+            "brightmagenta"
+          ],
+          "green": [
+            "#417161",
+            "#417161",
+            "green"
+          ],
+          "teal": [
+            "#3F716A",
+            "#3f716a",
+            "brightgreen"
+          ],
+          "cyan": [
+            "#426F74",
+            "#426f74",
+            "brightcyan"
+          ],
+          "blue": [
+            "#40628D",
+            "#40628d",
+            "brightblue"
+          ],
+          "dark-blue": [
+            "#2B4B75",
+            "#2b4b75",
+            "blue"
+          ],
+          "dark-cyan": [
+            "#255257",
+            "#255257",
+            "cyan"
+          ],
+          "comments": [
+            "#7E6764",
+            "#7e6764",
+            "brightblack"
+          ],
+          "doc-comments": [
+            "#6E5757",
+            "#6e5757",
+            "brightblack"
+          ],
+          "strings": [
+            "#765E44",
+            "#765e44",
+            "black"
+          ],
+          "region": [
+            "#F1D3CD",
+            "#f1d3cd",
+            "brightblack"
+          ],
+          "selection": [
+            "#F1D3CD",
+            "#f1d3cd",
+            "brightblack"
+          ],
+          "diff-added-bg": [
+            "#D8EEE1",
+            "#d8eee1",
+            "white"
+          ],
+          "diff-removed-bg": [
+            "#FCE0E0",
+            "#fce0e0",
+            "white"
+          ],
+          "diff-changed-bg": [
+            "#F4E6CE",
+            "#f4e6ce",
+            "white"
+          ],
+          "diff-added-refine": [
+            "#B3E1C7",
+            "#b3e1c7",
+            "white"
+          ],
+          "diff-removed-refine": [
+            "#FAC5C4",
+            "#fac5c4",
+            "white"
           ],
           "grey": {
             "ref": "base5"
           },
-          "yellow": [
-            "#825414",
-            "#825414",
-            "yellow"
-          ],
-          "orange": [
-            "#94581C",
-            "#94581c",
-            "brightred"
-          ],
-          "red": [
-            "#8A2A38",
-            "#8a2a38",
-            "red"
-          ],
-          "magenta": [
-            "#74284A",
-            "#74284a",
-            "magenta"
-          ],
-          "violet": [
-            "#5E3858",
-            "#5e3858",
-            "brightmagenta"
-          ],
-          "green": [
-            "#3A6055",
-            "#3a6055",
-            "green"
-          ],
-          "teal": [
-            "#305850",
-            "#305850",
-            "brightgreen"
-          ],
-          "cyan": [
-            "#4A6E68",
-            "#4a6e68",
-            "brightcyan"
-          ],
-          "blue": [
-            "#2C4878",
-            "#2c4878",
-            "brightblue"
-          ],
-          "dark-blue": [
-            "#1A2E58",
-            "#1a2e58",
-            "blue"
-          ],
-          "dark-cyan": [
-            "#1A3848",
-            "#1a3848",
-            "cyan"
-          ],
           "highlight": {
             "ref": "yellow"
           },
           "vertical-bar": {
             "ref": "base3"
           },
-          "selection": [
-            "#E5CCB8",
-            "#dadada",
-            "brightblack"
-          ],
           "builtin": {
-            "ref": "yellow"
+            "ref": "violet"
           },
-          "comments": [
-            "#7C6058",
-            "#7c6058",
-            "brightblack"
-          ],
-          "doc-comments": [
-            "#6C504A",
-            "#6c504a",
-            "brightblack"
-          ],
           "constants": {
             "ref": "red"
           },
           "functions": {
-            "ref": "orange"
+            "ref": "yellow"
           },
           "keywords": {
-            "ref": "yellow"
+            "ref": "magenta"
           },
           "methods": {
             "ref": "orange"
           },
           "operators": {
-            "ref": "base5"
+            "ref": "base6"
           },
           "type": {
             "ref": "green"
           },
-          "strings": [
-            "#6E5E48",
-            "#6e5e48",
-            "black"
-          ],
           "variables": {
             "ref": "fg"
           },
           "numbers": {
             "ref": "red"
           },
-          "region": [
-            "#E5CCB8",
-            "#dadada",
-            "brightblack"
-          ],
-          "error": [
-            "#8A1828",
-            "#8a1828",
-            "red"
-          ],
+          "error": {
+            "ref": "red"
+          },
           "warning": {
-            "ref": "yellow"
+            "ref": "orange"
           },
           "success": {
             "ref": "green"
@@ -2212,13 +2266,11 @@
           "vc-added": {
             "ref": "green"
           },
-          "vc-deleted": [
-            "#8A1828",
-            "#8a1828",
-            "red"
-          ]
+          "vc-deleted": {
+            "ref": "red"
+          }
         },
-        "commentary": "Lumina Oxblood, light variant.\nWarm wine-tinted paper; deep gilt-ink lead, velvet-wine in cascade, sage relief."
+        "commentary": "Lumina Oxblood, light variant.\nWarm programme paper under the same gilt spot; deep inks of velvet rose, brass, wine and sage at equal weight."
       }
     }
   }
