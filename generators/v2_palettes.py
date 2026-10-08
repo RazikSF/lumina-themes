@@ -170,6 +170,47 @@ PALETTES = {
             "light": "Lumina Canopy, light variant.\nLeaf-tinted paper under the same shaft of sun; deep inks of chlorophyll, pine, russet and heather at equal weight.",
         },
     },
+    "slate": {
+        "dark": {
+            "bg": (.215, .009, 256), "bg-alt": (.19, .009, 258), "fg": (.86, .008, 260), "fg-alt": (.74, .014, 260),
+            "base0": (.165, .008, 258), "base1": (.235, .01, 256), "base2": (.27, .011, 256), "base3": (.31, .012, 256),
+            "base4": (.40, .014, 258), "base5": (.52, .016, 258), "base6": (.63, .017, 260), "base7": (.75, .016, 260),
+            "base8": (.86, .008, 260), "surface": (.245, .01, 256),
+            "blue": (.76, .09, 245), "teal": (.71, .05, 195), "cyan": (.71, .05, 215), "green": (.72, .055, 155),
+            "violet": (.70, .05, 285), "magenta": (.70, .055, 340), "red": (.67, .09, 22), "orange": (.72, .07, 62),
+            "yellow": (.74, .06, 92), "dark-blue": (.62, .07, 245), "dark-cyan": (.60, .045, 215),
+            "comments": (.60, .018, 258), "doc-comments": (.66, .02, 258), "strings": (.76, .015, 250),
+            "variables": (.81, .01, 262),
+            "region": (.33, .03, 250), "selection": (.33, .03, 250),
+            "diff-added-bg": (.27, .03, 150), "diff-removed-bg": (.27, .035, 20), "diff-changed-bg": (.27, .03, 85),
+            "diff-added-refine": (.34, .055, 150), "diff-removed-refine": (.34, .065, 20),
+        },
+        "light": {
+            "bg": (.96, .006, 255), "bg-alt": (.93, .008, 258), "fg": (.33, .015, 258), "fg-alt": (.43, .016, 260),
+            "base0": (.99, .003, 255), "base1": (.94, .007, 256), "base2": (.905, .009, 258), "base3": (.855, .011, 258),
+            "base4": (.76, .013, 260), "base5": (.62, .015, 260), "base6": (.50, .016, 260), "base7": (.40, .016, 258),
+            "base8": (.33, .015, 258), "surface": (.94, .007, 256),
+            "blue": (.50, .11, 250), "teal": (.51, .06, 195), "cyan": (.51, .06, 220), "green": (.51, .07, 155),
+            "violet": (.50, .07, 285), "magenta": (.50, .08, 340), "red": (.50, .11, 22), "orange": (.53, .09, 58),
+            "yellow": (.52, .08, 90), "dark-blue": (.42, .10, 250), "dark-cyan": (.42, .05, 220),
+            "comments": (.535, .015, 258), "doc-comments": (.48, .015, 258), "strings": (.47, .012, 258),
+            "variables": (.39, .015, 258),
+            "region": (.88, .03, 250), "selection": (.88, .03, 250),
+            "diff-added-bg": (.93, .03, 150), "diff-removed-bg": (.93, .03, 20), "diff-changed-bg": (.93, .035, 85),
+            "diff-added-refine": (.87, .06, 150), "diff-removed-refine": (.87, .06, 20),
+        },
+        "refs": {
+            "grey": "base5", "highlight": "blue", "vertical-bar": "base3", "builtin": "cyan",
+            "constants": "magenta", "functions": "blue", "keywords": "violet", "methods": "teal",
+            "operators": "base6", "type": "cyan", "numbers": "orange", "error": "red",
+            "warning": "orange", "success": "green", "vc-modified": "yellow", "vc-added": "green",
+            "vc-deleted": "red",
+        },
+        "commentary": {
+            "dark": "Lumina Slate, dark variant.\nCold graphite ground; near-achromatic text and strings, one steel-blue lamp, muted violet, teal and sage at equal weight, a single warm note of brass in numbers.",
+            "light": "Lumina Slate, light variant.\nCool grey paper under the same steel-blue lamp; near-achromatic inks with muted violet, teal and sage at equal weight.",
+        },
+    },
 }
 
 
