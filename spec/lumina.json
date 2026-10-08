@@ -484,165 +484,203 @@
         "schema": "tide",
         "colors": {
           "bg": [
-            "#0F1D20",
-            "#1c1c1c",
+            "#0E1D21",
+            "#0e1d21",
+            "black"
+          ],
+          "bg-alt": [
+            "#0A171A",
+            "#0a171a",
             "black"
           ],
           "fg": [
-            "#D0D0CC",
-            "#dfdfdf",
+            "#CCD7D7",
+            "#ccd7d7",
             "white"
           ],
-          "bg-alt": [
-            "#0B1719",
-            "#262626",
-            "black"
-          ],
           "fg-alt": [
-            "#909290",
-            "#bcbcbc",
+            "#9DAFB0",
+            "#9dafb0",
             "brightwhite"
           ],
           "base0": [
-            "#081214",
-            "#121212",
+            "#061214",
+            "#061214",
             "black"
           ],
           "base1": [
-            "#16282A",
-            "#1c1c1c",
+            "#112226",
+            "#112226",
             "brightblack"
           ],
           "base2": [
-            "#1E3234",
-            "#262626",
+            "#192C30",
+            "#192c30",
             "brightblack"
           ],
           "base3": [
-            "#284042",
-            "#303030",
+            "#22373B",
+            "#22373b",
             "brightblack"
           ],
           "base4": [
-            "#355154",
-            "#4e4e4e",
+            "#374F53",
+            "#374f53",
             "brightblack"
           ],
           "base5": [
-            "#4E6E70",
-            "#6c6c6c",
+            "#546E73",
+            "#546e73",
             "brightblack"
           ],
           "base6": [
-            "#6E9092",
-            "#8a8a8a",
+            "#738F92",
+            "#738f92",
             "brightblack"
           ],
           "base7": [
-            "#97B6B7",
-            "#b2b2b2",
+            "#99B4B6",
+            "#99b4b6",
             "brightblack"
           ],
           "base8": [
-            "#DCEAE9",
-            "#dfdfdf",
+            "#CCD7D7",
+            "#ccd7d7",
             "white"
+          ],
+          "surface": [
+            "#132529",
+            "#132529",
+            "black"
+          ],
+          "teal": [
+            "#63D5BE",
+            "#63d5be",
+            "brightgreen"
+          ],
+          "green": [
+            "#8AB58B",
+            "#8ab58b",
+            "green"
+          ],
+          "cyan": [
+            "#77AFB9",
+            "#77afb9",
+            "brightcyan"
+          ],
+          "blue": [
+            "#79A8C9",
+            "#79a8c9",
+            "brightblue"
+          ],
+          "dark-blue": [
+            "#5886A6",
+            "#5886a6",
+            "blue"
+          ],
+          "violet": [
+            "#A499CC",
+            "#a499cc",
+            "brightmagenta"
+          ],
+          "magenta": [
+            "#BF8CAD",
+            "#bf8cad",
+            "magenta"
+          ],
+          "red": [
+            "#CF7E81",
+            "#cf7e81",
+            "red"
+          ],
+          "orange": [
+            "#D5977B",
+            "#d5977b",
+            "brightred"
+          ],
+          "yellow": [
+            "#BBAA7C",
+            "#bbaa7c",
+            "yellow"
+          ],
+          "dark-cyan": [
+            "#538A94",
+            "#538a94",
+            "cyan"
+          ],
+          "comments": [
+            "#6C8687",
+            "#6c8687",
+            "brightblack"
+          ],
+          "doc-comments": [
+            "#7A9999",
+            "#7a9999",
+            "brightblack"
+          ],
+          "strings": [
+            "#8BB5AE",
+            "#8bb5ae",
+            "white"
+          ],
+          "region": [
+            "#183E46",
+            "#183e46",
+            "brightblack"
+          ],
+          "selection": [
+            "#183E46",
+            "#183e46",
+            "brightblack"
+          ],
+          "diff-added-bg": [
+            "#1E2D21",
+            "#1e2d21",
+            "black"
+          ],
+          "diff-removed-bg": [
+            "#382222",
+            "#382222",
+            "black"
+          ],
+          "diff-changed-bg": [
+            "#2F2817",
+            "#2f2817",
+            "black"
+          ],
+          "diff-added-refine": [
+            "#24432B",
+            "#24432b",
+            "black"
+          ],
+          "diff-removed-refine": [
+            "#582C2C",
+            "#582c2c",
+            "black"
           ],
           "grey": {
             "ref": "base5"
           },
-          "green": [
-            "#3FDEC4",
-            "#3fdec4",
-            "green"
-          ],
-          "teal": [
-            "#3FB8B0",
-            "#3fb8b0",
-            "brightgreen"
-          ],
-          "cyan": [
-            "#5FB8C8",
-            "#5fb8c8",
-            "brightcyan"
-          ],
-          "violet": [
-            "#A894E4",
-            "#a894e4",
-            "brightmagenta"
-          ],
-          "blue": [
-            "#66B6E2",
-            "#66b6e2",
-            "brightblue"
-          ],
-          "dark-blue": [
-            "#2E5E84",
-            "#2e5e84",
-            "blue"
-          ],
-          "dark-cyan": [
-            "#2F6F7C",
-            "#2f6f7c",
-            "cyan"
-          ],
-          "red": [
-            "#E07688",
-            "#e07688",
-            "red"
-          ],
-          "orange": [
-            "#EAA478",
-            "#eaa478",
-            "brightred"
-          ],
-          "yellow": [
-            "#DCCB86",
-            "#dccb86",
-            "yellow"
-          ],
-          "magenta": [
-            "#DC86C2",
-            "#dc86c2",
-            "magenta"
-          ],
           "highlight": {
-            "ref": "green"
+            "ref": "teal"
           },
-          "vertical-bar": [
-            "#2E5E84",
-            "#2e5e84",
-            "blue"
-          ],
-          "selection": [
-            "#2E5E84",
-            "#2e5e84",
-            "brightblack"
-          ],
+          "vertical-bar": {
+            "ref": "base3"
+          },
           "builtin": {
-            "ref": "green"
+            "ref": "magenta"
           },
-          "comments": [
-            "#607C7A",
-            "#607c7a",
-            "brightblack"
-          ],
-          "doc-comments": [
-            "#608280",
-            "#608280",
-            "brightblack"
-          ],
           "constants": {
-            "ref": "red"
+            "ref": "orange"
           },
           "functions": {
-            "ref": "blue"
+            "ref": "teal"
           },
           "keywords": {
-            "ref": "green"
+            "ref": "violet"
           },
           "methods": {
-            "ref": "teal"
+            "ref": "blue"
           },
           "operators": {
             "ref": "base6"
@@ -650,27 +688,15 @@
           "type": {
             "ref": "cyan"
           },
-          "strings": [
-            "#7A9694",
-            "#7a9694",
-            "white"
-          ],
           "variables": {
             "ref": "fg"
           },
           "numbers": {
+            "ref": "orange"
+          },
+          "error": {
             "ref": "red"
           },
-          "region": [
-            "#2E5E84",
-            "#2e5e84",
-            "brightblack"
-          ],
-          "error": [
-            "#FF4458",
-            "#ff4458",
-            "red"
-          ],
           "warning": {
             "ref": "orange"
           },
@@ -683,13 +709,11 @@
           "vc-added": {
             "ref": "green"
           },
-          "vc-deleted": [
-            "#FF4458",
-            "#ff4458",
-            "red"
-          ]
+          "vc-deleted": {
+            "ref": "red"
+          }
         },
-        "commentary": "Lumina Tide, dark variant.\nDeep ocean at night, lit from within by a bioluminescent jellyfish: ocean teal and surface cyan in cascade, biolum violet, muted coral and sand as rare warm notes."
+        "commentary": "Lumina Tide, dark variant.\nDeep ocean at night, lit from within by a single bioluminescent glow; sea-glass, kelp, slate blue and jellyfish violet at equal weight, coral and sand as rare warm notes."
       },
       "light": {
         "theme": "lumina-tide-light",
@@ -697,163 +721,203 @@
         "schema": "tide",
         "colors": {
           "bg": [
-            "#F1F8F7",
-            "#ffffff",
+            "#EEF5F5",
+            "#eef5f5",
+            "white"
+          ],
+          "bg-alt": [
+            "#E1ECEC",
+            "#e1ecec",
             "white"
           ],
           "fg": [
-            "#1E2A28",
-            "#1e1e1e",
+            "#26393D",
+            "#26393d",
             "black"
           ],
-          "bg-alt": [
-            "#E0ECEA",
-            "#f0f0f0",
-            "white"
-          ],
           "fg-alt": [
-            "#4C6868",
-            "#4a4a4a",
+            "#3D5155",
+            "#3d5155",
             "brightwhite"
           ],
           "base0": [
-            "#FBFEFE",
-            "#ffffff",
+            "#F9FDFC",
+            "#f9fdfc",
             "white"
           ],
           "base1": [
-            "#E0ECEA",
-            "#f0f0f0",
+            "#E6EFEF",
+            "#e6efef",
             "brightblack"
           ],
           "base2": [
-            "#D0E0DE",
-            "#e6e6e6",
+            "#D7E4E4",
+            "#d7e4e4",
             "brightblack"
           ],
           "base3": [
-            "#BCD0CC",
-            "#dadada",
+            "#C6D4D5",
+            "#c6d4d5",
             "brightblack"
           ],
           "base4": [
-            "#92ACA8",
-            "#c2c2c2",
+            "#A3B5B6",
+            "#a3b5b6",
             "brightblack"
           ],
           "base5": [
-            "#688480",
-            "#9d9d9d",
+            "#758B8D",
+            "#758b8d",
             "brightblack"
           ],
           "base6": [
-            "#4C6868",
-            "#737373",
+            "#51686C",
+            "#51686c",
             "brightblack"
           ],
           "base7": [
-            "#2D4444",
-            "#565656",
+            "#364C50",
+            "#364c50",
             "brightblack"
           ],
           "base8": [
-            "#1E2A2A",
-            "#2a2a2a",
+            "#26393D",
+            "#26393d",
             "black"
+          ],
+          "surface": [
+            "#E6EFEF",
+            "#e6efef",
+            "white"
+          ],
+          "teal": [
+            "#167A69",
+            "#167a69",
+            "brightgreen"
+          ],
+          "green": [
+            "#467748",
+            "#467748",
+            "green"
+          ],
+          "cyan": [
+            "#2A7084",
+            "#2a7084",
+            "brightcyan"
+          ],
+          "blue": [
+            "#356890",
+            "#356890",
+            "brightblue"
+          ],
+          "dark-blue": [
+            "#1D5178",
+            "#1d5178",
+            "blue"
+          ],
+          "violet": [
+            "#675891",
+            "#675891",
+            "brightmagenta"
+          ],
+          "magenta": [
+            "#874D6F",
+            "#874d6f",
+            "magenta"
+          ],
+          "red": [
+            "#9F454B",
+            "#9f454b",
+            "red"
+          ],
+          "orange": [
+            "#9B5738",
+            "#9b5738",
+            "brightred"
+          ],
+          "yellow": [
+            "#7D6622",
+            "#7d6622",
+            "yellow"
+          ],
+          "dark-cyan": [
+            "#205564",
+            "#205564",
+            "cyan"
+          ],
+          "comments": [
+            "#597374",
+            "#597374",
+            "brightblack"
+          ],
+          "doc-comments": [
+            "#4A6364",
+            "#4a6364",
+            "brightblack"
+          ],
+          "strings": [
+            "#45726F",
+            "#45726f",
+            "black"
+          ],
+          "region": [
+            "#C1E2E4",
+            "#c1e2e4",
+            "brightblack"
+          ],
+          "selection": [
+            "#C1E2E4",
+            "#c1e2e4",
+            "brightblack"
+          ],
+          "diff-added-bg": [
+            "#DBEEDE",
+            "#dbeede",
+            "white"
+          ],
+          "diff-removed-bg": [
+            "#FCE0E0",
+            "#fce0e0",
+            "white"
+          ],
+          "diff-changed-bg": [
+            "#F1E7CE",
+            "#f1e7ce",
+            "white"
+          ],
+          "diff-added-refine": [
+            "#B9E0C0",
+            "#b9e0c0",
+            "white"
+          ],
+          "diff-removed-refine": [
+            "#FAC5C4",
+            "#fac5c4",
+            "white"
           ],
           "grey": {
             "ref": "base5"
           },
-          "green": [
-            "#127858",
-            "#127858",
-            "green"
-          ],
-          "teal": [
-            "#157070",
-            "#157070",
-            "brightgreen"
-          ],
-          "cyan": [
-            "#286888",
-            "#286888",
-            "brightcyan"
-          ],
-          "violet": [
-            "#4E3A8E",
-            "#4e3a8e",
-            "brightmagenta"
-          ],
-          "blue": [
-            "#2C6298",
-            "#2c6298",
-            "brightblue"
-          ],
-          "dark-blue": [
-            "#1A4068",
-            "#1a4068",
-            "blue"
-          ],
-          "dark-cyan": [
-            "#1C4E4E",
-            "#1c4e4e",
-            "cyan"
-          ],
-          "red": [
-            "#A04050",
-            "#a04050",
-            "red"
-          ],
-          "orange": [
-            "#A05828",
-            "#a05828",
-            "brightred"
-          ],
-          "yellow": [
-            "#6A5810",
-            "#6a5810",
-            "yellow"
-          ],
-          "magenta": [
-            "#84385C",
-            "#84385c",
-            "magenta"
-          ],
           "highlight": {
-            "ref": "green"
+            "ref": "teal"
           },
           "vertical-bar": {
             "ref": "base3"
           },
-          "selection": [
-            "#CCD8E0",
-            "#dadada",
-            "brightblack"
-          ],
           "builtin": {
-            "ref": "green"
+            "ref": "magenta"
           },
-          "comments": [
-            "#688480",
-            "#688480",
-            "brightblack"
-          ],
-          "doc-comments": [
-            "#587470",
-            "#587470",
-            "brightblack"
-          ],
           "constants": {
-            "ref": "red"
+            "ref": "orange"
           },
           "functions": {
-            "ref": "blue"
+            "ref": "teal"
           },
           "keywords": {
-            "ref": "green"
+            "ref": "violet"
           },
           "methods": {
-            "ref": "teal"
+            "ref": "blue"
           },
           "operators": {
             "ref": "base6"
@@ -861,27 +925,15 @@
           "type": {
             "ref": "cyan"
           },
-          "strings": [
-            "#486A48",
-            "#486a48",
-            "black"
-          ],
           "variables": {
             "ref": "fg"
           },
           "numbers": {
+            "ref": "orange"
+          },
+          "error": {
             "ref": "red"
           },
-          "region": [
-            "#CCD8E0",
-            "#dadada",
-            "brightblack"
-          ],
-          "error": [
-            "#8A1A38",
-            "#8a1a38",
-            "red"
-          ],
           "warning": {
             "ref": "orange"
           },
@@ -894,13 +946,11 @@
           "vc-added": {
             "ref": "green"
           },
-          "vc-deleted": [
-            "#8A1A38",
-            "#8a1a38",
-            "red"
-          ]
+          "vc-deleted": {
+            "ref": "red"
+          }
         },
-        "commentary": "Lumina Tide, light variant.\nCool teal paper; deep biolum-green ink, ocean teal and surface cyan in cascade, biolum violet."
+        "commentary": "Lumina Tide, light variant.\nSea-foam paper under the same bioluminescent glow; deep inks of ocean blue, kelp, violet and coral at equal weight."
       }
     },
     "canopy": {

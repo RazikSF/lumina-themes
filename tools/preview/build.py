@@ -1,5 +1,5 @@
 import json, sys, html
-S = sys.argv[1]; OUT = sys.argv[2]
+S = sys.argv[1]; OUT = sys.argv[2]; NAME = sys.argv[3].capitalize() if len(sys.argv) > 3 else "Dawn"
 def load(n): return json.load(open(f"{S}/out/{n}.json"))
 def st(d, f, k="style"): return (d["faces"].get(f) or {}).get(k) or ""
 def col(d, f, k, dflt=None): return (d["faces"].get(f) or {}).get(k) or dflt
@@ -37,7 +37,7 @@ def mini(d):
     sol = col(d, "solaire-default-face", "bg") or bg
     pr = st(d, "minibuffer-prompt"); cur = col(d, "vertico-current", "bg") or col(d, "region", "bg") or col(d, "hl-line", "bg") or bg
     m = st(d, "orderless-match-face-0") or st(d, "completions-common-part")
-    rows = [("lumi", "na-dawn-dark", True), ("lumi", "na-dawn-light", False), ("lumi", "na-tide-dark", False)]
+    rows = [("lumi", f"na-{NAME.lower()}-dark", True), ("lumi", f"na-{NAME.lower()}-light", False), ("lumi", "na-slate-dark", False)]
     s = f'<div class="mini" style="background:{sol};color:{col(d,"default","fg")}"><div><span style="{pr}">Load custom theme: </span>lumi</div>'
     for a, b, c in rows:
         s += f'<div class="row" style="{"background:"+cur if c else ""}"><span style="{m}">{a}</span>{b}</div>'
@@ -51,11 +51,11 @@ def panel(name, d):
             + window(d, [tuple(x) for x in d["diff"]], numbers=False, active=False, title="magit-diff", mode="Diff")
             + mini(d) + '</section>')
 
-rows = [("Sombre", [("Dawn 1 (actuel)", "old-dark"), ("Dawn 2 (proposé)", "new-dark"), ("Gruvbox (référence)", "gruvbox-dark")]),
-        ("Clair", [("Dawn 1 (actuel)", "old-light"), ("Dawn 2 (proposé)", "new-light"), ("Gruvbox clair (référence)", "gruvbox-light")])]
+rows = [("Sombre", [(f"{NAME} 1 (actuel)", "old-dark"), (f"{NAME} 2 (proposé)", "new-dark"), ("Gruvbox (référence)", "gruvbox-dark")]),
+        ("Clair", [(f"{NAME} 1 (actuel)", "old-light"), (f"{NAME} 2 (proposé)", "new-light"), ("Gruvbox clair (référence)", "gruvbox-light")])]
 body = "".join(f'<h2>{t}</h2><div class="grid">' + "".join(panel(n, load(f)) for n, f in p) + "</div>" for t, p in rows)
 page = f"""<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Lumina Dawn 2</title><style>
+<title>Lumina {NAME} 2</title><style>
 body{{margin:0;padding:24px 16px;background:#2a2a2a;color:#ddd;font:15px/1.4 -apple-system,system-ui,sans-serif}}
 h1{{font-weight:600;margin:0 0 4px}} p.note{{margin:0 0 20px;color:#aaa;max-width:70ch}}
 h2{{font-weight:500;margin:28px 0 10px;color:#bbb}}
@@ -67,7 +67,7 @@ section h3{{margin:0 0 6px;font-weight:500;font-size:14px;color:#ccc}}
 .ml{{display:flex;align-items:center;gap:10px;font:12.5px "Zed Mono",Menlo,monospace;padding:7px 10px 7px 0}}
 .bar{{width:3px;align-self:stretch;margin-right:4px}} .sp{{flex:1}}
 @media (max-width:520px){{.grid{{grid-template-columns:1fr}} .win{{overflow-x:auto}}}}
-</style></head><body><h1>Lumina Dawn 2</h1>
+</style></head><body><h1>Lumina {NAME} 2</h1>
 <p class="note">Rendu exporté depuis GNU Emacs 30.2 (emacs -Q, fontification réelle de python-mode, org-mode et diff-mode). Chaque couleur vient des faces calculées par Emacs ; seuls la mise en page, le curseur et la barre d'état sont dessinés à l'identique pour les trois thèmes.</p>
 {body}</body></html>"""
 open(OUT, "w").write(page)

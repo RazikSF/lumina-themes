@@ -28,10 +28,10 @@
     "weight": "semi-bold"
   },
   "mode-line-emphasis": {
-    "fg": "yellow"
+    "fg": "schema.lead"
   },
   "mode-line-highlight": {
-    "fg": "yellow"
+    "fg": "schema.lead"
   },
   "header-line": {
     "fg": "base6",
@@ -50,7 +50,7 @@
     }
   },
   "cursor": {
-    "bg": "yellow"
+    "bg": "schema.lead"
   },
   "region": {
     "bg": "region",
@@ -84,7 +84,7 @@
     "bg": "bg"
   },
   "line-number-current-line": {
-    "fg": "yellow",
+    "fg": "schema.lead",
     "bg": "base1"
   },
   "line-number-major-tick": {
@@ -99,11 +99,11 @@
     "fg": "base2"
   },
   "minibuffer-prompt": {
-    "fg": "yellow"
+    "fg": "schema.lead"
   },
   "isearch": {
     "fg": "bg",
-    "bg": "yellow"
+    "bg": "schema.lead"
   },
   "isearch-fail": {
     "fg": "red",
@@ -114,11 +114,11 @@
     "bg": "base3"
   },
   "match": {
-    "fg": "yellow",
+    "fg": "schema.lead",
     "bg": "surface"
   },
   "show-paren-match": {
-    "fg": "yellow",
+    "fg": "schema.lead",
     "bg": "base3"
   },
   "show-paren-mismatch": {
@@ -149,7 +149,7 @@
     "fg": "green"
   },
   "escape-glyph": {
-    "fg": "yellow"
+    "fg": "schema.lead"
   },
   "trailing-whitespace": {
     "bg": "diff-removed-bg"
@@ -159,7 +159,7 @@
     "bg": "surface"
   },
   "help-key-binding": {
-    "fg": "yellow",
+    "fg": "schema.lead",
     "bg": "surface",
     "box": {
       "width": -1,
@@ -211,7 +211,7 @@
     "fg": "base6"
   },
   "font-lock-regexp-grouping-construct": {
-    "fg": "yellow"
+    "fg": "schema.lead"
   },
   "tab-bar": {
     "fg": "fg-alt",
@@ -220,7 +220,7 @@
   "tab-bar-tab": {
     "fg": "fg",
     "bg": "bg",
-    "overline": "yellow",
+    "overline": "schema.lead",
     "box": {
       "width": 4,
       "color": "bg"
@@ -249,7 +249,7 @@
   "tab-line-tab-current": {
     "fg": "fg",
     "bg": "bg",
-    "overline": "yellow",
+    "overline": "schema.lead",
     "box": {
       "width": 4,
       "color": "bg"
@@ -268,7 +268,7 @@
     "italic": true
   },
   "tab-line-highlight": {
-    "fg": "yellow",
+    "fg": "schema.lead",
     "bg": "bg"
   },
   "outline-1": {
@@ -303,7 +303,7 @@
     "fg": "schema.outline[3]"
   },
   "org-document-title": {
-    "fg": "yellow",
+    "fg": "schema.lead",
     "weight": "semi-bold",
     "height": 1.5
   },
@@ -382,7 +382,7 @@
     "fg": "fg-alt"
   },
   "org-checkbox": {
-    "fg": "yellow"
+    "fg": "schema.lead"
   },
   "org-checkbox-statistics-todo": {
     "fg": "schema.org_todo"
@@ -400,7 +400,7 @@
     "fg": "cyan"
   },
   "org-agenda-structure": {
-    "fg": "yellow",
+    "fg": "schema.lead",
     "weight": "semi-bold",
     "height": 1.15
   },
@@ -409,7 +409,7 @@
     "weight": "semi-bold"
   },
   "org-agenda-date-today": {
-    "fg": "yellow",
+    "fg": "schema.lead",
     "bg": "base1",
     "weight": "semi-bold",
     "extend": true
@@ -419,7 +419,7 @@
     "weight": "semi-bold"
   },
   "org-agenda-current-time": {
-    "fg": "yellow"
+    "fg": "schema.lead"
   },
   "org-agenda-done": {
     "fg": "base5"
@@ -428,7 +428,7 @@
     "fg": "fg"
   },
   "org-scheduled-today": {
-    "fg": "yellow"
+    "fg": "schema.lead"
   },
   "org-scheduled-previously": {
     "fg": "orange"
@@ -468,11 +468,11 @@
     "inherit": "org-quote"
   },
   "magit-section-heading": {
-    "fg": "yellow",
+    "fg": "schema.lead",
     "weight": "semi-bold"
   },
   "magit-section-heading-selection": {
-    "fg": "yellow",
+    "fg": "schema.lead",
     "bg": "base1"
   },
   "magit-section-highlight": {
@@ -480,7 +480,7 @@
     "extend": true
   },
   "magit-branch-current": {
-    "fg": "yellow",
+    "fg": "schema.lead",
     "box": {
       "width": -1,
       "color": "base4"
@@ -493,7 +493,7 @@
     "fg": "base6"
   },
   "magit-tag": {
-    "fg": "yellow"
+    "fg": "schema.lead"
   },
   "magit-diff-added": {
     "fg": "green",
@@ -557,11 +557,11 @@
   },
   "magit-diff-lines-heading": {
     "fg": "bg",
-    "bg": "yellow",
+    "bg": "schema.lead",
     "extend": true
   },
   "magit-diff-revision-summary": {
-    "fg": "yellow",
+    "fg": "schema.lead",
     "weight": "semi-bold"
   },
   "magit-process-ok": {
@@ -634,7 +634,7 @@
     "bg": "surface"
   },
   "diff-function": {
-    "fg": "yellow",
+    "fg": "schema.lead",
     "bg": "surface"
   },
   "smerge-upper": {
@@ -736,14 +736,14 @@
   },
   "vertico-quick1": {
     "fg": "bg",
-    "bg": "yellow"
+    "bg": "schema.lead"
   },
   "vertico-quick2": {
     "fg": "bg",
     "bg": "orange"
   },
   "completions-common-part": {
-    "fg": "yellow"
+    "fg": "schema.lead"
   },
   "completions-first-difference": {
     "fg": "fg",
@@ -788,9 +788,9 @@
     "bg": "surface"
   },
   "eldoc-highlight-function-argument": {
-    "fg": "yellow",
+    "fg": "schema.lead",
     "underline": {
-      "color": "yellow",
+      "color": "schema.lead",
       "style": "line"
     }
   },
@@ -896,7 +896,7 @@
     "bg": "bg-alt"
   },
   "doom-modeline-bar": {
-    "bg": "yellow"
+    "bg": "schema.lead"
   },
   "doom-modeline-bar-inactive": {
     "bg": "bg"
@@ -916,14 +916,14 @@
     "fg": "fg-alt"
   },
   "doom-modeline-project-dir": {
-    "fg": "yellow"
+    "fg": "schema.lead"
   },
   "doom-modeline-highlight": {
-    "fg": "yellow"
+    "fg": "schema.lead"
   },
   "doom-modeline-panel": {
     "fg": "bg",
-    "bg": "yellow"
+    "bg": "schema.lead"
   },
   "doom-modeline-info": {
     "fg": "green"
@@ -938,7 +938,7 @@
     "fg": "red"
   },
   "doom-modeline-evil-normal-state": {
-    "fg": "yellow"
+    "fg": "schema.lead"
   },
   "doom-modeline-evil-insert-state": {
     "fg": "teal"
@@ -962,7 +962,7 @@
     "fg": "base5"
   },
   "doom-dashboard-menu-title": {
-    "fg": "yellow"
+    "fg": "schema.lead"
   },
   "doom-dashboard-menu-desc": {
     "fg": "base6"
@@ -979,7 +979,7 @@
     "bg": "diff-removed-bg"
   },
   "which-key-key-face": {
-    "fg": "yellow"
+    "fg": "schema.lead"
   },
   "which-key-group-description-face": {
     "fg": "orange"
@@ -988,12 +988,12 @@
     "fg": "orange"
   },
   "helpful-heading": {
-    "fg": "yellow",
+    "fg": "schema.lead",
     "weight": "semi-bold",
     "height": 1.15
   },
   "font-latex-sectioning-0-face": {
-    "fg": "yellow",
+    "fg": "schema.lead",
     "weight": "semi-bold",
     "height": 1.3
   },
@@ -1043,30 +1043,30 @@
     "fg": "yellow"
   },
   "dired-directory": {
-    "fg": "yellow"
+    "fg": "schema.lead"
   },
   "diredfl-dir-name": {
-    "fg": "yellow"
+    "fg": "schema.lead"
   },
   "diredfl-dir-priv": {
-    "fg": "yellow"
+    "fg": "schema.lead"
   },
   "dired-dirname": {
-    "fg": "yellow"
+    "fg": "schema.lead"
   },
   "dirvish-hl-line": {
     "bg": "base2",
     "extend": true
   },
   "eshell-prompt": {
-    "fg": "yellow",
+    "fg": "schema.lead",
     "weight": "semi-bold"
   },
   "eshell-ls-directory": {
-    "fg": "yellow"
+    "fg": "schema.lead"
   },
   "treemacs-root-face": {
-    "fg": "yellow",
+    "fg": "schema.lead",
     "weight": "semi-bold",
     "height": 1.1
   },
@@ -1074,13 +1074,13 @@
     "fg": "fg-alt"
   },
   "consult-key": {
-    "fg": "yellow"
+    "fg": "schema.lead"
   },
   "consult-narrow-indicator": {
-    "fg": "yellow"
+    "fg": "schema.lead"
   },
   "marginalia-key": {
-    "fg": "yellow"
+    "fg": "schema.lead"
   },
   "company-tooltip": {
     "fg": "fg",
@@ -1090,9 +1090,9 @@
     "bg": "base3"
   },
   "company-tooltip-common": {
-    "fg": "yellow"
+    "fg": "schema.lead"
   },
   "company-tooltip-common-selection": {
-    "fg": "yellow"
+    "fg": "schema.lead"
   }
 }
