@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-A family of twenty themes for code editors and terminals.
+A family of five themes for code editors and terminals.
 
 Each flavor is anchored in a specific material, pigment or scene and
 rendered with a single dominant lead across a tightly disciplined
@@ -11,40 +11,26 @@ darks: each is a complete companion in its own register.
 
 ## Flavors
 
-Twenty flavors, each in a dark and a light variant — forty themes.
+Five flavors, each in a dark and a light variant, ten themes in all. Fifteen
+earlier flavors are kept, unmaintained, in `archive/`.
 
 | Flavor | Lead | Description |
 |---|---|---|
-| **Dawn**       | warm violet     | warm sepia ground; aged-ivory text and deep hand-mixed inks |
+| **Dawn**       | amber lamp      | warm sepia room lit by a single amber lamp; muted inks of rust, olive, sage, slate and plum |
 | **Oxblood**    | gilt yellow     | theatre after the curtain falls; oxblood-velvet drape, a single overhead spot on the gilt frame |
-| **Ember**      | forge orange    | blacksmith's shop at night; cold dark iron and the incandescent forge-glow |
 | **Tide**       | biolum green    | deep ocean at night, lit from within by a bioluminescent jellyfish |
-| **Indigo**     | dye blue        | indigo dyer's workshop at dusk; dye-vat, copper kettles, verdigris on aged tools |
 | **Canopy**     | sun yellow      | pine forest at noon; one shaft of sun through the leaves |
 | **Slate**      | steel blue      | cold graphite ground; near-achromatic with one steel-blue voice |
-| **Aurora**     | aurora green    | Icelandic basalt night swept by the aurora borealis |
-| **Solitude**   | deep petrol     | mountain observatory at midnight; one deep-teal beacon governing the surface |
-| **Monastery**  | beeswax gold    | old scriptorium; aged-leather shadows and the sacred glow of beeswax gold |
-| **Jade**       | jade green      | volcanic glass and imperial jade; obsidian ground with oxidized copper-jade cascade |
-| **Cherenkov**  | electric cyan   | nuclear reactor cooling pool at night; the electric blue-violet Cherenkov glow |
-| **Vesper**     | star cream      | evening star piercing dusk; cool velvet-violet sky, one warm cream of Venus |
-| **Eclipse**    | solar gold      | total eclipse; violet-graphite blackness against the pure solar corona |
-| **Petrichor**  | terracotta      | earth after a storm; wet slate, terracotta clay, sage moss, ochre dust, mist blue |
-| **Atelier**    | brushed brass   | modernist designer's workshop at dusk; polished concrete, brass lamp, navy wool |
-| **Cinnabar**   | imperial red    | Chinese imperial lacquer-work; cinnabar red on warm ink-black, gold-leaf and jade |
-| **Prisma**     | spectral violet | single white light enters a glass prism and refracts: violet, cerulean, mint, peach |
-| **Tyrian**     | murex pourpre   | Phoenician dyer's workshop on the Mediterranean coast; imperial murex purple |
-| **Lapis**      | ultramarine     | Renaissance pigment-grinder's workshop; lapis-lazuli from the Sar-e-Sang mines |
 
 ## Supported targets
 
 | Target | Output |
 |---|---|
-| **Emacs** (vanilla `deftheme`)  | `emacs/themes/*.el` (40) |
-| **Neovim** (Lua colorscheme)    | `nvim/colors/*.lua` (40) |
-| **VS Code** (extension)         | `vscode/themes/*.json` (40) + `package.json` |
-| **WezTerm** (color scheme)      | `wezterm/*.toml` (40) |
-| **base24** (tinted-theming)     | `base24/*.yaml` (40) |
+| **Emacs** (vanilla `deftheme`)  | `emacs/themes/*.el` (10) |
+| **Neovim** (Lua colorscheme)    | `nvim/colors/*.lua` (10) |
+| **VS Code** (extension)         | `vscode/themes/*.json` (10) + `package.json` |
+| **WezTerm** (color scheme)      | `wezterm/*.toml` (10) |
+| **base24** (tinted-theming)     | `base24/*.yaml` (10) |
 
 The Emacs files require no external dependency: they set a comprehensive
 face surface — modeline, completion, syntax, outline, org, magit, diff,
