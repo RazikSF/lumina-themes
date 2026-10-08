@@ -1,0 +1,1098 @@
+{
+  "_schema": "Lumina 2 overlay: merged over faces.json for flavors whose schema sets v2. Same keys as faces.json plus box {width,color}, underline {color,style}, overline.",
+  "fringe": {
+    "fg": "base4",
+    "bg": "bg"
+  },
+  "mode-line": {
+    "fg": "fg-alt",
+    "bg": "bg-alt",
+    "box": {
+      "width": 6,
+      "color": "bg-alt"
+    }
+  },
+  "mode-line-active": {
+    "inherit": "mode-line"
+  },
+  "mode-line-inactive": {
+    "fg": "base5",
+    "bg": "bg",
+    "box": {
+      "width": 6,
+      "color": "bg"
+    }
+  },
+  "mode-line-buffer-id": {
+    "fg": "fg",
+    "weight": "semi-bold"
+  },
+  "mode-line-emphasis": {
+    "fg": "yellow"
+  },
+  "mode-line-highlight": {
+    "fg": "yellow"
+  },
+  "header-line": {
+    "fg": "base6",
+    "bg": "bg-alt",
+    "box": {
+      "width": 4,
+      "color": "bg-alt"
+    }
+  },
+  "header-line-inactive": {
+    "fg": "base5",
+    "bg": "bg-alt",
+    "box": {
+      "width": 4,
+      "color": "bg-alt"
+    }
+  },
+  "cursor": {
+    "bg": "yellow"
+  },
+  "region": {
+    "bg": "region",
+    "extend": true
+  },
+  "secondary-selection": {
+    "bg": "base2",
+    "extend": true
+  },
+  "hl-line": {
+    "bg": "base1",
+    "extend": true
+  },
+  "highlight": {
+    "bg": "base2"
+  },
+  "vertical-border": {
+    "fg": "base2"
+  },
+  "window-divider": {
+    "fg": "base2"
+  },
+  "window-divider-first-pixel": {
+    "fg": "base2"
+  },
+  "window-divider-last-pixel": {
+    "fg": "base2"
+  },
+  "line-number": {
+    "fg": "base4",
+    "bg": "bg"
+  },
+  "line-number-current-line": {
+    "fg": "yellow",
+    "bg": "base1"
+  },
+  "line-number-major-tick": {
+    "fg": "base5",
+    "bg": "bg"
+  },
+  "line-number-minor-tick": {
+    "fg": "base4",
+    "bg": "bg"
+  },
+  "fill-column-indicator": {
+    "fg": "base2"
+  },
+  "minibuffer-prompt": {
+    "fg": "yellow"
+  },
+  "isearch": {
+    "fg": "bg",
+    "bg": "yellow"
+  },
+  "isearch-fail": {
+    "fg": "red",
+    "bg": "diff-removed-bg"
+  },
+  "lazy-highlight": {
+    "fg": "fg",
+    "bg": "base3"
+  },
+  "match": {
+    "fg": "yellow",
+    "bg": "surface"
+  },
+  "show-paren-match": {
+    "fg": "yellow",
+    "bg": "base3"
+  },
+  "show-paren-mismatch": {
+    "fg": "red",
+    "bg": "diff-removed-bg"
+  },
+  "link": {
+    "fg": "blue",
+    "underline": {
+      "color": "dark-blue",
+      "style": "line"
+    }
+  },
+  "link-visited": {
+    "fg": "violet",
+    "underline": {
+      "color": "base5",
+      "style": "line"
+    }
+  },
+  "error": {
+    "fg": "red"
+  },
+  "warning": {
+    "fg": "orange"
+  },
+  "success": {
+    "fg": "green"
+  },
+  "escape-glyph": {
+    "fg": "yellow"
+  },
+  "trailing-whitespace": {
+    "bg": "diff-removed-bg"
+  },
+  "tooltip": {
+    "fg": "fg",
+    "bg": "surface"
+  },
+  "help-key-binding": {
+    "fg": "yellow",
+    "bg": "surface",
+    "box": {
+      "width": -1,
+      "color": "base3"
+    }
+  },
+  "font-lock-keyword-face": {
+    "fg": "keywords"
+  },
+  "font-lock-comment-face": {
+    "fg": "comments",
+    "italic": true
+  },
+  "font-lock-doc-face": {
+    "fg": "doc-comments",
+    "italic": true
+  },
+  "font-lock-string-face": {
+    "fg": "strings"
+  },
+  "font-lock-function-name-face": {
+    "fg": "functions"
+  },
+  "font-lock-variable-name-face": {
+    "fg": "variables"
+  },
+  "font-lock-type-face": {
+    "fg": "type"
+  },
+  "font-lock-constant-face": {
+    "fg": "constants"
+  },
+  "font-lock-builtin-face": {
+    "fg": "builtin"
+  },
+  "font-lock-negation-char-face": {
+    "fg": "red"
+  },
+  "font-lock-bracket-face": {
+    "fg": "base6"
+  },
+  "font-lock-delimiter-face": {
+    "fg": "base6"
+  },
+  "font-lock-punctuation-face": {
+    "fg": "base6"
+  },
+  "font-lock-regexp-grouping-backslash": {
+    "fg": "base6"
+  },
+  "font-lock-regexp-grouping-construct": {
+    "fg": "yellow"
+  },
+  "tab-bar": {
+    "fg": "fg-alt",
+    "bg": "bg-alt"
+  },
+  "tab-bar-tab": {
+    "fg": "fg",
+    "bg": "bg",
+    "overline": "yellow",
+    "box": {
+      "width": 4,
+      "color": "bg"
+    }
+  },
+  "tab-bar-tab-inactive": {
+    "fg": "base5",
+    "bg": "bg-alt",
+    "box": {
+      "width": 4,
+      "color": "bg-alt"
+    }
+  },
+  "tab-line": {
+    "fg": "fg-alt",
+    "bg": "bg-alt"
+  },
+  "tab-line-tab": {
+    "fg": "fg",
+    "bg": "bg",
+    "box": {
+      "width": 4,
+      "color": "bg"
+    }
+  },
+  "tab-line-tab-current": {
+    "fg": "fg",
+    "bg": "bg",
+    "overline": "yellow",
+    "box": {
+      "width": 4,
+      "color": "bg"
+    }
+  },
+  "tab-line-tab-inactive": {
+    "fg": "base5",
+    "bg": "bg-alt",
+    "box": {
+      "width": 4,
+      "color": "bg-alt"
+    }
+  },
+  "tab-line-tab-modified": {
+    "fg": "orange",
+    "italic": true
+  },
+  "tab-line-highlight": {
+    "fg": "yellow",
+    "bg": "bg"
+  },
+  "outline-1": {
+    "fg": "schema.outline[0]",
+    "weight": "semi-bold",
+    "height": 1.25
+  },
+  "outline-2": {
+    "fg": "schema.outline[1]",
+    "weight": "semi-bold",
+    "height": 1.12
+  },
+  "outline-3": {
+    "fg": "schema.outline[2]",
+    "weight": "semi-bold",
+    "height": 1.05
+  },
+  "outline-4": {
+    "fg": "schema.outline[3]",
+    "weight": "semi-bold"
+  },
+  "outline-5": {
+    "fg": "schema.outline[0]"
+  },
+  "outline-6": {
+    "fg": "schema.outline[1]"
+  },
+  "outline-7": {
+    "fg": "schema.outline[2]"
+  },
+  "outline-8": {
+    "fg": "schema.outline[3]"
+  },
+  "org-document-title": {
+    "fg": "yellow",
+    "weight": "semi-bold",
+    "height": 1.5
+  },
+  "org-document-info": {
+    "fg": "fg-alt",
+    "height": 1.05
+  },
+  "org-document-info-keyword": {
+    "fg": "base5"
+  },
+  "org-hide": {
+    "fg": "bg"
+  },
+  "org-block": {
+    "bg": "surface",
+    "extend": true
+  },
+  "org-block-begin-line": {
+    "fg": "base5",
+    "bg": "surface",
+    "height": 0.85,
+    "extend": true
+  },
+  "org-block-end-line": {
+    "inherit": "org-block-begin-line"
+  },
+  "org-code": {
+    "fg": "orange"
+  },
+  "org-verbatim": {
+    "fg": "green"
+  },
+  "org-quote": {
+    "fg": "fg-alt",
+    "bg": "surface",
+    "italic": true,
+    "extend": true
+  },
+  "org-todo": {
+    "fg": "schema.org_todo",
+    "weight": "semi-bold"
+  },
+  "org-done": {
+    "fg": "schema.org_done",
+    "weight": "semi-bold"
+  },
+  "org-headline-done": {
+    "fg": "base5"
+  },
+  "org-priority": {
+    "fg": "red"
+  },
+  "org-tag": {
+    "fg": "base5",
+    "italic": true
+  },
+  "org-table": {
+    "fg": "fg-alt"
+  },
+  "org-formula": {
+    "fg": "magenta"
+  },
+  "org-date": {
+    "fg": "violet"
+  },
+  "org-special-keyword": {
+    "fg": "base5"
+  },
+  "org-meta-line": {
+    "fg": "base5"
+  },
+  "org-drawer": {
+    "fg": "base5"
+  },
+  "org-property-value": {
+    "fg": "fg-alt"
+  },
+  "org-checkbox": {
+    "fg": "yellow"
+  },
+  "org-checkbox-statistics-todo": {
+    "fg": "schema.org_todo"
+  },
+  "org-checkbox-statistics-done": {
+    "fg": "schema.org_done"
+  },
+  "org-warning": {
+    "fg": "orange"
+  },
+  "org-ellipsis": {
+    "fg": "base5"
+  },
+  "org-footnote": {
+    "fg": "cyan"
+  },
+  "org-agenda-structure": {
+    "fg": "yellow",
+    "weight": "semi-bold",
+    "height": 1.15
+  },
+  "org-agenda-date": {
+    "fg": "fg",
+    "weight": "semi-bold"
+  },
+  "org-agenda-date-today": {
+    "fg": "yellow",
+    "bg": "base1",
+    "weight": "semi-bold",
+    "extend": true
+  },
+  "org-agenda-date-weekend": {
+    "fg": "base6",
+    "weight": "semi-bold"
+  },
+  "org-agenda-current-time": {
+    "fg": "yellow"
+  },
+  "org-agenda-done": {
+    "fg": "base5"
+  },
+  "org-scheduled": {
+    "fg": "fg"
+  },
+  "org-scheduled-today": {
+    "fg": "yellow"
+  },
+  "org-scheduled-previously": {
+    "fg": "orange"
+  },
+  "org-upcoming-deadline": {
+    "fg": "orange"
+  },
+  "org-deadline-announce": {
+    "fg": "red"
+  },
+  "org-time-grid": {
+    "fg": "base5"
+  },
+  "markdown-header-face": {
+    "fg": "schema.outline[0]",
+    "weight": "semi-bold"
+  },
+  "markdown-header-face-1": {
+    "inherit": "outline-1"
+  },
+  "markdown-header-face-2": {
+    "inherit": "outline-2"
+  },
+  "markdown-header-face-3": {
+    "inherit": "outline-3"
+  },
+  "markdown-header-face-4": {
+    "inherit": "outline-4"
+  },
+  "markdown-inline-code-face": {
+    "fg": "orange"
+  },
+  "markdown-markup-face": {
+    "fg": "base5"
+  },
+  "markdown-blockquote-face": {
+    "inherit": "org-quote"
+  },
+  "magit-section-heading": {
+    "fg": "yellow",
+    "weight": "semi-bold"
+  },
+  "magit-section-heading-selection": {
+    "fg": "yellow",
+    "bg": "base1"
+  },
+  "magit-section-highlight": {
+    "bg": "base1",
+    "extend": true
+  },
+  "magit-branch-current": {
+    "fg": "yellow",
+    "box": {
+      "width": -1,
+      "color": "base4"
+    }
+  },
+  "magit-hash": {
+    "fg": "base5"
+  },
+  "magit-log-author": {
+    "fg": "base6"
+  },
+  "magit-tag": {
+    "fg": "yellow"
+  },
+  "magit-diff-added": {
+    "fg": "green",
+    "bg": "diff-added-bg",
+    "extend": true
+  },
+  "magit-diff-added-highlight": {
+    "fg": "green",
+    "bg": "diff-added-bg",
+    "extend": true
+  },
+  "magit-diff-removed": {
+    "fg": "red",
+    "bg": "diff-removed-bg",
+    "extend": true
+  },
+  "magit-diff-removed-highlight": {
+    "fg": "red",
+    "bg": "diff-removed-bg",
+    "extend": true
+  },
+  "magit-diff-base": {
+    "fg": "yellow",
+    "bg": "diff-changed-bg",
+    "extend": true
+  },
+  "magit-diff-base-highlight": {
+    "fg": "yellow",
+    "bg": "diff-changed-bg",
+    "extend": true
+  },
+  "magit-diff-context": {
+    "fg": "base5",
+    "extend": true
+  },
+  "magit-diff-context-highlight": {
+    "fg": "fg-alt",
+    "bg": "base1",
+    "extend": true
+  },
+  "magit-diff-file-heading": {
+    "fg": "fg",
+    "weight": "semi-bold",
+    "extend": true
+  },
+  "magit-diff-file-heading-highlight": {
+    "fg": "fg",
+    "bg": "base1",
+    "weight": "semi-bold",
+    "extend": true
+  },
+  "magit-diff-hunk-heading": {
+    "fg": "base6",
+    "bg": "base2",
+    "extend": true
+  },
+  "magit-diff-hunk-heading-highlight": {
+    "fg": "fg",
+    "bg": "base3",
+    "extend": true
+  },
+  "magit-diff-lines-heading": {
+    "fg": "bg",
+    "bg": "yellow",
+    "extend": true
+  },
+  "magit-diff-revision-summary": {
+    "fg": "yellow",
+    "weight": "semi-bold"
+  },
+  "magit-process-ok": {
+    "fg": "green"
+  },
+  "magit-process-ng": {
+    "fg": "red"
+  },
+  "magit-blame-heading": {
+    "fg": "fg-alt",
+    "bg": "surface",
+    "extend": true
+  },
+  "magit-blame-name": {
+    "fg": "orange"
+  },
+  "magit-blame-hash": {
+    "fg": "base5"
+  },
+  "diff-added": {
+    "fg": "green",
+    "bg": "diff-added-bg",
+    "extend": true
+  },
+  "diff-removed": {
+    "fg": "red",
+    "bg": "diff-removed-bg",
+    "extend": true
+  },
+  "diff-changed": {
+    "fg": "yellow",
+    "bg": "diff-changed-bg",
+    "extend": true
+  },
+  "diff-refine-added": {
+    "bg": "diff-added-refine"
+  },
+  "diff-refine-removed": {
+    "bg": "diff-removed-refine"
+  },
+  "diff-refine-changed": {
+    "bg": "base3"
+  },
+  "diff-indicator-added": {
+    "fg": "green",
+    "bg": "diff-added-bg"
+  },
+  "diff-indicator-removed": {
+    "fg": "red",
+    "bg": "diff-removed-bg"
+  },
+  "diff-indicator-changed": {
+    "fg": "yellow",
+    "bg": "diff-changed-bg"
+  },
+  "diff-context": {
+    "fg": "fg-alt"
+  },
+  "diff-header": {
+    "fg": "base6",
+    "bg": "base1"
+  },
+  "diff-file-header": {
+    "fg": "fg",
+    "bg": "base2",
+    "weight": "semi-bold"
+  },
+  "diff-hunk-header": {
+    "fg": "base6",
+    "bg": "surface"
+  },
+  "diff-function": {
+    "fg": "yellow",
+    "bg": "surface"
+  },
+  "smerge-upper": {
+    "bg": "diff-removed-bg",
+    "extend": true
+  },
+  "smerge-lower": {
+    "bg": "diff-added-bg",
+    "extend": true
+  },
+  "smerge-base": {
+    "bg": "diff-changed-bg",
+    "extend": true
+  },
+  "smerge-markers": {
+    "fg": "base6",
+    "bg": "base2",
+    "extend": true
+  },
+  "smerge-refined-added": {
+    "bg": "diff-added-refine"
+  },
+  "smerge-refined-removed": {
+    "bg": "diff-removed-refine"
+  },
+  "ediff-current-diff-A": {
+    "bg": "diff-removed-bg",
+    "extend": true
+  },
+  "ediff-current-diff-B": {
+    "bg": "diff-added-bg",
+    "extend": true
+  },
+  "ediff-current-diff-C": {
+    "bg": "diff-changed-bg",
+    "extend": true
+  },
+  "ediff-fine-diff-A": {
+    "bg": "diff-removed-refine"
+  },
+  "ediff-fine-diff-B": {
+    "bg": "diff-added-refine"
+  },
+  "ediff-fine-diff-C": {
+    "bg": "base3"
+  },
+  "ediff-even-diff-A": {
+    "bg": "base1"
+  },
+  "ediff-even-diff-B": {
+    "bg": "base1"
+  },
+  "ediff-odd-diff-A": {
+    "bg": "base2"
+  },
+  "ediff-odd-diff-B": {
+    "bg": "base2"
+  },
+  "diff-hl-insert": {
+    "fg": "green",
+    "bg": "green"
+  },
+  "diff-hl-change": {
+    "fg": "yellow",
+    "bg": "yellow"
+  },
+  "diff-hl-delete": {
+    "fg": "red",
+    "bg": "red"
+  },
+  "git-gutter:added": {
+    "fg": "green"
+  },
+  "git-gutter:modified": {
+    "fg": "yellow"
+  },
+  "git-gutter:deleted": {
+    "fg": "red"
+  },
+  "git-gutter-fr:added": {
+    "fg": "green"
+  },
+  "git-gutter-fr:modified": {
+    "fg": "yellow"
+  },
+  "git-gutter-fr:deleted": {
+    "fg": "red"
+  },
+  "vertico-current": {
+    "bg": "base2",
+    "extend": true
+  },
+  "vertico-group-title": {
+    "fg": "base6",
+    "italic": true
+  },
+  "vertico-group-separator": {
+    "fg": "base3"
+  },
+  "vertico-quick1": {
+    "fg": "bg",
+    "bg": "yellow"
+  },
+  "vertico-quick2": {
+    "fg": "bg",
+    "bg": "orange"
+  },
+  "completions-common-part": {
+    "fg": "yellow"
+  },
+  "completions-first-difference": {
+    "fg": "fg",
+    "weight": "semi-bold"
+  },
+  "completions-annotations": {
+    "fg": "base5",
+    "italic": true
+  },
+  "orderless-match-face-0": {
+    "fg": "schema.orderless[0]",
+    "weight": "semi-bold"
+  },
+  "orderless-match-face-1": {
+    "fg": "schema.orderless[1]",
+    "weight": "semi-bold"
+  },
+  "orderless-match-face-2": {
+    "fg": "schema.orderless[2]",
+    "weight": "semi-bold"
+  },
+  "orderless-match-face-3": {
+    "fg": "blue",
+    "weight": "semi-bold"
+  },
+  "corfu-default": {
+    "fg": "fg",
+    "bg": "surface"
+  },
+  "corfu-current": {
+    "fg": "fg",
+    "bg": "base3"
+  },
+  "corfu-border": {
+    "bg": "base3"
+  },
+  "corfu-bar": {
+    "bg": "base5"
+  },
+  "corfu-popupinfo": {
+    "fg": "fg-alt",
+    "bg": "surface"
+  },
+  "eldoc-highlight-function-argument": {
+    "fg": "yellow",
+    "underline": {
+      "color": "yellow",
+      "style": "line"
+    }
+  },
+  "eglot-highlight-symbol-face": {
+    "bg": "base2"
+  },
+  "eglot-inlay-hint-face": {
+    "fg": "base5",
+    "height": 0.9
+  },
+  "eglot-mode-line": {
+    "fg": "base6"
+  },
+  "lsp-face-highlight-textual": {
+    "bg": "base2"
+  },
+  "lsp-face-highlight-read": {
+    "bg": "base2"
+  },
+  "lsp-face-highlight-write": {
+    "bg": "base3"
+  },
+  "lsp-inlay-hint-face": {
+    "fg": "base5",
+    "height": 0.9
+  },
+  "flycheck-error": {
+    "underline": {
+      "color": "red",
+      "style": "wave"
+    }
+  },
+  "flycheck-warning": {
+    "underline": {
+      "color": "orange",
+      "style": "wave"
+    }
+  },
+  "flycheck-info": {
+    "underline": {
+      "color": "blue",
+      "style": "wave"
+    }
+  },
+  "flymake-error": {
+    "underline": {
+      "color": "red",
+      "style": "wave"
+    }
+  },
+  "flymake-warning": {
+    "underline": {
+      "color": "orange",
+      "style": "wave"
+    }
+  },
+  "flymake-note": {
+    "underline": {
+      "color": "blue",
+      "style": "wave"
+    }
+  },
+  "hl-todo": {
+    "fg": "orange",
+    "weight": "semi-bold"
+  },
+  "pulse-highlight-start-face": {
+    "bg": "region"
+  },
+  "pulse-highlight-face": {
+    "bg": "region",
+    "extend": true
+  },
+  "nav-flash-face": {
+    "bg": "region",
+    "extend": true
+  },
+  "solaire-default-face": {
+    "fg": "fg",
+    "bg": "bg-alt"
+  },
+  "solaire-fringe-face": {
+    "fg": "base4",
+    "bg": "bg-alt"
+  },
+  "solaire-line-number-face": {
+    "fg": "base4",
+    "bg": "bg-alt"
+  },
+  "solaire-hl-line-face": {
+    "bg": "bg",
+    "extend": true
+  },
+  "solaire-org-hide-face": {
+    "fg": "bg-alt"
+  },
+  "solaire-minibuffer-face": {
+    "fg": "fg",
+    "bg": "bg-alt"
+  },
+  "solaire-header-line-face": {
+    "fg": "base6",
+    "bg": "bg-alt"
+  },
+  "doom-modeline-bar": {
+    "bg": "yellow"
+  },
+  "doom-modeline-bar-inactive": {
+    "bg": "bg"
+  },
+  "doom-modeline-buffer-file": {
+    "fg": "fg",
+    "weight": "semi-bold"
+  },
+  "doom-modeline-buffer-path": {
+    "fg": "base6"
+  },
+  "doom-modeline-buffer-modified": {
+    "fg": "orange",
+    "weight": "semi-bold"
+  },
+  "doom-modeline-buffer-major-mode": {
+    "fg": "fg-alt"
+  },
+  "doom-modeline-project-dir": {
+    "fg": "yellow"
+  },
+  "doom-modeline-highlight": {
+    "fg": "yellow"
+  },
+  "doom-modeline-panel": {
+    "fg": "bg",
+    "bg": "yellow"
+  },
+  "doom-modeline-info": {
+    "fg": "green"
+  },
+  "doom-modeline-warning": {
+    "fg": "orange"
+  },
+  "doom-modeline-urgent": {
+    "fg": "red"
+  },
+  "doom-modeline-error": {
+    "fg": "red"
+  },
+  "doom-modeline-evil-normal-state": {
+    "fg": "yellow"
+  },
+  "doom-modeline-evil-insert-state": {
+    "fg": "teal"
+  },
+  "doom-modeline-evil-visual-state": {
+    "fg": "violet"
+  },
+  "doom-modeline-evil-replace-state": {
+    "fg": "red"
+  },
+  "doom-modeline-evil-emacs-state": {
+    "fg": "magenta"
+  },
+  "doom-modeline-evil-motion-state": {
+    "fg": "blue"
+  },
+  "doom-modeline-evil-operator-state": {
+    "fg": "blue"
+  },
+  "doom-dashboard-banner": {
+    "fg": "base5"
+  },
+  "doom-dashboard-menu-title": {
+    "fg": "yellow"
+  },
+  "doom-dashboard-menu-desc": {
+    "fg": "base6"
+  },
+  "doom-dashboard-loaded": {
+    "fg": "base5",
+    "italic": true
+  },
+  "doom-dashboard-footer-icon": {
+    "fg": "base4"
+  },
+  "rainbow-delimiters-unmatched-face": {
+    "fg": "red",
+    "bg": "diff-removed-bg"
+  },
+  "which-key-key-face": {
+    "fg": "yellow"
+  },
+  "which-key-group-description-face": {
+    "fg": "orange"
+  },
+  "which-key-special-key-face": {
+    "fg": "orange"
+  },
+  "helpful-heading": {
+    "fg": "yellow",
+    "weight": "semi-bold",
+    "height": 1.15
+  },
+  "font-latex-sectioning-0-face": {
+    "fg": "yellow",
+    "weight": "semi-bold",
+    "height": 1.3
+  },
+  "font-latex-sectioning-1-face": {
+    "fg": "orange",
+    "weight": "semi-bold",
+    "height": 1.2
+  },
+  "font-latex-sectioning-2-face": {
+    "fg": "orange",
+    "weight": "semi-bold",
+    "height": 1.12
+  },
+  "font-latex-sectioning-3-face": {
+    "fg": "teal",
+    "weight": "semi-bold"
+  },
+  "font-latex-sectioning-4-face": {
+    "fg": "blue",
+    "weight": "semi-bold"
+  },
+  "font-latex-sectioning-5-face": {
+    "fg": "blue"
+  },
+  "font-latex-warning-face": {
+    "fg": "red"
+  },
+  "TeX-error-description-error": {
+    "fg": "red"
+  },
+  "TeX-error-description-warning": {
+    "fg": "orange"
+  },
+  "compilation-error": {
+    "fg": "red"
+  },
+  "compilation-warning": {
+    "fg": "orange"
+  },
+  "compilation-mode-line-fail": {
+    "fg": "red"
+  },
+  "compilation-mode-line-exit": {
+    "fg": "green"
+  },
+  "compilation-mode-line-run": {
+    "fg": "yellow"
+  },
+  "dired-directory": {
+    "fg": "yellow"
+  },
+  "diredfl-dir-name": {
+    "fg": "yellow"
+  },
+  "diredfl-dir-priv": {
+    "fg": "yellow"
+  },
+  "dired-dirname": {
+    "fg": "yellow"
+  },
+  "dirvish-hl-line": {
+    "bg": "base2",
+    "extend": true
+  },
+  "eshell-prompt": {
+    "fg": "yellow",
+    "weight": "semi-bold"
+  },
+  "eshell-ls-directory": {
+    "fg": "yellow"
+  },
+  "treemacs-root-face": {
+    "fg": "yellow",
+    "weight": "semi-bold",
+    "height": 1.1
+  },
+  "treemacs-directory-face": {
+    "fg": "fg-alt"
+  },
+  "consult-key": {
+    "fg": "yellow"
+  },
+  "consult-narrow-indicator": {
+    "fg": "yellow"
+  },
+  "marginalia-key": {
+    "fg": "yellow"
+  },
+  "company-tooltip": {
+    "fg": "fg",
+    "bg": "surface"
+  },
+  "company-tooltip-selection": {
+    "bg": "base3"
+  },
+  "company-tooltip-common": {
+    "fg": "yellow"
+  },
+  "company-tooltip-common-selection": {
+    "fg": "yellow"
+  }
+}

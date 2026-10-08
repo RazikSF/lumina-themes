@@ -8,160 +8,200 @@
         "schema": "dawn",
         "colors": {
           "bg": [
-            "#15120F",
-            "#1c1c1c",
+            "#1D1814",
+            "#1d1814",
+            "black"
+          ],
+          "bg-alt": [
+            "#17130F",
+            "#17130f",
             "black"
           ],
           "fg": [
-            "#E8E1D2",
-            "#dfdfdf",
+            "#D9D0BF",
+            "#d9d0bf",
             "white"
           ],
-          "bg-alt": [
-            "#1E1813",
-            "#262626",
-            "black"
-          ],
           "fg-alt": [
-            "#B9AC97",
-            "#bcbcbc",
+            "#B4A99A",
+            "#b4a99a",
             "brightwhite"
           ],
           "base0": [
-            "#100D0A",
-            "#121212",
+            "#110D0A",
+            "#110d0a",
             "black"
           ],
           "base1": [
-            "#1A1612",
-            "#1c1c1c",
+            "#221D18",
+            "#221d18",
             "brightblack"
           ],
           "base2": [
-            "#241E18",
-            "#262626",
+            "#2B251F",
+            "#2b251f",
             "brightblack"
           ],
           "base3": [
-            "#322A20",
-            "#303030",
+            "#352F2A",
+            "#352f2a",
             "brightblack"
           ],
           "base4": [
-            "#4A3F30",
-            "#4e4e4e",
+            "#4D463F",
+            "#4d463f",
             "brightblack"
           ],
           "base5": [
-            "#6E6051",
-            "#6c6c6c",
+            "#70675E",
+            "#70675e",
             "brightblack"
           ],
           "base6": [
-            "#8C7C68",
-            "#8a8a8a",
+            "#91877C",
+            "#91877c",
             "brightblack"
           ],
           "base7": [
-            "#B5A488",
-            "#b2b2b2",
+            "#B6AC9F",
+            "#b6ac9f",
             "brightblack"
           ],
           "base8": [
-            "#E8E1D2",
-            "#dfdfdf",
+            "#D9D0BF",
+            "#d9d0bf",
             "white"
+          ],
+          "surface": [
+            "#251F1A",
+            "#251f1a",
+            "black"
+          ],
+          "yellow": [
+            "#DBAA64",
+            "#dbaa64",
+            "yellow"
+          ],
+          "orange": [
+            "#D28F6D",
+            "#d28f6d",
+            "brightred"
+          ],
+          "red": [
+            "#D3786D",
+            "#d3786d",
+            "red"
+          ],
+          "green": [
+            "#A1AF79",
+            "#a1af79",
+            "green"
+          ],
+          "teal": [
+            "#87B099",
+            "#87b099",
+            "brightgreen"
+          ],
+          "cyan": [
+            "#7DABB0",
+            "#7dabb0",
+            "brightcyan"
+          ],
+          "blue": [
+            "#86A6BE",
+            "#86a6be",
+            "brightblue"
+          ],
+          "dark-blue": [
+            "#65859B",
+            "#65859b",
+            "blue"
+          ],
+          "violet": [
+            "#A099BB",
+            "#a099bb",
+            "brightmagenta"
+          ],
+          "magenta": [
+            "#BB8BA1",
+            "#bb8ba1",
+            "magenta"
+          ],
+          "dark-cyan": [
+            "#60888D",
+            "#60888d",
+            "cyan"
+          ],
+          "comments": [
+            "#8A7E70",
+            "#8a7e70",
+            "brightblack"
+          ],
+          "doc-comments": [
+            "#9D907E",
+            "#9d907e",
+            "brightblack"
+          ],
+          "strings": [
+            "#A1AF79",
+            "#a1af79",
+            "white"
+          ],
+          "region": [
+            "#3E301F",
+            "#3e301f",
+            "brightblack"
+          ],
+          "selection": [
+            "#3E301F",
+            "#3e301f",
+            "brightblack"
+          ],
+          "diff-added-bg": [
+            "#202A1B",
+            "#202a1b",
+            "black"
+          ],
+          "diff-removed-bg": [
+            "#36201D",
+            "#36201d",
+            "black"
+          ],
+          "diff-changed-bg": [
+            "#2F2512",
+            "#2f2512",
+            "black"
+          ],
+          "diff-added-refine": [
+            "#2A3F1E",
+            "#2a3f1e",
+            "black"
+          ],
+          "diff-removed-refine": [
+            "#572823",
+            "#572823",
+            "black"
           ],
           "grey": {
             "ref": "base5"
           },
-          "red": [
-            "#E06B62",
-            "#e06b62",
-            "red"
-          ],
-          "orange": [
-            "#D8965A",
-            "#d8965a",
-            "brightred"
-          ],
-          "green": [
-            "#7FB58A",
-            "#7fb58a",
-            "green"
-          ],
-          "teal": [
-            "#4FB0A6",
-            "#4fb0a6",
-            "brightgreen"
-          ],
-          "yellow": [
-            "#C9A14E",
-            "#c9a14e",
-            "yellow"
-          ],
-          "blue": [
-            "#6EA6D8",
-            "#6ea6d8",
-            "brightblue"
-          ],
-          "dark-blue": [
-            "#4F84B0",
-            "#4f84b0",
-            "blue"
-          ],
-          "magenta": [
-            "#CC8FB6",
-            "#cc8fb6",
-            "magenta"
-          ],
-          "violet": [
-            "#9292E8",
-            "#9292e8",
-            "brightmagenta"
-          ],
-          "cyan": [
-            "#4FA3B8",
-            "#4fa3b8",
-            "brightcyan"
-          ],
-          "dark-cyan": [
-            "#3C7E92",
-            "#3c7e92",
-            "cyan"
-          ],
           "highlight": {
-            "ref": "violet"
+            "ref": "yellow"
           },
           "vertical-bar": {
             "ref": "base3"
           },
-          "selection": [
-            "#2D2A42",
-            "#303030",
-            "brightblack"
-          ],
           "builtin": {
             "ref": "magenta"
           },
-          "comments": [
-            "#7A6E5C",
-            "#6c6c6c",
-            "brightblack"
-          ],
-          "doc-comments": [
-            "#8C7E68",
-            "#8a8a8a",
-            "brightblack"
-          ],
           "constants": {
             "ref": "magenta"
           },
           "functions": {
-            "ref": "blue"
+            "ref": "yellow"
           },
           "keywords": {
-            "ref": "violet"
+            "ref": "orange"
           },
           "methods": {
             "ref": "blue"
@@ -170,29 +210,17 @@
             "ref": "base6"
           },
           "type": {
-            "ref": "green"
+            "ref": "teal"
           },
-          "strings": [
-            "#B5A488",
-            "#b5a488",
-            "white"
-          ],
           "variables": {
             "ref": "fg"
           },
           "numbers": {
-            "ref": "orange"
+            "ref": "violet"
           },
-          "region": [
-            "#2D2A42",
-            "#303030",
-            "brightblack"
-          ],
-          "error": [
-            "#E04050",
-            "#e04050",
-            "red"
-          ],
+          "error": {
+            "ref": "red"
+          },
           "warning": {
             "ref": "orange"
           },
@@ -205,13 +233,11 @@
           "vc-added": {
             "ref": "green"
           },
-          "vc-deleted": [
-            "#E04050",
-            "#e04050",
-            "red"
-          ]
+          "vc-deleted": {
+            "ref": "red"
+          }
         },
-        "commentary": "Lumina Dawn, dark variant.\nWarm sepia ground; aged-ivory text and deep hand-mixed inks of red, ochre, blue and violet under lamplight."
+        "commentary": "Lumina Dawn, dark variant.\nWarm sepia room lit by a single amber lamp; muted inks of rust, olive, sage, slate and plum at equal weight."
       },
       "light": {
         "theme": "lumina-dawn-light",
@@ -219,160 +245,200 @@
         "schema": "dawn",
         "colors": {
           "bg": [
-            "#FAF7F2",
-            "#ffffff",
+            "#F7F3EB",
+            "#f7f3eb",
+            "white"
+          ],
+          "bg-alt": [
+            "#EFE9DF",
+            "#efe9df",
             "white"
           ],
           "fg": [
-            "#2B2A28",
-            "#1e1e1e",
+            "#3D332B",
+            "#3d332b",
             "black"
           ],
-          "bg-alt": [
-            "#F1ECE3",
-            "#f0f0f0",
-            "white"
-          ],
           "fg-alt": [
-            "#5C574F",
-            "#4a4a4a",
+            "#554B42",
+            "#554b42",
             "brightwhite"
           ],
           "base0": [
-            "#FFFFFF",
-            "#ffffff",
+            "#FEFBF7",
+            "#fefbf7",
             "white"
           ],
           "base1": [
-            "#F1ECE3",
-            "#f0f0f0",
+            "#F2ECE3",
+            "#f2ece3",
             "brightblack"
           ],
           "base2": [
-            "#E8E2D6",
-            "#e6e6e6",
+            "#E7E0D6",
+            "#e7e0d6",
             "brightblack"
           ],
           "base3": [
-            "#DBD3C4",
-            "#dadada",
+            "#D8D0C4",
+            "#d8d0c4",
             "brightblack"
           ],
           "base4": [
-            "#C5BBA8",
-            "#c2c2c2",
+            "#B9B0A3",
+            "#b9b0a3",
             "brightblack"
           ],
           "base5": [
-            "#9A9080",
-            "#9d9d9d",
+            "#8E8479",
+            "#8e8479",
             "brightblack"
           ],
           "base6": [
-            "#6E665A",
-            "#737373",
+            "#6B6157",
+            "#6b6157",
             "brightblack"
           ],
           "base7": [
-            "#47423A",
-            "#565656",
+            "#50463D",
+            "#50463d",
             "brightblack"
           ],
           "base8": [
-            "#2B2A28",
-            "#2a2a2a",
+            "#3D332B",
+            "#3d332b",
             "black"
+          ],
+          "surface": [
+            "#F2ECE3",
+            "#f2ece3",
+            "white"
+          ],
+          "yellow": [
+            "#956011",
+            "#956011",
+            "yellow"
+          ],
+          "orange": [
+            "#9F5531",
+            "#9f5531",
+            "brightred"
+          ],
+          "red": [
+            "#A3433A",
+            "#a3433a",
+            "red"
+          ],
+          "green": [
+            "#5D7235",
+            "#5d7235",
+            "green"
+          ],
+          "teal": [
+            "#3E765F",
+            "#3e765f",
+            "brightgreen"
+          ],
+          "cyan": [
+            "#3B737C",
+            "#3b737c",
+            "brightcyan"
+          ],
+          "blue": [
+            "#426A8C",
+            "#426a8c",
+            "brightblue"
+          ],
+          "dark-blue": [
+            "#295171",
+            "#295171",
+            "blue"
+          ],
+          "violet": [
+            "#695E8A",
+            "#695e8a",
+            "brightmagenta"
+          ],
+          "magenta": [
+            "#85506A",
+            "#85506a",
+            "magenta"
+          ],
+          "dark-cyan": [
+            "#1D565F",
+            "#1d565f",
+            "cyan"
+          ],
+          "comments": [
+            "#776B5E",
+            "#776b5e",
+            "brightblack"
+          ],
+          "doc-comments": [
+            "#675B4F",
+            "#675b4f",
+            "brightblack"
+          ],
+          "strings": [
+            "#5D7235",
+            "#5d7235",
+            "black"
+          ],
+          "region": [
+            "#E9D8BE",
+            "#e9d8be",
+            "brightblack"
+          ],
+          "selection": [
+            "#E9D8BE",
+            "#e9d8be",
+            "brightblack"
+          ],
+          "diff-added-bg": [
+            "#DFEDD9",
+            "#dfedd9",
+            "white"
+          ],
+          "diff-removed-bg": [
+            "#FCE1DD",
+            "#fce1dd",
+            "white"
+          ],
+          "diff-changed-bg": [
+            "#F4E6CA",
+            "#f4e6ca",
+            "white"
+          ],
+          "diff-added-refine": [
+            "#C1DFB1",
+            "#c1dfb1",
+            "white"
+          ],
+          "diff-removed-refine": [
+            "#FFC3BB",
+            "#ffc3bb",
+            "white"
           ],
           "grey": {
             "ref": "base5"
           },
-          "red": [
-            "#BE2F33",
-            "#dc322f",
-            "red"
-          ],
-          "orange": [
-            "#A8521C",
-            "#a8521c",
-            "brightred"
-          ],
-          "green": [
-            "#2E7549",
-            "#2e7549",
-            "green"
-          ],
-          "teal": [
-            "#1C7A78",
-            "#159a8c",
-            "brightgreen"
-          ],
-          "yellow": [
-            "#9A6B16",
-            "#b58900",
-            "yellow"
-          ],
-          "blue": [
-            "#1F6FB5",
-            "#268bd2",
-            "brightblue"
-          ],
-          "dark-blue": [
-            "#14538A",
-            "#3f88ad",
-            "blue"
-          ],
-          "magenta": [
-            "#7A3868",
-            "#7a3868",
-            "magenta"
-          ],
-          "violet": [
-            "#4842B8",
-            "#4842b8",
-            "brightmagenta"
-          ],
-          "cyan": [
-            "#1B6E86",
-            "#2aa198",
-            "brightcyan"
-          ],
-          "dark-cyan": [
-            "#114F60",
-            "#204052",
-            "cyan"
-          ],
           "highlight": {
-            "ref": "violet"
+            "ref": "yellow"
           },
           "vertical-bar": {
             "ref": "base3"
           },
-          "selection": [
-            "#E3DEEF",
-            "#dadada",
-            "brightblack"
-          ],
           "builtin": {
             "ref": "magenta"
           },
-          "comments": [
-            "#79705F",
-            "#9d9d9d",
-            "brightblack"
-          ],
-          "doc-comments": [
-            "#6E665A",
-            "#737373",
-            "brightblack"
-          ],
           "constants": {
             "ref": "magenta"
           },
           "functions": {
-            "ref": "blue"
+            "ref": "yellow"
           },
           "keywords": {
-            "ref": "violet"
+            "ref": "orange"
           },
           "methods": {
             "ref": "blue"
@@ -381,29 +447,17 @@
             "ref": "base6"
           },
           "type": {
-            "ref": "green"
+            "ref": "teal"
           },
-          "strings": [
-            "#6E5E48",
-            "#6e5e48",
-            "black"
-          ],
           "variables": {
             "ref": "fg"
           },
           "numbers": {
-            "ref": "orange"
+            "ref": "violet"
           },
-          "region": [
-            "#E3DEEF",
-            "#dadada",
-            "brightblack"
-          ],
-          "error": [
-            "#A02030",
-            "#a02030",
-            "red"
-          ],
+          "error": {
+            "ref": "red"
+          },
           "warning": {
             "ref": "orange"
           },
@@ -416,13 +470,11 @@
           "vc-added": {
             "ref": "green"
           },
-          "vc-deleted": [
-            "#A02030",
-            "#a02030",
-            "red"
-          ]
+          "vc-deleted": {
+            "ref": "red"
+          }
         },
-        "commentary": "Lumina Dawn, light variant.\nAged-ivory paper with deep hand-mixed inks of red, ochre, blue and violet."
+        "commentary": "Lumina Dawn, light variant.\nWarm ivory paper under the same amber lamp; deep muted inks of rust, olive, sage, slate and plum at equal weight."
       }
     },
     "oxblood": {

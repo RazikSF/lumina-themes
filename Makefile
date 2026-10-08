@@ -1,4 +1,4 @@
-.PHONY: build verify clean extract
+.PHONY: build verify check clean extract
 
 build:
 	python3 generators/lumina_gen.py build
@@ -6,7 +6,10 @@ build:
 extract:
 	python3 generators/lumina_gen.py extract
 
-verify: build
+check:
+	python3 generators/lumina_gen.py check
+
+verify: build check
 	@d=0; n=0; for f in emacs/themes/lumina-*-theme.el; do \
 	  n=$$((n+1)); \
 	  t=$$(basename "$$f" -theme.el); \

@@ -1,0 +1,14 @@
+diff --git a/limiter.py b/limiter.py
+--- a/limiter.py
++++ b/limiter.py
+@@ -27,9 +27,10 @@ class TokenBucket:
+     def try_consume(self, n: float = 1.0) -> bool:
+         """Consume `n` tokens; return False if the bucket runs dry."""
+         self._refill()
+-        if self.tokens < n:
+-            return False
++        if self.tokens < n or n <= 0:
++            logger.debug("bucket dry: %s", self.tokens)
++            return False
+         self.tokens -= n
+         return True

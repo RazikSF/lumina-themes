@@ -1,0 +1,20 @@
+#+title: Carnet de bord
+#+author: razik
+* Lumière unique                                               :design:
+Une pièce éclairée par *une seule lampe*, le reste en demi-teinte.
+** TODO Relire le chapitre sur les [[https://orgmode.org][blocs org]]
+   SCHEDULED: <2026-10-09 Fri>
+** DONE Choisir l'ambre de la lampe
+*** Mesures retenues
+- [X] commentaires au moins à 4,3:1
+- [ ] accents de même clarté, ~code~ et =verbatim=
+| saveur | fond    | lampe   |
+|--------+---------+---------|
+| dawn   | sépia   | ambre   |
+#+begin_src python
+def lampe(intensite: float) -> str:
+    return f"ambre {intensite:.0%}"  # une seule source
+#+end_src
+#+begin_quote
+La lumière gouverne tout le champ.
+#+end_quote

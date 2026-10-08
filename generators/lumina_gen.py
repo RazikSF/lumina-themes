@@ -31,6 +31,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 SPEC = ROOT / "spec" / "lumina.json"
 DOOM_THEMES = Path.home() / ".doom.d" / "themes"
 
@@ -41,16 +42,17 @@ FLAVORS = ["dawn", "oxblood", "ember", "tide", "indigo", "canopy", "slate"]
 # ---------------------------------------------------------------------------
 SCHEMAS = {
     "dawn": {
-        "lead": "violet",
-        "modeline_bg": "base1", "vertico_bg": "base2",
-        "function_call": "blue", "property": "green",
-        "preprocessor": "violet", "escape": "magenta",
+        "v2": True,
+        "lead": "yellow",
+        "modeline_bg": "bg-alt", "vertico_bg": "base2",
+        "function_call": "blue", "property": "cyan",
+        "preprocessor": "orange", "escape": "yellow",
         "modeline_modified": "orange",
-        "rainbow":   ["violet", "blue", "magenta", "green", "orange", "teal"],
-        "outline":   ["violet", "blue", "magenta", "green"],
-        "orderless": ["violet", "blue", "magenta"],
-        "magit_branch_local": "blue", "magit_branch_remote": "green",
-        "org_todo": "red", "org_done": "green",
+        "rainbow":   ["yellow", "blue", "magenta", "green", "orange", "teal"],
+        "outline":   ["yellow", "teal", "blue", "orange"],
+        "orderless": ["yellow", "teal", "magenta"],
+        "magit_branch_local": "blue", "magit_branch_remote": "teal",
+        "org_todo": "orange", "org_done": "green",
     },
     "oxblood": {
         "lead": "yellow",
@@ -465,8 +467,18 @@ def spec_to_attrs(fspec: dict, colors: dict, schema: dict) -> list:
         attrs.append((":slant", str(fspec["slant"])))
     elif fspec.get("italic"):
         attrs.append((":slant", "italic"))
+    if "box" in fspec:
+        b = fspec["box"]
+        attrs.append((":box", f'(:line-width {b["width"]} :color '
+                              f'"{resolve_ref(b["color"], colors, schema)}")'))
     if fspec.get("underline") is True:
         attrs.append((":underline", "t"))
+    elif isinstance(fspec.get("underline"), dict):
+        u = fspec["underline"]
+        attrs.append((":underline", f'(:color "{resolve_ref(u["color"], colors, schema)}"'
+                                    f' :style {u.get("style", "line")})'))
+    if "overline" in fspec:
+        attrs.append((":overline", f'"{resolve_ref(fspec["overline"], colors, schema)}"'))
     if fspec.get("extend"):
         attrs.append((":extend", "t"))
     if "inherit" in fspec:
@@ -521,6 +533,7 @@ def build_emacs(spec: dict):
     outdir = ROOT / "emacs" / "themes"
     outdir.mkdir(parents=True, exist_ok=True)
     face_map = _load_decl("faces.json")
+    face_v2 = _load_decl("faces_v2.json")
     n = 0
     for flavor, modes in spec["flavors"].items():
         sch = SCHEMAS[flavor]
@@ -533,8 +546,9 @@ def build_emacs(spec: dict):
                                    for ln in d["commentary"].split("\n"))
             docstring = (commentary.split("\n")[0].lstrip("; ").strip()
                          or short).replace('"', '\\"')
+            fmap = {**face_map, **face_v2} if sch.get("v2") else face_map
             faces = [emit_face(name, spec_to_attrs(fs, c, sch))
-                     for name, fs in face_map.items()]
+                     for name, fs in fmap.items()]
             file_name = f"{theme}-theme.el"
             text = (
                 ELISP_FILE_HEADER.format(
@@ -762,6 +776,41 @@ def build_nvim(spec: dict):
     print(f"nvim    -> {n} files in nvim/colors/")
 
 
+ACCENTS = ["red", "orange", "yellow", "green", "teal",
+           "cyan", "blue", "violet", "magenta"]
+
+
+def check(spec: dict) -> bool:
+    """Lumina 2 legibility gate, applied to flavors whose schema sets v2."""
+    from oklch import contrast, from_hex
+    ok = True
+    for flavor, modes in spec["flavors"].items():
+        sch = SCHEMAS[flavor]
+        if not sch.get("v2"):
+            continue
+        for d in modes.values():
+            c = d["colors"]
+            bg = C(c, "bg")
+            fails = []
+            fg = contrast(C(c, "fg"), bg)
+            if not 10 <= fg <= 12.5:
+                fails.append(f"fg {fg:.1f} outside 10-12.5")
+            for k in ("comments", "doc-comments"):
+                if contrast(C(c, k), bg) < 4.3:
+                    fails.append(f"{k} {contrast(C(c, k), bg):.1f} < 4.3")
+            for k in ACCENTS:
+                if contrast(C(c, k), bg) < 4.5:
+                    fails.append(f"{k} {contrast(C(c, k), bg):.1f} < 4.5")
+            lead = sch["lead"]
+            ls = [from_hex(C(c, k))[0] for k in ACCENTS if k != lead]
+            if max(ls) - min(ls) > 0.08:
+                fails.append(f"accent lightness spread {max(ls) - min(ls):.2f} > 0.08")
+            print(f"{'FAIL' if fails else 'OK  '} {d['theme']}"
+                  + (": " + "; ".join(fails) if fails else ""))
+            ok = ok and not fails
+    return ok
+
+
 def build():
     spec = json.loads(SPEC.read_text())
     build_emacs(spec)
@@ -777,3 +826,5 @@ if __name__ == "__main__":
         extract()
     if cmd in ("build", "all"):
         build()
+    if cmd == "check":
+        sys.exit(0 if check(json.loads(SPEC.read_text())) else 1)
