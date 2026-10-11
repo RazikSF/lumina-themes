@@ -35,7 +35,10 @@ violet keywords and indigo types beside it, soft text, one apricot note.
   the windows you are not working in fall into shade.
 - **Measured, not guessed.** Text sits at 8.6 to 9.7:1, comments at
   4.7:1 or more, every accent at 4.5:1 or more, on its own tinted ground
-  at 4:1 or more. `make check` refuses a palette that drifts.
+  at 4:1 or more. `make check` refuses a
+  palette that drifts, and `tools/explore/audit.py` refuses two code roles
+  closer than 8 dE, a lamp closer than 9 to any role, an error red closer
+  than 10, or a second warm note beside the lamp.
 - **High contrast built in.** Every theme ships a `-contrast` twin:
   text 15:1 or more, comments 6:1, every accent 7:1 (WCAG AAA), same
   lamp, same hues.
