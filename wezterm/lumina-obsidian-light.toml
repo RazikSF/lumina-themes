@@ -1,53 +1,53 @@
 # lumina-obsidian-light -- Lumina (obsidian, light)
 # Generated from spec/lumina.json. Do not edit by hand.
 [colors]
-foreground   = "#2D2D31"
-background   = "#FAFAFB"
-cursor_bg    = "#2D2D31"
-cursor_fg    = "#FAFAFB"
-cursor_border = "#2D2D31"
-selection_bg = "#F2C8C0"
-selection_fg = "#2D2D31"
-scrollbar_thumb = "#B0B1B4"
-split = "#D7D7DB"
-compose_cursor = "#C12B09"
-visual_bell = "#EBADA0"
-copy_mode_active_highlight_bg = { Color = "#C12B09" }
-copy_mode_active_highlight_fg = { Color = "#FAFAFB" }
-copy_mode_inactive_highlight_bg = { Color = "#F5D9D4" }
-copy_mode_inactive_highlight_fg = { Color = "#2D2D31" }
-quick_select_label_bg = { Color = "#C12B09" }
-quick_select_label_fg = { Color = "#FAFAFB" }
-quick_select_match_bg = { Color = "#F5D9D4" }
-quick_select_match_fg = { Color = "#2D2D31" }
-ansi = ["#F3F3F7", "#B4144E", "#007C2E", "#886200", "#1F53B8", "#A41B78", "#00708E", "#47474B"]
-brights = ["#868689", "#C12B09", "#00786E", "#886200", "#144097", "#6B3BAA", "#00708E", "#2D2D31"]
+foreground   = "#47474A"
+background   = "#FCFCFD"
+cursor_bg    = "#47474A"
+cursor_fg    = "#FCFCFD"
+cursor_border = "#47474A"
+selection_bg = "#F5CAC1"
+selection_fg = "#47474A"
+scrollbar_thumb = "#B1B1B4"
+split = "#D9D9DC"
+compose_cursor = "#C82905"
+visual_bell = "#EDA596"
+copy_mode_active_highlight_bg = { Color = "#C82905" }
+copy_mode_active_highlight_fg = { Color = "#FCFCFD" }
+copy_mode_inactive_highlight_bg = { Color = "#F8DDD8" }
+copy_mode_inactive_highlight_fg = { Color = "#47474A" }
+quick_select_label_bg = { Color = "#B34200" }
+quick_select_label_fg = { Color = "#FCFCFD" }
+quick_select_match_bg = { Color = "#F8DDD8" }
+quick_select_match_fg = { Color = "#47474A" }
+ansi = ["#F5F5F8", "#C82905", "#2A7E3B", "#9E5800", "#3D5DC0", "#B23860", "#00749E", "#47474A"]
+brights = ["#868689", "#B34200", "#007E6D", "#9E5800", "#243E9F", "#6550B9", "#00749E", "#47474A"]
 
 [colors.indexed]
-16 = "#C12B09"
-17 = "#00786E"
-18 = "#6B3BAA"
-19 = "#144097"
+16 = "#B34200"
+17 = "#007E6D"
+18 = "#6550B9"
+19 = "#243E9F"
 
 [colors.tab_bar]
-background = "#EFF0F4"
-inactive_tab_edge = "#E7E7EB"
+background = "#F1F1F4"
+inactive_tab_edge = "#E9E9EC"
 [colors.tab_bar.active_tab]
-bg_color = "#FAFAFB"
-fg_color = "#2D2D31"
+bg_color = "#FCFCFD"
+fg_color = "#47474A"
 intensity = "Bold"
 [colors.tab_bar.inactive_tab]
-bg_color = "#EFF0F4"
+bg_color = "#F1F1F4"
 fg_color = "#636366"
 [colors.tab_bar.inactive_tab_hover]
-bg_color = "#F7E7E4"
-fg_color = "#2D2D31"
+bg_color = "#FAE8E5"
+fg_color = "#47474A"
 [colors.tab_bar.new_tab]
-bg_color = "#EFF0F4"
+bg_color = "#F1F1F4"
 fg_color = "#868689"
 [colors.tab_bar.new_tab_hover]
-bg_color = "#F5D9D4"
-fg_color = "#C12B09"
+bg_color = "#F8DDD8"
+fg_color = "#C82905"
 
 [metadata]
 name = "lumina-obsidian-light"

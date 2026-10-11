@@ -1,0 +1,53 @@
+# lumina-vesper-dark-contrast -- Lumina (vesper, dark)
+# Generated from spec/lumina.json. Do not edit by hand.
+[colors]
+foreground   = "#E8EFFC"
+background   = "#070D1F"
+cursor_bg    = "#E8EFFC"
+cursor_fg    = "#070D1F"
+cursor_border = "#E8EFFC"
+selection_bg = "#173F49"
+selection_fg = "#E8EFFC"
+scrollbar_thumb = "#414D67"
+split = "#202B42"
+compose_cursor = "#46ECD5"
+visual_bell = "#23686B"
+copy_mode_active_highlight_bg = { Color = "#46ECD5" }
+copy_mode_active_highlight_fg = { Color = "#070D1F" }
+copy_mode_inactive_highlight_bg = { Color = "#102B38" }
+copy_mode_inactive_highlight_fg = { Color = "#E8EFFC" }
+quick_select_label_bg = { Color = "#FFBC6E" }
+quick_select_label_fg = { Color = "#070D1F" }
+quick_select_match_bg = { Color = "#102B38" }
+quick_select_match_fg = { Color = "#E8EFFC" }
+ansi = ["#091328", "#FFADBA", "#70E9B9", "#EDCB61", "#B7C8FF", "#F5B1FF", "#7BDBFF", "#BBC4D8"]
+brights = ["#6D7A96", "#FFBC6E", "#46ECD5", "#EDCB61", "#7B89D5", "#D1C0FF", "#7BDBFF", "#E8EFFC"]
+
+[colors.indexed]
+16 = "#FFBC6E"
+17 = "#46ECD5"
+18 = "#D1C0FF"
+19 = "#7B89D5"
+
+[colors.tab_bar]
+background = "#030819"
+inactive_tab_edge = "#131D34"
+[colors.tab_bar.active_tab]
+bg_color = "#070D1F"
+fg_color = "#E8EFFC"
+intensity = "Bold"
+[colors.tab_bar.inactive_tab]
+bg_color = "#030819"
+fg_color = "#909FBC"
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "#0D202E"
+fg_color = "#E8EFFC"
+[colors.tab_bar.new_tab]
+bg_color = "#030819"
+fg_color = "#6D7A96"
+[colors.tab_bar.new_tab_hover]
+bg_color = "#102B38"
+fg_color = "#46ECD5"
+
+[metadata]
+name = "lumina-vesper-dark-contrast"

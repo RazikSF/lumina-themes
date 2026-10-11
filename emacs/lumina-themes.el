@@ -26,7 +26,7 @@
 ;;   (setq lumina-themes-brighter-comments  nil)  ; bolder comments
 ;;   (setq lumina-themes-comment-bg         nil)  ; tinted comment bg
 ;;   (setq lumina-themes-padded-modeline    nil)  ; extra modeline padding
-;;   (setq lumina-themes-italic-comments    t)    ; italic on comments
+;;   (setq lumina-themes-italic-comments    t)    ; italic on comments (default)
 ;;   (setq lumina-themes-italic-types       nil)  ; italic on types
 ;;   (setq lumina-themes-bold-keywords      nil)  ; bold on keywords
 ;;

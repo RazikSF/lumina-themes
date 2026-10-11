@@ -1,53 +1,53 @@
 # lumina-nocturne-light -- Lumina (nocturne, light)
 # Generated from spec/lumina.json. Do not edit by hand.
 [colors]
-foreground   = "#2C3039"
-background   = "#F2F4F9"
-cursor_bg    = "#2C3039"
-cursor_fg    = "#F2F4F9"
-cursor_border = "#2C3039"
-selection_bg = "#E7C9BC"
-selection_fg = "#2C3039"
-scrollbar_thumb = "#ACB1BC"
-split = "#CDD2DD"
-compose_cursor = "#B64B00"
-visual_bell = "#DFB29C"
-copy_mode_active_highlight_bg = { Color = "#B64B00" }
-copy_mode_active_highlight_fg = { Color = "#F2F4F9" }
-copy_mode_inactive_highlight_bg = { Color = "#EBD8D1" }
-copy_mode_inactive_highlight_fg = { Color = "#2C3039" }
-quick_select_label_bg = { Color = "#B64B00" }
-quick_select_label_fg = { Color = "#F2F4F9" }
-quick_select_match_bg = { Color = "#EBD8D1" }
-quick_select_match_fg = { Color = "#2C3039" }
-ansi = ["#E8EEFA", "#B32D37", "#0A7E3A", "#876700", "#2256BB", "#A4277A", "#007391", "#434851"]
-brights = ["#818691", "#B64B00", "#007B70", "#876700", "#144097", "#6A44B4", "#007391", "#2C3039"]
+foreground   = "#46474E"
+background   = "#F8F8FB"
+cursor_bg    = "#46474E"
+cursor_fg    = "#F8F8FB"
+cursor_border = "#46474E"
+selection_bg = "#EDCABE"
+selection_fg = "#46474E"
+scrollbar_thumb = "#AFB0B8"
+split = "#D4D5DD"
+compose_cursor = "#BC3F00"
+visual_bell = "#E4A892"
+copy_mode_active_highlight_bg = { Color = "#BC3F00" }
+copy_mode_active_highlight_fg = { Color = "#F8F8FB" }
+copy_mode_inactive_highlight_bg = { Color = "#F2DCD5" }
+copy_mode_inactive_highlight_fg = { Color = "#46474E" }
+quick_select_label_bg = { Color = "#BC3F00" }
+quick_select_label_fg = { Color = "#F8F8FB" }
+quick_select_match_bg = { Color = "#F2DCD5" }
+quick_select_match_fg = { Color = "#46474E" }
+ansi = ["#F0F1F9", "#B63B39", "#2A7E3B", "#9E5800", "#3D5DC0", "#B23860", "#00749E", "#46474E"]
+brights = ["#85868D", "#BC3F00", "#007E6D", "#9E5800", "#243E9F", "#6550B9", "#00749E", "#46474E"]
 
 [colors.indexed]
-16 = "#B64B00"
-17 = "#007B70"
-18 = "#6A44B4"
-19 = "#144097"
+16 = "#BC3F00"
+17 = "#007E6D"
+18 = "#6550B9"
+19 = "#243E9F"
 
 [colors.tab_bar]
-background = "#E5EBF6"
-inactive_tab_edge = "#DDE2EE"
+background = "#EDEEF6"
+inactive_tab_edge = "#E4E6EE"
 [colors.tab_bar.active_tab]
-bg_color = "#F2F4F9"
-fg_color = "#2C3039"
+bg_color = "#F8F8FB"
+fg_color = "#46474E"
 intensity = "Bold"
 [colors.tab_bar.inactive_tab]
-bg_color = "#E5EBF6"
-fg_color = "#5F636D"
+bg_color = "#EDEEF6"
+fg_color = "#62636A"
 [colors.tab_bar.inactive_tab_hover]
-bg_color = "#EEE4E1"
-fg_color = "#2C3039"
+bg_color = "#F4E6E3"
+fg_color = "#46474E"
 [colors.tab_bar.new_tab]
-bg_color = "#E5EBF6"
-fg_color = "#818691"
+bg_color = "#EDEEF6"
+fg_color = "#85868D"
 [colors.tab_bar.new_tab_hover]
-bg_color = "#EBD8D1"
-fg_color = "#B64B00"
+bg_color = "#F2DCD5"
+fg_color = "#BC3F00"
 
 [metadata]
 name = "lumina-nocturne-light"

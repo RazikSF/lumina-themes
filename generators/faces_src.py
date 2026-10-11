@@ -1547,6 +1547,21 @@ add("latex, reftex, haskell, ruby, ocaml, agda, coq, clojure, lisp, scheme, R", 
 # ---------------------------------------------------------------------------
 # Overrides of base entries: popups sit on the overlay ground.
 # ---------------------------------------------------------------------------
+add("signature: definitions in semi-bold, selected candidate in the lamp, paren boxed, state pills", {
+    "font-lock-function-name-face": f("functions", w=S), "vertico-current": f(L, "halo2", w=S, ext=True),
+    "corfu-current": f(L, "halo2", w=S), "company-tooltip-selection": f(L, "halo2", w=S), "icomplete-selected-match": f(L, "halo2", w=S),
+    "show-paren-match": f(L, "halo2", w=S, box=box(L, -1)), "show-paren-mismatch": f("red", "red-bg", w=S, box=box("red", -1)),
+    "doom-modeline-evil-normal-state": f("bg", L, w=S), "doom-modeline-evil-insert-state": f("bg", "teal", w=S),
+    "doom-modeline-evil-visual-state": f("bg", "violet", w=S), "doom-modeline-evil-replace-state": f("bg", "red", w=S),
+    "doom-modeline-evil-emacs-state": f("bg", "magenta", w=S), "doom-modeline-evil-motion-state": f("bg", "blue", w=S),
+    "doom-modeline-evil-operator-state": f("bg", "blue", w=S), "doom-modeline-meow-normal-state": f("bg", L, w=S),
+    "doom-modeline-meow-insert-state": f("bg", "teal", w=S), "doom-modeline-meow-keypad-state": f("bg", "violet", w=S),
+    "doom-modeline-meow-motion-state": f("bg", "blue", w=S), "doom-modeline-meow-beacon-state": f("bg", "orange", w=S),
+    "meow-normal-indicator": f("bg", L, w=S), "meow-insert-indicator": f("bg", "teal", w=S), "meow-keypad-indicator": f("bg", "violet", w=S),
+    "meow-motion-indicator": f("bg", "blue", w=S), "meow-beacon-indicator": f("bg", "orange", w=S),
+    "doom-modeline-buffer-file": f("fg", w=S), "doom-modeline-project-dir": f(L, w=S), "mode-line-buffer-id": f("fg", w=S),
+    "org-document-title": f(L, w=S, h=1.5), "magit-section-heading": f(L, w=S), "line-number-current-line": f(L, "halo", w=S),
+})
 add("overrides", {
     "tooltip": f("fg", "overlay"), "corfu-default": f("fg", "overlay"), "corfu-popupinfo": f("fg-alt", "overlay"),
     "company-tooltip": f("fg", "overlay"), "company-preview": f("base5", i=True), "company-preview-common": f(L, i=True),

@@ -1,53 +1,53 @@
 # lumina-amethyst-light -- Lumina (amethyst, light)
 # Generated from spec/lumina.json. Do not edit by hand.
 [colors]
-foreground   = "#342C3E"
-background   = "#F6F3FB"
-cursor_bg    = "#342C3E"
-cursor_fg    = "#F6F3FB"
-cursor_border = "#342C3E"
-selection_bg = "#D4CFBE"
-selection_fg = "#342C3E"
-scrollbar_thumb = "#B6ACC3"
-split = "#D7CDE4"
-compose_cursor = "#7A6E00"
-visual_bell = "#C2BD9D"
-copy_mode_active_highlight_bg = { Color = "#7A6E00" }
-copy_mode_active_highlight_fg = { Color = "#F6F3FB" }
-copy_mode_inactive_highlight_bg = { Color = "#E0DBD3" }
-copy_mode_inactive_highlight_fg = { Color = "#342C3E" }
-quick_select_label_bg = { Color = "#A55115" }
-quick_select_label_fg = { Color = "#F6F3FB" }
-quick_select_match_bg = { Color = "#E0DBD3" }
-quick_select_match_fg = { Color = "#342C3E" }
-ansi = ["#F3E9FF", "#B32D37", "#007D50", "#7A6E00", "#3357B1", "#A42C71", "#00728D", "#4C4357"]
-brights = ["#8B8197", "#A55115", "#087970", "#7A6E00", "#24418D", "#6D41A9", "#00728D", "#342C3E"]
+foreground   = "#49464E"
+background   = "#F9F8FB"
+cursor_bg    = "#49464E"
+cursor_fg    = "#F9F8FB"
+cursor_border = "#49464E"
+selection_bg = "#E4CEBF"
+selection_fg = "#49464E"
+scrollbar_thumb = "#B3AFB8"
+split = "#D8D4DD"
+compose_cursor = "#A15B00"
+visual_bell = "#D3B093"
+copy_mode_active_highlight_bg = { Color = "#A15B00" }
+copy_mode_active_highlight_fg = { Color = "#F9F8FB" }
+copy_mode_inactive_highlight_bg = { Color = "#ECDED6" }
+copy_mode_inactive_highlight_fg = { Color = "#49464E" }
+quick_select_label_bg = { Color = "#B34200" }
+quick_select_label_fg = { Color = "#F9F8FB" }
+quick_select_match_bg = { Color = "#ECDED6" }
+quick_select_match_fg = { Color = "#49464E" }
+ansi = ["#F4F0FA", "#B63B39", "#2A7E3B", "#A15B00", "#3D5DC0", "#92439F", "#00749E", "#49464E"]
+brights = ["#88848D", "#B34200", "#007E6D", "#A15B00", "#243E9F", "#6550B9", "#00749E", "#49464E"]
 
 [colors.indexed]
-16 = "#A55115"
-17 = "#087970"
-18 = "#6D41A9"
-19 = "#24418D"
+16 = "#B34200"
+17 = "#007E6D"
+18 = "#6550B9"
+19 = "#243E9F"
 
 [colors.tab_bar]
-background = "#F0E5FD"
-inactive_tab_edge = "#E7DDF5"
+background = "#F0ECF6"
+inactive_tab_edge = "#E8E4EE"
 [colors.tab_bar.active_tab]
-bg_color = "#F6F3FB"
-fg_color = "#342C3E"
+bg_color = "#F9F8FB"
+fg_color = "#49464E"
 intensity = "Bold"
 [colors.tab_bar.inactive_tab]
-bg_color = "#F0E5FD"
-fg_color = "#685F73"
+bg_color = "#F0ECF6"
+fg_color = "#65616A"
 [colors.tab_bar.inactive_tab_hover]
-bg_color = "#E9E5E3"
-fg_color = "#342C3E"
+bg_color = "#F1E8E4"
+fg_color = "#49464E"
 [colors.tab_bar.new_tab]
-bg_color = "#F0E5FD"
-fg_color = "#8B8197"
+bg_color = "#F0ECF6"
+fg_color = "#88848D"
 [colors.tab_bar.new_tab_hover]
-bg_color = "#E0DBD3"
-fg_color = "#7A6E00"
+bg_color = "#ECDED6"
+fg_color = "#A15B00"
 
 [metadata]
 name = "lumina-amethyst-light"

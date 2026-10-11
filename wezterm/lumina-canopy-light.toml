@@ -1,53 +1,53 @@
 # lumina-canopy-light -- Lumina (canopy, light)
 # Generated from spec/lumina.json. Do not edit by hand.
 [colors]
-foreground   = "#2C392F"
-background   = "#F0F5EC"
-cursor_bg    = "#2C392F"
-cursor_fg    = "#F0F5EC"
-cursor_border = "#2C392F"
-selection_bg = "#D0D1B5"
-selection_fg = "#2C392F"
-scrollbar_thumb = "#A9B5A6"
-split = "#CAD5C6"
-compose_cursor = "#7B6C01"
-visual_bell = "#BFBD97"
-copy_mode_active_highlight_bg = { Color = "#7B6C01" }
-copy_mode_active_highlight_fg = { Color = "#F0F5EC" }
-copy_mode_inactive_highlight_bg = { Color = "#DBDDC7" }
-copy_mode_inactive_highlight_fg = { Color = "#2C392F" }
-quick_select_label_bg = { Color = "#955C28" }
-quick_select_label_fg = { Color = "#F0F5EC" }
-quick_select_match_bg = { Color = "#DBDDC7" }
-quick_select_match_fg = { Color = "#2C392F" }
-ansi = ["#E9EFE4", "#974936", "#437445", "#7B6C01", "#3B638C", "#864A68", "#387079", "#3E4C40"]
-brights = ["#7C8B7C", "#955C28", "#347364", "#7B6C01", "#254D74", "#645789", "#387079", "#2C392F"]
+foreground   = "#454945"
+background   = "#F7F9F7"
+cursor_bg    = "#454945"
+cursor_fg    = "#F7F9F7"
+cursor_border = "#454945"
+selection_bg = "#C3D8C4"
+selection_fg = "#454945"
+scrollbar_thumb = "#ADB3AE"
+split = "#D2D7D3"
+compose_cursor = "#2A7E3B"
+visual_bell = "#9DC1A0"
+copy_mode_active_highlight_bg = { Color = "#2A7E3B" }
+copy_mode_active_highlight_fg = { Color = "#F7F9F7" }
+copy_mode_inactive_highlight_bg = { Color = "#D7E5D8" }
+copy_mode_inactive_highlight_fg = { Color = "#454945" }
+quick_select_label_bg = { Color = "#B34200" }
+quick_select_label_fg = { Color = "#F7F9F7" }
+quick_select_match_bg = { Color = "#D7E5D8" }
+quick_select_match_fg = { Color = "#454945" }
+ansi = ["#EEF3EF", "#B63B39", "#2A7E3B", "#9E5800", "#3D5DC0", "#B23860", "#00749E", "#454945"]
+brights = ["#838883", "#B34200", "#007E6D", "#9E5800", "#243E9F", "#6550B9", "#00749E", "#454945"]
 
 [colors.indexed]
-16 = "#955C28"
-17 = "#347364"
-18 = "#645789"
-19 = "#254D74"
+16 = "#B34200"
+17 = "#007E6D"
+18 = "#6550B9"
+19 = "#243E9F"
 
 [colors.tab_bar]
-background = "#E5ECE0"
-inactive_tab_edge = "#DCE4D7"
+background = "#EBF0EB"
+inactive_tab_edge = "#E2E8E3"
 [colors.tab_bar.active_tab]
-bg_color = "#F0F5EC"
-fg_color = "#2C392F"
+bg_color = "#F7F9F7"
+fg_color = "#454945"
 intensity = "Bold"
 [colors.tab_bar.inactive_tab]
-bg_color = "#E5ECE0"
-fg_color = "#59685A"
+bg_color = "#EBF0EB"
+fg_color = "#606561"
 [colors.tab_bar.inactive_tab_hover]
-bg_color = "#E4E7D6"
-fg_color = "#2C392F"
+bg_color = "#E3ECE4"
+fg_color = "#454945"
 [colors.tab_bar.new_tab]
-bg_color = "#E5ECE0"
-fg_color = "#7C8B7C"
+bg_color = "#EBF0EB"
+fg_color = "#838883"
 [colors.tab_bar.new_tab_hover]
-bg_color = "#DBDDC7"
-fg_color = "#7B6C01"
+bg_color = "#D7E5D8"
+fg_color = "#2A7E3B"
 
 [metadata]
 name = "lumina-canopy-light"

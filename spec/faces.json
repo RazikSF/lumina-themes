@@ -87,7 +87,8 @@
   },
   "line-number-current-line": {
     "fg": "schema.lead",
-    "bg": "halo"
+    "bg": "halo",
+    "weight": "semi-bold"
   },
   "minibuffer-prompt": {
     "fg": "schema.lead"
@@ -110,11 +111,21 @@
   },
   "show-paren-match": {
     "fg": "schema.lead",
-    "bg": "halo2"
+    "bg": "halo2",
+    "weight": "semi-bold",
+    "box": {
+      "width": -1,
+      "color": "schema.lead"
+    }
   },
   "show-paren-mismatch": {
     "fg": "red",
-    "bg": "diff-removed-bg"
+    "bg": "red-bg",
+    "weight": "semi-bold",
+    "box": {
+      "width": -1,
+      "color": "red"
+    }
   },
   "link": {
     "fg": "blue",
@@ -172,7 +183,8 @@
     "fg": "strings"
   },
   "font-lock-function-name-face": {
-    "fg": "functions"
+    "fg": "functions",
+    "weight": "semi-bold"
   },
   "font-lock-variable-name-face": {
     "fg": "variables"
@@ -812,7 +824,9 @@
     "fg": "schema.lead"
   },
   "vertico-current": {
+    "fg": "schema.lead",
     "bg": "halo2",
+    "weight": "semi-bold",
     "extend": true
   },
   "vertico-group-title": {
@@ -962,8 +976,9 @@
     "fg": "base5"
   },
   "corfu-current": {
-    "fg": "fg",
-    "bg": "halo2"
+    "fg": "schema.lead",
+    "bg": "halo2",
+    "weight": "semi-bold"
   },
   "corfu-default": {
     "fg": "fg",
@@ -1010,7 +1025,9 @@
     "fg": "schema.lead"
   },
   "company-tooltip-selection": {
-    "bg": "halo2"
+    "fg": "schema.lead",
+    "bg": "halo2",
+    "weight": "semi-bold"
   },
   "company-tooltip-annotation": {
     "fg": "base5",
@@ -1729,7 +1746,8 @@
     "weight": "semi-bold"
   },
   "doom-modeline-project-dir": {
-    "fg": "schema.lead"
+    "fg": "schema.lead",
+    "weight": "semi-bold"
   },
   "doom-modeline-highlight": {
     "fg": "schema.lead"
@@ -1742,25 +1760,39 @@
     "fg": "red"
   },
   "doom-modeline-evil-normal-state": {
-    "fg": "schema.lead"
+    "fg": "bg",
+    "bg": "schema.lead",
+    "weight": "semi-bold"
   },
   "doom-modeline-evil-insert-state": {
-    "fg": "teal"
+    "fg": "bg",
+    "bg": "teal",
+    "weight": "semi-bold"
   },
   "doom-modeline-evil-visual-state": {
-    "fg": "violet"
+    "fg": "bg",
+    "bg": "violet",
+    "weight": "semi-bold"
   },
   "doom-modeline-evil-replace-state": {
-    "fg": "red"
+    "fg": "bg",
+    "bg": "red",
+    "weight": "semi-bold"
   },
   "doom-modeline-evil-emacs-state": {
-    "fg": "magenta"
+    "fg": "bg",
+    "bg": "magenta",
+    "weight": "semi-bold"
   },
   "doom-modeline-evil-motion-state": {
-    "fg": "blue"
+    "fg": "bg",
+    "bg": "blue",
+    "weight": "semi-bold"
   },
   "doom-modeline-evil-operator-state": {
-    "fg": "blue"
+    "fg": "bg",
+    "bg": "blue",
+    "weight": "semi-bold"
   },
   "doom-dashboard-banner": {
     "fg": "glow"
@@ -2434,7 +2466,9 @@
     "italic": true
   },
   "icomplete-selected-match": {
-    "bg": "halo2"
+    "fg": "schema.lead",
+    "bg": "halo2",
+    "weight": "semi-bold"
   },
   "ibuffer-locked-buffer": {
     "fg": "red"
@@ -6464,23 +6498,28 @@
     "bg": "red"
   },
   "meow-normal-indicator": {
-    "fg": "schema.lead",
+    "fg": "bg",
+    "bg": "schema.lead",
     "weight": "semi-bold"
   },
   "meow-insert-indicator": {
-    "fg": "teal",
+    "fg": "bg",
+    "bg": "teal",
     "weight": "semi-bold"
   },
   "meow-keypad-indicator": {
-    "fg": "violet",
+    "fg": "bg",
+    "bg": "violet",
     "weight": "semi-bold"
   },
   "meow-motion-indicator": {
-    "fg": "blue",
+    "fg": "bg",
+    "bg": "blue",
     "weight": "semi-bold"
   },
   "meow-beacon-indicator": {
-    "fg": "orange",
+    "fg": "bg",
+    "bg": "orange",
     "weight": "semi-bold"
   },
   "meow-keypad-cannot-display": {
@@ -8287,19 +8326,29 @@
     "fg": "orange"
   },
   "doom-modeline-meow-beacon-state": {
-    "fg": "orange"
+    "fg": "bg",
+    "bg": "orange",
+    "weight": "semi-bold"
   },
   "doom-modeline-meow-insert-state": {
-    "fg": "teal"
+    "fg": "bg",
+    "bg": "teal",
+    "weight": "semi-bold"
   },
   "doom-modeline-meow-keypad-state": {
-    "fg": "violet"
+    "fg": "bg",
+    "bg": "violet",
+    "weight": "semi-bold"
   },
   "doom-modeline-meow-motion-state": {
-    "fg": "blue"
+    "fg": "bg",
+    "bg": "blue",
+    "weight": "semi-bold"
   },
   "doom-modeline-meow-normal-state": {
-    "fg": "schema.lead"
+    "fg": "bg",
+    "bg": "schema.lead",
+    "weight": "semi-bold"
   },
   "doom-modeline-notification": {
     "fg": "orange"
@@ -10330,6 +10379,7 @@
   "ess-debug-blink-same-ref-face": {
     "bg": "green-bg"
   },
+  "_section:signature: definitions in semi-bold, selected candidate in the lamp, paren boxed, state pills": "signature: definitions in semi-bold, selected candidate in the lamp, paren boxed, state pills",
   "_section:overrides": "overrides",
   "eldoc-box-body": {
     "fg": "fg",

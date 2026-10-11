@@ -8,28 +8,34 @@ every flavor, one colour is the light (the cursor, the definition you
 are reading, the current line, the heading you are in) and everything
 else sits in the room at equal weight, never louder than the lamp.
 
-Nine flavors in two ranges, each in dark, light and high contrast:
-40 themes. The flagship is **Prisma**: an ultraviolet lamp, the light
-just beyond the spectrum, and the code is the spectrum itself.
+Ten flavors, each in dark, light and high contrast: 44 themes. The
+flagship is **Vesper**: navy slate at dusk, a mint-teal star for a lamp,
+violet keywords and indigo types beside it, soft text, one apricot note.
 
-<img src="assets/screens/lumina-prisma-dark.svg" width="49%"> <img src="assets/screens/lumina-prisma-light.svg" width="49%">
+<img src="assets/screens/lumina-vesper-dark.svg" width="49%"> <img src="assets/screens/lumina-vesper-light.svg" width="49%">
 
 ## What makes it different
 
 - **One lamp.** Each flavor has one lead colour, and only the lamp
   glows: cursor, current line number, function definitions, headings,
   mode-line bar, search. Keywords never shout.
-- **Equal lightness.** Accents are tuned in OKLCH so that every
-  non-lamp accent sits within 0.08 lightness of the others. Vivid or
-  muted, nothing jumps out by accident; that is what keeps even the
-  vivid range elegant instead of garish.
+- **Public scales, composed here.** Every accent comes from a public
+  colour system: Tailwind v4 step 300 on dark grounds, Radix Colors
+  step 11 on light paper, both OKLCH-defined. No editor theme or brand
+  palette is copied; the composition (ground, lamp, roles) is Lumina's.
+- **Equal lightness, one lamp.** Non-lamp accents are clamped to a
+  common lightness band and a chroma cap; only the lamp keeps its full
+  value. Nothing jumps out by accident, the definitions do on purpose.
+- **Soft text.** Body text sits near 9:1, never white on black: the
+  range of Tokyo Night, One Dark and Nord, not the 12 to 15:1 of the
+  harder themes.
 - **Light that follows you.** The lamp tints the current line, the
   selection and the completion candidate, and flashes on every jump.
   With [auto-dim-other-buffers](https://github.com/mina86/auto-dim-other-buffers.el)
   the windows you are not working in fall into shade.
-- **Measured, not guessed.** Text sits at 10.8 to 13.4:1, comments at
-  4.4:1 or more, every accent at 4.5:1 or more. `make check` refuses a
-  palette that drifts.
+- **Measured, not guessed.** Text sits at 8.6 to 9.7:1, comments at
+  4.7:1 or more, every accent at 4.5:1 or more, on its own tinted ground
+  at 4:1 or more. `make check` refuses a palette that drifts.
 - **High contrast built in.** Every theme ships a `-contrast` twin:
   text 15:1 or more, comments 6:1, every accent 7:1 (WCAG AAA), same
   lamp, same hues.
@@ -48,30 +54,27 @@ just beyond the spectrum, and the code is the spectrum itself.
 
 ## Flavors
 
-### Muted
+Each flavor covers one colour group: one ground hue, one lamp, one role
+map. Dark grounds carry Tailwind pastels, light paper carries Radix inks.
 
-Quiet rooms for long sessions.
-
-| Flavor | Lamp | Scene |
-|---|---|---|
-| **Dawn** | amber | warm sepia room lit by a single candle |
-| **Oxblood** | rose spotlight | a theatre after the curtain falls; oxblood velvet, plum and gilt |
-| **Tide** | bioluminescence | deep ocean at night, lit from within |
-| **Canopy** | leaf-filtered sun | pine forest at noon; chlorophyll keywords, russet types |
-| **Slate** | steel blue | cold graphite; near-achromatic, one steel voice |
-
-### Vivid
-
-Saturated colour, still at equal lightness and still under one lamp.
-
-| Flavor | Lamp | Scene |
-|---|---|---|
-| **Nocturne** | sodium streetlamp | a city at night under an indigo sky; neon violet, cobalt, jade |
-| **Amethyst** | citrine | inside a split amethyst geode; orchid, mint, ice blue |
-| **Obsidian** | molten lava | near-black volcanic glass; glacier teal, cobalt, magenta |
-| **Prisma** | ultraviolet | black light in dark, ultraviolet ink in light; the code is the full spectrum. Black-and-white twins: `lumina-prisma-dark-ink` (white ray) and `lumina-prisma-light-ink` (black ink) |
+| Flavor | Ground | Lamp | Keywords, types, strings | Note |
+|---|---|---|---|---|
+| **Vesper** | navy slate | mint teal | violet, indigo, emerald | apricot |
+| **Dawn** | warm sepia | amber | terracotta, teal, lime | rose |
+| **Oxblood** | dark wine | rose | violet, amber, emerald | orange |
+| **Tide** | deep ocean | sky | teal, indigo, emerald | amber |
+| **Canopy** | pine | leaf green | teal, amber, sky | orange |
+| **Slate** | cold graphite | steel blue | sky, violet, emerald, all held back | orange |
+| **Nocturne** | indigo night | sodium orange | violet, sky, emerald | amber |
+| **Amethyst** | purple geode | citrine | orchid, sky, emerald | orange |
+| **Obsidian** | near-black glass | lava | teal, sky, emerald | amber |
+| **Prisma** | neutral indigo | ultraviolet | violet, amber, emerald; full-spectrum delimiters | black-and-white `-ink` twins |
 
 ### Gallery
+
+**Dawn**
+
+<img src="assets/screens/lumina-dawn-dark.svg" width="49%"> <img src="assets/screens/lumina-dawn-light.svg" width="49%">
 
 **Oxblood**
 
@@ -101,9 +104,9 @@ Saturated colour, still at equal lightness and still under one lamp.
 
 <img src="assets/screens/lumina-obsidian-dark.svg" width="49%"> <img src="assets/screens/lumina-obsidian-light.svg" width="49%">
 
-**Dawn**
+**Prisma**
 
-<img src="assets/screens/lumina-dawn-dark.svg" width="49%"> <img src="assets/screens/lumina-dawn-light.svg" width="49%">
+<img src="assets/screens/lumina-prisma-dark.svg" width="49%"> <img src="assets/screens/lumina-prisma-light.svg" width="49%">
 
 **Prisma ink** (black and white)
 
@@ -112,7 +115,7 @@ Saturated colour, still at equal lightness and still under one lamp.
 ### Names
 
 `lumina-<flavor>-<dark|light>` and `lumina-<flavor>-<dark|light>-contrast`,
-for example `lumina-nocturne-dark` or `lumina-dawn-light-contrast`.
+for example `lumina-vesper-dark` or `lumina-dawn-light-contrast`.
 Prisma adds black-and-white twins: `lumina-prisma-dark-ink`,
 `lumina-prisma-light-ink` and their `-contrast` versions.
 
@@ -120,11 +123,11 @@ Prisma adds black-and-white twins: `lumina-prisma-dark-ink`,
 
 | Target | Output |
 |---|---|
-| **Emacs** (vanilla `deftheme`)  | `emacs/themes/*.el` (40), close to 3 000 faces each |
-| **Neovim** (Lua colorscheme)    | `nvim/colors/*.lua` (40), over 1 600 groups each, plus `nvim/lua/lualine/themes/*.lua` |
-| **VS Code** (extension)         | `vscode/themes/*.json` (40): 565 workbench colours, 80 token scopes, 47 semantic tokens |
-| **WezTerm** (color scheme)      | `wezterm/*.toml` (40): ANSI, indexed, tab bar states, copy and quick-select modes |
-| **base24** (tinted-theming)     | `base24/*.yaml` (40) |
+| **Emacs** (vanilla `deftheme`)  | `emacs/themes/*.el` (44), close to 3 000 faces each |
+| **Neovim** (Lua colorscheme)    | `nvim/colors/*.lua` (44), over 1 600 groups each, plus `nvim/lua/lualine/themes/*.lua` |
+| **VS Code** (extension)         | `vscode/themes/*.json` (44): 565 workbench colours, 80 token scopes, 47 semantic tokens |
+| **WezTerm** (color scheme)      | `wezterm/*.toml` (44): ANSI, indexed, tab bar states, copy and quick-select modes |
+| **base24** (tinted-theming)     | `base24/*.yaml` (44) |
 
 The Emacs files require no external dependency and load on a bare
 `emacs -Q` in about ten milliseconds. Each one styles close to 3 000
@@ -143,7 +146,7 @@ Requires Emacs 26.1 or later.
 **MELPA**:
 ```elisp
 M-x package-install RET lumina-themes RET
-M-x load-theme RET lumina-dawn-dark RET
+M-x load-theme RET lumina-vesper-dark RET
 ```
 
 **Doom** — `packages.el`:
@@ -154,7 +157,7 @@ M-x load-theme RET lumina-dawn-dark RET
 Then `config.el`:
 ```elisp
 (require 'lumina-themes)
-(setq doom-theme 'lumina-dawn-dark)
+(setq doom-theme 'lumina-vesper-dark)
 ```
 
 **`straight.el`**:
@@ -162,7 +165,7 @@ Then `config.el`:
 (straight-use-package
  '(lumina-themes :type git :host github :repo "RazikSF/lumina-themes"
                  :files ("emacs/*.el" "emacs/themes/*.el")))
-(load-theme 'lumina-dawn-dark t)
+(load-theme 'lumina-vesper-dark t)
 ```
 
 **`elpaca`**:
@@ -175,7 +178,7 @@ Then `config.el`:
 `custom-theme-load-path`:
 ```elisp
 (add-to-list 'custom-theme-load-path "/path/to/lumina-themes/emacs/themes")
-(load-theme 'lumina-dawn-dark t)
+(load-theme 'lumina-vesper-dark t)
 ```
 
 #### Customisation
@@ -206,7 +209,7 @@ theme (prefix arg `C-u` restricts to dark, `C-u C-u` to light).
   init = function()
     vim.opt.rtp:append(vim.fn.stdpath("data") .. "/lazy/lumina-themes/nvim")
   end,
-  config = function() vim.cmd.colorscheme("lumina-dawn-dark") end,
+  config = function() vim.cmd.colorscheme("lumina-vesper-dark") end,
 }
 ```
 
@@ -221,7 +224,7 @@ Plug 'RazikSF/lumina-themes', { 'rtp': 'nvim' }
 ```
 
 **Manual**: copy `nvim/colors/*.lua` into your Neovim runtime's
-`colors/` directory, then `:colorscheme lumina-dawn-dark`.
+`colors/` directory, then `:colorscheme lumina-vesper-dark`.
 
 Every colorscheme sets `vim.g.terminal_color_0..15` and covers the
 core UI, tree-sitter captures, LSP semantic tokens, diagnostics and
@@ -232,7 +235,7 @@ render-markdown, orgmode, mini.*, bufferline, barbar, lspsaga, navic and
 more). A matching lualine theme ships for each flavor:
 
 ```lua
-require("lualine").setup({ options = { theme = "lumina-dawn-dark" } })
+require("lualine").setup({ options = { theme = "lumina-vesper-dark" } })
 ```
 
 ### VS Code
@@ -253,7 +256,7 @@ code --install-extension lumina-themes-2.1.0.vsix
 
 ```lua
 config.color_scheme_dirs = { "/path/to/lumina-themes/wezterm" }
-config.color_scheme = "lumina-dawn-dark"
+config.color_scheme = "lumina-vesper-dark"
 ```
 
 ### base24 / tinted-theming
@@ -267,7 +270,8 @@ of the CLI from a single source.
 ## Architecture
 
 ```
-generators/v2_palettes.py   OKLCH palettes; derives signature and -contrast
+generators/v2_palettes.py   flavors composed from public scales (compose); signature, -contrast
+tools/explore/              palette lab: sources.json, explore.py contact sheet, variants.py
 spec/lumina.json            generated palettes (one per flavor/variant)
 generators/faces_src.py     face design, grouped by package (edit this)
 spec/faces.json             generated face mapping (~3 000 faces)
@@ -297,8 +301,9 @@ and org mappings, preprocessor and escape slots — shared between dark
 and light). The generator resolves palette references to literal hex
 per flavor and emits one file per target per (flavor, mode).
 
-A color edit in `generators/v2_palettes.py` propagates to all five
-targets on the next `make build`; a face edit in
+A flavor is one `compose(...)` call in `generators/v2_palettes.py`:
+ground, lamp slot, role map, optional hue overrides. It propagates to
+all five targets on the next `make build`; a face edit in
 `generators/faces_src.py` propagates to the 40 Emacs themes, one in
 `generators/nvim_src.py` to the 40 Neovim colorschemes.
 

@@ -7,7 +7,7 @@ sys.path.insert(0, str(ROOT / "generators"))
 import lumina_gen as g
 
 SPEC = json.loads(g.SPEC.read_text())["flavors"]
-RANGES = {"Feutrés": ["dawn", "oxblood", "tide", "canopy", "slate"],
+RANGES = {"Signature": ["vesper"], "Feutrés": ["dawn", "oxblood", "tide", "canopy", "slate"],
           "Vifs": ["nocturne", "amethyst", "obsidian", "prisma"]}
 LINES = slice(13, 32)
 SPAN = re.compile(r'<span style="([^"]*)">(.*?)</span>', re.S)
@@ -98,7 +98,7 @@ figure{{margin:0;border-radius:10px;overflow:hidden}}
 .r{{white-space:pre;padding:0 10px}} .ml{{display:flex;gap:8px;align-items:center;font:12px "Zed Mono",Menlo,monospace;padding:6px 10px 6px 0}}
 .bar{{width:3px;align-self:stretch}}
 @media (max-width:500px){{.grid{{grid-template-columns:1fr}} .code{{overflow-x:auto}}}}
-</style></head><body><h1>Lumina</h1><p>Neuf saveurs, chacune en sombre, clair et contraste élevé ; Prisma a aussi des jumeaux noir et blanc. Rendu exporté depuis GNU Emacs 30.2.</p>
+</style></head><body><h1>Lumina</h1><p>Dix saveurs, chacune en sombre, clair et contraste élevé ; Prisma a aussi des jumeaux noir et blanc. Accents composés à partir des échelles publiques Tailwind v4 (sombre) et Radix Colors (clair), texte adouci vers 9:1. Rendu exporté depuis GNU Emacs 30.2.</p>
 {"".join(sections)}</body></html>"""
 (ROOT / "docs" / "gallery.html").write_text(page)
 shots = ROOT / "assets" / "screens"

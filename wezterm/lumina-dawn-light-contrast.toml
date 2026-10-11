@@ -1,53 +1,53 @@
 # lumina-dawn-light-contrast -- Lumina (dawn, light)
 # Generated from spec/lumina.json. Do not edit by hand.
 [colors]
-foreground   = "#160D07"
-background   = "#FFFDF5"
-cursor_bg    = "#160D07"
-cursor_fg    = "#FFFDF5"
-cursor_border = "#160D07"
-selection_bg = "#DBC9B2"
-selection_fg = "#160D07"
-scrollbar_thumb = "#B2A99D"
-split = "#E1DACE"
-compose_cursor = "#703E00"
-visual_bell = "#C7AD8F"
-copy_mode_active_highlight_bg = { Color = "#703E00" }
-copy_mode_active_highlight_fg = { Color = "#FFFDF5" }
-copy_mode_inactive_highlight_bg = { Color = "#E8DBC9" }
-copy_mode_inactive_highlight_fg = { Color = "#160D07" }
-quick_select_label_bg = { Color = "#843C17" }
-quick_select_label_fg = { Color = "#FFFDF5" }
-quick_select_match_bg = { Color = "#E8DBC9" }
-quick_select_match_fg = { Color = "#160D07" }
-ansi = ["#FCF6ED", "#8E2F28", "#485C1F", "#703E00", "#305878", "#75405A", "#255D66", "#382E26"]
-brights = ["#797065", "#843C17", "#28604A", "#703E00", "#295171", "#574C77", "#255D66", "#160D07"]
+foreground   = "#140E09"
+background   = "#FFFDFA"
+cursor_bg    = "#140E09"
+cursor_fg    = "#FFFDFA"
+cursor_border = "#140E09"
+selection_bg = "#DEC8B4"
+selection_fg = "#140E09"
+scrollbar_thumb = "#B2A9A2"
+split = "#E2D9D2"
+compose_cursor = "#7B3800"
+visual_bell = "#C5A282"
+copy_mode_active_highlight_bg = { Color = "#7B3800" }
+copy_mode_active_highlight_fg = { Color = "#FFFDFA" }
+copy_mode_inactive_highlight_bg = { Color = "#EBDCCF" }
+copy_mode_inactive_highlight_fg = { Color = "#140E09" }
+quick_select_label_bg = { Color = "#932200" }
+quick_select_label_fg = { Color = "#FFFDFA" }
+quick_select_match_bg = { Color = "#EBDCCF" }
+quick_select_match_fg = { Color = "#140E09" }
+ansi = ["#FEF5EE", "#951B02", "#3E5C06", "#7B3800", "#2A46A8", "#921546", "#005982", "#362F29"]
+brights = ["#78706A", "#932200", "#006252", "#7B3800", "#243E9F", "#523AA1", "#005982", "#140E09"]
 
 [colors.indexed]
-16 = "#843C17"
-17 = "#28604A"
-18 = "#574C77"
-19 = "#295171"
+16 = "#932200"
+17 = "#006252"
+18 = "#523AA1"
+19 = "#243E9F"
 
 [colors.tab_bar]
-background = "#F9F3E8"
-inactive_tab_edge = "#F1EAE0"
+background = "#FBF1EA"
+inactive_tab_edge = "#F3E9E2"
 [colors.tab_bar.active_tab]
-bg_color = "#FFFDF5"
-fg_color = "#160D07"
+bg_color = "#FFFDFA"
+fg_color = "#140E09"
 intensity = "Bold"
 [colors.tab_bar.inactive_tab]
-bg_color = "#F9F3E8"
-fg_color = "#554B42"
+bg_color = "#FBF1EA"
+fg_color = "#534B46"
 [colors.tab_bar.inactive_tab_hover]
-bg_color = "#F3E9DB"
-fg_color = "#160D07"
+bg_color = "#F3E8DF"
+fg_color = "#140E09"
 [colors.tab_bar.new_tab]
-bg_color = "#F9F3E8"
-fg_color = "#797065"
+bg_color = "#FBF1EA"
+fg_color = "#78706A"
 [colors.tab_bar.new_tab_hover]
-bg_color = "#E8DBC9"
-fg_color = "#703E00"
+bg_color = "#EBDCCF"
+fg_color = "#7B3800"
 
 [metadata]
 name = "lumina-dawn-light-contrast"
