@@ -1,27 +1,27 @@
 # lumina-vesper-light-contrast -- Lumina (vesper, light)
 # Generated from spec/lumina.json. Do not edit by hand.
 [colors]
-foreground   = "#0E0F12"
-background   = "#FDFDFF"
-cursor_bg    = "#0E0F12"
-cursor_fg    = "#FDFDFF"
-cursor_border = "#0E0F12"
-selection_bg = "#B8D0CB"
-selection_fg = "#0E0F12"
-scrollbar_thumb = "#A9ABAE"
-split = "#D9DBDE"
+foreground   = "#0D0F15"
+background   = "#FCFDFF"
+cursor_bg    = "#0D0F15"
+cursor_fg    = "#FCFDFF"
+cursor_border = "#0D0F15"
+selection_bg = "#B8D0CC"
+selection_fg = "#0D0F15"
+scrollbar_thumb = "#A8ABB2"
+split = "#D8DAE3"
 compose_cursor = "#005546"
-visual_bell = "#87AFA6"
+visual_bell = "#87AFA7"
 copy_mode_active_highlight_bg = { Color = "#005546" }
-copy_mode_active_highlight_fg = { Color = "#FDFDFF" }
-copy_mode_inactive_highlight_bg = { Color = "#D2E1DF" }
-copy_mode_inactive_highlight_fg = { Color = "#0E0F12" }
+copy_mode_active_highlight_fg = { Color = "#FCFDFF" }
+copy_mode_inactive_highlight_bg = { Color = "#CDDEDC" }
+copy_mode_inactive_highlight_fg = { Color = "#0D0F15" }
 quick_select_label_bg = { Color = "#942300" }
-quick_select_label_fg = { Color = "#FDFDFF" }
-quick_select_match_bg = { Color = "#D2E1DF" }
-quick_select_match_fg = { Color = "#0E0F12" }
-ansi = ["#F5F7FB", "#96181E", "#006321", "#803D00", "#2B47A8", "#921646", "#005A82", "#2F3033"]
-brights = ["#707175", "#942300", "#005546", "#803D00", "#243E9F", "#523AA1", "#005A82", "#0E0F12"]
+quick_select_label_fg = { Color = "#FCFDFF" }
+quick_select_match_bg = { Color = "#CDDEDC" }
+quick_select_match_fg = { Color = "#0D0F15" }
+ansi = ["#F4F7FF", "#96181E", "#006321", "#803D00", "#2B47A8", "#921646", "#005A82", "#2E3036"]
+brights = ["#6F7179", "#942300", "#005546", "#803D00", "#243E9F", "#523AA1", "#005A82", "#0D0F15"]
 
 [colors.indexed]
 16 = "#942300"
@@ -30,23 +30,23 @@ brights = ["#707175", "#942300", "#005546", "#803D00", "#243E9F", "#523AA1", "#0
 19 = "#243E9F"
 
 [colors.tab_bar]
-background = "#F1F3F7"
-inactive_tab_edge = "#E9EBEF"
+background = "#F0F3FC"
+inactive_tab_edge = "#E8EBF3"
 [colors.tab_bar.active_tab]
-bg_color = "#FDFDFF"
-fg_color = "#0E0F12"
+bg_color = "#FCFDFF"
+fg_color = "#0D0F15"
 intensity = "Bold"
 [colors.tab_bar.inactive_tab]
-bg_color = "#F1F3F7"
-fg_color = "#4B4D50"
+bg_color = "#F0F3FC"
+fg_color = "#4B4D54"
 [colors.tab_bar.inactive_tab_hover]
-bg_color = "#E2ECEB"
-fg_color = "#0E0F12"
+bg_color = "#DCE8E8"
+fg_color = "#0D0F15"
 [colors.tab_bar.new_tab]
-bg_color = "#F1F3F7"
-fg_color = "#707175"
+bg_color = "#F0F3FC"
+fg_color = "#6F7179"
 [colors.tab_bar.new_tab_hover]
-bg_color = "#D2E1DF"
+bg_color = "#CDDEDC"
 fg_color = "#005546"
 
 [metadata]

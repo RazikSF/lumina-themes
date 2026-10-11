@@ -19,9 +19,9 @@ import explore
 
 SRC = json.loads((ROOT / "tools/explore/sources.json").read_text())
 RADIX_HUE = {"dawn": "amber", "oxblood": "ruby", "tide": "sky", "canopy": "grass", "slate": "slate", "nocturne": "indigo",
-             "amethyst": "plum", "obsidian": "gray", "prisma": "iris", "vesper": "indigo"}
+             "amethyst": "plum", "prisma": "iris", "vesper": "indigo"}
 TW_NEUTRAL = {"dawn": "stone", "oxblood": "stone", "tide": "slate", "canopy": "zinc", "slate": "zinc", "nocturne": "slate",
-              "amethyst": "zinc", "obsidian": "neutral", "prisma": "zinc", "vesper": "slate"}
+              "amethyst": "zinc", "prisma": "zinc", "vesper": "slate"}
 
 
 def radix_dark(hue, step):
@@ -69,7 +69,7 @@ figure{margin:0} .code{font:12.5px/1.5 "JetBrains Mono",Menlo,monospace;padding:
     print("ok", len(cards), "cards -> docs/grounds.html")
 
 
-if __name__ == "__main__" and "--pair" not in sys.argv:
+if __name__ == "__main__" and "--pair" not in sys.argv and "--pair-light" not in sys.argv:
     main()
 
 
@@ -113,3 +113,54 @@ figure{margin:0} .code{font:12.5px/1.5 "JetBrains Mono",Menlo,monospace;padding:
 
 if __name__ == "__main__" and "--pair" in sys.argv:
     pair()
+
+
+def radix_light(hue, step):
+    scale = SRC["radix-light"][hue]; L, C, h = from_hex(scale.get(hue + str(step)) or list(scale.values())[step - 1])
+    return (round(L, 3), round(C, 3), round(h, 1))
+
+
+def pair_light(install_dir=Path.home() / ".doom.d/themes"):
+    """Light twins: Radix <hue> light step 2 (left) and Tailwind neutral -50 (right), with large swatches
+    of the seven grounds under each card so the small differences can be seen."""
+    faces = g._load_decl("faces.json"); variables = g._load_decl("variables.json"); rows = []
+    for flavor, spec in vp.FLAVORS.items():
+        sch = g.SCHEMAS[flavor]; h, cd, cl, Ld, Ll = spec["ground"]
+        hue = RADIX_HUE[flavor]; r = radix_light(hue, 2); tw = from_hex(explore.tw(TW_NEUTRAL[flavor], 50))
+        grounds = {"radix": (f"Radix {hue} 2", (h, cd, r[1], Ld, r[0]), r[2]), "tailwind": (f"Tailwind {TW_NEUTRAL[flavor]}-50", (h, cd, tw[1], Ld, tw[0]), tw[2])}
+        current = "tailwind" if flavor in ("vesper", "dawn", "nocturne", "slate") else "radix"
+        cells = []
+        for key, (label, ground, lh) in grounds.items():
+            pal = vp.compose(**{**spec, "ground": ground})
+            L0, C0, _ = pal["light"]["bg"]; pal["light"]["bg"] = (L0, C0, lh)
+            sig = vp.signature(pal["light"], spec["lamp"], False, {**pal["sig"], "halo": .12, "halo2": .18})
+            colors = {k: [to_hex(*v), to_hex(*v).lower(), "white"] for k, v in sig.items()}
+            for k, ref in pal["refs"].items():
+                colors.setdefault(k, {"ref": ref})
+            theme = f"lumina-{flavor}-light" if key == current else f"lumina-{flavor}2-light"
+            body = "\n".join(g.emit_face(n, g.spec_to_attrs(fs, colors, sch)) for n, fs in faces.items())
+            vars_ = f"\n\n(custom-theme-set-variables\n '{theme}\n" + "\n".join(g.emit_variable(n, v, colors, sch) for n, v in variables.items()) + ")"
+            text = (g.ELISP_FILE_HEADER.format(file=f"{theme}-theme.el", short=theme, theme=theme, docstring=f"{flavor}, {label}", commentary=f";; {flavor}, {label}")
+                    + body + g.ELISP_FILE_FOOTER.format(file=f"{theme}-theme.el", theme=theme, variables=vars_))
+            (explore.THEMES / f"{theme}-theme.el").write_text(text)
+            if key != current:
+                (install_dir / f"{theme}-theme.el").write_text(text)
+            sw = "".join(f'<div class="sw" style="background:{colors[k][0]}"><span>{n}<br>{colors[k][0]}</span></div>'
+                         for k, n in [("bg", "papier"), ("bg-alt", "chrome"), ("surface", "panneau"), ("overlay", "popup"), ("halo", "halo"), ("halo2", "candidat"), ("region", "sélection")])
+            cells.append(explore.card(f"{theme} : {label} {colors['bg'][0]}" + ("  (actuel)" if key == current else ""), explore.render(theme, True)) + f'<div class="sws">{sw}</div>')
+        rows.append(f'<h2>{flavor}</h2><div class="grid">' + "".join(f'<div>{c}</div>' for c in cells) + "</div>")
+    page = ("""<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Fonds clairs</title><style>
+body{margin:0;padding:20px 14px;background:#d9d9d9;color:#222;font:14px/1.4 -apple-system,system-ui,sans-serif} h1{font-weight:600;margin:0 0 4px} p{color:#444;margin:0 0 14px;max-width:90ch}
+h2{font-weight:500;color:#333;margin:22px 0 8px;text-transform:capitalize} .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+figure{margin:0} .code{font:12.5px/1.5 "JetBrains Mono",Menlo,monospace;padding:6px 0;border-radius:6px 6px 0 0;overflow:hidden} .r{white-space:pre;padding:0 8px;min-height:1.5em}
+.ml{display:flex;align-items:center;gap:8px;font:11.5px Menlo,monospace;padding:5px 8px 5px 0} .bar{width:3px;align-self:stretch}
+.sws{display:grid;grid-template-columns:repeat(7,1fr);height:64px;border-radius:0 0 6px 6px;overflow:hidden;border:1px solid #bbb} .sw{display:flex;align-items:flex-end;padding:4px;font:10px Menlo,monospace;color:#333}
+@media (max-width:1150px){.grid{grid-template-columns:1fr}}
+</style></head><body><h1>Fonds clairs : Radix pas 2 (gauche) et Tailwind 50 (droite)</h1><p>Par saveur, le papier Radix pas 2 de la teinte et le neutre Tailwind 50 assorti au fond sombre, avec les encres de la saveur. Sous chaque carte, les sept paliers en grands aplats. La version non retenue est installée sous lumina-&lt;saveur&gt;2-light. Rendu par Emacs ; page sur gris moyen pour ne pas fausser le papier.</p>"""
+            + "".join(rows) + "</body></html>")
+    (ROOT / "docs/grounds-light.html").write_text(page)
+    print("ok", len(rows), "flavors -> docs/grounds-light.html; twins installed in", install_dir)
+
+
+if __name__ == "__main__" and "--pair-light" in sys.argv:
+    pair_light()

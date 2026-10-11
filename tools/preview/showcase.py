@@ -8,7 +8,7 @@ sys.path.insert(0, str(ROOT / "generators"))
 import lumina_gen as g
 
 SPEC = json.loads(g.SPEC.read_text())["flavors"]
-ORDER = ["vesper", "dawn", "oxblood", "tide", "canopy", "slate", "nocturne", "amethyst", "obsidian", "prisma"]
+ORDER = ["vesper", "dawn", "oxblood", "tide", "canopy", "slate", "nocturne", "amethyst", "prisma"]
 MODES = ["dark", "light", "dark-ink", "light-ink"]
 
 

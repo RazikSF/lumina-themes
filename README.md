@@ -8,7 +8,7 @@ every flavor, one colour is the light (the cursor, the definition you
 are reading, the current line, the heading you are in) and everything
 else sits in the room at equal weight, never louder than the lamp.
 
-Ten flavors, each in dark, light and high contrast: 44 themes. The
+Nine flavors, each in dark, light and high contrast: 40 themes. The
 flagship is **Vesper**: navy slate at dusk, a mint-teal star for a lamp,
 violet keywords and indigo types beside it, soft text, one apricot note.
 
@@ -54,8 +54,11 @@ violet keywords and indigo types beside it, soft text, one apricot note.
 
 ## Flavors
 
-Each flavor covers one colour group: one ground hue, one lamp, one role
-map. Dark grounds carry Tailwind pastels, light paper carries Radix inks.
+Each flavor covers one colour group: one ground, one lamp, one role map.
+Dark grounds are Radix app backgrounds (step 2 of the flavor's hue) or the
+Tailwind neutral that carries the same temperature, and carry Tailwind
+pastels; light paper is always the Radix step 2 of the hue, and carries
+Radix inks.
 
 | Flavor | Ground | Lamp | Keywords, types, strings | Note |
 |---|---|---|---|---|
@@ -67,7 +70,6 @@ map. Dark grounds carry Tailwind pastels, light paper carries Radix inks.
 | **Slate** | cold graphite | steel blue | sky, violet, emerald, all held back | orange |
 | **Nocturne** | indigo night | sodium orange | violet, sky, emerald | amber |
 | **Amethyst** | purple geode | citrine | orchid, sky, emerald | orange |
-| **Obsidian** | near-black glass | lava | teal, sky, emerald | amber |
 | **Prisma** | neutral indigo | ultraviolet | violet, amber, emerald; full-spectrum delimiters | black-and-white `-ink` twins |
 
 ### Gallery
@@ -100,10 +102,6 @@ map. Dark grounds carry Tailwind pastels, light paper carries Radix inks.
 
 <img src="assets/screens/lumina-amethyst-dark.svg" width="49%"> <img src="assets/screens/lumina-amethyst-light.svg" width="49%">
 
-**Obsidian**
-
-<img src="assets/screens/lumina-obsidian-dark.svg" width="49%"> <img src="assets/screens/lumina-obsidian-light.svg" width="49%">
-
 **Prisma**
 
 <img src="assets/screens/lumina-prisma-dark.svg" width="49%"> <img src="assets/screens/lumina-prisma-light.svg" width="49%">
@@ -123,11 +121,11 @@ Prisma adds black-and-white twins: `lumina-prisma-dark-ink`,
 
 | Target | Output |
 |---|---|
-| **Emacs** (vanilla `deftheme`)  | `emacs/themes/*.el` (44), close to 3 000 faces each |
-| **Neovim** (Lua colorscheme)    | `nvim/colors/*.lua` (44), over 1 600 groups each, plus `nvim/lua/lualine/themes/*.lua` |
-| **VS Code** (extension)         | `vscode/themes/*.json` (44): 565 workbench colours, 80 token scopes, 47 semantic tokens |
-| **WezTerm** (color scheme)      | `wezterm/*.toml` (44): ANSI, indexed, tab bar states, copy and quick-select modes |
-| **base24** (tinted-theming)     | `base24/*.yaml` (44) |
+| **Emacs** (vanilla `deftheme`)  | `emacs/themes/*.el` (40), close to 3 000 faces each |
+| **Neovim** (Lua colorscheme)    | `nvim/colors/*.lua` (40), over 1 600 groups each, plus `nvim/lua/lualine/themes/*.lua` |
+| **VS Code** (extension)         | `vscode/themes/*.json` (40): 565 workbench colours, 80 token scopes, 47 semantic tokens |
+| **WezTerm** (color scheme)      | `wezterm/*.toml` (40): ANSI, indexed, tab bar states, copy and quick-select modes |
+| **base24** (tinted-theming)     | `base24/*.yaml` (40) |
 
 The Emacs files require no external dependency and load on a bare
 `emacs -Q` in about ten milliseconds. Each one styles close to 3 000
