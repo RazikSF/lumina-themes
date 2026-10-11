@@ -10,9 +10,9 @@ else sits in the room at equal weight, never louder than the lamp.
 
 Ten flavors, each in dark, light and high contrast: 44 themes. The
 flagship is **Vesper**. Dark: deep navy at night, blue-lavender text at
-8:1 and every accent below it, blue functions, purple keywords, gold
-types, sky strings, coral constants, turquoise builtins. Light: the
-same inks darkened on cool white paper, so both modes read alike.
+8:1 and every accent below it, blue functions, purple keywords, sky
+types, straw strings, coral constants, rose builtins, no green in the
+code. Light: the same hues as inks on cool white paper.
 Its warm counterpart is **Sienne**: slate night under warm inks, beige
 text, teal functions, mauve keywords, gold types, olive strings, coral
 constants, apricot builtins.
@@ -70,7 +70,7 @@ Radix inks.
 
 | Flavor | Ground | Lamp | Keywords, types, strings | Note |
 |---|---|---|---|---|
-| **Vesper** | deep navy / cool white | blue | purple, gold, sky | coral |
+| **Vesper** | deep navy / cool white | blue | purple, sky, straw | coral, rose |
 | **Sienne** | slate night / slate paper | teal | mauve, gold, olive | coral, apricot |
 | **Dawn** | warm sepia | amber | terracotta, teal, lime | rose |
 | **Oxblood** | dark wine | rose | violet, amber, emerald | orange |

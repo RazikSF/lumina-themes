@@ -131,7 +131,7 @@ SHEETS = {
                     intro="Première carte : Vesper tel que figé (chaînes vert olive #91B265). Puis quatre remplacements, tout le reste identique. Installés sous lumina-vesper-lime, -menthe, -ciel, -sauge (suffixe -dark)."),
     "final": dict(refs=[], protos={}, themes=["lumina-sienne-dark", "lumina-sienne-light", "lumina-vesper-dark", "lumina-vesper-light"], out="final.html",
                   title="Sienne et Vesper tels que figés dans la spec",
-                  intro="Sienne sombre : fond ardoise 0,24, texte beige discret 8,8:1, fonctions sarcelle, mots-clés mauve, types or, chaînes olive, constantes corail, builtins abricot. Sienne clair : composé par la recette standard des clairs (provisoire, à valider). Vesper pour mémoire."),
+                  intro="Vesper : fonctions bleu, mots-clés pourpre, types ciel, chaînes paille, constantes corail, builtins rose ; aucun vert dans le code. Sienne : fonctions sarcelle, mots-clés mauve, types or, chaînes olive, constantes corail, builtins abricot. Les clairs reprennent les mêmes teintes en encres (clarté 0,46 à 0,55)."),
     "sienne12": dict(refs=["jazz"], protos=SIENNE12, themes=[], out="sienne12.html",
                      title="Sienne : affectation 2 sur ardoise et gris-bleu, trois tons de texte plus discrets",
                      intro="Le texte sable (#D1B99F) tirait sur le jaune ; ici trois tons plus neutres, toujours teintés : beige discret, gris chaud, beige rosé. Fonctions sarcelle, mots-clés mauve, types or, chaînes olive, constantes corail, builtins abricot. Installés sous lumina-sienne12-{ardoise,brume}-{beige,gris,rose}-dark."),

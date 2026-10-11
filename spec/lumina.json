@@ -11189,23 +11189,23 @@
             "brightred"
           ],
           "yellow": [
-            "#D7B355",
-            "#d7b355",
+            "#DFCA7D",
+            "#dfca7d",
             "yellow"
           ],
           "green": [
-            "#5EC6EC",
-            "#5ec6ec",
+            "#80B38A",
+            "#80b38a",
             "green"
           ],
           "teal": [
-            "#60BFA4",
-            "#60bfa4",
+            "#66B5AB",
+            "#66b5ab",
             "brightgreen"
           ],
           "cyan": [
-            "#4BB5C9",
-            "#4bb5c9",
+            "#5BC1D9",
+            "#5bc1d9",
             "cyan"
           ],
           "blue": [
@@ -11233,14 +11233,19 @@
             "#6c727e",
             "black"
           ],
+          "rose": [
+            "#E38AB5",
+            "#e38ab5",
+            "black"
+          ],
           "dark-blue": [
             "#3B6EB9",
             "#3b6eb9",
             "brightblue"
           ],
           "dark-cyan": [
-            "#06899D",
-            "#06899d",
+            "#2695AC",
+            "#2695ac",
             "brightcyan"
           ],
           "halo": [
@@ -11289,23 +11294,23 @@
             "black"
           ],
           "yellow-bg": [
-            "#2F3031",
-            "#2f3031",
+            "#303335",
+            "#303335",
             "black"
           ],
           "green-bg": [
-            "#213242",
-            "#213242",
+            "#243036",
+            "#243036",
             "black"
           ],
           "teal-bg": [
-            "#213139",
-            "#213139",
+            "#21303A",
+            "#21303a",
             "black"
           ],
           "cyan-bg": [
-            "#1F303D",
-            "#1f303d",
+            "#20313F",
+            "#20313f",
             "black"
           ],
           "blue-bg": [
@@ -11366,22 +11371,22 @@
             "ref": "magenta"
           },
           "type": {
-            "ref": "yellow"
+            "ref": "cyan"
           },
           "strings": {
-            "ref": "green"
+            "ref": "yellow"
           },
           "constants": {
             "ref": "orange"
           },
           "builtin": {
-            "ref": "teal"
+            "ref": "rose"
           },
           "methods": {
-            "ref": "teal"
+            "ref": "blue"
           }
         },
-        "commentary": "Lumina Vesper, dark variant.\nDeep navy at night; blue-lavender text at 8:1, deep accents below it: blue functions, purple keywords, gold types, sky strings, coral constants, turquoise builtins."
+        "commentary": "Lumina Vesper, dark variant.\nDeep navy at night; blue-lavender text at 8:1, deep accents below it: blue functions, purple keywords, sky types, straw strings, coral constants, rose builtins; no green in the code."
       },
       "light": {
         "theme": "lumina-vesper-light",
@@ -11484,48 +11489,48 @@
             "white"
           ],
           "red": [
-            "#C82462",
-            "#c82462",
+            "#980035",
+            "#980035",
             "red"
           ],
           "orange": [
-            "#A73014",
-            "#a73014",
+            "#B94127",
+            "#b94127",
             "brightred"
           ],
           "yellow": [
-            "#644D00",
-            "#644d00",
+            "#9C5F00",
+            "#9c5f00",
             "yellow"
           ],
           "green": [
-            "#005972",
-            "#005972",
+            "#21763C",
+            "#21763c",
             "green"
           ],
           "teal": [
-            "#006953",
-            "#006953",
+            "#00756B",
+            "#00756b",
             "brightgreen"
           ],
           "cyan": [
-            "#006A79",
-            "#006a79",
+            "#00728A",
+            "#00728a",
             "cyan"
           ],
           "blue": [
-            "#2D65B5",
-            "#2d65b5",
+            "#2460B7",
+            "#2460b7",
             "blue"
           ],
           "violet": [
-            "#7254A1",
-            "#7254a1",
+            "#6F4FA1",
+            "#6f4fa1",
             "brightmagenta"
           ],
           "magenta": [
-            "#8B42A1",
-            "#8b42a1",
+            "#883E9D",
+            "#883e9d",
             "magenta"
           ],
           "comments": [
@@ -11538,39 +11543,44 @@
             "#575a64",
             "white"
           ],
+          "rose": [
+            "#A83876",
+            "#a83876",
+            "white"
+          ],
           "dark-blue": [
-            "#0D4795",
-            "#0d4795",
+            "#004296",
+            "#004296",
             "brightblue"
           ],
           "dark-cyan": [
-            "#004D5C",
-            "#004d5c",
+            "#00556C",
+            "#00556c",
             "brightcyan"
           ],
           "halo": [
-            "#DFE7F4",
-            "#dfe7f4",
+            "#DEE7F5",
+            "#dee7f5",
             "white"
           ],
           "halo2": [
-            "#D2DEF1",
-            "#d2def1",
+            "#D1DDF1",
+            "#d1ddf1",
             "white"
           ],
           "region": [
-            "#C2D2EB",
-            "#c2d2eb",
+            "#C0D1EC",
+            "#c0d1ec",
             "white"
           ],
           "selection": [
-            "#C2D2EB",
-            "#c2d2eb",
+            "#C0D1EC",
+            "#c0d1ec",
             "white"
           ],
           "glow": [
-            "#9BB6DE",
-            "#9bb6de",
+            "#98B4DF",
+            "#98b4df",
             "white"
           ],
           "dim": [
@@ -11584,38 +11594,38 @@
             "white"
           ],
           "red-bg": [
-            "#F7E7ED",
-            "#f7e7ed",
+            "#F3E4E8",
+            "#f3e4e8",
             "white"
           ],
           "orange-bg": [
-            "#F3E7E7",
-            "#f3e7e7",
+            "#F4E9E8",
+            "#f4e9e8",
             "white"
           ],
           "yellow-bg": [
-            "#EAE8E6",
-            "#eae8e6",
+            "#F0EBE6",
+            "#f0ebe6",
             "white"
           ],
           "green-bg": [
-            "#E3EAEF",
-            "#e3eaef",
+            "#E5EDEA",
+            "#e5edea",
             "white"
           ],
           "teal-bg": [
-            "#E4EBEC",
-            "#e4ebec",
+            "#E4EDEE",
+            "#e4edee",
             "white"
           ],
           "cyan-bg": [
-            "#E4EBF0",
-            "#e4ebf0",
+            "#E3ECF1",
+            "#e3ecf1",
             "white"
           ],
           "blue-bg": [
-            "#E5EBF6",
-            "#e5ebf6",
+            "#E4EBF7",
+            "#e4ebf7",
             "white"
           ],
           "violet-bg": [
@@ -11671,22 +11681,22 @@
             "ref": "magenta"
           },
           "type": {
-            "ref": "yellow"
+            "ref": "cyan"
           },
           "strings": {
-            "ref": "green"
+            "ref": "yellow"
           },
           "constants": {
             "ref": "orange"
           },
           "builtin": {
-            "ref": "teal"
+            "ref": "rose"
           },
           "methods": {
-            "ref": "teal"
+            "ref": "blue"
           }
         },
-        "commentary": "Lumina Vesper, light variant.\nCool white paper; the same inks as the night, darkened: blue functions, purple keywords, gold types, sky strings, coral constants, turquoise builtins."
+        "commentary": "Lumina Vesper, light variant.\nCool white paper; the same inks as the night, darkened: blue functions, purple keywords, sky types, straw strings, coral constants, rose builtins; no green in the code."
       },
       "dark-contrast": {
         "theme": "lumina-vesper-dark-contrast",
@@ -11789,33 +11799,33 @@
             "black"
           ],
           "red": [
-            "#FF7C92",
-            "#ff7c92",
+            "#FF8FA5",
+            "#ff8fa5",
             "red"
           ],
           "orange": [
-            "#FF9175",
-            "#ff9175",
+            "#FFA488",
+            "#ffa488",
             "brightred"
           ],
           "yellow": [
-            "#D7B355",
-            "#d7b355",
+            "#DFCA7D",
+            "#dfca7d",
             "yellow"
           ],
           "green": [
-            "#5EC6EC",
-            "#5ec6ec",
+            "#A6DAAF",
+            "#a6daaf",
             "green"
           ],
           "teal": [
-            "#6ECCB0",
-            "#6eccb0",
+            "#8CDCD1",
+            "#8cdcd1",
             "brightgreen"
           ],
           "cyan": [
-            "#60C8DD",
-            "#60c8dd",
+            "#76DBF3",
+            "#76dbf3",
             "cyan"
           ],
           "blue": [
@@ -11824,13 +11834,13 @@
             "blue"
           ],
           "violet": [
-            "#C2A7F4",
-            "#c2a7f4",
+            "#D5BAFF",
+            "#d5baff",
             "brightmagenta"
           ],
           "magenta": [
-            "#DF97F5",
-            "#df97f5",
+            "#F3AAFF",
+            "#f3aaff",
             "magenta"
           ],
           "comments": [
@@ -11843,14 +11853,19 @@
             "#949aa7",
             "black"
           ],
+          "rose": [
+            "#E38AB5",
+            "#e38ab5",
+            "black"
+          ],
           "dark-blue": [
             "#487CC8",
             "#487cc8",
             "brightblue"
           ],
           "dark-cyan": [
-            "#06899D",
-            "#06899d",
+            "#2695AC",
+            "#2695ac",
             "brightcyan"
           ],
           "halo": [
@@ -11889,33 +11904,33 @@
             "black"
           ],
           "red-bg": [
-            "#2E1F2B",
-            "#2e1f2b",
+            "#31212E",
+            "#31212e",
             "black"
           ],
           "orange-bg": [
-            "#2B2128",
-            "#2b2128",
+            "#2E242B",
+            "#2e242b",
             "black"
           ],
           "yellow-bg": [
-            "#242526",
-            "#242526",
+            "#24282A",
+            "#24282a",
             "black"
           ],
           "green-bg": [
-            "#162636",
-            "#162636",
+            "#1D292F",
+            "#1d292f",
             "black"
           ],
           "teal-bg": [
-            "#17272F",
-            "#17272f",
+            "#1A2933",
+            "#1a2933",
             "black"
           ],
           "cyan-bg": [
-            "#162734",
-            "#162734",
+            "#182937",
+            "#182937",
             "black"
           ],
           "blue-bg": [
@@ -11924,13 +11939,13 @@
             "black"
           ],
           "violet-bg": [
-            "#212337",
-            "#212337",
+            "#242539",
+            "#242539",
             "black"
           ],
           "magenta-bg": [
-            "#262137",
-            "#262137",
+            "#282339",
+            "#282339",
             "black"
           ],
           "grey": {
@@ -11976,22 +11991,22 @@
             "ref": "magenta"
           },
           "type": {
-            "ref": "yellow"
+            "ref": "cyan"
           },
           "strings": {
-            "ref": "green"
+            "ref": "yellow"
           },
           "constants": {
             "ref": "orange"
           },
           "builtin": {
-            "ref": "teal"
+            "ref": "rose"
           },
           "methods": {
-            "ref": "teal"
+            "ref": "blue"
           }
         },
-        "commentary": "Lumina Vesper, dark variant, high contrast.\nDeep navy at night; blue-lavender text at 8:1, deep accents below it: blue functions, purple keywords, gold types, sky strings, coral constants, turquoise builtins."
+        "commentary": "Lumina Vesper, dark variant, high contrast.\nDeep navy at night; blue-lavender text at 8:1, deep accents below it: blue functions, purple keywords, sky types, straw strings, coral constants, rose builtins; no green in the code."
       },
       "light-contrast": {
         "theme": "lumina-vesper-light-contrast",
@@ -12094,48 +12109,48 @@
             "white"
           ],
           "red": [
-            "#9E0041",
-            "#9e0041",
+            "#980035",
+            "#980035",
             "red"
           ],
           "orange": [
-            "#941B00",
-            "#941b00",
+            "#901600",
+            "#901600",
             "brightred"
           ],
           "yellow": [
-            "#644D00",
-            "#644d00",
+            "#773C00",
+            "#773c00",
             "yellow"
           ],
           "green": [
-            "#005972",
-            "#005972",
+            "#005E26",
+            "#005e26",
             "green"
           ],
           "teal": [
-            "#00604B",
-            "#00604b",
+            "#005E54",
+            "#005e54",
             "brightgreen"
           ],
           "cyan": [
-            "#005C6B",
-            "#005c6b",
+            "#005A72",
+            "#005a72",
             "cyan"
           ],
           "blue": [
-            "#0F4996",
-            "#0f4996",
+            "#06489C",
+            "#06489c",
             "blue"
           ],
           "violet": [
-            "#5B3D87",
-            "#5b3d87",
+            "#593888",
+            "#593888",
             "brightmagenta"
           ],
           "magenta": [
-            "#732988",
-            "#732988",
+            "#6F2584",
+            "#6f2584",
             "magenta"
           ],
           "comments": [
@@ -12148,39 +12163,44 @@
             "#565963",
             "white"
           ],
+          "rose": [
+            "#A83876",
+            "#a83876",
+            "white"
+          ],
           "dark-blue": [
-            "#0D4795",
-            "#0d4795",
+            "#004296",
+            "#004296",
             "brightblue"
           ],
           "dark-cyan": [
-            "#004D5C",
-            "#004d5c",
+            "#00556C",
+            "#00556c",
             "brightcyan"
           ],
           "halo": [
-            "#DFE7F4",
-            "#dfe7f4",
+            "#DEE7F5",
+            "#dee7f5",
             "white"
           ],
           "halo2": [
-            "#D0DCEE",
-            "#d0dcee",
+            "#D0DCF0",
+            "#d0dcf0",
             "white"
           ],
           "region": [
-            "#BDCDE6",
-            "#bdcde6",
+            "#BCCEE8",
+            "#bccee8",
             "white"
           ],
           "selection": [
-            "#BDCDE6",
-            "#bdcde6",
+            "#BCCEE8",
+            "#bccee8",
             "white"
           ],
           "glow": [
-            "#90ABD3",
-            "#90abd3",
+            "#8FABD6",
+            "#8fabd6",
             "white"
           ],
           "dim": [
@@ -12189,13 +12209,13 @@
             "white"
           ],
           "overlay": [
-            "#E5E9F0",
-            "#e5e9f0",
+            "#E5E9F1",
+            "#e5e9f1",
             "white"
           ],
           "red-bg": [
-            "#F7E8EE",
-            "#f7e8ee",
+            "#F6E8EC",
+            "#f6e8ec",
             "white"
           ],
           "orange-bg": [
@@ -12204,38 +12224,38 @@
             "white"
           ],
           "yellow-bg": [
-            "#EEECE9",
-            "#eeece9",
+            "#F0EBE7",
+            "#f0ebe7",
             "white"
           ],
           "green-bg": [
-            "#E7EEF3",
-            "#e7eef3",
+            "#E6EEEB",
+            "#e6eeeb",
             "white"
           ],
           "teal-bg": [
-            "#E7EEEF",
-            "#e7eeef",
+            "#E5EEF0",
+            "#e5eef0",
             "white"
           ],
           "cyan-bg": [
-            "#E6EEF2",
-            "#e6eef2",
+            "#E4EEF3",
+            "#e4eef3",
             "white"
           ],
           "blue-bg": [
-            "#E6EDF7",
-            "#e6edf7",
+            "#E6EDF8",
+            "#e6edf8",
             "white"
           ],
           "violet-bg": [
-            "#EDEBF6",
-            "#edebf6",
+            "#ECEBF6",
+            "#ecebf6",
             "white"
           ],
           "magenta-bg": [
-            "#F0EAF6",
-            "#f0eaf6",
+            "#EFE9F5",
+            "#efe9f5",
             "white"
           ],
           "grey": {
@@ -12281,22 +12301,22 @@
             "ref": "magenta"
           },
           "type": {
-            "ref": "yellow"
+            "ref": "cyan"
           },
           "strings": {
-            "ref": "green"
+            "ref": "yellow"
           },
           "constants": {
             "ref": "orange"
           },
           "builtin": {
-            "ref": "teal"
+            "ref": "rose"
           },
           "methods": {
-            "ref": "teal"
+            "ref": "blue"
           }
         },
-        "commentary": "Lumina Vesper, light variant, high contrast.\nCool white paper; the same inks as the night, darkened: blue functions, purple keywords, gold types, sky strings, coral constants, turquoise builtins."
+        "commentary": "Lumina Vesper, light variant, high contrast.\nCool white paper; the same inks as the night, darkened: blue functions, purple keywords, sky types, straw strings, coral constants, rose builtins; no green in the code."
       }
     },
     "sienne": {
@@ -12711,48 +12731,48 @@
             "white"
           ],
           "red": [
-            "#C82462",
-            "#c82462",
+            "#950049",
+            "#950049",
             "red"
           ],
           "orange": [
-            "#A75700",
-            "#a75700",
+            "#A85B00",
+            "#a85b00",
             "brightred"
           ],
           "yellow": [
-            "#5A4400",
-            "#5a4400",
+            "#7D5100",
+            "#7d5100",
             "yellow"
           ],
           "green": [
-            "#576000",
-            "#576000",
+            "#647119",
+            "#647119",
             "green"
           ],
           "teal": [
-            "#007079",
-            "#007079",
+            "#007481",
+            "#007481",
             "brightgreen"
           ],
           "cyan": [
-            "#126686",
-            "#126686",
+            "#006D91",
+            "#006d91",
             "cyan"
           ],
           "blue": [
-            "#3C6A98",
-            "#3c6a98",
+            "#2266A4",
+            "#2266a4",
             "blue"
           ],
           "violet": [
-            "#71569C",
-            "#71569c",
+            "#6F4FA1",
+            "#6f4fa1",
             "brightmagenta"
           ],
           "magenta": [
-            "#81488A",
-            "#81488a",
+            "#874392",
+            "#874392",
             "magenta"
           ],
           "comments": [
@@ -12766,43 +12786,43 @@
             "white"
           ],
           "coral": [
-            "#9B1E20",
-            "#9b1e20",
+            "#AF2E0F",
+            "#af2e0f",
             "white"
           ],
           "dark-blue": [
-            "#1F4D7A",
-            "#1f4d7a",
+            "#004985",
+            "#004985",
             "brightblue"
           ],
           "dark-cyan": [
-            "#004A69",
-            "#004a69",
+            "#005073",
+            "#005073",
             "brightcyan"
           ],
           "halo": [
-            "#DEE8EB",
-            "#dee8eb",
+            "#DCE9EC",
+            "#dce9ec",
             "white"
           ],
           "halo2": [
-            "#D1E0E3",
-            "#d1e0e3",
+            "#CEE1E5",
+            "#cee1e5",
             "white"
           ],
           "region": [
-            "#BFD5D8",
-            "#bfd5d8",
+            "#BBD6DB",
+            "#bbd6db",
             "white"
           ],
           "selection": [
-            "#BFD5D8",
-            "#bfd5d8",
+            "#BBD6DB",
+            "#bbd6db",
             "white"
           ],
           "glow": [
-            "#96BABF",
-            "#96babf",
+            "#8EBDC3",
+            "#8ebdc3",
             "white"
           ],
           "dim": [
@@ -12811,53 +12831,53 @@
             "white"
           ],
           "overlay": [
-            "#E3E7EA",
-            "#e3e7ea",
+            "#E2E8EB",
+            "#e2e8eb",
             "white"
           ],
           "red-bg": [
-            "#F7E8ED",
-            "#f7e8ed",
+            "#F3E5EA",
+            "#f3e5ea",
             "white"
           ],
           "orange-bg": [
-            "#F2EBE5",
-            "#f2ebe5",
+            "#F2EBE6",
+            "#f2ebe6",
             "white"
           ],
           "yellow-bg": [
-            "#E9E8E5",
-            "#e9e8e5",
+            "#EDEAE4",
+            "#edeae4",
             "white"
           ],
           "green-bg": [
-            "#E9EBE6",
-            "#e9ebe6",
+            "#EAEDE8",
+            "#eaede8",
             "white"
           ],
           "teal-bg": [
-            "#E5EDEF",
-            "#e5edef",
+            "#E3EDF0",
+            "#e3edf0",
             "white"
           ],
           "cyan-bg": [
-            "#E5ECF1",
-            "#e5ecf1",
+            "#E5EDF2",
+            "#e5edf2",
             "white"
           ],
           "blue-bg": [
-            "#E7ECF3",
-            "#e7ecf3",
+            "#E5ECF4",
+            "#e5ecf4",
             "white"
           ],
           "violet-bg": [
-            "#EBEAF3",
-            "#ebeaf3",
+            "#EBEAF4",
+            "#ebeaf4",
             "white"
           ],
           "magenta-bg": [
-            "#EEE9F1",
-            "#eee9f1",
+            "#EFE9F2",
+            "#efe9f2",
             "white"
           ],
           "grey": {
@@ -12918,7 +12938,7 @@
             "ref": "teal"
           }
         },
-        "commentary": "Lumina Sienne, light variant.\nSlate paper; the same inks as the night, darkened: teal functions, mauve keywords, gold types, olive strings, coral constants, apricot builtins."
+        "commentary": "Lumina Sienne, light variant.\nSlate paper; the same hues as inks: teal functions, mauve keywords, amber types, olive strings, coral constants, apricot builtins."
       },
       "dark-contrast": {
         "theme": "lumina-sienne-dark-contrast",
@@ -13331,48 +13351,48 @@
             "white"
           ],
           "red": [
-            "#930039",
-            "#930039",
+            "#950049",
+            "#950049",
             "red"
           ],
           "orange": [
-            "#7A2D00",
-            "#7a2d00",
+            "#7F3500",
+            "#7f3500",
             "brightred"
           ],
           "yellow": [
-            "#5A4400",
-            "#5a4400",
+            "#6E4300",
+            "#6e4300",
             "yellow"
           ],
           "green": [
-            "#464E00",
-            "#464e00",
+            "#485400",
+            "#485400",
             "green"
           ],
           "teal": [
-            "#00535C",
-            "#00535c",
+            "#00525F",
+            "#00525f",
             "brightgreen"
           ],
           "cyan": [
-            "#004F6E",
-            "#004f6e",
+            "#005679",
+            "#005679",
             "cyan"
           ],
           "blue": [
-            "#1B4A76",
-            "#1b4a76",
+            "#004F8B",
+            "#004f8b",
             "blue"
           ],
           "violet": [
-            "#523779",
-            "#523779",
+            "#593888",
+            "#593888",
             "brightmagenta"
           ],
           "magenta": [
-            "#642D6D",
-            "#642d6d",
+            "#6F2C79",
+            "#6f2c79",
             "magenta"
           ],
           "comments": [
@@ -13386,43 +13406,43 @@
             "white"
           ],
           "coral": [
-            "#9B1E20",
-            "#9b1e20",
+            "#AF2E0F",
+            "#af2e0f",
             "white"
           ],
           "dark-blue": [
-            "#1F4D7A",
-            "#1f4d7a",
+            "#004985",
+            "#004985",
             "brightblue"
           ],
           "dark-cyan": [
-            "#004A69",
-            "#004a69",
+            "#005073",
+            "#005073",
             "brightcyan"
           ],
           "halo": [
-            "#DDE8EB",
-            "#dde8eb",
+            "#DBE8EB",
+            "#dbe8eb",
             "white"
           ],
           "halo2": [
-            "#CEDDE0",
-            "#cedde0",
+            "#CADDE1",
+            "#cadde1",
             "white"
           ],
           "region": [
-            "#BACFD3",
-            "#bacfd3",
+            "#B4CFD4",
+            "#b4cfd4",
             "white"
           ],
           "selection": [
-            "#BACFD3",
-            "#bacfd3",
+            "#B4CFD4",
+            "#b4cfd4",
             "white"
           ],
           "glow": [
-            "#8AAEB3",
-            "#8aaeb3",
+            "#80AEB5",
+            "#80aeb5",
             "white"
           ],
           "dim": [
@@ -13431,53 +13451,53 @@
             "white"
           ],
           "overlay": [
-            "#E5E9EC",
-            "#e5e9ec",
+            "#E4E9EC",
+            "#e4e9ec",
             "white"
           ],
           "red-bg": [
-            "#F6E7EC",
-            "#f6e7ec",
+            "#F6E8EE",
+            "#f6e8ee",
             "white"
           ],
           "orange-bg": [
-            "#F1EAE4",
-            "#f1eae4",
+            "#F2EBE6",
+            "#f2ebe6",
             "white"
           ],
           "yellow-bg": [
-            "#EDEBE8",
-            "#edebe8",
+            "#EFECE6",
+            "#efece6",
             "white"
           ],
           "green-bg": [
-            "#EAEDE7",
-            "#eaede7",
+            "#EAEDE8",
+            "#eaede8",
             "white"
           ],
           "teal-bg": [
-            "#E5EDF0",
-            "#e5edf0",
+            "#E3EDF0",
+            "#e3edf0",
             "white"
           ],
           "cyan-bg": [
-            "#E5EDF2",
-            "#e5edf2",
+            "#E5EEF3",
+            "#e5eef3",
             "white"
           ],
           "blue-bg": [
-            "#E7ECF3",
-            "#e7ecf3",
+            "#E6EDF5",
+            "#e6edf5",
             "white"
           ],
           "violet-bg": [
-            "#EBEAF3",
-            "#ebeaf3",
+            "#ECEBF5",
+            "#ecebf5",
             "white"
           ],
           "magenta-bg": [
-            "#EEE9F2",
-            "#eee9f2",
+            "#EFEAF3",
+            "#efeaf3",
             "white"
           ],
           "grey": {
@@ -13538,7 +13558,7 @@
             "ref": "teal"
           }
         },
-        "commentary": "Lumina Sienne, light variant, high contrast.\nSlate paper; the same inks as the night, darkened: teal functions, mauve keywords, gold types, olive strings, coral constants, apricot builtins."
+        "commentary": "Lumina Sienne, light variant, high contrast.\nSlate paper; the same hues as inks: teal functions, mauve keywords, amber types, olive strings, coral constants, apricot builtins."
       }
     }
   }

@@ -233,19 +233,6 @@ DEFAULT_HUES = {"red": ("rose", "crimson"), "orange": ("orange", "orange"), "yel
 SIG = {"halo": (.10, .12), "halo2": (.16, .18), "region": .26, "glow": .45, "overlay": (.05, .04)}
 
 
-def inks(dark, base=.56, k=.8, floor=.55, bump=.01, tweak=None):
-    """Light inks derived from a flavor's dark accents: same hue, chroma kept, lightness mirrored
-    (the lightest accent on the dark ground becomes the darkest ink on paper), red held at the floor."""
-    out = {}
-    for slot, (L, C, h) in dark.items():
-        if slot in ("fg", "base8", "fg-alt", "comments", "doc-comments"):
-            continue
-        Ll = min(floor, base - (L - .62) * k)
-        out[slot] = (Ll, fit_chroma(Ll, C + bump, h), h)
-    out.update(tweak or {})
-    return out
-
-
 def compose(ground, lamp, roles, hues=None, text=(.78, .40), cap=(.13, .16), band=((.79, .85), (.50, .53)),
             commentary=None, variants=None, extra=None, paper=None, roles_dark=None, sig=None):
     """Build a flavor from public scales.
@@ -294,27 +281,30 @@ def compose(ground, lamp, roles, hues=None, text=(.78, .40), cap=(.13, .16), ban
     return out
 
 
-VESPER_DARK = {"blue": (.68, .13, 258), "magenta": (.68, .15, 318), "green": (.78, .11, 225), "yellow": (.78, .12, 88), "orange": (.71, .15, 34),
-               "red": (.63, .19, 14), "violet": (.68, .11, 300), "teal": (.74, .10, 172), "cyan": (.72, .10, 212),
+VESPER_DARK = {"blue": (.68, .13, 258), "magenta": (.68, .15, 318), "cyan": (.76, .10, 215), "yellow": (.84, .10, 95), "orange": (.71, .15, 34), "rose": (.74, .12, 350),
+               "red": (.63, .19, 14), "violet": (.68, .11, 300), "green": (.72, .08, 150), "teal": (.72, .08, 185),
                "fg": (.76, .045, 272), "base8": (.76, .045, 272), "fg-alt": (.66, .04, 272), "comments": (.50, .02, 265), "doc-comments": (.55, .02, 265)}
+VESPER_LIGHT = {"blue": (.50, .15, 258), "magenta": (.50, .16, 318), "cyan": (.50, .11, 215), "yellow": (.54, .13, 72), "orange": (.54, .16, 34), "rose": (.52, .16, 350),
+                "red": (.42, .19, 10), "violet": (.50, .13, 300), "green": (.50, .12, 150), "teal": (.50, .10, 185)}
 SIENNE_DARK = {"teal": (.70, .09, 205), "magenta": (.70, .11, 322), "yellow": (.82, .11, 88), "green": (.74, .11, 116), "coral": (.72, .15, 28), "orange": (.77, .15, 62),
                "red": (.62, .20, 12), "cyan": (.72, .08, 230), "blue": (.68, .08, 250), "violet": (.68, .10, 300),
                "fg": (.80, .025, 70), "base8": (.80, .025, 70), "fg-alt": (.70, .0225, 70), "comments": (.51, .015, 262), "doc-comments": (.56, .02, 262)}
-
+SIENNE_LIGHT = {"teal": (.50, .11, 205), "magenta": (.50, .14, 322), "yellow": (.47, .12, 80), "green": (.52, .11, 118), "coral": (.50, .17, 34), "orange": (.55, .14, 64),
+                "red": (.42, .19, 0), "cyan": (.50, .10, 230), "blue": (.50, .12, 250), "violet": (.50, .13, 300)}
 
 FLAVORS = {
     "vesper": dict(ground=(265, .028, .004, .22, .985), lamp="blue", paper=(271.3, 0.0083, 0.982), text=(.76, .40),
-                      roles=dict(functions="blue", keywords="magenta", type="yellow", strings="green", constants="orange", builtin="teal", methods="teal"),
-                      extra={"dark": VESPER_DARK, "light": inks(VESPER_DARK, tweak={"red": (.55, .20, 5)})},
+                      roles=dict(functions="blue", keywords="magenta", type="cyan", strings="yellow", constants="orange", builtin="rose", methods="blue"),
+                      extra={"dark": VESPER_DARK, "light": VESPER_LIGHT},
                       sig={"halo": (.07, .12), "halo2": (.14, .18), "region": (.24, .26), "glow": (.42, .45)},
-                      commentary={"dark": "Lumina Vesper, dark variant.\nDeep navy at night; blue-lavender text at 8:1, deep accents below it: blue functions, purple keywords, gold types, sky strings, coral constants, turquoise builtins.",
-                                  "light": "Lumina Vesper, light variant.\nCool white paper; the same inks as the night, darkened: blue functions, purple keywords, gold types, sky strings, coral constants, turquoise builtins."}),
+                      commentary={"dark": "Lumina Vesper, dark variant.\nDeep navy at night; blue-lavender text at 8:1, deep accents below it: blue functions, purple keywords, sky types, straw strings, coral constants, rose builtins; no green in the code.",
+                                  "light": "Lumina Vesper, light variant.\nCool white paper; the same inks as the night, darkened: blue functions, purple keywords, sky types, straw strings, coral constants, rose builtins; no green in the code."}),
     "sienne": dict(ground=(262, .030, .006, .24, .984), lamp="teal", text=(.80, .40),
                       roles=dict(functions="teal", keywords="magenta", type="yellow", strings="green", constants="coral", builtin="orange", methods="teal"),
-                      extra={"dark": SIENNE_DARK, "light": inks(SIENNE_DARK, tweak={"red": (.55, .20, 5), "orange": (.54, .15, 66), "coral": (.45, .16, 26)})},
+                      extra={"dark": SIENNE_DARK, "light": SIENNE_LIGHT},
                       sig={"halo": (.07, .12), "halo2": (.14, .18), "region": (.24, .26), "glow": (.42, .45)},
                       commentary={"dark": "Lumina Sienne, dark variant.\nSlate night under warm inks: beige text at 9:1 above every accent, teal functions, mauve keywords, gold types, olive strings, coral constants, apricot builtins.",
-                                  "light": "Lumina Sienne, light variant.\nSlate paper; the same inks as the night, darkened: teal functions, mauve keywords, gold types, olive strings, coral constants, apricot builtins."}),
+                                  "light": "Lumina Sienne, light variant.\nSlate paper; the same hues as inks: teal functions, mauve keywords, amber types, olive strings, coral constants, apricot builtins."}),
     "dawn": dict(ground=(56.0, 0.006, .010, 0.216, .975), lamp="yellow", paper=(99.1, 0.0238, 0.986),
                     roles=dict(functions="yellow", keywords="teal", type="blue", strings="cyan", constants="magenta", builtin="blue", methods="blue"),
                     hues={"magenta": ("fuchsia", "plum")},
