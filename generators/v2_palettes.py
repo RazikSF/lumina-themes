@@ -113,11 +113,13 @@ def write(flavors):
     spec = json.loads(SPEC.read_text())
     for flavor in flavors:
         pal = PALETTES[flavor]
-        lead = SCHEMAS[flavor]["lead"]
+        ld = SCHEMAS[flavor]["lead"]
         modes = spec["flavors"].setdefault(flavor, {})
         extra = {name: (src, {**pal[src], **over}) for name, (src, over) in pal.get("variants", {}).items()}
         for mode, (src, base) in {"dark": ("dark", pal["dark"]), "light": ("light", pal["light"]), **extra}.items():
             dark = src == "dark"
+            lead = ld[src] if isinstance(ld, dict) else ld
+            refs = pal.get("refs_dark", pal["refs"]) if dark else pal["refs"]
             sig = pal.get("sig")
             variants = {mode: signature(base, lead, dark, sig),
                         f"{mode}-contrast": signature(high_contrast(base, lead, dark), lead, dark, sig)}
@@ -129,7 +131,7 @@ def write(flavors):
                     h = to_hex(*v)
                     ansi = old[k][2] if isinstance(old.get(k), list) else ANSI.get(k, "black" if dark else "white")
                     colors[k] = [h, h.lower(), ansi]
-                for k, r in pal["refs"].items():
+                for k, r in refs.items():
                     if k not in vpal:
                         colors[k] = {"ref": r}
                 t["theme"] = f"lumina-{flavor}-{vname}"
@@ -232,7 +234,7 @@ SIG = {"halo": (.10, .12), "halo2": (.16, .18), "region": .26, "glow": .45, "ove
 
 
 def compose(ground, lamp, roles, hues=None, text=(.78, .40), cap=(.13, .16), band=((.79, .85), (.50, .53)),
-            commentary=None, variants=None, extra=None, paper=None):
+            commentary=None, variants=None, extra=None, paper=None, roles_dark=None, sig=None):
     """Build a flavor from public scales.
 
     ground   (hue, chroma dark, chroma light, L dark, L light)
@@ -241,7 +243,10 @@ def compose(ground, lamp, roles, hues=None, text=(.78, .40), cap=(.13, .16), ban
     roles    {"functions", "keywords", "type", "strings", "constants", "builtin", "methods"} -> slot
     hues     slot -> (Tailwind hue, Radix hue); defaults in DEFAULT_HUES; may add "spark"
     paper    (hue, chroma, L) of the light paper when it differs from the ground (Radix light step 2)
+    lamp     may be a (dark, light) pair; roles_dark overrides roles for the dark side; sig overrides SIG per flavor
     """
+    lamp_d, lamp_l = lamp if isinstance(lamp, tuple) else (lamp, lamp)
+    roles_d = roles_dark or roles
     h, cd, cl, Ld, Ll = ground
     hl, cl, Ll = paper or (h, cl, Ll)
     hues = {**DEFAULT_HUES, **(hues or {})}
@@ -252,33 +257,40 @@ def compose(ground, lamp, roles, hues=None, text=(.78, .40), cap=(.13, .16), ban
     for slot, (twn, rxn) in hues.items():
         for pal, table, i in ((dark, TW300, 0), (light, RX11, 1)):
             L, C, hh = table[twn if i == 0 else rxn]
-            if slot == lamp:
+            if slot == (lamp_d, lamp_l)[i]:
                 L, C = (max(L, band[0][1] + .02), max(C, cap[0] + .01)) if i == 0 else (min(L, band[1][0] - .02), max(C, cap[1] + .02))
             elif slot == "red":
                 L, C = (band[0][0] - .01, cap[0] + .02) if i == 0 else (band[1][0] - .02, cap[1] + .03)
             else:
                 L = min(max(L, band[i][0]), band[i][1]); C = min(C, cap[i])
             pal[slot] = (L, fit_chroma(L, C, hh), hh)
-    dark["dark-blue"] = (dark["blue"][0] - .14, dark["blue"][1], dark["blue"][2]); dark["dark-cyan"] = (dark["cyan"][0] - .14, dark["cyan"][1], dark["cyan"][2])
-    light["dark-blue"] = (light["blue"][0] - .10, light["blue"][1], light["blue"][2]); light["dark-cyan"] = (light["cyan"][0] - .10, light["cyan"][1], light["cyan"][2])
     dark["comments"] = (.61, min(cd * 1.1, .05), h); dark["doc-comments"] = (.67, min(cd * 1.1, .05), h)
     light["comments"] = (.54, max(cl * 2, .012), hl); light["doc-comments"] = (.47, max(cl * 2, .014), hl)
     for pal, over in ((dark, (extra or {}).get("dark", {})), (light, (extra or {}).get("light", {}))):
         pal.update(over)
-    refs = {"grey": "base5", "highlight": lamp, "vertical-bar": "base3", "operators": "base6", "variables": "fg",
-            "error": "red", "warning": "orange", "success": "green", "vc-modified": "yellow", "vc-added": "green", "vc-deleted": "red",
-            "numbers": roles["constants"], **roles}
-    out = {"dark": dark, "light": light, "sig": dict(SIG), "refs": refs, "commentary": commentary or {}}
+    dark["dark-blue"] = (dark["blue"][0] - .14, dark["blue"][1], dark["blue"][2]); dark["dark-cyan"] = (dark["cyan"][0] - .14, dark["cyan"][1], dark["cyan"][2])
+    light["dark-blue"] = (light["blue"][0] - .10, light["blue"][1], light["blue"][2]); light["dark-cyan"] = (light["cyan"][0] - .10, light["cyan"][1], light["cyan"][2])
+    def mkrefs(lp, rl):
+        return {"grey": "base5", "highlight": lp, "vertical-bar": "base3", "operators": "base6", "variables": "fg",
+                "error": "red", "warning": "orange", "success": "green", "vc-modified": "yellow", "vc-added": "green", "vc-deleted": "red",
+                "numbers": rl["constants"], **rl}
+    out = {"dark": dark, "light": light, "sig": {**SIG, **(sig or {})}, "refs": mkrefs(lamp_l, roles), "refs_dark": mkrefs(lamp_d, roles_d),
+           "commentary": commentary or {}}
     if variants:
         out["variants"] = variants
     return out
 
 
 FLAVORS = {
-    "vesper": dict(ground=(265, .042, .004, .208, .985), lamp="teal", paper=(271.3, 0.0083, 0.982),
+    "vesper": dict(ground=(265, .028, .004, .22, .985), lamp=("blue", "teal"), paper=(271.3, 0.0083, 0.982), text=(.76, .40),
                       roles=dict(functions="teal", keywords="violet", type="cyan", strings="green", constants="orange", builtin="cyan", methods="cyan"),
+                      roles_dark=dict(functions="blue", keywords="magenta", type="yellow", strings="green", constants="orange", builtin="teal", methods="teal"),
                       hues={"magenta": ("fuchsia", "plum"), "green": ("lime", "lime")},
-                      commentary={"dark": "Lumina Vesper, dark variant.\nNavy slate at dusk; the lamp is a mint-teal star, violet keywords and indigo types beside it, soft text, one apricot note.",
+                      extra={"dark": {"blue": (.68, .13, 258), "magenta": (.68, .15, 318), "green": (.72, .11, 128), "yellow": (.78, .12, 88), "orange": (.71, .15, 34),
+                                      "red": (.63, .19, 14), "violet": (.68, .11, 300), "teal": (.74, .10, 172), "cyan": (.72, .10, 212),
+                                      "fg": (.76, .045, 272), "base8": (.76, .045, 272), "fg-alt": (.66, .04, 272), "comments": (.50, .02, 265), "doc-comments": (.55, .02, 265)}},
+                      sig={"halo": (.07, .12), "halo2": (.14, .18), "region": (.24, .26), "glow": (.42, .45)},
+                      commentary={"dark": "Lumina Vesper, dark variant.\nDeep navy at night; blue-lavender text at 8:1, deep accents below it: blue functions, purple keywords, gold types, green strings, coral constants, turquoise builtins.",
                                   "light": "Lumina Vesper, light variant.\nCool white paper; the same teal star as a deep ink, violet keywords and indigo types beside it, soft text, one apricot note."}),
     "dawn": dict(ground=(56.0, 0.006, .010, 0.216, .975), lamp="yellow", paper=(99.1, 0.0238, 0.986),
                     roles=dict(functions="yellow", keywords="teal", type="blue", strings="cyan", constants="magenta", builtin="blue", methods="blue"),

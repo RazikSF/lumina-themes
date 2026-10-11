@@ -9,8 +9,10 @@ are reading, the current line, the heading you are in) and everything
 else sits in the room at equal weight, never louder than the lamp.
 
 Nine flavors, each in dark, light and high contrast: 40 themes. The
-flagship is **Vesper**: navy slate at dusk, a mint-teal star for a lamp,
-violet keywords and indigo types beside it, soft text, one apricot note.
+flagship is **Vesper**. Dark: deep navy at night, blue-lavender text at
+8:1 and every accent below it, blue functions, purple keywords, gold
+types, green strings, coral constants, turquoise builtins. Light: cool
+white paper, a teal star for a lamp, violet keywords and indigo types.
 
 <img src="assets/screens/lumina-vesper-dark.svg" width="49%"> <img src="assets/screens/lumina-vesper-light.svg" width="49%">
 
@@ -65,7 +67,7 @@ Radix inks.
 
 | Flavor | Ground | Lamp | Keywords, types, strings | Note |
 |---|---|---|---|---|
-| **Vesper** | navy slate | mint teal | violet, indigo, emerald | apricot |
+| **Vesper** | deep navy / cool white | blue (dark), teal (light) | purple, gold, green / violet, indigo, emerald | coral / apricot |
 | **Dawn** | warm sepia | amber | terracotta, teal, lime | rose |
 | **Oxblood** | dark wine | rose | violet, amber, emerald | orange |
 | **Tide** | deep ocean | sky | teal, indigo, emerald | amber |

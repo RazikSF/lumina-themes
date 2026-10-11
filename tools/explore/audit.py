@@ -31,7 +31,7 @@ def audit(flavor, mode, colors):
     def C(k):
         v = colors[k]; return v[0] if isinstance(v, list) else C(v["ref"])
     role = {r: C(r) for r in ROLES}
-    sch = g.SCHEMAS[flavor]; role["property"] = C(sch["property"]); role["escape"] = C(sch["escape"])
+    sch = g.schema_for(flavor, mode); role["property"] = C(sch["property"]); role["escape"] = C(sch["escape"])
     issues = []
     keys = ROLES + ["property"]
     for i, a in enumerate(keys):

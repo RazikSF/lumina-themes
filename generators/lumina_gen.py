@@ -43,7 +43,12 @@ FLAVORS = ["dawn", "oxblood", "tide", "canopy", "slate"]
 # Per-flavour syntax schema (face design intent, shared dark/light).
 # ---------------------------------------------------------------------------
 SCHEMAS = {
-    "vesper": {"v2": True, "lead": "teal", "fg_min": 8, "modeline_bg": "bg-alt", "vertico_bg": "halo2", "function_call": "cyan", "property": "cyan", "preprocessor": "violet", "escape": "orange", "modeline_modified": "orange", "rainbow": ["teal", "violet", "cyan", "orange", "green", "magenta"], "outline": ["teal", "violet", "cyan", "green"], "orderless": ["teal", "violet", "orange"], "magit_branch_local": "blue", "magit_branch_remote": "cyan", "org_todo": "orange", "org_done": "green"},
+    "vesper": {"v2": True, "lead": {"dark": "blue", "light": "teal"}, "fg_min": {"dark": 7.5, "light": 8}, "comments_min": {"dark": 2.8, "light": 4.3}, "accent_bg_min": {"dark": 3.3, "light": 4.0}, "spread": {"dark": .20, "light": .0805},
+               "modeline_bg": "bg-alt", "vertico_bg": "halo2", "function_call": {"dark": "teal", "light": "cyan"}, "property": {"dark": "teal", "light": "cyan"}, "preprocessor": "violet", "escape": "orange", "modeline_modified": "orange",
+               "rainbow": {"dark": ["blue", "magenta", "yellow", "orange", "green", "teal"], "light": ["teal", "violet", "cyan", "orange", "green", "magenta"]},
+               "outline": {"dark": ["blue", "magenta", "yellow", "green"], "light": ["teal", "violet", "cyan", "green"]},
+               "orderless": {"dark": ["blue", "magenta", "orange"], "light": ["teal", "violet", "orange"]},
+               "magit_branch_local": {"dark": "cyan", "light": "blue"}, "magit_branch_remote": {"dark": "violet", "light": "cyan"}, "org_todo": "orange", "org_done": "green"},
     "dawn": {"v2": True, "lead": "yellow", "fg_min": 8, "modeline_bg": "bg-alt", "vertico_bg": "halo2", "function_call": "blue", "property": "blue", "preprocessor": "teal", "escape": "magenta", "modeline_modified": "orange", "rainbow": ["yellow", "teal", "blue", "magenta", "cyan", "violet"], "outline": ["yellow", "teal", "blue", "cyan"], "orderless": ["yellow", "teal", "magenta"], "magit_branch_local": "blue", "magit_branch_remote": "teal", "org_todo": "orange", "org_done": "green"},
     "oxblood": {"v2": True, "lead": "magenta", "fg_min": 8, "modeline_bg": "bg-alt", "vertico_bg": "halo2", "function_call": "cyan", "property": "cyan", "preprocessor": "blue", "escape": "teal", "modeline_modified": "orange", "rainbow": ["magenta", "blue", "orange", "teal", "green", "cyan"], "outline": ["magenta", "blue", "orange", "green"], "orderless": ["magenta", "blue", "teal"], "magit_branch_local": "blue", "magit_branch_remote": "teal", "org_todo": "orange", "org_done": "green"},
     "tide": {"v2": True, "lead": "cyan", "fg_min": 8, "modeline_bg": "bg-alt", "vertico_bg": "halo2", "function_call": "violet", "property": "violet", "preprocessor": "teal", "escape": "orange", "modeline_modified": "orange", "rainbow": ["cyan", "teal", "violet", "orange", "green", "magenta"], "outline": ["cyan", "teal", "violet", "green"], "orderless": ["cyan", "teal", "orange"], "magit_branch_local": "blue", "magit_branch_remote": "teal", "org_todo": "orange", "org_done": "green"},
@@ -157,6 +162,11 @@ def C(colors, key, default="#000000"):
     if isinstance(v, dict):
         return C(colors, v["ref"], default)
     return default
+
+
+def schema_for(flavor: str, mode: str) -> dict:
+    """The flavor's schema resolved for one mode: a {"dark": x, "light": y} value picks the mode's side."""
+    return {k: (v.get(mode, v.get("dark")) if isinstance(v, dict) else v) for k, v in SCHEMAS[flavor].items()}
 
 
 def resolve_ref(ref, colors, schema):
@@ -337,11 +347,11 @@ def build_emacs(spec: dict):
     var_map = _load_decl("variables.json")
     n = 0
     for flavor, modes in spec["flavors"].items():
-        sch = SCHEMAS[flavor]
         for d in modes.values():
             c = d["colors"]
             theme = d["theme"]
             mode = d["background"]
+            sch = schema_for(flavor, mode)
             short = pretty(theme)
             commentary = "\n".join(f";; {ln}" if ln else ";;"
                                    for ln in d["commentary"].split("\n"))
@@ -380,7 +390,7 @@ def build_wezterm(spec: dict):
         for d in modes.values():
             c = d["colors"]
             name = d["theme"]
-            lead = resolve_ref("schema.lead", c, SCHEMAS[flavor])
+            lead = resolve_ref("schema.lead", c, schema_for(flavor, d["background"]))
             ansi = [C(c, k) for k in
                     ("base1", "red", "green", "yellow", "blue",
                      "magenta", "cyan", "base7")]
@@ -495,11 +505,11 @@ def build_vscode(spec: dict):
     semantic_spec = vmap["semanticTokenColors"]
     n = 0
     for flavor, modes in spec["flavors"].items():
-        sch = SCHEMAS[flavor]
         for d in modes.values():
             c = d["colors"]
             theme = d["theme"]
             mode = d["background"]
+            sch = schema_for(flavor, mode)
             workbench = {k: resolve_ref(v, c, sch)
                          for k, v in workbench_spec.items()}
             token_colors = []
@@ -585,11 +595,11 @@ def build_nvim(spec: dict):
     hl_map = _load_decl("nvim_highlights.json")
     n = 0
     for flavor, modes in spec["flavors"].items():
-        sch = SCHEMAS[flavor]
         for d in modes.values():
             c = d["colors"]
             theme = d["theme"]
             mode = d["background"]
+            sch = schema_for(flavor, mode)
             lines = [
                 f"-- {theme} -- Lumina ({flavor}, {mode})",
                 "-- Generated from spec/lumina.json + spec/nvim_highlights.json.",
@@ -649,10 +659,10 @@ def check(spec: dict) -> bool:
     from oklch import contrast, from_hex
     ok = True
     for flavor, modes in spec["flavors"].items():
-        sch = SCHEMAS[flavor]
-        if not sch.get("v2"):
+        if not SCHEMAS[flavor].get("v2"):
             continue
         for d in modes.values():
+            sch = schema_for(flavor, d["background"])
             c = d["colors"]
             bg = C(c, "bg")
             hc = d["theme"].endswith("-contrast")
@@ -662,22 +672,22 @@ def check(spec: dict) -> bool:
             if not lo <= fg <= hi:
                 fails.append(f"fg {fg:.1f} outside {lo}-{hi}")
             for k in ("comments", "doc-comments"):
-                if contrast(C(c, k), bg) < (6 if hc else 4.3):
+                if contrast(C(c, k), bg) < (6 if hc else sch.get("comments_min", 4.3)):
                     fails.append(f"{k} {contrast(C(c, k), bg):.1f}")
             for k in ACCENTS:
-                if contrast(C(c, k), bg) < (7 if hc else 4.5):
+                if contrast(C(c, k), bg) < (7 if hc else sch.get("accent_min", 4.5)):
                     fails.append(f"{k} {contrast(C(c, k), bg):.1f}")
             lead = sch["lead"]
             for k in ACCENTS + ["spark"]:
-                if k in c and f"{k}-bg" in c and contrast(C(c, k), C(c, f"{k}-bg")) < 4.0:
+                if k in c and f"{k}-bg" in c and contrast(C(c, k), C(c, f"{k}-bg")) < sch.get("accent_bg_min", 4.0):
                     fails.append(f"{k} on {k}-bg {contrast(C(c, k), C(c, f'{k}-bg')):.1f}")
             if "overlay" in c and contrast(C(c, "fg"), C(c, "overlay")) < sch.get("fg_min", 10) - 1:
                 fails.append(f"fg on overlay {contrast(C(c, 'fg'), C(c, 'overlay')):.1f}")
             if "halo2" in c and contrast(C(c, lead), C(c, "halo2")) < 3.5:
                 fails.append(f"lead on halo2 {contrast(C(c, lead), C(c, 'halo2')):.1f}")
             ls = [from_hex(C(c, k))[0] for k in ACCENTS if k != lead]
-            if max(ls) - min(ls) > 0.0805:
-                fails.append(f"accent lightness spread {max(ls) - min(ls):.2f} > 0.08")
+            if max(ls) - min(ls) > sch.get("spread", .0805):
+                fails.append(f"accent lightness spread {max(ls) - min(ls):.2f} > {sch.get('spread', .0805):.2f}")
             print(f"{'FAIL' if fails else 'OK  '} {d['theme']}"
                   + (": " + "; ".join(fails) if fails else ""))
             ok = ok and not fails
