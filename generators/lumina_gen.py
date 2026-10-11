@@ -60,7 +60,7 @@ SCHEMAS = {
                "modeline_bg": "bg-alt", "vertico_bg": "halo2", "function_call": "ink-light", "property": "ink-mid", "preprocessor": "violet", "escape": "orange", "modeline_modified": "orange",
                "rainbow": ["blue", "orange", "violet", "cyan", "yellow", "magenta"], "outline": ["blue", "violet", "cyan", "orange"], "orderless": ["blue", "orange", "violet"],
                "magit_branch_local": "cyan", "magit_branch_remote": "violet", "org_todo": "orange", "org_done": "green"},
-    "azur": {"v2": True, "lead": "blue", "fg_min": 8, "comments_min": {"dark": 3.0, "light": 4.3}, "accent_min": {"dark": 4.0, "light": 4.5}, "accent_bg_min": {"dark": 3.3, "light": 4.0}, "spread": {"dark": .22, "light": .19}, "warm_family": True,
+    "azur": {"v2": True, "lead": "blue", "fg_min": 8, "comments_min": {"dark": 3.0, "light": 4.3}, "accent_min": {"dark": 4.0, "light": 4.5}, "accent_bg_min": {"dark": 3.3, "light": 4.0}, "spread": {"dark": .24, "light": .19}, "warm_family": True,
              "modeline_bg": "bg-alt", "vertico_bg": "halo2", "function_call": "orange", "property": "cyan", "preprocessor": "violet", "escape": "yellow", "modeline_modified": "orange",
              "rainbow": ["blue", "orange", "violet", "yellow", "cyan", "magenta"], "outline": ["blue", "orange", "violet", "cyan"], "orderless": ["blue", "orange", "yellow"],
              "magit_branch_local": "cyan", "magit_branch_remote": "violet", "org_todo": "orange", "org_done": "green"},
