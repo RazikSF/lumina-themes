@@ -300,7 +300,7 @@ INDIGO_LIGHT = {"blue": (.50, .16, 255), "fg": (.40, .02, 75), "base8": (.40, .0
                 "ink-light": (.30, .06, 72), "ink-mid": (.46, .05, 70), "ink-dim": (.55, .05, 62)}
 AZUR_DARK = {**UI_COOL, "red": (.62, .19, 10), "blue": (.72, .15, 253), "yellow": (.83, .08, 92), "orange": (.78, .11, 45), "violet": (.78, .11, 300), "coral": (.72, .15, 22), "cyan": (.78, .09, 205),
              "fg": (.82, .03, 255), "base8": (.82, .03, 255), "fg-alt": (.72, .03, 255), "comments": (.55, .02, 255), "doc-comments": (.59, .02, 255)}
-AZUR_LIGHT = {"blue": (.50, .16, 253), "yellow": (.46, .12, 80), "orange": (.56, .12, 48), "violet": (.50, .14, 300), "coral": (.46, .17, 22), "cyan": (.48, .10, 205),
+AZUR_LIGHT = {"blue": (.50, .16, 253), "yellow": (.46, .12, 80), "orange": (.52, .13, 48), "violet": (.50, .14, 300), "coral": (.46, .17, 22), "cyan": (.48, .10, 205),
               "red": (.38, .20, 350), "green": (.50, .12, 150), "teal": (.48, .10, 185), "magenta": (.50, .14, 330)}
 
 
@@ -350,11 +350,11 @@ FLAVORS = {
                       commentary={"dark": "Lumina Indigo, dark variant.\nIndigo night, one azure for the keywords, everything else in tints of sand: cream functions and constants, sand types and builtins, tan strings, sand text.",
                                   "light": "Lumina Indigo, light variant.\nLavender-white paper, the same azure for the keywords, umber inks for the rest."}),
     "azur": dict(ground=(255, .022, .006, .235, .984), lamp="blue", text=(.82, .40),
-                    roles=dict(functions="yellow", keywords="blue", type="violet", strings="orange", constants="coral", builtin="cyan", methods="yellow"),
+                    roles=dict(functions="orange", keywords="blue", type="violet", strings="yellow", constants="coral", builtin="cyan", methods="orange"),
                     extra={"dark": AZUR_DARK, "light": AZUR_LIGHT},
                     sig={"halo": (.07, .12), "halo2": (.14, .18), "region": (.24, .26), "glow": (.42, .45)},
-                    commentary={"dark": "Lumina Azur, dark variant.\nBlue slate; Monoink's azure on the keywords and five companions: straw functions, lilac types, peach strings, coral constants, aqua builtins, blue-grey text.",
-                                "light": "Lumina Azur, light variant.\nCool paper; the same hues as inks: azure keywords, amber functions, violet types, rust strings, coral constants, teal builtins."}),
+                    commentary={"dark": "Lumina Azur, dark variant.\nBlue slate; Monoink's azure on the keywords and five companions: peach functions, straw strings, coral constants, lilac types, aqua builtins, blue-grey text.",
+                                "light": "Lumina Azur, light variant.\nCool paper; the same hues as inks: azure keywords, rust functions, amber strings, coral constants, violet types, teal builtins."}),
     "nocturne": dict(ground=(266.4, 0.042, .008, 0.208, .98), lamp="orange", paper=(271.3, 0.0083, 0.982),
                         roles=dict(functions="orange", keywords="blue", type="cyan", strings="green", constants="magenta", builtin="cyan", methods="cyan"),
                         hues={"magenta": ("fuchsia", "plum")},

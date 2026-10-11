@@ -229,7 +229,35 @@ AZUR7 = {
     "azur7-ardoise": azur_ground("ardoise", (255, .022, .006, .235, .98), "fond ardoise (255, .022) clarté 0,235"),
     "azur7-acier": azur_ground("acier", (240, .016, .006, .25, .98), "fond acier (240, .016) clarté 0,25, le plus clair"),
 }
+# Azur, straw and peach swapped: peach functions, straw strings.
+AZ = vp.FLAVORS["azur"]
+AZUR_SWAP = {
+    "azur-swap": dict(base="azur", ground=AZ["ground"], text=AZ["text"], lead="blue", accents=AZ["extra"]["dark"],
+                      roles={**AZ["roles"], "functions": "orange", "methods": "orange", "strings": "yellow"},
+                      label="Azur, paille et pêche inversés : fonctions pêche, chaînes paille"),
+}
+# Azur, functions in the numbers' coral; the numbers move to a compatible rose.
+AZUR_ROSE = {
+    "azur-rose": dict(base="azur", ground=AZ["ground"], text=AZ["text"], lead="blue", accents={**AZ["extra"]["dark"], "rose": (.76, .11, 345)},
+                      roles={**AZ["roles"], "functions": "coral", "methods": "coral", "strings": "yellow", "constants": "rose"},
+                      label="Azur : fonctions corail (l'ancien orange des nombres), nombres et constantes rose, chaînes paille"),
+}
+# Azur, blue and coral swapped on the rose version: azure functions, coral keywords.
+AZUR_INV = {
+    "azur-inv": dict(base="azur", ground=AZ["ground"], text=AZ["text"], lead="blue", accents={**AZ["extra"]["dark"], "rose": (.76, .11, 345)},
+                     roles={**AZ["roles"], "functions": "blue", "methods": "blue", "keywords": "coral", "strings": "yellow", "constants": "rose"},
+                     label="Azur : fonctions bleu Monoink, mots-clés corail, nombres rose, chaînes paille"),
+}
 SHEETS = {
+    "inv": dict(refs=[], protos=AZUR_INV, themes=["lumina-azur-rose-dark"], out="inv.html",
+                title="Azur : bleu et corail inversés",
+                intro="À gauche fonctions bleu et mots-clés corail ; à droite la version précédente (mots-clés bleu, fonctions corail). Installé sous lumina-azur-inv-dark."),
+    "rose": dict(refs=[], protos=AZUR_ROSE, themes=["lumina-azur-swap-dark", "lumina-azur-dark"], out="rose.html",
+                 title="Azur : le corail aux fonctions, un rose pour les nombres",
+                 intro="Première carte : fonctions corail, constantes et nombres rose, chaînes paille. Puis l'inversion précédente et Azur figé. Installé sous lumina-azur-rose-dark."),
+    "swap": dict(refs=[], protos=AZUR_SWAP, themes=["lumina-azur-dark"], out="swap.html",
+                 title="Azur : paille et pêche inversés",
+                 intro="À gauche l'inversion (fonctions pêche, chaînes paille), à droite Azur tel que figé. Installé sous lumina-azur-swap-dark."),
     "azur7": dict(refs=[], protos=AZUR7, themes=["lumina-azur6a-dark"], out="azur7.html",
                   title="Azur A : trois fonds teintés de bleu",
                   intro="Mêmes couleurs de code qu'Azur A ; seul le fond change, avec le texte et les commentaires accordés à sa teinte. Dernière carte : le charbon Monoink actuel. Installés sous lumina-azur7-nuit, -ardoise, -acier (suffixe -dark) ; azur6b retiré."),
