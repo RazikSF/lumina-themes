@@ -43,14 +43,12 @@ FLAVORS = ["dawn", "oxblood", "tide", "canopy", "slate"]
 # Per-flavour syntax schema (face design intent, shared dark/light).
 # ---------------------------------------------------------------------------
 SCHEMAS = {
-    "vesper": {"v2": True, "lead": {"dark": "blue", "light": "teal"}, "fg_min": {"dark": 7.5, "light": 8}, "comments_min": {"dark": 2.8, "light": 4.3}, "accent_bg_min": {"dark": 3.3, "light": 4.0}, "spread": {"dark": .20, "light": .0805},
-               "modeline_bg": "bg-alt", "vertico_bg": "halo2", "function_call": {"dark": "teal", "light": "cyan"}, "property": {"dark": "teal", "light": "cyan"}, "preprocessor": "violet", "escape": "orange", "modeline_modified": "orange",
-               "rainbow": {"dark": ["blue", "magenta", "yellow", "orange", "green", "teal"], "light": ["teal", "violet", "cyan", "orange", "green", "magenta"]},
-               "outline": {"dark": ["blue", "magenta", "yellow", "green"], "light": ["teal", "violet", "cyan", "green"]},
-               "orderless": {"dark": ["blue", "magenta", "orange"], "light": ["teal", "violet", "orange"]},
-               "magit_branch_local": {"dark": "cyan", "light": "blue"}, "magit_branch_remote": {"dark": "violet", "light": "cyan"}, "org_todo": "orange", "org_done": "green"},
-    "sienne": {"v2": True, "lead": "teal", "fg_min": 8, "comments_min": {"dark": 2.8, "light": 4.3}, "accent_min": {"dark": 3.6, "light": 4.5}, "accent_bg_min": {"dark": 3.3, "light": 4.0}, "spread": {"dark": .21, "light": .0805},
-               "modeline_bg": "bg-alt", "vertico_bg": "halo2", "function_call": "teal", "property": {"dark": "orange", "light": "cyan"}, "preprocessor": "magenta", "escape": "orange", "modeline_modified": "orange",
+    "vesper": {"v2": True, "lead": "blue", "fg_min": {"dark": 7.5, "light": 8}, "comments_min": {"dark": 2.8, "light": 4.3}, "accent_bg_min": {"dark": 3.3, "light": 4.0}, "spread": {"dark": .20, "light": .13},
+               "modeline_bg": "bg-alt", "vertico_bg": "halo2", "function_call": "teal", "property": "teal", "preprocessor": "violet", "escape": "orange", "modeline_modified": "orange",
+               "rainbow": ["blue", "magenta", "yellow", "orange", "green", "teal"], "outline": ["blue", "magenta", "yellow", "green"], "orderless": ["blue", "magenta", "orange"],
+               "magit_branch_local": "cyan", "magit_branch_remote": "violet", "org_todo": "orange", "org_done": "green"},
+    "sienne": {"v2": True, "lead": "teal", "fg_min": 8, "comments_min": {"dark": 2.8, "light": 4.3}, "accent_min": {"dark": 3.6, "light": 4.5}, "accent_bg_min": {"dark": 3.3, "light": 4.0}, "spread": {"dark": .21, "light": .16},
+               "modeline_bg": "bg-alt", "vertico_bg": "halo2", "function_call": "teal", "property": "orange", "preprocessor": "magenta", "escape": "orange", "modeline_modified": "orange",
                "rainbow": ["teal", "magenta", "yellow", "orange", "green", "violet"], "outline": ["teal", "magenta", "yellow", "green"], "orderless": ["teal", "magenta", "orange"],
                "magit_branch_local": "cyan", "magit_branch_remote": "violet", "org_todo": "orange", "org_done": "green"},
     "dawn": {"v2": True, "lead": "yellow", "fg_min": 8, "modeline_bg": "bg-alt", "vertico_bg": "halo2", "function_call": "blue", "property": "blue", "preprocessor": "teal", "escape": "magenta", "modeline_modified": "orange", "rainbow": ["yellow", "teal", "blue", "magenta", "cyan", "violet"], "outline": ["yellow", "teal", "blue", "cyan"], "orderless": ["yellow", "teal", "magenta"], "magit_branch_local": "blue", "magit_branch_remote": "teal", "org_todo": "orange", "org_done": "green"},

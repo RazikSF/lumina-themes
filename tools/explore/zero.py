@@ -118,7 +118,7 @@ SIENNE12 = {f"sienne12-{g}-{t}": sienne12(gr, cm, t) for g, gr, cm in (("ardoise
 # (blue 258, purple 318, gold 88, coral 34, turquoise 172 are taken): bright lime, mint, pale sky, grey sage.
 VESPER = vp.FLAVORS["vesper"]
 def vesper_strings(name, green, label):
-    return dict(base="vesper", ground=VESPER["ground"], text=VESPER["text"], accents={**VESPER["extra"]["dark"], "green": green}, roles=VESPER["roles_dark"], label=label)
+    return dict(base="vesper", ground=VESPER["ground"], text=VESPER["text"], accents={**VESPER["extra"]["dark"], "green": green}, roles=VESPER["roles"], label=label)
 STRINGS = {
     "vesper-lime": vesper_strings("vesper-lime", (.82, .13, 118), "chaînes lime clair (comme Gruvbox, Tokyo Night)"),
     "vesper-menthe": vesper_strings("vesper-menthe", (.78, .09, 155), "chaînes menthe"),
