@@ -228,7 +228,7 @@ SLOTS = ["red", "orange", "yellow", "green", "teal", "cyan", "blue", "violet", "
 DEFAULT_HUES = {"red": ("red", "red"), "orange": ("orange", "orange"), "yellow": ("amber", "amber"), "green": ("emerald", "grass"),
                 "teal": ("teal", "teal"), "cyan": ("sky", "sky"), "blue": ("indigo", "indigo"), "violet": ("violet", "violet"),
                 "magenta": ("fuchsia", "crimson")}
-SIG = {"halo": (.10, .12), "halo2": (.16, .18), "region": .26, "glow": .45, "overlay": (.05, .045)}
+SIG = {"halo": (.10, .12), "halo2": (.16, .18), "region": .26, "glow": .45, "overlay": (.05, .04)}
 
 
 def compose(ground, lamp, roles, hues=None, text=(.78, .40), cap=(.13, .16), band=((.79, .85), (.50, .53)),
