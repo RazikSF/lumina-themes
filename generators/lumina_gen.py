@@ -8,7 +8,9 @@ Three layers of source of truth:
                              orderless sequences, modeline_bg, vertico_bg,
                              function-call/property/preprocessor/escape,
                              magit/org/modeline-modified) shared dark/light
-  spec/faces.json            face name -> {fg, bg, bold/italic/...}  (Emacs)
+  spec/faces.json            face name -> {fg, bg, weight, slant, ...}  (Emacs)
+                             written by generators/faces_src.py
+  spec/variables.json        theme variables: hl-todo, vc-annotate, ... (Emacs)
   spec/nvim_highlights.json  highlight group -> {fg, bg, sp, link, ...} (Nvim)
   spec/vscode.json           workbench colors + tokenColors + semantic     (VS Code)
 
@@ -304,14 +306,19 @@ def emit_face(name: str, attrs: list) -> str:
     return f" '({name} ((t ({body}))))"
 
 
+def _color(ref, colors, schema):
+    return "unspecified" if ref == "unspecified" else f'"{resolve_ref(ref, colors, schema)}"'
+
+
 def spec_to_attrs(fspec: dict, colors: dict, schema: dict) -> list:
     """Turn a face spec dict (from faces.json) into emit_face's attrs list.
-    Canonical order: fg, bg, weight, slant, underline, extend, inherit, height."""
+    Canonical order: fg, bg, weight, slant, box, underline, overline,
+    strike-through, inverse, extend, inherit, height."""
     attrs = []
     if "fg" in fspec:
-        attrs.append((":foreground", f'"{resolve_ref(fspec["fg"], colors, schema)}"'))
+        attrs.append((":foreground", _color(fspec["fg"], colors, schema)))
     if "bg" in fspec:
-        attrs.append((":background", f'"{resolve_ref(fspec["bg"], colors, schema)}"'))
+        attrs.append((":background", _color(fspec["bg"], colors, schema)))
     if "weight" in fspec:
         attrs.append((":weight", str(fspec["weight"])))
     elif fspec.get("bold"):
@@ -322,23 +329,68 @@ def spec_to_attrs(fspec: dict, colors: dict, schema: dict) -> list:
         attrs.append((":slant", "italic"))
     if "box" in fspec:
         b = fspec["box"]
-        attrs.append((":box", f'(:line-width {b["width"]} :color '
-                              f'"{resolve_ref(b["color"], colors, schema)}")'))
-    if fspec.get("underline") is True:
+        if b is True:
+            attrs.append((":box", "t"))
+        else:
+            w = b["width"]
+            w = f"({w[0]} . {w[1]})" if isinstance(w, list) else str(w)
+            s = f' :style {b["style"]}' if b.get("style") else ""
+            attrs.append((":box", f'(:line-width {w} :color {_color(b["color"], colors, schema)}{s})'))
+    u = fspec.get("underline")
+    if u is True:
         attrs.append((":underline", "t"))
-    elif isinstance(fspec.get("underline"), dict):
-        u = fspec["underline"]
-        attrs.append((":underline", f'(:color "{resolve_ref(u["color"], colors, schema)}"'
+    elif isinstance(u, str):
+        attrs.append((":underline", _color(u, colors, schema)))
+    elif isinstance(u, dict):
+        attrs.append((":underline", f'(:color {_color(u["color"], colors, schema)}'
                                     f' :style {u.get("style", "line")})'))
     if "overline" in fspec:
-        attrs.append((":overline", f'"{resolve_ref(fspec["overline"], colors, schema)}"'))
+        attrs.append((":overline", _color(fspec["overline"], colors, schema)))
+    s = fspec.get("strike-through")
+    if s is True:
+        attrs.append((":strike-through", "t"))
+    elif isinstance(s, str):
+        attrs.append((":strike-through", _color(s, colors, schema)))
+    if fspec.get("inverse"):
+        attrs.append((":inverse-video", "t"))
     if fspec.get("extend"):
         attrs.append((":extend", "t"))
     if "inherit" in fspec:
-        attrs.append((":inherit", str(fspec["inherit"])))
+        inh = str(fspec["inherit"])
+        attrs.append((":inherit", f"({inh})" if " " in inh else inh))
     if "height" in fspec:
         attrs.append((":height", str(fspec["height"])))
     return attrs
+
+
+def emit_variable(name: str, vspec, colors: dict, schema: dict) -> str:
+    """One `custom-theme-set-variables' entry.  Value forms: a color ref,
+    a number, {lit}, {cons: [a, b]}, {vector: [...]}, {list: [...]},
+    {alist: {key: ref}} and {pairs: [[k, ref], ...]}."""
+    def lit(v):
+        if isinstance(v, str):
+            return f'"{resolve_ref(v, colors, schema)}"'
+        if isinstance(v, (int, float)):
+            return str(v)
+        if isinstance(v, dict):
+            if "lit" in v:
+                return v["lit"]
+            if "cons" in v:
+                a, b = v["cons"]
+                return f"({lit(a)} . {lit(b)})"
+            if "vector" in v:
+                return "[" + " ".join(lit(x) for x in v["vector"]) + "]"
+            if "list" in v:
+                return "(" + " ".join(lit(x) for x in v["list"]) + ")"
+            if "alist" in v:
+                return "(" + " ".join(f'("{k}" . {lit(x)})' for k, x in v["alist"].items()) + ")"
+            if "pairs" in v:
+                return "(" + " ".join(f"({lit(k)} . {lit(x)})" for k, x in v["pairs"]) + ")"
+        raise ValueError(f"bad variable spec for {name}: {vspec!r}")
+    value = lit(vspec)
+    if value.startswith("("):
+        value = "'" + value
+    return f" '({name} {value})"
 
 
 ELISP_FILE_HEADER = '''\
@@ -347,7 +399,7 @@ ELISP_FILE_HEADER = '''\
 ;; Author: razik <https://github.com/RazikSF>
 ;; Maintainer: razik <https://github.com/RazikSF>
 ;; URL: https://github.com/RazikSF/lumina-themes
-;; Version: 1.0.0
+;; Version: 2.1.0
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: faces, themes
 ;;
@@ -363,7 +415,7 @@ ELISP_FILE_HEADER = '''\
 (custom-theme-set-faces
  '{theme}
 '''
-ELISP_FILE_FOOTER = ''' )
+ELISP_FILE_FOOTER = ''' ){variables}
 
 ;;;###autoload
 (when load-file-name
@@ -386,7 +438,7 @@ def build_emacs(spec: dict):
     outdir = ROOT / "emacs" / "themes"
     outdir.mkdir(parents=True, exist_ok=True)
     face_map = _load_decl("faces.json")
-    face_v2 = _load_decl("faces_v2.json")
+    var_map = _load_decl("variables.json")
     n = 0
     for flavor, modes in spec["flavors"].items():
         sch = SCHEMAS[flavor]
@@ -399,9 +451,13 @@ def build_emacs(spec: dict):
                                    for ln in d["commentary"].split("\n"))
             docstring = (commentary.split("\n")[0].lstrip("; ").strip()
                          or short).replace('"', '\\"')
-            fmap = {**face_map, **face_v2} if sch.get("v2") else face_map
             faces = [emit_face(name, spec_to_attrs(fs, c, sch))
-                     for name, fs in fmap.items()]
+                     for name, fs in face_map.items()]
+            variables = ""
+            if var_map:
+                variables = (f"\n\n(custom-theme-set-variables\n '{theme}\n"
+                             + "\n".join(emit_variable(n, v, c, sch) for n, v in var_map.items())
+                             + ")")
             file_name = f"{theme}-theme.el"
             text = (
                 ELISP_FILE_HEADER.format(
@@ -409,11 +465,11 @@ def build_emacs(spec: dict):
                     docstring=docstring, commentary=commentary,
                 )
                 + "\n".join(faces)
-                + ELISP_FILE_FOOTER.format(file=file_name, theme=theme)
+                + ELISP_FILE_FOOTER.format(file=file_name, theme=theme, variables=variables)
             )
             (outdir / file_name).write_text(text)
             n += 1
-    print(f"emacs   -> {n} files in emacs/themes/")
+    print(f"emacs   -> {n} files in emacs/themes/  ({len(face_map)} faces, {len(var_map)} variables each)")
 
 
 # ---------------------------------------------------------------------------
@@ -638,7 +694,9 @@ def check(spec: dict) -> bool:
 
     Standard variants: fg 10-12.5:1 (fg_max per schema), comments >= 4.3,
     accents >= 4.5.  -contrast variants: fg >= 15, comments >= 6, accents >= 7.
-    Both: non-lead accents within 0.08 OKLCH lightness.
+    Both: non-lead accents within 0.08 OKLCH lightness, every accent >= 4.0
+    on its own tinted ground, fg >= 9 on the popup ground, lamp >= 3.5 on halo2
+    (short highlighted tokens only: paren match, current search hit).
     """
     from oklch import contrast, from_hex
     ok = True
@@ -662,6 +720,13 @@ def check(spec: dict) -> bool:
                 if contrast(C(c, k), bg) < (7 if hc else 4.5):
                     fails.append(f"{k} {contrast(C(c, k), bg):.1f}")
             lead = sch["lead"]
+            for k in ACCENTS + ["spark"]:
+                if k in c and f"{k}-bg" in c and contrast(C(c, k), C(c, f"{k}-bg")) < 4.0:
+                    fails.append(f"{k} on {k}-bg {contrast(C(c, k), C(c, f'{k}-bg')):.1f}")
+            if "overlay" in c and contrast(C(c, "fg"), C(c, "overlay")) < 9:
+                fails.append(f"fg on overlay {contrast(C(c, 'fg'), C(c, 'overlay')):.1f}")
+            if "halo2" in c and contrast(C(c, lead), C(c, "halo2")) < 3.5:
+                fails.append(f"lead on halo2 {contrast(C(c, lead), C(c, 'halo2')):.1f}")
             ls = [from_hex(C(c, k))[0] for k in ACCENTS if k != lead]
             if max(ls) - min(ls) > 0.08:
                 fails.append(f"accent lightness spread {max(ls) - min(ls):.2f} > 0.08")

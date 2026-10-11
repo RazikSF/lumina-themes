@@ -35,6 +35,16 @@ just beyond the spectrum, and the code is the spectrum itself.
   lamp, same hues.
 - **Readable diffs.** Added, removed and changed lines sit on tinted
   grounds in magit, diff, smerge and ediff.
+- **Complete coverage.** Close to 3 000 faces per theme, written against
+  the real `defface` names of Emacs 30 and of the installed packages:
+  org and org-modern, magit and forge, vertico, corfu, company, consult,
+  marginalia, embark, ivy and helm, treemacs and dirvish, lsp-mode,
+  lsp-ui, dap and eglot, tree-sitter, flycheck and flymake, meow and
+  evil, vterm, eat and term, mu4e, gnus and notmuch, elfeed and erc,
+  markdown, LaTeX and web-mode, doom-modeline and nano-modeline,
+  transient, which-key, avy, and more. Popups sit on their own ground,
+  every state has a tinted ground, and `hl-todo`, `vc-annotate`,
+  `pdf-tools` and `rustic` variables follow the palette.
 
 ## Flavors
 
@@ -117,10 +127,12 @@ Prisma adds black-and-white twins: `lumina-prisma-dark-ink`,
 | **base24** (tinted-theming)     | `base24/*.yaml` (40) |
 
 The Emacs files require no external dependency and load on a bare
-`emacs -Q`. They style the core UI, syntax, org, magit, diff, smerge,
-ediff, dired, vertico, consult, marginalia, corfu, eglot, flycheck,
-flymake, which-key, treemacs, and Doom's modeline and dashboard; faces
-of packages you do not use are simply ignored.
+`emacs -Q` in about ten milliseconds. Each one styles close to 3 000
+faces across the core UI, built-in modes and some 180 packages (see
+`generators/faces_src.py` for the full list, grouped by section); faces
+of packages you do not use are simply ignored. `docs/showcase.html`,
+built by `tools/preview/showcase.sh`, shows every theme on a full
+interface mock whose colours are read back from Emacs.
 
 ## Install
 
@@ -180,8 +192,10 @@ Six optional variables, set them before loading a theme or call
 (setq lumina-themes-bold-keywords      nil)  ; bold on keywords
 ```
 
-`M-x lumina-themes-load-random` loads a random Lumina theme.  Prefix
-arg `C-u` restricts to dark, `C-u C-u` to light.
+`M-x lumina-themes-select` picks a Lumina theme with completion,
+`M-x lumina-themes-toggle` switches between the dark and light twin of
+the current one, and `M-x lumina-themes-load-random` loads a random
+theme (prefix arg `C-u` restricts to dark, `C-u C-u` to light).
 
 ### Neovim
 
@@ -243,8 +257,9 @@ of the CLI from a single source.
 ```
 generators/v2_palettes.py   OKLCH palettes; derives signature and -contrast
 spec/lumina.json            generated palettes (one per flavor/variant)
-spec/faces.json             declarative face mapping (~390 faces)
-spec/faces_v2.json          Lumina 2 overlay (lamp, halo, diffs, headings)
+generators/faces_src.py     face design, grouped by package (edit this)
+spec/faces.json             generated face mapping (~3 000 faces)
+spec/variables.json         theme variables (hl-todo, vc-annotate, pdf-tools)
 spec/nvim_highlights.json   declarative Neovim highlight mapping
 spec/vscode.json            declarative VS Code workbench + tokens
 generators/lumina_gen.py    spec -> all targets; embeds per-flavor schemas
@@ -255,7 +270,7 @@ vscode/themes/*.json        generated
 vscode/package.json         generated; bundles all flavors
 wezterm/*.toml              generated
 base24/*.yaml               generated
-tools/preview/              Emacs batch renderer, comparison pages, gallery
+tools/preview/              Emacs batch renderer, gallery, showcase
 tools/distance.py           perceptual distance between flavors
 archive/                    fifteen retired flavors, restorable
 Makefile                    make build / make check / make verify
@@ -269,8 +284,9 @@ and org mappings, preprocessor and escape slots — shared between dark
 and light). The generator resolves palette references to literal hex
 per flavor and emits one file per target per (flavor, mode).
 
-A color edit in `spec/lumina.json` propagates to all five targets on
-the next `make build`.
+A color edit in `generators/v2_palettes.py` propagates to all five
+targets on the next `make build`; a face edit in
+`generators/faces_src.py` propagates to the 40 Emacs themes.
 
 ## Develop
 
@@ -282,6 +298,7 @@ python3 generators/v2_palettes.py   # OKLCH -> spec/lumina.json
 make check       # contrast and lightness gate
 make verify      # rebuild, check, and smoke-test every theme on vanilla Emacs
 tools/preview/gallery.sh            # re-render assets/screens/*.svg
+tools/preview/showcase.sh           # docs/showcase.html, full UI mock per theme
 make extract     # one-time bootstrap from existing .el files (rarely needed)
 ```
 

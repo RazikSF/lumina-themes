@@ -3,7 +3,7 @@
 ;; Author: razik <https://github.com/RazikSF>
 ;; Maintainer: razik <https://github.com/RazikSF>
 ;; URL: https://github.com/RazikSF/lumina-themes
-;; Version: 1.0.0
+;; Version: 2.1.0
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: faces, themes
 ;;
@@ -11,8 +11,12 @@
 ;;
 ;; Lumina is a family of nine flavors, each in a dark, a light and
 ;; two high-contrast variants, plus black-and-white Prisma twins --
-;; 40 themes in total.  Pure `deftheme'
-;; files, no external dependency.
+;; 40 themes in total.  Pure `deftheme' files, no external dependency,
+;; close to 3 000 faces each: core UI, built-in modes and some 180
+;; packages (org, magit, vertico, corfu, lsp, treemacs, mu4e, ...).
+;;
+;; M-x lumina-themes-select to pick one with completion,
+;; M-x lumina-themes-toggle to switch between the dark and light twin.
 ;;
 ;; M-x load-theme RET lumina-dawn-dark RET to load any of them.
 ;;
@@ -147,6 +151,34 @@ With \\[universal-argument] \\[universal-argument] (or \\='light), restricts to 
     (let ((pick (nth (random (length pool)) pool)))
       (load-theme pick t)
       (message "Loaded %s" pick))))
+
+;;;###autoload
+(defun lumina-themes-select (theme)
+  "Load the Lumina THEME chosen with completion, disabling every other theme."
+  (interactive
+   (list (intern (completing-read "Lumina theme: "
+                                  (mapcar #'symbol-name (lumina-themes--list))
+                                  nil t))))
+  (mapc #'disable-theme custom-enabled-themes)
+  (load-theme theme t)
+  (message "Loaded %s" theme))
+
+;;;###autoload
+(defun lumina-themes-toggle ()
+  "Switch between the dark and the light twin of the current Lumina theme.
+Contrast and ink variants keep their suffix: lumina-dawn-dark-contrast
+becomes lumina-dawn-light-contrast."
+  (interactive)
+  (let* ((cur (lumina-themes--current-lumina-theme))
+         (name (if cur (symbol-name cur) (user-error "No Lumina theme is enabled")))
+         (next (cond ((string-match-p "-dark" name)
+                      (replace-regexp-in-string "-dark" "-light" name t t))
+                     ((string-match-p "-light" name)
+                      (replace-regexp-in-string "-light" "-dark" name t t))
+                     (t (user-error "No twin for %s" name)))))
+    (mapc #'disable-theme custom-enabled-themes)
+    (load-theme (intern next) t)
+    (message "Loaded %s" next)))
 
 (defun lumina-themes--on-enable (theme)
   "Apply Lumina customisations when a Lumina THEME is enabled."

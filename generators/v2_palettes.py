@@ -360,7 +360,8 @@ def lift(c, bg, target, step):
 
 
 def signature(pal, lead, dark):
-    """Lumina light signature: the lamp tints the current line, the selection and jumps."""
+    """Lumina light signature: the lamp tints the current line, the selection and jumps.
+    Also derives the popup ground (overlay) and one tinted ground per accent (<accent>-bg)."""
     bg, lamp = pal["bg"], pal[lead]
     out = dict(pal)
     out["halo"] = mix(bg, lamp, .075 if dark else .10)
@@ -369,6 +370,10 @@ def signature(pal, lead, dark):
     out["glow"] = mix(bg, lamp, .42 if dark else .40)
     L, C, h = bg
     out["dim"] = (L - .03, C * .8, h) if dark else (L - .025, C * 1.2, h)
+    out["overlay"] = mix((L + .045, C * 1.1, h) if dark else (L - .03, C * 1.3, h), lamp, .04)
+    for k in (*ACCENT_KEYS, "spark"):
+        if k in pal:
+            out[f"{k}-bg"] = mix(bg, pal[k], .16 if dark else .09)
     return out
 
 
