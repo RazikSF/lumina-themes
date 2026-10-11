@@ -39,7 +39,7 @@ def audit(flavor, mode, colors):
             if role[a] == role[b]:
                 continue
             d = de(role[a], role[b])
-            if d < CONFUSABLE:
+            if d < sch.get("confusable", CONFUSABLE):
                 issues.append(f"confondus {NAMES.get(a, a)} / {NAMES.get(b, b)} dE {d:.0f}")
 
     lamp = role["functions"]
@@ -48,7 +48,7 @@ def audit(flavor, mode, colors):
     if nearest < LAMP_MIN:
         issues.append(f"lampe à dE {nearest:.0f} du rôle le plus proche")
     warm_roles = [r for r in ROLES if warm(role[r])]
-    if warm("x" if False else lamp) and any(r != "functions" for r in warm_roles):
+    if warm(lamp) and any(r != "functions" for r in warm_roles) and not sch.get("warm_family"):
         issues.append("deux notes chaudes : lampe + " + ", ".join(NAMES[r] for r in warm_roles if r != "functions"))
     if not warm_roles:
         issues.append("aucune note chaude")

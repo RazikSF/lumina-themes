@@ -1,0 +1,53 @@
+# lumina-azur-light-contrast -- Lumina (azur, light)
+# Generated from spec/lumina.json. Do not edit by hand.
+[colors]
+foreground   = "#0D1013"
+background   = "#FCFEFF"
+cursor_bg    = "#0D1013"
+cursor_fg    = "#FCFEFF"
+cursor_border = "#0D1013"
+selection_bg = "#B8CEE8"
+selection_fg = "#0D1013"
+scrollbar_thumb = "#A7ABB0"
+split = "#D7DBE0"
+compose_cursor = "#00479D"
+visual_bell = "#88ABD6"
+copy_mode_active_highlight_bg = { Color = "#00479D" }
+copy_mode_active_highlight_fg = { Color = "#FCFEFF" }
+copy_mode_inactive_highlight_bg = { Color = "#CDDCEF" }
+copy_mode_inactive_highlight_fg = { Color = "#0D1013" }
+quick_select_label_bg = { Color = "#722700" }
+quick_select_label_fg = { Color = "#FCFEFF" }
+quick_select_match_bg = { Color = "#CDDCEF" }
+quick_select_match_fg = { Color = "#0D1013" }
+ansi = ["#F3F7FD", "#840051", "#00531B", "#633700", "#00479D", "#681C65", "#00505B", "#2D3135"]
+brights = ["#6E7276", "#722700", "#005249", "#633700", "#00449A", "#4F2980", "#00505B", "#0D1013"]
+
+[colors.indexed]
+16 = "#722700"
+17 = "#005249"
+18 = "#4F2980"
+19 = "#00449A"
+
+[colors.tab_bar]
+background = "#F0F4F9"
+inactive_tab_edge = "#E7EBF1"
+[colors.tab_bar.active_tab]
+bg_color = "#FCFEFF"
+fg_color = "#0D1013"
+intensity = "Bold"
+[colors.tab_bar.inactive_tab]
+bg_color = "#F0F4F9"
+fg_color = "#4A4D52"
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "#DCE7F5"
+fg_color = "#0D1013"
+[colors.tab_bar.new_tab]
+bg_color = "#F0F4F9"
+fg_color = "#6E7276"
+[colors.tab_bar.new_tab_hover]
+bg_color = "#CDDCEF"
+fg_color = "#00479D"
+
+[metadata]
+name = "lumina-azur-light-contrast"

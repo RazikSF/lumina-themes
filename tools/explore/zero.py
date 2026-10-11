@@ -125,12 +125,140 @@ STRINGS = {
     "vesper-ciel": vesper_strings("vesper-ciel", (.80, .08, 228), "chaînes ciel pâle"),
     "vesper-sauge": vesper_strings("vesper-sauge", (.78, .05, 140), "chaînes sauge grise, discrètes"),
 }
+# Three further palette types, each more restrained than Vesper (six hues): Indigo (three hues on an indigo ground, Monoink's
+# ink tones for the rest), Encre (one amber accent on neutral charcoal, Monoink register), Opale (four hues, Horizon register,
+# plum-charcoal ground).  Measured: doom-indigo bg (278, .030) L .21, keywords periwinkle 270, strings orange 54; doom-monoink bg (268, .010)
+# L .20, one azure 253, strings/types grey L .68-.71, constants light L .88; doom-horizon bg (277, .021) L .27, purple 313, sky 226, peach 48, salmon 30.
+UI_COOL = {"red": (.64, .17, 15), "green": (.72, .08, 150), "teal": (.72, .08, 185), "cyan": (.74, .08, 220), "blue": (.70, .10, 255), "violet": (.72, .09, 300), "magenta": (.72, .11, 320), "yellow": (.82, .08, 85), "orange": (.78, .09, 52)}
+TROIS = {
+    "indigo": dict(base="vesper", ground=(278, .030, .010, .21, .98), text=(.80, .40), lead="blue",
+                   accents={**UI_COOL, "blue": (.72, .14, 255), "violet": (.76, .10, 300), "orange": (.80, .08, 52),
+                            "fg": (.80, .03, 278), "base8": (.80, .03, 278), "fg-alt": (.70, .03, 278), "comments": (.56, .03, 278), "doc-comments": (.60, .03, 278),
+                            "ink-light": (.88, .04, 280), "ink-dim": (.70, .04, 278)},
+                   roles=dict(functions="blue", keywords="violet", type="ink-light", strings="orange", constants="ink-dim", builtin="ink-dim", methods="blue"),
+                   label="Indigo, trois teintes : fonctions azur, mots-clés lilas, chaînes pêche ; types, constantes et builtins en tons d'encre lavande"),
+    "encre": dict(base="slate", ground=(268, .010, .006, .20, .98), text=(.84, .40), lead="yellow",
+                  accents={**UI_COOL, "yellow": (.80, .12, 78),
+                           "fg": (.84, .012, 268), "base8": (.84, .012, 268), "fg-alt": (.74, .012, 268), "comments": (.54, .012, 268), "doc-comments": (.58, .012, 268),
+                           "ink-light": (.92, .01, 268), "ink-mid": (.76, .014, 268), "ink-dim": (.70, .012, 268)},
+                  roles=dict(functions="ink-light", keywords="yellow", type="ink-mid", strings="ink-dim", constants="ink-light", builtin="ink-mid", methods="ink-light"),
+                  label="Encre, une teinte : mots-clés ambre, tout le reste en encres grises (fonctions et constantes claires, chaînes sombres)"),
+    "opale": dict(base="nocturne", ground=(300, .015, .010, .23, .98), text=(.80, .40), lead="cyan",
+                  accents={**UI_COOL, "magenta": (.72, .13, 330), "cyan": (.78, .10, 215), "orange": (.80, .10, 60), "red": (.62, .18, 12),
+                           "coral": (.72, .14, 30), "aqua-dim": (.66, .10, 215),
+                           "fg": (.80, .015, 300), "base8": (.80, .015, 300), "fg-alt": (.70, .015, 300), "comments": (.54, .02, 300), "doc-comments": (.58, .02, 300)},
+                  roles=dict(functions="cyan", keywords="magenta", type="aqua-dim", strings="orange", constants="coral", builtin="aqua-dim", methods="cyan"),
+                  label="Opale, quatre teintes : fonctions aigue-marine, mots-clés orchidée, chaînes abricot, constantes corail ; types et builtins en aigue-marine sombre"),
+}
+# Indigo, second round: the Monoink azure must be the keyword colour (def, return, for), everything else in ink tones.
+INDIGO_INK = {**UI_COOL, "blue": (.72, .14, 255),
+              "fg": (.80, .03, 278), "base8": (.80, .03, 278), "fg-alt": (.70, .03, 278), "comments": (.56, .03, 278), "doc-comments": (.60, .03, 278),
+              "ink-light": (.90, .03, 280), "ink-mid": (.74, .035, 278), "ink-dim": (.68, .035, 278)}
+INDIGO_ROLES = dict(functions="ink-light", keywords="blue", type="ink-mid", strings="ink-dim", constants="ink-light", builtin="ink-mid", methods="ink-light")
+INDIGO2 = {
+    "indigo2": dict(base="vesper", ground=(278, .030, .010, .21, .98), text=(.80, .40), lead="blue", accents=INDIGO_INK, roles=INDIGO_ROLES,
+                    label="Indigo, une teinte : mots-clés azur (def, return, for), tout le reste en encres lavande, structure d'Encre sur le fond de doom-indigo"),
+    "indigo2b": dict(base="vesper", ground=(278, .030, .010, .21, .98), text=(.80, .40), lead="blue", accents={**INDIGO_INK, "orange": (.80, .07, 52)}, roles={**INDIGO_ROLES, "strings": "orange"},
+                     label="Indigo, variante à une note chaude : idem, chaînes pêche sourd"),
+}
+# Third round: no more near-white inks; every tone is a tint or shade of the theme's one hue (monochromatic scheme).
+def mono(ground, hue, accent_slot, accent, text, light, mid, dim, cm, extra=None, label=""):
+    acc = {**UI_COOL, accent_slot: accent, "fg": text, "base8": text, "fg-alt": (text[0] - .10, text[1], text[2]),
+           "comments": cm, "doc-comments": (cm[0] + .04, cm[1], cm[2]), "ink-light": light, "ink-mid": mid, "ink-dim": dim, **(extra or {})}
+    roles = dict(functions="ink-light", keywords=accent_slot, type="ink-mid", strings="ink-dim", constants="ink-light", builtin="ink-mid", methods="ink-light")
+    return dict(base="vesper", ground=ground, text=(text[0], .40), lead=accent_slot, accents=acc, roles=roles, label=label)
+MONO = {
+    "indigo3": mono((278, .030, .010, .21, .98), 265, "blue", (.72, .14, 255), text=(.80, .045, 272), light=(.88, .07, 262), mid=(.76, .08, 268), dim=(.68, .07, 262), cm=(.56, .04, 270),
+                    label="Indigo, nuances d'indigo : mots-clés azur, fonctions et constantes pervenche clair, types et builtins bleu-lavande, chaînes bleu ardoise, texte lavande"),
+    "encre3": mono((75, .006, .006, .20, .98), 78, "yellow", (.80, .12, 78), text=(.84, .025, 80), light=(.90, .05, 85), mid=(.76, .05, 80), dim=(.68, .05, 75), cm=(.54, .02, 78),
+                   label="Encre, nuances d'ambre : mots-clés ambre, fonctions et constantes crème, types et builtins sable, chaînes tan, texte beige clair"),
+    "encre3b": mono((268, .010, .006, .20, .98), 268, "yellow", (.80, .12, 78), text=(.84, .02, 268), light=(.90, .035, 268), mid=(.76, .04, 268), dim=(.68, .04, 268), cm=(.54, .02, 268),
+                    label="Encre, nuances du fond : mots-clés ambre, encres bleu-ardoise claires, moyennes et sombres, texte gris-bleu"),
+}
+# Fourth round: the ink tones are tints and shades of a COMPANION hue that pairs with the accent (two-hue scheme).
+# Azure's companions: sand/peach (complement, Jazz's warm text on cold accents) or mauve (analogous-violet).
+# Amber's companions: plum (triad side) or teal-blue 210 (cool complement, kept away from green); slate 268 is already encre3b.
+DUO = {
+    "indigo4a": mono((278, .030, .010, .21, .98), 265, "blue", (.72, .14, 255), text=(.80, .045, 75), light=(.88, .06, 72), mid=(.76, .065, 70), dim=(.68, .06, 65), cm=(.56, .03, 270),
+                     label="Indigo + sable : mots-clés azur, fonctions et constantes crème, types et builtins sable, chaînes tan, texte sable clair"),
+    "indigo4b": mono((278, .030, .010, .21, .98), 265, "blue", (.72, .14, 255), text=(.80, .04, 305), light=(.88, .06, 310), mid=(.76, .07, 310), dim=(.68, .07, 312), cm=(.56, .035, 290),
+                     label="Indigo + mauve : mots-clés azur, fonctions et constantes mauve clair, types et builtins mauve, chaînes prune, texte lilas gris"),
+    "encre4a": mono((300, .010, .006, .20, .98), 300, "yellow", (.80, .12, 78), text=(.84, .025, 320), light=(.90, .04, 320), mid=(.76, .05, 320), dim=(.68, .06, 322), cm=(.54, .02, 300),
+                    label="Encre + prune : mots-clés ambre, fonctions et constantes rose pâle, types et builtins vieux rose, chaînes prune, texte rose gris"),
+    "encre4b": mono((220, .010, .006, .20, .98), 215, "yellow", (.80, .12, 78), text=(.84, .025, 215), light=(.90, .045, 212), mid=(.76, .06, 210), dim=(.68, .06, 208), cm=(.54, .02, 220),
+                    label="Encre + bleu sarcelle : mots-clés ambre, fonctions et constantes bleu glacier, types et builtins bleu-gris, chaînes pétrole, texte bleu pâle"),
+}
+# Encre, fifth round: amber rejected with every companion; change the single accent instead and give each its natural companion.
+ENCRE5 = {
+    "encre5a": mono((268, .010, .006, .20, .98), 268, "orange", (.72, .15, 22), text=(.84, .02, 268), light=(.90, .035, 268), mid=(.76, .04, 268), dim=(.68, .04, 268), cm=(.54, .02, 268),
+                    label="Encre corail : mots-clés corail, encres bleu-ardoise claires, moyennes et sombres, texte gris-bleu, charbon froid"),
+    "encre5b": mono((300, .008, .006, .20, .98), 250, "magenta", (.70, .14, 335), text=(.84, .02, 250), light=(.90, .035, 250), mid=(.76, .04, 250), dim=(.68, .045, 250), cm=(.54, .02, 280),
+                    label="Encre orchidée : mots-clés orchidée, encres bleu acier, texte gris-bleu, charbon prune"),
+    "encre5c": mono((60, .005, .006, .20, .98), 72, "teal", (.74, .11, 195), text=(.84, .035, 75), light=(.90, .05, 78), mid=(.76, .055, 72), dim=(.68, .055, 68), cm=(.54, .015, 70),
+                    label="Encre sarcelle : mots-clés sarcelle, encres crème, sable et tan (le mariage de Jazz), charbon neutre"),
+}
+# Azur: Monoink's blue (#5BA8FF, .72/.15/253) as the keyword colour on Monoink's charcoal; the companions are its complement family,
+# a warm gradient from cream to coral: cream functions, sand types and builtins, peach strings, coral constants, sand text.  Four hues.
+AZUR = {
+    "azur": dict(base="vesper", ground=(268, .010, .006, .20, .98), text=(.82, .40), lead="blue",
+                 accents={**UI_COOL, "blue": (.72, .15, 253), "orange": (.80, .09, 48), "coral": (.72, .14, 24),
+                          "fg": (.82, .04, 75), "base8": (.82, .04, 75), "fg-alt": (.72, .04, 75), "comments": (.54, .015, 268), "doc-comments": (.58, .015, 268),
+                          "cream": (.90, .05, 82), "sand": (.76, .055, 72)},
+                 roles=dict(functions="cream", keywords="blue", type="sand", strings="orange", constants="coral", builtin="sand", methods="cream"),
+                 label="Azur : mots-clés bleu Monoink, fonctions crème, types et builtins sable, chaînes pêche, constantes corail, texte sable, charbon de Monoink"),
+}
+# Azur, full palette: Monoink's blue on the keywords, five companions around it (gold, peach, lilac, coral, aqua), tinted text, Monoink's charcoal.
+AZUR6_ACC = {**UI_COOL, "blue": (.72, .15, 253), "yellow": (.84, .11, 88), "orange": (.78, .11, 45), "violet": (.78, .11, 300), "coral": (.72, .15, 22), "cyan": (.78, .09, 205),
+             "fg": (.82, .03, 262), "base8": (.82, .03, 262), "fg-alt": (.72, .03, 262), "comments": (.54, .015, 268), "doc-comments": (.58, .015, 268)}
+AZUR6 = {
+    "azur6a": dict(base="vesper", ground=(268, .010, .006, .20, .98), text=(.82, .40), lead="blue", accents=AZUR6_ACC,
+                   roles=dict(functions="yellow", keywords="blue", type="violet", strings="orange", constants="coral", builtin="cyan", methods="yellow"),
+                   label="Azur A : mots-clés bleu Monoink, fonctions or, types lilas, chaînes pêche, constantes corail, builtins aigue-marine, texte gris-bleu"),
+    "azur6b": dict(base="vesper", ground=(268, .010, .006, .20, .98), text=(.82, .40), lead="blue", accents=AZUR6_ACC,
+                   roles=dict(functions="violet", keywords="blue", type="yellow", strings="orange", constants="coral", builtin="cyan", methods="violet"),
+                   label="Azur B : mêmes couleurs, fonctions lilas et types or"),
+}
+# Azur A ground: the Monoink charcoal (268, .010, L .20) is near-black and flat; three blue-tinted grounds, each with comments in the same hue.
+AZUR_ROLES = dict(functions="yellow", keywords="blue", type="violet", strings="orange", constants="coral", builtin="cyan", methods="yellow")
+def azur_ground(name, ground, label):
+    h = ground[0]
+    acc = {**AZUR6_ACC, "fg": (.82, .03, h), "base8": (.82, .03, h), "fg-alt": (.72, .03, h), "comments": (.55, .02, h), "doc-comments": (.59, .02, h)}
+    return dict(base="vesper", ground=ground, text=(.82, .40), lead="blue", accents=acc, roles=AZUR_ROLES, label=label)
+AZUR7 = {
+    "azur7-nuit": azur_ground("nuit", (262, .028, .006, .22, .98), "fond nuit (262, .028) clarté 0,22, comme Vesper"),
+    "azur7-ardoise": azur_ground("ardoise", (255, .022, .006, .235, .98), "fond ardoise (255, .022) clarté 0,235"),
+    "azur7-acier": azur_ground("acier", (240, .016, .006, .25, .98), "fond acier (240, .016) clarté 0,25, le plus clair"),
+}
 SHEETS = {
+    "azur7": dict(refs=[], protos=AZUR7, themes=["lumina-azur6a-dark"], out="azur7.html",
+                  title="Azur A : trois fonds teintés de bleu",
+                  intro="Mêmes couleurs de code qu'Azur A ; seul le fond change, avec le texte et les commentaires accordés à sa teinte. Dernière carte : le charbon Monoink actuel. Installés sous lumina-azur7-nuit, -ardoise, -acier (suffixe -dark) ; azur6b retiré."),
+    "azur6": dict(refs=["doom-indigo"], protos=AZUR6, themes=[], out="azur6.html",
+                  title="Azur : le bleu de Monoink et cinq compagnes",
+                  intro="Un vrai thème : six teintes de code autour du bleu de Monoink, sur son charbon ; texte gris-bleu teinté 10:1 au-dessus des accents. Deux affectations des mêmes couleurs. Installés sous lumina-azur6a-dark et lumina-azur6b-dark ; lumina-azur-dark retiré."),
+    "azur": dict(refs=["doom-monoink"], protos=AZUR, themes=["lumina-indigo4a-dark"], out="azur.html",
+                 title="Azur : le bleu de Monoink et sa famille complémentaire",
+                 intro="Le bleu de Monoink reste seul côté froid ; tout le reste est un dégradé chaud, de la crème au corail, sur le charbon de Monoink. Indigo + sable en dernière carte. Installé sous lumina-azur-dark ; encre5a, 5b, 5c retirés."),
+    "encre5": dict(refs=[], protos=ENCRE5, themes=["lumina-indigo4a-dark"], out="encre5.html",
+                   title="Encre : trois autres accents, chacun avec sa couleur compagne",
+                   intro="L'ambre ne prenait avec aucune compagne ; l'accent change. Corail sur encres bleu-ardoise, orchidée sur encres bleu acier, sarcelle sur encres sable comme Jazz. Indigo + sable en dernière carte pour comparer. Installés sous lumina-encre5a, -encre5b, -encre5c (suffixe -dark) ; encre3b, encre4a, encre4b et indigo4b retirés."),
+    "duo": dict(refs=[], protos=DUO, themes=["lumina-encre3b-dark"], out="duo.html",
+                title="Indigo et Encre : nuances d'une couleur compagne",
+                intro="L'accent reste seul (azur pour Indigo, ambre pour Encre) ; les encres sont des teintes et ombres d'une couleur qui se marie avec lui : sable ou mauve pour l'azur, prune ou bleu sarcelle pour l'ambre, et l'ardoise déjà vue (encre3b). Installés sous lumina-indigo4a, -indigo4b, -encre4a, -encre4b (suffixe -dark) ; indigo3 et encre3 retirés."),
+    "mono": dict(refs=["doom-monoink"], protos=MONO, themes=[], out="mono.html",
+                 title="Indigo et Encre : nuances de la couleur principale, plus de blanc",
+                 intro="Chaque ton est une teinte ou une ombre de la couleur du thème : pervenche, bleu-lavande et bleu ardoise pour Indigo ; crème, sable et tan pour Encre ; une variante d'Encre garde l'ambre seul avec des encres bleu-ardoise. Installés sous lumina-indigo3-dark, lumina-encre3-dark, lumina-encre3b-dark ; indigo2, indigo2b et encre retirés."),
+    "indigo2": dict(refs=["doom-monoink"], protos=INDIGO2, themes=["lumina-encre-dark"], out="indigo2.html",
+                    title="Indigo, deuxième tour : l'azur de Monoink aux mots-clés",
+                    intro="Monoink en référence, puis Indigo à une teinte (azur sur mots-clés, encres lavande ailleurs), la variante avec chaînes pêche, et Encre pour comparer. Installés sous lumina-indigo2-dark et lumina-indigo2b-dark ; lumina-indigo-dark et lumina-opale-dark retirés."),
+    "trois": dict(refs=["doom-indigo", "doom-monoink", "doom-horizon"], protos=TROIS, themes=[], out="trois.html",
+                  title="Trois autres types de palettes, de plus en plus retenues",
+                  intro="Indigo (trois teintes, fond indigo, encres de Monoink), Encre (une seule teinte, charbon neutre), Opale (quatre teintes, registre Horizon). Texte teinté 9:1 partout. Références en tête. Installés sous lumina-indigo-dark, lumina-encre-dark, lumina-opale-dark."),
     "strings": dict(refs=[], protos=STRINGS, themes=["lumina-vesper-dark"], out="strings.html",
                     title="Vesper sombre : la couleur des chaînes, sur du code Python NSI",
                     intro="Première carte : Vesper tel que figé (chaînes vert olive #91B265). Puis quatre remplacements, tout le reste identique. Installés sous lumina-vesper-lime, -menthe, -ciel, -sauge (suffixe -dark)."),
-    "final": dict(refs=[], protos={}, themes=["lumina-sienne-dark", "lumina-sienne-light", "lumina-vesper-dark", "lumina-vesper-light"], out="final.html",
-                  title="Sienne et Vesper tels que figés dans la spec",
+    "final": dict(refs=[], protos={}, themes=["lumina-indigo-dark", "lumina-indigo-light", "lumina-azur-dark", "lumina-azur-light", "lumina-vesper-dark", "lumina-sienne-dark"], out="final.html",
+                  title="Indigo et Azur tels que figés dans la spec, Vesper et Sienne pour mémoire",
                   intro="Vesper : fonctions bleu, mots-clés pourpre, types ciel, chaînes paille, constantes corail, builtins rose ; aucun vert dans le code. Sienne : fonctions sarcelle, mots-clés mauve, types or, chaînes olive, constantes corail, builtins abricot. Les clairs reprennent les mêmes teintes en encres (clarté 0,46 à 0,55)."),
     "sienne12": dict(refs=["jazz"], protos=SIENNE12, themes=[], out="sienne12.html",
                      title="Sienne : affectation 2 sur ardoise et gris-bleu, trois tons de texte plus discrets",
@@ -169,13 +297,14 @@ def main(sheet="warm", install_dir=Path.home() / ".doom.d/themes"):
     for ref in sh["refs"]:
         cards.append(explore.card(f"{ref} (référence)", render_doom(ref, sample=sample), lines))
     for name, pr in sh["protos"].items():
-        sch = {**g.schema_for(pr["base"], "dark"), "lead": pr["roles"]["functions"], "function_call": pr["roles"]["methods"], "property": pr["roles"]["builtin"]}
+        lead = pr.get("lead", pr["roles"]["functions"])
+        sch = {**g.schema_for(pr["base"], "dark"), "lead": lead, "function_call": pr["roles"]["methods"], "property": pr["roles"]["builtin"]}
         roles = {k: v for k, v in pr["roles"].items() if k != "variables"}
-        pal = vp.compose(ground=pr["ground"], lamp=roles["functions"], roles=roles, text=pr["text"], band=((.55, .95), (.50, .53)), cap=(.40, .16),
+        pal = vp.compose(ground=pr["ground"], lamp=lead, roles=roles, text=pr["text"], band=((.55, .95), (.50, .53)), cap=(.40, .16),
                          extra={"dark": pr["accents"]})
         if "variables" in pr["roles"]:
             pal["refs_dark"]["variables"] = pr["roles"]["variables"]
-        sig = vp.signature(pal["dark"], roles["functions"], True, {"halo": .07, "halo2": .14, "region": .24, "glow": .42, "overlay": .05})
+        sig = vp.signature(pal["dark"], lead, True, {"halo": .07, "halo2": .14, "region": .24, "glow": .42, "overlay": .05})
         colors = {k: [to_hex(*v), to_hex(*v).lower(), "black"] for k, v in sig.items()}
         for k, r in pal["refs_dark"].items():
             if k not in pr["accents"]:

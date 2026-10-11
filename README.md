@@ -8,7 +8,7 @@ every flavor, one colour is the light (the cursor, the definition you
 are reading, the current line, the heading you are in) and everything
 else sits in the room at equal weight, never louder than the lamp.
 
-Ten flavors, each in dark, light and high contrast: 44 themes. The
+Twelve flavors, each in dark, light and high contrast: 52 themes. The
 flagship is **Vesper**. Dark: deep navy at night, blue-lavender text at
 8:1 and every accent below it, blue functions, purple keywords, sky
 types, straw strings, coral constants, rose builtins, no green in the
@@ -16,6 +16,9 @@ code. Light: the same hues as inks on cool white paper.
 Its warm counterpart is **Sienne**: slate night under warm inks, beige
 text, teal functions, mauve keywords, gold types, olive strings, coral
 constants, apricot builtins.
+**Indigo** keeps one azure for the keywords and tints of sand for
+everything else; **Azur** sets the same azure among straw, lilac, peach,
+coral and aqua on blue slate.
 
 <img src="assets/screens/lumina-vesper-dark.svg" width="49%"> <img src="assets/screens/lumina-vesper-light.svg" width="49%">
 
@@ -72,6 +75,8 @@ Radix inks.
 |---|---|---|---|---|
 | **Vesper** | deep navy / cool white | blue | purple, sky, straw | coral, rose |
 | **Sienne** | slate night / slate paper | teal | mauve, gold, olive | coral, apricot |
+| **Indigo** | indigo night / lavender paper | azure | sand tints only | cream |
+| **Azur** | blue slate / cool paper | azure | straw, lilac, peach | coral, aqua |
 | **Dawn** | warm sepia | amber | terracotta, teal, lime | rose |
 | **Oxblood** | dark wine | rose | violet, amber, emerald | orange |
 | **Tide** | deep ocean | sky | teal, indigo, emerald | amber |
@@ -130,11 +135,11 @@ Prisma adds black-and-white twins: `lumina-prisma-dark-ink`,
 
 | Target | Output |
 |---|---|
-| **Emacs** (vanilla `deftheme`)  | `emacs/themes/*.el` (44), close to 3 000 faces each |
-| **Neovim** (Lua colorscheme)    | `nvim/colors/*.lua` (44), over 1 600 groups each, plus `nvim/lua/lualine/themes/*.lua` |
-| **VS Code** (extension)         | `vscode/themes/*.json` (44): 565 workbench colours, 80 token scopes, 47 semantic tokens |
-| **WezTerm** (color scheme)      | `wezterm/*.toml` (44): ANSI, indexed, tab bar states, copy and quick-select modes |
-| **base24** (tinted-theming)     | `base24/*.yaml` (44) |
+| **Emacs** (vanilla `deftheme`)  | `emacs/themes/*.el` (52), close to 3 000 faces each |
+| **Neovim** (Lua colorscheme)    | `nvim/colors/*.lua` (52), over 1 600 groups each, plus `nvim/lua/lualine/themes/*.lua` |
+| **VS Code** (extension)         | `vscode/themes/*.json` (52): 565 workbench colours, 80 token scopes, 47 semantic tokens |
+| **WezTerm** (color scheme)      | `wezterm/*.toml` (52): ANSI, indexed, tab bar states, copy and quick-select modes |
+| **base24** (tinted-theming)     | `base24/*.yaml` (52) |
 
 The Emacs files require no external dependency and load on a bare
 `emacs -Q` in about ten milliseconds. Each one styles close to 3 000
@@ -311,8 +316,8 @@ per flavor and emits one file per target per (flavor, mode).
 A flavor is one `compose(...)` call in `generators/v2_palettes.py`:
 ground, lamp slot, role map, optional hue overrides. It propagates to
 all five targets on the next `make build`; a face edit in
-`generators/faces_src.py` propagates to the 44 Emacs themes, one in
-`generators/nvim_src.py` to the 44 Neovim colorschemes.
+`generators/faces_src.py` propagates to the 52 Emacs themes, one in
+`generators/nvim_src.py` to the 52 Neovim colorschemes.
 
 ## Develop
 
