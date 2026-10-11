@@ -10,6 +10,7 @@ extract:
 
 check:
 	python3 generators/lumina_gen.py check
+	python3 tools/explore/audit.py
 
 verify: build check
 	@d=0; n=0; for f in emacs/themes/lumina-*-theme.el; do \
