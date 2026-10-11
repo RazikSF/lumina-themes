@@ -308,7 +308,7 @@ FLAVORS = {
                         hues={"magenta": ("fuchsia", "plum"), "red": ("rose", "red")},
                         commentary={"dark": "Lumina Amethyst, dark variant.\nInside a split amethyst geode; one shard of citrine catching the light, orchid keywords, ice-blue types, soft text.",
                                     "light": "Lumina Amethyst, light variant.\nLilac paper under the same citrine light; plum, sky and jade inks, soft text."}),
-    "obsidian": dict(ground=(89.9, 0.0, .003, 0.178, .99), lamp="red",
+    "obsidian": dict(ground=(89.9, 0.0, .003, 0.213, .99), lamp="red",
                         roles=dict(functions="red", keywords="teal", type="cyan", strings="green", constants="yellow", builtin="violet", methods="blue"),
                         hues={"red": ("red", "tomato")},
                         commentary={"dark": "Lumina Obsidian, dark variant.\nVolcanic glass, near-black, split by one seam of molten lava; glacier teal keywords, sky types, soft text.",
