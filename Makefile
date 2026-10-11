@@ -2,6 +2,7 @@
 
 build:
 	python3 generators/faces_src.py
+	python3 generators/nvim_src.py
 	python3 generators/lumina_gen.py build
 
 extract:

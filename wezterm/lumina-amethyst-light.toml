@@ -10,17 +10,44 @@ selection_bg = "#D4CFBE"
 selection_fg = "#342C3E"
 scrollbar_thumb = "#B6ACC3"
 split = "#D7CDE4"
+compose_cursor = "#7A6E00"
+visual_bell = "#C2BD9D"
+copy_mode_active_highlight_bg = { Color = "#7A6E00" }
+copy_mode_active_highlight_fg = { Color = "#F6F3FB" }
+copy_mode_inactive_highlight_bg = { Color = "#E0DBD3" }
+copy_mode_inactive_highlight_fg = { Color = "#342C3E" }
+quick_select_label_bg = { Color = "#A55115" }
+quick_select_label_fg = { Color = "#F6F3FB" }
+quick_select_match_bg = { Color = "#E0DBD3" }
+quick_select_match_fg = { Color = "#342C3E" }
 ansi = ["#F3E9FF", "#B32D37", "#007D50", "#7A6E00", "#3357B1", "#A42C71", "#00728D", "#4C4357"]
 brights = ["#8B8197", "#A55115", "#087970", "#7A6E00", "#24418D", "#6D41A9", "#00728D", "#342C3E"]
 
+[colors.indexed]
+16 = "#A55115"
+17 = "#087970"
+18 = "#6D41A9"
+19 = "#24418D"
+
 [colors.tab_bar]
 background = "#F0E5FD"
+inactive_tab_edge = "#E7DDF5"
 [colors.tab_bar.active_tab]
 bg_color = "#F6F3FB"
 fg_color = "#342C3E"
+intensity = "Bold"
 [colors.tab_bar.inactive_tab]
 bg_color = "#F0E5FD"
 fg_color = "#685F73"
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "#E9E5E3"
+fg_color = "#342C3E"
+[colors.tab_bar.new_tab]
+bg_color = "#F0E5FD"
+fg_color = "#8B8197"
+[colors.tab_bar.new_tab_hover]
+bg_color = "#E0DBD3"
+fg_color = "#7A6E00"
 
 [metadata]
 name = "lumina-amethyst-light"

@@ -120,10 +120,10 @@ Prisma adds black-and-white twins: `lumina-prisma-dark-ink`,
 
 | Target | Output |
 |---|---|
-| **Emacs** (vanilla `deftheme`)  | `emacs/themes/*.el` (40) |
-| **Neovim** (Lua colorscheme)    | `nvim/colors/*.lua` (40) |
-| **VS Code** (extension)         | `vscode/themes/*.json` (40) + `package.json` |
-| **WezTerm** (color scheme)      | `wezterm/*.toml` (40) |
+| **Emacs** (vanilla `deftheme`)  | `emacs/themes/*.el` (40), close to 3 000 faces each |
+| **Neovim** (Lua colorscheme)    | `nvim/colors/*.lua` (40), over 1 600 groups each, plus `nvim/lua/lualine/themes/*.lua` |
+| **VS Code** (extension)         | `vscode/themes/*.json` (40): 565 workbench colours, 80 token scopes, 47 semantic tokens |
+| **WezTerm** (color scheme)      | `wezterm/*.toml` (40): ANSI, indexed, tab bar states, copy and quick-select modes |
 | **base24** (tinted-theming)     | `base24/*.yaml` (40) |
 
 The Emacs files require no external dependency and load on a bare
@@ -223,6 +223,18 @@ Plug 'RazikSF/lumina-themes', { 'rtp': 'nvim' }
 **Manual**: copy `nvim/colors/*.lua` into your Neovim runtime's
 `colors/` directory, then `:colorscheme lumina-dawn-dark`.
 
+Every colorscheme sets `vim.g.terminal_color_0..15` and covers the
+core UI, tree-sitter captures, LSP semantic tokens, diagnostics and
+some 70 plugins (telescope, fzf-lua, snacks, nvim-tree, neo-tree, oil,
+nvim-cmp, blink.cmp, gitsigns, neogit, diffview, fugitive, flash, leap,
+noice, notify, which-key, trouble, lazy, mason, dap-ui, neotest,
+render-markdown, orgmode, mini.*, bufferline, barbar, lspsaga, navic and
+more). A matching lualine theme ships for each flavor:
+
+```lua
+require("lualine").setup({ options = { theme = "lumina-dawn-dark" } })
+```
+
 ### VS Code
 
 **Marketplace**:
@@ -234,7 +246,7 @@ Then `Cmd/Ctrl-K Cmd/Ctrl-T` and pick a Lumina flavor.
 **Manual `.vsix`**:
 ```sh
 cd vscode && npx @vscode/vsce package
-code --install-extension lumina-themes-1.0.0.vsix
+code --install-extension lumina-themes-2.1.0.vsix
 ```
 
 ### WezTerm
@@ -260,12 +272,13 @@ spec/lumina.json            generated palettes (one per flavor/variant)
 generators/faces_src.py     face design, grouped by package (edit this)
 spec/faces.json             generated face mapping (~3 000 faces)
 spec/variables.json         theme variables (hl-todo, vc-annotate, pdf-tools)
-spec/nvim_highlights.json   declarative Neovim highlight mapping
+generators/nvim_src.py      Neovim highlight design, grouped by plugin (edit this)
+spec/nvim_highlights.json   generated Neovim highlight mapping
 spec/vscode.json            declarative VS Code workbench + tokens
 generators/lumina_gen.py    spec -> all targets; embeds per-flavor schemas
 emacs/themes/*.el           generated; pure vanilla deftheme
 emacs/lumina-themes.el      Emacs package loader
-nvim/colors/*.lua           generated
+nvim/colors/*.lua           generated, with nvim/lua/lualine/themes/*.lua
 vscode/themes/*.json        generated
 vscode/package.json         generated; bundles all flavors
 wezterm/*.toml              generated
@@ -286,7 +299,8 @@ per flavor and emits one file per target per (flavor, mode).
 
 A color edit in `generators/v2_palettes.py` propagates to all five
 targets on the next `make build`; a face edit in
-`generators/faces_src.py` propagates to the 40 Emacs themes.
+`generators/faces_src.py` propagates to the 40 Emacs themes, one in
+`generators/nvim_src.py` to the 40 Neovim colorschemes.
 
 ## Develop
 

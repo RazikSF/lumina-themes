@@ -10,17 +10,44 @@ selection_bg = "#BBCDE0"
 selection_fg = "#31363D"
 scrollbar_thumb = "#ACB1BA"
 split = "#CBD0D7"
+compose_cursor = "#2A669F"
+visual_bell = "#A0B9D4"
+copy_mode_active_highlight_bg = { Color = "#2A669F" }
+copy_mode_active_highlight_fg = { Color = "#EFF2F6" }
+copy_mode_inactive_highlight_bg = { Color = "#CDDAE8" }
+copy_mode_inactive_highlight_fg = { Color = "#31363D" }
+quick_select_label_bg = { Color = "#925E33" }
+quick_select_label_fg = { Color = "#EFF2F6" }
+quick_select_match_bg = { Color = "#CDDAE8" }
+quick_select_match_fg = { Color = "#31363D" }
 ansi = ["#E8EBF0", "#984646", "#447254", "#7B672E", "#2A669F", "#825172", "#3B6E7E", "#424850"]
 brights = ["#81868F", "#925E33", "#387171", "#7B672E", "#194F81", "#5F5E8A", "#3B6E7E", "#31363D"]
 
+[colors.indexed]
+16 = "#925E33"
+17 = "#387171"
+18 = "#5F5E8A"
+19 = "#194F81"
+
 [colors.tab_bar]
 background = "#E5E8ED"
+inactive_tab_edge = "#DCE0E6"
 [colors.tab_bar.active_tab]
 bg_color = "#EFF2F6"
 fg_color = "#31363D"
+intensity = "Bold"
 [colors.tab_bar.inactive_tab]
 bg_color = "#E5E8ED"
 fg_color = "#5E646D"
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "#DBE4ED"
+fg_color = "#31363D"
+[colors.tab_bar.new_tab]
+bg_color = "#E5E8ED"
+fg_color = "#81868F"
+[colors.tab_bar.new_tab_hover]
+bg_color = "#CDDAE8"
+fg_color = "#2A669F"
 
 [metadata]
 name = "lumina-slate-light"

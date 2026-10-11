@@ -484,6 +484,7 @@ def build_wezterm(spec: dict):
         for d in modes.values():
             c = d["colors"]
             name = d["theme"]
+            lead = resolve_ref("schema.lead", c, SCHEMAS[flavor])
             ansi = [C(c, k) for k in
                     ("base1", "red", "green", "yellow", "blue",
                      "magenta", "cyan", "base7")]
@@ -502,17 +503,44 @@ selection_bg = "{C(c,'selection')}"
 selection_fg = "{C(c,'fg')}"
 scrollbar_thumb = "{C(c,'base4')}"
 split = "{C(c,'base3')}"
+compose_cursor = "{lead}"
+visual_bell = "{C(c,'glow')}"
+copy_mode_active_highlight_bg = {{ Color = "{lead}" }}
+copy_mode_active_highlight_fg = {{ Color = "{C(c,'bg')}" }}
+copy_mode_inactive_highlight_bg = {{ Color = "{C(c,'halo2')}" }}
+copy_mode_inactive_highlight_fg = {{ Color = "{C(c,'fg')}" }}
+quick_select_label_bg = {{ Color = "{C(c,'orange')}" }}
+quick_select_label_fg = {{ Color = "{C(c,'bg')}" }}
+quick_select_match_bg = {{ Color = "{C(c,'halo2')}" }}
+quick_select_match_fg = {{ Color = "{C(c,'fg')}" }}
 ansi = [{", ".join(f'"{x}"' for x in ansi)}]
 brights = [{", ".join(f'"{x}"' for x in brights)}]
 
+[colors.indexed]
+16 = "{C(c,'orange')}"
+17 = "{C(c,'teal')}"
+18 = "{C(c,'violet')}"
+19 = "{C(c,'dark-blue')}"
+
 [colors.tab_bar]
 background = "{C(c,'bg-alt')}"
+inactive_tab_edge = "{C(c,'base2')}"
 [colors.tab_bar.active_tab]
 bg_color = "{C(c,'bg')}"
 fg_color = "{C(c,'fg')}"
+intensity = "Bold"
 [colors.tab_bar.inactive_tab]
 bg_color = "{C(c,'bg-alt')}"
 fg_color = "{C(c,'base6')}"
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "{C(c,'halo')}"
+fg_color = "{C(c,'fg')}"
+[colors.tab_bar.new_tab]
+bg_color = "{C(c,'bg-alt')}"
+fg_color = "{C(c,'base5')}"
+[colors.tab_bar.new_tab_hover]
+bg_color = "{C(c,'halo2')}"
+fg_color = "{lead}"
 
 [metadata]
 name = "{name}"
@@ -612,7 +640,7 @@ def build_vscode(spec: dict):
         "description":
             "A curated palette-first theme family — one light governs each "
             "field. Nine flavors in dark, light and high contrast.",
-        "version": "1.0.0",
+        "version": "2.1.0",
         "publisher": "RazikSF",
         "license": "MIT",
         "engines": {"vscode": "^1.74.0"},
@@ -649,7 +677,7 @@ def _nv_line(name: str, hspec: dict, colors: dict, schema: dict) -> str:
         parts.append(f"bg = '{resolve_ref(hspec['bg'], colors, schema)}'")
     if "sp" in hspec:
         parts.append(f"sp = '{resolve_ref(hspec['sp'], colors, schema)}'")
-    for k in ("bold", "italic", "underline", "undercurl"):
+    for k in ("bold", "italic", "underline", "undercurl", "strikethrough"):
         if hspec.get(k):
             parts.append(f"{k} = true")
     return f"set(0, '{name}', {{ {', '.join(parts)} }})"
@@ -680,9 +708,33 @@ def build_nvim(spec: dict):
             ]
             lines += [_nv_line(name, hspec, c, sch)
                       for name, hspec in hl_map.items()]
+            term = [C(c, k) for k in ("base0", "red", "green", "yellow", "blue", "magenta", "cyan", "base8",
+                                      "base5", "red", "green", "yellow", "blue", "magenta", "cyan", "fg")]
+            lines += [""] + [f"vim.g.terminal_color_{i} = '{col}'" for i, col in enumerate(term)]
             (outdir / f"{theme}.lua").write_text("\n".join(lines) + "\n")
+            _nv_lualine(theme, flavor, mode, c, sch)
             n += 1
-    print(f"nvim    -> {n} files in nvim/colors/")
+    print(f"nvim    -> {n} files in nvim/colors/ + lualine themes in nvim/lua/lualine/themes/")
+
+
+def _nv_lualine(theme, flavor, mode, c, sch):
+    """Emit nvim/lua/lualine/themes/<theme>.lua: lamp for normal, teal insert,
+    violet visual, red replace, orange command; b/c sections on the chrome."""
+    lead = resolve_ref("schema.lead", c, sch)
+    bg, bg_alt, fg_alt, base1, base5 = C(c, "bg"), C(c, "bg-alt"), C(c, "fg-alt"), C(c, "base1"), C(c, "base5")
+    modes = {"normal": lead, "insert": C(c, "teal"), "visual": C(c, "violet"), "replace": C(c, "red"),
+             "command": C(c, "orange"), "terminal": C(c, "green")}
+    body = []
+    for m, col in modes.items():
+        body.append(f"  {m} = {{ a = {{ fg = '{bg}', bg = '{col}', gui = 'bold' }}, "
+                    f"b = {{ fg = '{fg_alt}', bg = '{base1}' }}, c = {{ fg = '{fg_alt}', bg = '{bg_alt}' }} }},")
+    body.append(f"  inactive = {{ a = {{ fg = '{base5}', bg = '{bg_alt}' }}, "
+                f"b = {{ fg = '{base5}', bg = '{bg_alt}' }}, c = {{ fg = '{base5}', bg = '{bg}' }} }},")
+    out = ROOT / "nvim" / "lua" / "lualine" / "themes"
+    out.mkdir(parents=True, exist_ok=True)
+    (out / f"{theme}.lua").write_text(
+        f"-- {theme} -- Lumina lualine theme ({flavor}, {mode}). Generated; do not edit.\n"
+        "return {\n" + "\n".join(body) + "\n}\n")
 
 
 ACCENTS = ["red", "orange", "yellow", "green", "teal",

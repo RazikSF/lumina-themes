@@ -9,20 +9,20 @@
     "editor.background": "bg",
     "editor.foreground": "fg",
     "editorCursor.foreground": "schema.lead",
-    "editor.lineHighlightBackground": "base1",
+    "editor.lineHighlightBackground": "halo",
     "editor.selectionBackground": "region",
     "editor.inactiveSelectionBackground": "base2",
-    "editor.findMatchBackground": "yellow@55",
-    "editor.findMatchHighlightBackground": "yellow@33",
+    "editor.findMatchBackground": "schema.lead@66",
+    "editor.findMatchHighlightBackground": "schema.lead@33",
     "editor.wordHighlightBackground": "base2",
     "editor.wordHighlightStrongBackground": "base3",
-    "editor.hoverHighlightBackground": "base2",
+    "editor.hoverHighlightBackground": "halo2",
     "editorLineNumber.foreground": "base4",
     "editorLineNumber.activeForeground": "schema.lead",
     "editorIndentGuide.background1": "base2",
     "editorIndentGuide.activeBackground1": "base4",
-    "editorBracketMatch.background": "base3",
-    "editorBracketMatch.border": "schema.lead",
+    "editorBracketMatch.background": "halo2",
+    "editorBracketMatch.border": "halo2",
     "editorWhitespace.foreground": "base3",
     "editorRuler.foreground": "base3",
     "activityBar.background": "bg-alt",
@@ -35,7 +35,7 @@
     "sideBar.foreground": "fg-alt",
     "sideBar.border": "bg-alt",
     "sideBarTitle.foreground": "fg",
-    "sideBarSectionHeader.background": "base1",
+    "sideBarSectionHeader.background": "bg-alt",
     "sideBarSectionHeader.foreground": "fg-alt",
     "statusBar.background": "schema.modeline_bg",
     "statusBar.foreground": "fg-alt",
@@ -43,7 +43,7 @@
     "statusBar.debuggingBackground": "orange",
     "statusBar.debuggingForeground": "bg",
     "statusBar.noFolderBackground": "schema.modeline_bg",
-    "statusBarItem.hoverBackground": "base2",
+    "statusBarItem.hoverBackground": "halo2",
     "statusBarItem.remoteBackground": "schema.lead",
     "statusBarItem.remoteForeground": "bg",
     "tab.activeBackground": "bg",
@@ -62,22 +62,22 @@
     "panelTitle.activeForeground": "schema.lead",
     "panelTitle.activeBorder": "schema.lead",
     "panelTitle.inactiveForeground": "base5",
-    "input.background": "base1",
+    "input.background": "surface",
     "input.foreground": "fg",
     "input.border": "base3",
     "input.placeholderForeground": "base5",
     "inputOption.activeBackground": "base3",
     "inputOption.activeBorder": "schema.lead",
-    "dropdown.background": "base1",
+    "dropdown.background": "surface",
     "dropdown.foreground": "fg",
     "dropdown.border": "base3",
-    "list.activeSelectionBackground": "base2",
+    "list.activeSelectionBackground": "halo2",
     "list.activeSelectionForeground": "schema.lead",
     "list.inactiveSelectionBackground": "base1",
     "list.inactiveSelectionForeground": "fg",
-    "list.hoverBackground": "base1",
+    "list.hoverBackground": "halo",
     "list.hoverForeground": "fg",
-    "list.focusBackground": "base2",
+    "list.focusBackground": "halo2",
     "list.focusForeground": "schema.lead",
     "list.highlightForeground": "schema.lead",
     "scrollbar.shadow": "base0",
@@ -100,11 +100,11 @@
     "gitDecoration.ignoredResourceForeground": "base5",
     "gitDecoration.conflictingResourceForeground": "orange",
     "peekView.border": "schema.lead",
-    "peekViewEditor.background": "base0",
-    "peekViewResult.background": "base1",
+    "peekViewEditor.background": "surface",
+    "peekViewResult.background": "overlay",
     "peekViewTitle.background": "base1",
     "peekViewTitleLabel.foreground": "schema.lead",
-    "notifications.background": "bg-alt",
+    "notifications.background": "overlay",
     "notifications.foreground": "fg",
     "notifications.border": "base3",
     "terminal.background": "bg",
@@ -129,8 +129,8 @@
     "terminal.ansiBrightWhite": "base8",
     "editor.selectionHighlightBackground": "base2",
     "editor.findRangeHighlightBackground": "base2",
-    "editor.lineHighlightBorder": "base1",
-    "editor.rangeHighlightBackground": "base1",
+    "editor.lineHighlightBorder": "halo",
+    "editor.rangeHighlightBackground": "halo",
     "editor.symbolHighlightBackground": "base2",
     "editorBracketHighlight.foreground1": "schema.rainbow[0]",
     "editorBracketHighlight.foreground2": "schema.rainbow[1]",
@@ -166,23 +166,23 @@
     "editorCodeLens.foreground": "base5",
     "editorLightBulb.foreground": "yellow",
     "editorLightBulbAutoFix.foreground": "green",
-    "editorWidget.background": "bg-alt",
+    "editorWidget.background": "overlay",
     "editorWidget.border": "base3",
     "editorWidget.foreground": "fg",
-    "editorSuggestWidget.background": "bg-alt",
+    "editorSuggestWidget.background": "overlay",
     "editorSuggestWidget.border": "base3",
     "editorSuggestWidget.foreground": "fg",
     "editorSuggestWidget.highlightForeground": "schema.lead",
-    "editorSuggestWidget.selectedBackground": "base2",
-    "editorHoverWidget.background": "bg-alt",
+    "editorSuggestWidget.selectedBackground": "halo2",
+    "editorHoverWidget.background": "overlay",
     "editorHoverWidget.border": "base3",
     "editorHoverWidget.foreground": "fg",
     "editorMarkerNavigation.background": "bg-alt",
     "editorMarkerNavigationError.background": "red",
     "editorMarkerNavigationWarning.background": "orange",
     "editorMarkerNavigationInfo.background": "blue",
-    "editorInlayHint.foreground": "base6",
-    "editorInlayHint.background": "base1",
+    "editorInlayHint.foreground": "base5",
+    "editorInlayHint.background": "surface",
     "editorInlayHint.typeForeground": "schema.property",
     "editorInlayHint.parameterForeground": "violet",
     "diffEditor.diagonalFill": "base2",
@@ -195,14 +195,14 @@
     "activityBar.activeFocusBorder": "schema.lead",
     "statusBar.noFolderForeground": "fg-alt",
     "statusBarItem.activeBackground": "base2",
-    "statusBarItem.prominentBackground": "schema.lead",
+    "statusBarItem.prominentBackground": "halo2",
     "statusBarItem.prominentForeground": "bg",
     "statusBarItem.errorBackground": "red",
     "statusBarItem.errorForeground": "bg",
     "statusBarItem.warningBackground": "orange",
     "statusBarItem.warningForeground": "bg",
     "tab.unfocusedHoverBackground": "base1",
-    "tab.activeBorder": "schema.lead",
+    "tab.activeBorder": "bg",
     "tab.unfocusedActiveBorder": "base3",
     "tab.unfocusedActiveBorderTop": "base3",
     "tab.inactiveModifiedBorder": "yellow",
@@ -226,10 +226,10 @@
     "notificationsErrorIcon.foreground": "red",
     "notificationsWarningIcon.foreground": "orange",
     "notificationsInfoIcon.foreground": "blue",
-    "quickInput.background": "bg-alt",
+    "quickInput.background": "overlay",
     "quickInput.foreground": "fg",
-    "quickInputList.focusBackground": "base2",
-    "quickInputList.focusForeground": "schema.lead",
+    "quickInputList.focusBackground": "halo2",
+    "quickInputList.focusForeground": "fg",
     "quickInputTitle.background": "bg-alt",
     "pickerGroup.border": "base3",
     "pickerGroup.foreground": "schema.lead",
@@ -237,12 +237,12 @@
     "breadcrumb.background": "bg",
     "breadcrumb.focusForeground": "schema.lead",
     "breadcrumb.activeSelectionForeground": "schema.lead",
-    "breadcrumbPicker.background": "bg-alt",
+    "breadcrumbPicker.background": "overlay",
     "peekViewEditorGutter.background": "bg-alt",
     "peekViewResult.fileForeground": "schema.lead",
     "peekViewResult.lineForeground": "fg",
     "peekViewResult.matchHighlightBackground": "schema.lead@40",
-    "peekViewResult.selectionBackground": "base2",
+    "peekViewResult.selectionBackground": "halo2",
     "peekViewResult.selectionForeground": "schema.lead",
     "peekViewTitleDescription.foreground": "fg-alt",
     "peekViewEditor.matchHighlightBackground": "schema.lead@40",
@@ -319,19 +319,253 @@
     "editor.snippetFinalTabstopHighlightBorder": "schema.lead",
     "selection.background": "region",
     "disabledForeground": "base5",
-    "widget.shadow": "base0",
+    "widget.shadow": "base0@66",
     "menubar.selectionBackground": "base2",
     "menubar.selectionForeground": "schema.lead",
-    "menu.background": "bg-alt",
+    "menu.background": "overlay",
     "menu.foreground": "fg",
-    "menu.selectionBackground": "base2",
+    "menu.selectionBackground": "halo2",
     "menu.selectionForeground": "schema.lead",
     "menu.separatorBackground": "base3",
     "menu.border": "base3",
     "keybindingLabel.background": "base2",
     "keybindingLabel.foreground": "fg",
     "keybindingLabel.border": "base3",
-    "keybindingLabel.bottomBorder": "base3"
+    "keybindingLabel.bottomBorder": "base3",
+    "chat.avatarBackground": "overlay",
+    "chat.checkpointSeparator": "base3",
+    "chat.editedFileForeground": "orange",
+    "chat.inputWorkingBorderColor1": "schema.lead",
+    "chat.inputWorkingBorderColor2": "teal",
+    "chat.inputWorkingBorderColor3": "violet",
+    "chat.linesAddedForeground": "green",
+    "chat.linesRemovedForeground": "red",
+    "chat.requestBackground": "surface",
+    "chat.requestBorder": "base3",
+    "chat.requestBubbleBackground": "surface",
+    "chat.requestBubbleHoverBackground": "halo2",
+    "chat.requestCodeBorder": "base3",
+    "chat.slashCommandBackground": "halo2",
+    "chat.slashCommandForeground": "schema.lead",
+    "chat.thinkingShimmer": "schema.lead@66",
+    "editor.compositionBorder": "schema.lead",
+    "editor.findMatchBorder": "schema.lead",
+    "editor.focusedStackFrameHighlightBackground": "yellow-bg",
+    "editor.foldBackground": "surface",
+    "editor.foldPlaceholderForeground": "base5",
+    "editor.inlineValuesForeground": "base5",
+    "editor.linkedEditingBackground": "halo2",
+    "editor.stackFrameHighlightBackground": "yellow-bg",
+    "testing.coveredBackground": "green-bg",
+    "testing.coveredBorder": "green",
+    "testing.coveredGutterBackground": "green",
+    "testing.coveredMinimapBackground": "green",
+    "testing.iconPassed": "green",
+    "testing.messagePeekBorder": "base3",
+    "testing.messagePeekHeaderBackground": "surface",
+    "testing.peekBorder": "base3",
+    "testing.peekHeaderBackground": "surface",
+    "testing.uncoveredBackground": "red-bg",
+    "testing.uncoveredBorder": "red",
+    "testing.uncoveredBranchBackground": "orange-bg",
+    "testing.uncoveredGutterBackground": "red",
+    "testing.uncoveredMinimapBackground": "red",
+    "notebook.cellBorderColor": "base3",
+    "notebook.cellEditorBackground": "surface",
+    "notebook.cellHoverBackground": "halo",
+    "notebook.cellStatusBarItemHoverBackground": "halo2",
+    "notebook.cellToolbarSeparator": "base3",
+    "notebook.editorBackground": "bg",
+    "notebook.inactiveSelectedCellBorder": "base4",
+    "notebook.selectedCellBackground": "halo",
+    "notebook.selectedCellBorder": "schema.lead",
+    "notebook.symbolHighlightBackground": "halo2",
+    "symbolIcon.classForeground": "type",
+    "symbolIcon.constructorForeground": "type",
+    "symbolIcon.enumeratorForeground": "type",
+    "symbolIcon.enumeratorMemberForeground": "constants",
+    "symbolIcon.eventForeground": "violet",
+    "symbolIcon.fieldForeground": "schema.property",
+    "symbolIcon.functionForeground": "functions",
+    "symbolIcon.interfaceForeground": "type",
+    "symbolIcon.methodForeground": "functions",
+    "symbolIcon.variableForeground": "variables",
+    "inputValidation.errorBackground": "red-bg",
+    "inputValidation.errorBorder": "red",
+    "inputValidation.errorForeground": "fg",
+    "inputValidation.infoBackground": "blue-bg",
+    "inputValidation.infoBorder": "blue",
+    "inputValidation.infoForeground": "fg",
+    "inputValidation.warningBackground": "orange-bg",
+    "inputValidation.warningBorder": "orange",
+    "inputValidation.warningForeground": "fg",
+    "debugIcon.breakpointCurrentStackframeForeground": "yellow",
+    "debugIcon.disconnectForeground": "red",
+    "debugIcon.restartForeground": "green",
+    "debugIcon.stepBackForeground": "blue",
+    "debugIcon.stepIntoForeground": "blue",
+    "debugIcon.stepOutForeground": "blue",
+    "debugIcon.stepOverForeground": "blue",
+    "editorGutter.addedSecondaryBackground": "green@80",
+    "editorGutter.commentGlyphForeground": "base5",
+    "editorGutter.commentRangeForeground": "base4",
+    "editorGutter.deletedSecondaryBackground": "red@80",
+    "editorGutter.itemBackground": "surface",
+    "editorGutter.itemGlyphForeground": "base6",
+    "editorGutter.modifiedSecondaryBackground": "yellow@80",
+    "extensionButton.background": "schema.lead",
+    "extensionButton.border": "schema.lead",
+    "extensionButton.foreground": "bg",
+    "extensionButton.hoverBackground": "schema.lead@CC",
+    "extensionButton.prominentBackground": "schema.lead",
+    "extensionButton.prominentForeground": "bg",
+    "extensionButton.prominentHoverBackground": "schema.lead@CC",
+    "inlineEdit.gutterIndicator.background": "surface",
+    "inlineEdit.gutterIndicator.primaryBackground": "halo2",
+    "inlineEdit.modifiedBorder": "green",
+    "inlineEdit.modifiedChangedLineBackground": "diff-added-bg",
+    "inlineEdit.originalBorder": "red",
+    "inlineEdit.tabWillAcceptModifiedBorder": "green",
+    "inlineEdit.tabWillAcceptOriginalBorder": "red",
+    "terminal.findMatchBackground": "schema.lead",
+    "terminal.findMatchBorder": "schema.lead",
+    "terminal.findMatchHighlightBackground": "halo2",
+    "terminal.inactiveSelectionBackground": "base2",
+    "terminal.initialHintForeground": "base5",
+    "editorOverviewRuler.border": "base2",
+    "editorOverviewRuler.commonContentForeground": "base4",
+    "editorOverviewRuler.currentContentForeground": "green",
+    "editorOverviewRuler.incomingContentForeground": "blue",
+    "editorOverviewRuler.inlineChatInserted": "green",
+    "editorOverviewRuler.inlineChatRemoved": "red",
+    "tab.dragAndDropBorder": "schema.lead",
+    "tab.unfocusedHoverForeground": "base6",
+    "tab.unfocusedInactiveForeground": "base5",
+    "tab.unfocusedInactiveModifiedBorder": "orange@66",
+    "titleBar.activeBackground": "bg-alt",
+    "titleBar.activeForeground": "fg-alt",
+    "titleBar.border": "bg-alt",
+    "titleBar.inactiveBackground": "bg-alt",
+    "titleBar.inactiveForeground": "base5",
+    "commandCenter.activeBackground": "surface",
+    "commandCenter.activeBorder": "base4",
+    "commandCenter.background": "surface",
+    "commandCenter.border": "base3",
+    "diffEditor.unchangedCodeBackground": "surface",
+    "diffEditor.unchangedRegionShadow": "base0",
+    "extensionIcon.preReleaseForeground": "orange",
+    "extensionIcon.privateForeground": "violet",
+    "extensionIcon.sponsorForeground": "magenta",
+    "extensionIcon.starForeground": "yellow",
+    "list.deemphasizedForeground": "base5",
+    "list.dropBetweenBackground": "schema.lead",
+    "list.focusHighlightForeground": "schema.lead",
+    "list.focusOutline": "schema.lead",
+    "merge.border": "base3",
+    "merge.commonHeaderBackground": "base2",
+    "merge.currentHeaderBackground": "diff-added-refine",
+    "merge.incomingHeaderBackground": "blue-bg",
+    "mergeEditor.change.word.background": "diff-changed-bg",
+    "mergeEditor.changeBase.background": "diff-changed-bg",
+    "mergeEditor.changeBase.word.background": "diff-changed-bg",
+    "mergeEditor.conflict.unhandledUnfocused.border": "orange@80",
+    "statusBarItem.compactHoverBackground": "halo2",
+    "statusBarItem.focusBorder": "schema.lead",
+    "statusBarItem.offlineHoverBackground": "red@66",
+    "statusBarItem.remoteHoverBackground": "teal@66",
+    "activityBarTop.activeBorder": "schema.lead",
+    "activityBarTop.foreground": "fg",
+    "activityBarTop.inactiveForeground": "base5",
+    "button.secondaryBackground": "base3",
+    "button.secondaryForeground": "fg",
+    "button.secondaryHoverBackground": "base4",
+    "chart.axis": "base4",
+    "chart.guide": "base3",
+    "chart.line": "base5",
+    "editorGroup.dropBackground": "halo2",
+    "editorGroup.dropIntoPromptBorder": "schema.lead",
+    "editorGroup.focusedEmptyBorder": "schema.lead",
+    "minimap.errorHighlight": "red",
+    "minimap.infoHighlight": "blue",
+    "minimap.warningHighlight": "orange",
+    "textPreformat.background": "surface",
+    "textPreformat.border": "base3",
+    "textPreformat.foreground": "orange",
+    "toolbar.activeBackground": "halo2",
+    "toolbar.hoverBackground": "halo",
+    "activityErrorBadge.background": "red",
+    "activityErrorBadge.foreground": "bg",
+    "activityWarningBadge.background": "orange",
+    "activityWarningBadge.foreground": "bg",
+    "agentsPanel.background": "bg-alt",
+    "agentsPanel.border": "base3",
+    "agents.background": "bg-alt",
+    "agentFeedbackInputWidget.border": "base3",
+    "agentSessionReadIndicator.foreground": "schema.lead",
+    "agentSessionSelectedBadge.border": "schema.lead",
+    "agentSessionSelectedUnfocusedBadge.border": "base4",
+    "agentStatusIndicator.background": "green",
+    "commentsView.resolvedIcon": "green",
+    "commentsView.unresolvedIcon": "orange",
+    "editorCommentsWidget.resolvedBorder": "green",
+    "editorCommentsWidget.unresolvedBorder": "orange",
+    "editorGhostText.foreground": "base5",
+    "editorUnnecessaryCode.opacity": "#000000aa",
+    "inputOption.activeForeground": "schema.lead",
+    "inputOption.hoverBackground": "halo2",
+    "interactive.activeCodeBorder": "schema.lead",
+    "interactive.inactiveCodeBorder": "base3",
+    "multiDiffEditor.border": "base3",
+    "multiDiffEditor.headerBackground": "surface",
+    "profileBadge.background": "base3",
+    "profileBadge.foreground": "fg",
+    "scmGraph.historyItemHoverAdditionsForeground": "green",
+    "scmGraph.historyItemHoverDeletionsForeground": "red",
+    "searchEditor.findMatchBackground": "halo2",
+    "searchEditor.findMatchBorder": "schema.lead",
+    "settings.focusedRowBackground": "halo",
+    "settings.rowHoverBackground": "surface",
+    "textBlockQuote.background": "surface",
+    "textBlockQuote.border": "base3",
+    "textLink.activeForeground": "schema.lead",
+    "textLink.foreground": "blue",
+    "tree.tableColumnsBorder": "base2",
+    "tree.tableOddRowsBackground": "surface",
+    "window.activeBorder": "base3",
+    "window.inactiveBorder": "base2",
+    "banner.background": "surface",
+    "debugExceptionWidget.background": "red-bg",
+    "debugTokenExpression.type": "type",
+    "debugToolBar.background": "overlay",
+    "dropdown.listBackground": "overlay",
+    "editorActiveLineNumber.foreground": "schema.lead",
+    "editorGroupHeader.border": "bg-alt",
+    "editorHoverWidget.statusBarBackground": "bg-alt",
+    "editorMarkerNavigationError.headerBackground": "red-bg",
+    "editorMarkerNavigationInfo.headerBackground": "blue-bg",
+    "editorMarkerNavigationWarning.headerBackground": "orange-bg",
+    "editorMinimap.inlineChatInserted": "green",
+    "editorStickyScroll.border": "base2",
+    "editorStickyScrollHover.background": "halo",
+    "mcpIcon.starForeground": "yellow",
+    "panelTitle.border": "base2",
+    "progressBar.background": "schema.lead",
+    "radio.inactiveBorder": "base3",
+    "search.resultsInfoForeground": "base6",
+    "sideBarTitle.border": "base2",
+    "simpleFindWidget.sashBorder": "base3",
+    "statusBar.focusBorder": "schema.lead",
+    "terminalCommandGuide.foreground": "schema.lead",
+    "terminalOverviewRuler.findMatchForeground": "schema.lead",
+    "terminalStickyScroll.border": "base2",
+    "terminalStickyScrollHover.background": "halo",
+    "textCodeBlock.background": "surface",
+    "textSeparator.foreground": "base3",
+    "walkthrough.stepTitle.foreground": "schema.lead",
+    "widget.border": "base3",
+    "editorSuggestWidget.focusHighlightForeground": "schema.lead",
+    "checkbox.background": "surface",
+    "checkbox.border": "base3"
   },
   "tokenColors": [
     {
@@ -371,8 +605,7 @@
       "scope": [
         "constant.language"
       ],
-      "fg": "constants",
-      "fontStyle": "bold"
+      "fg": "constants"
     },
     {
       "scope": [
@@ -380,8 +613,7 @@
         "keyword.control",
         "storage.type.function"
       ],
-      "fg": "keywords",
-      "fontStyle": "bold"
+      "fg": "keywords"
     },
     {
       "scope": [
@@ -426,8 +658,7 @@
         "variable.language",
         "variable.other.constant"
       ],
-      "fg": "constants",
-      "fontStyle": "bold"
+      "fg": "constants"
     },
     {
       "scope": [
@@ -465,14 +696,12 @@
       "scope": [
         "markup.heading"
       ],
-      "fg": "schema.lead",
-      "fontStyle": "bold"
+      "fg": "schema.lead"
     },
     {
       "scope": [
         "markup.bold"
-      ],
-      "fontStyle": "bold"
+      ]
     },
     {
       "scope": [
@@ -509,6 +738,378 @@
         "invalid"
       ],
       "fg": "red"
+    },
+    {
+      "scope": [
+        "comment.block.documentation",
+        "string.quoted.docstring"
+      ],
+      "fg": "doc-comments",
+      "fontStyle": "italic"
+    },
+    {
+      "scope": [
+        "storage",
+        "storage.type",
+        "storage.modifier"
+      ],
+      "fg": "keywords"
+    },
+    {
+      "scope": [
+        "keyword.control.import",
+        "keyword.control.export",
+        "keyword.other.import"
+      ],
+      "fg": "keywords"
+    },
+    {
+      "scope": "keyword.other.unit",
+      "fg": "numbers"
+    },
+    {
+      "scope": [
+        "entity.name.function.decorator",
+        "meta.decorator",
+        "punctuation.decorator"
+      ],
+      "fg": "schema.preprocessor"
+    },
+    {
+      "scope": [
+        "meta.function-call",
+        "meta.method-call"
+      ],
+      "fg": "schema.function_call"
+    },
+    {
+      "scope": [
+        "support.type.property-name",
+        "meta.object-literal.key",
+        "variable.other.property",
+        "variable.other.object.property"
+      ],
+      "fg": "schema.property"
+    },
+    {
+      "scope": [
+        "entity.name.namespace",
+        "entity.name.type.module",
+        "entity.name.type.namespace"
+      ],
+      "fg": "violet"
+    },
+    {
+      "scope": [
+        "entity.name.type.parameter",
+        "storage.type.generic"
+      ],
+      "fg": "violet"
+    },
+    {
+      "scope": [
+        "entity.name.label",
+        "constant.other.symbol",
+        "constant.other.key"
+      ],
+      "fg": "violet"
+    },
+    {
+      "scope": [
+        "constant.other.color",
+        "support.constant.color"
+      ],
+      "fg": "orange"
+    },
+    {
+      "scope": [
+        "support.constant.property-value",
+        "support.constant.font-name",
+        "support.constant.media-type"
+      ],
+      "fg": "constants"
+    },
+    {
+      "scope": [
+        "entity.other.attribute-name.class",
+        "entity.other.attribute-name.class.css"
+      ],
+      "fg": "teal"
+    },
+    {
+      "scope": [
+        "entity.other.attribute-name.id",
+        "entity.other.attribute-name.id.css"
+      ],
+      "fg": "orange"
+    },
+    {
+      "scope": [
+        "entity.other.attribute-name.pseudo-class",
+        "entity.other.attribute-name.pseudo-element"
+      ],
+      "fg": "cyan"
+    },
+    {
+      "scope": [
+        "support.type.property-name.css",
+        "meta.property-name.css"
+      ],
+      "fg": "variables"
+    },
+    {
+      "scope": [
+        "punctuation.definition.tag",
+        "punctuation.definition.tag.begin",
+        "punctuation.definition.tag.end"
+      ],
+      "fg": "base6"
+    },
+    {
+      "scope": [
+        "punctuation.definition.string",
+        "punctuation.definition.string.begin",
+        "punctuation.definition.string.end"
+      ],
+      "fg": "strings"
+    },
+    {
+      "scope": [
+        "punctuation.section.embedded",
+        "punctuation.definition.template-expression"
+      ],
+      "fg": "schema.escape"
+    },
+    {
+      "scope": [
+        "string.interpolated",
+        "string.template meta.embedded"
+      ],
+      "fg": "fg"
+    },
+    {
+      "scope": [
+        "string.other.link",
+        "markup.underline.link.markdown"
+      ],
+      "fg": "blue",
+      "fontStyle": "underline"
+    },
+    {
+      "scope": "markup.quote",
+      "fg": "fg-alt",
+      "fontStyle": "italic"
+    },
+    {
+      "scope": [
+        "markup.raw",
+        "markup.inline.raw",
+        "markup.fenced_code.block"
+      ],
+      "fg": "orange"
+    },
+    {
+      "scope": [
+        "markup.list",
+        "punctuation.definition.list.begin.markdown"
+      ],
+      "fg": "schema.lead"
+    },
+    {
+      "scope": [
+        "markup.heading.1",
+        "heading.1.markdown entity.name.section"
+      ],
+      "fg": "schema.outline[0]",
+      "fontStyle": "bold"
+    },
+    {
+      "scope": [
+        "markup.heading.2",
+        "heading.2.markdown entity.name.section"
+      ],
+      "fg": "schema.outline[1]",
+      "fontStyle": "bold"
+    },
+    {
+      "scope": [
+        "markup.heading.3",
+        "heading.3.markdown entity.name.section"
+      ],
+      "fg": "schema.outline[2]",
+      "fontStyle": "bold"
+    },
+    {
+      "scope": "markup.strikethrough",
+      "fg": "base5",
+      "fontStyle": "strikethrough"
+    },
+    {
+      "scope": [
+        "meta.diff.header",
+        "meta.diff.index",
+        "meta.diff.range"
+      ],
+      "fg": "base6"
+    },
+    {
+      "scope": "meta.diff.header.from-file",
+      "fg": "red"
+    },
+    {
+      "scope": "meta.diff.header.to-file",
+      "fg": "green"
+    },
+    {
+      "scope": "token.info-token",
+      "fg": "blue"
+    },
+    {
+      "scope": "token.warn-token",
+      "fg": "orange"
+    },
+    {
+      "scope": "token.error-token",
+      "fg": "red"
+    },
+    {
+      "scope": "token.debug-token",
+      "fg": "violet"
+    },
+    {
+      "scope": "invalid.deprecated",
+      "fg": "base5",
+      "fontStyle": "strikethrough"
+    },
+    {
+      "scope": [
+        "variable.other.enummember",
+        "constant.other.enum"
+      ],
+      "fg": "constants"
+    },
+    {
+      "scope": [
+        "support.variable",
+        "support.other.variable"
+      ],
+      "fg": "builtin"
+    },
+    {
+      "scope": [
+        "support.function.builtin",
+        "support.function.magic"
+      ],
+      "fg": "builtin"
+    },
+    {
+      "scope": [
+        "entity.name.type.class",
+        "entity.name.class",
+        "entity.name.type.struct",
+        "entity.name.type.enum",
+        "entity.name.type.interface"
+      ],
+      "fg": "type"
+    },
+    {
+      "scope": [
+        "meta.embedded.block",
+        "source.embedded"
+      ],
+      "fg": "fg"
+    },
+    {
+      "scope": [
+        "comment.line.todo",
+        "comment keyword.codetag"
+      ],
+      "fg": "orange",
+      "fontStyle": "bold"
+    },
+    {
+      "scope": [
+        "constant.language.boolean",
+        "constant.language.null",
+        "constant.language.nil",
+        "constant.language.undefined"
+      ],
+      "fg": "constants"
+    },
+    {
+      "scope": [
+        "keyword.operator.new",
+        "keyword.operator.expression",
+        "keyword.operator.logical.python",
+        "keyword.operator.wordlike"
+      ],
+      "fg": "keywords"
+    },
+    {
+      "scope": [
+        "entity.name.section",
+        "entity.name.section.group-title"
+      ],
+      "fg": "schema.lead",
+      "fontStyle": "bold"
+    },
+    {
+      "scope": "meta.structure.dictionary.key.python string",
+      "fg": "schema.property"
+    },
+    {
+      "scope": [
+        "source.yaml entity.name.tag",
+        "source.toml support.type.property-name",
+        "source.ini entity.name.section"
+      ],
+      "fg": "schema.property"
+    },
+    {
+      "scope": "source.json support.type.property-name",
+      "fg": "schema.property"
+    },
+    {
+      "scope": [
+        "source.shell variable.other",
+        "source.shell variable.parameter"
+      ],
+      "fg": "variables"
+    },
+    {
+      "scope": [
+        "source.shell keyword.operator.heredoc",
+        "string.unquoted.heredoc"
+      ],
+      "fg": "strings"
+    },
+    {
+      "scope": [
+        "entity.name.function.preprocessor",
+        "meta.preprocessor.macro"
+      ],
+      "fg": "schema.preprocessor"
+    },
+    {
+      "scope": [
+        "markup.inserted.diff",
+        "markup.inserted.git_gutter"
+      ],
+      "fg": "green"
+    },
+    {
+      "scope": [
+        "markup.deleted.diff",
+        "markup.deleted.git_gutter"
+      ],
+      "fg": "red"
+    },
+    {
+      "scope": [
+        "markup.changed.diff",
+        "markup.changed.git_gutter"
+      ],
+      "fg": "yellow"
     }
   ],
   "semanticTokenColors": {
@@ -625,6 +1226,46 @@
     },
     "*.readonly": {
       "italic": true
+    },
+    "event": {
+      "fg": "violet"
+    },
+    "modifier": {
+      "fg": "keywords"
+    },
+    "selfParameter": {
+      "fg": "magenta"
+    },
+    "clsParameter": {
+      "fg": "magenta"
+    },
+    "builtinConstant": {
+      "fg": "constants"
+    },
+    "magicFunction": {
+      "fg": "builtin"
+    },
+    "lifetime": {
+      "fg": "violet",
+      "fontStyle": "italic"
+    },
+    "derive": {
+      "fg": "schema.preprocessor"
+    },
+    "attribute": {
+      "fg": "schema.preprocessor"
+    },
+    "typeAlias": {
+      "fg": "type"
+    },
+    "*.declaration": {
+      "fontStyle": ""
+    },
+    "*.static": {
+      "fontStyle": "italic"
+    },
+    "*.deprecated": {
+      "fontStyle": "strikethrough"
     }
   }
 }
