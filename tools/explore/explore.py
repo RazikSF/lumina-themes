@@ -107,8 +107,8 @@ def emit(theme, colors, sch):
     (THEMES / f"{theme}-theme.el").write_text(text)
 
 
-def render(theme, light):
-    env = dict(os.environ, R_THEME=theme, R_OUT=str(OUT / f"{theme}.json"), R_PATH=str(THEMES), R_DIR=str(ROOT / "tools/preview"), R_PY=str(ROOT / "docs/sample.py"))
+def render(theme, light, sample=None):
+    env = dict(os.environ, R_THEME=theme, R_OUT=str(OUT / f"{theme}.json"), R_PATH=str(THEMES), R_DIR=str(ROOT / "tools/preview"), R_PY=str(sample or ROOT / "docs/sample.py"))
     env.pop("R_LIGHT", None)
     if light:
         env["R_LIGHT"] = "1"
@@ -116,11 +116,11 @@ def render(theme, light):
     return json.loads((OUT / f"{theme}.json").read_text())
 
 
-def card(theme, d):
+def card(theme, d, lines=slice(13, 32)):
     f = lambda n, k: (d["faces"].get(n) or {}).get(k)
     bg, fg = f("default", "bg"), f("default", "fg"); hl = f("hl-line", "bg") or bg; cur = f("cursor", "bg") or fg
     rows = []
-    for i, (h, lbg) in enumerate(d["py"][13:32], 1):
+    for i, (h, lbg) in enumerate(d["py"][lines], 1):
         is_cur = i == 15
         num = f'<span style="color:{f("line-number-current-line", "fg") if is_cur else f("line-number", "fg")}">{i:>2} </span>'
         if is_cur:

@@ -1,0 +1,53 @@
+# lumina-sienne-dark-contrast -- Lumina (sienne, dark)
+# Generated from spec/lumina.json. Do not edit by hand.
+[colors]
+foreground   = "#FAECDD"
+background   = "#080E1A"
+cursor_bg    = "#FAECDD"
+cursor_fg    = "#080E1A"
+cursor_border = "#FAECDD"
+selection_bg = "#1A323E"
+selection_fg = "#FAECDD"
+scrollbar_thumb = "#434D5F"
+split = "#222B3C"
+compose_cursor = "#5CBAC4"
+visual_bell = "#294F5B"
+copy_mode_active_highlight_bg = { Color = "#5CBAC4" }
+copy_mode_active_highlight_fg = { Color = "#080E1A" }
+copy_mode_inactive_highlight_bg = { Color = "#12222E" }
+copy_mode_inactive_highlight_fg = { Color = "#FAECDD" }
+quick_select_label_bg = { Color = "#FFAC52" }
+quick_select_label_fg = { Color = "#080E1A" }
+quick_select_match_bg = { Color = "#12222E" }
+quick_select_match_fg = { Color = "#FAECDD" }
+ansi = ["#0C1423", "#FF84A1", "#C0CD78", "#E2C06D", "#9DC9F7", "#E6ACEF", "#8DCEEE", "#BDC4D2"]
+brights = ["#707B8E", "#FFAC52", "#5CBAC4", "#E2C06D", "#557EA8", "#CEB6FC", "#8DCEEE", "#FAECDD"]
+
+[colors.indexed]
+16 = "#FFAC52"
+17 = "#5CBAC4"
+18 = "#CEB6FC"
+19 = "#557EA8"
+
+[colors.tab_bar]
+background = "#040914"
+inactive_tab_edge = "#151E2E"
+[colors.tab_bar.active_tab]
+bg_color = "#080E1A"
+fg_color = "#FAECDD"
+intensity = "Bold"
+[colors.tab_bar.inactive_tab]
+bg_color = "#040914"
+fg_color = "#939FB4"
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "#0D1824"
+fg_color = "#FAECDD"
+[colors.tab_bar.new_tab]
+bg_color = "#040914"
+fg_color = "#707B8E"
+[colors.tab_bar.new_tab_hover]
+bg_color = "#12222E"
+fg_color = "#5CBAC4"
+
+[metadata]
+name = "lumina-sienne-dark-contrast"

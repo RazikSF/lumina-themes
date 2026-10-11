@@ -5,6 +5,6 @@ return {
   visual = { a = { fg = '#151A26', bg = '#A388D2', gui = 'bold' }, b = { fg = '#8991AB', bg = '#181F2E' }, c = { fg = '#8991AB', bg = '#0F1520' } },
   replace = { a = { fg = '#151A26', bg = '#E44A65', gui = 'bold' }, b = { fg = '#8991AB', bg = '#181F2E' }, c = { fg = '#8991AB', bg = '#0F1520' } },
   command = { a = { fg = '#151A26', bg = '#F07B60', gui = 'bold' }, b = { fg = '#8991AB', bg = '#181F2E' }, c = { fg = '#8991AB', bg = '#0F1520' } },
-  terminal = { a = { fg = '#151A26', bg = '#91B265', gui = 'bold' }, b = { fg = '#8991AB', bg = '#181F2E' }, c = { fg = '#8991AB', bg = '#0F1520' } },
+  terminal = { a = { fg = '#151A26', bg = '#5EC6EC', gui = 'bold' }, b = { fg = '#8991AB', bg = '#181F2E' }, c = { fg = '#8991AB', bg = '#0F1520' } },
   inactive = { a = { fg = '#60697B', bg = '#0F1520' }, b = { fg = '#60697B', bg = '#0F1520' }, c = { fg = '#60697B', bg = '#151A26' } },
 }

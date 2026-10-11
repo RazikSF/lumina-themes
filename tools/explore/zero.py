@@ -104,7 +104,37 @@ SIENNE11 = {
     "sienne11-ardoise": sienne(G_ARDOISE, A_SARCELLE, "affectation 2, fond ardoise 0,24 (comme Rouge)", cm=262),
     "sienne11-brume": sienne(G_BRUME, A_SARCELLE, "affectation 2, fond gris-bleu 0,22 (comme uwu, Tomorrow Night)", cm=240),
 }
+# Round 12: assignment 2 (teal lamp) on the slate and mist grounds; the sand text (#D1B99F, C .045) reads yellowish on a cool ground,
+# so three quieter text tones: muted beige (C .025), warm grey (C .012), rosy beige (C .028, hue 45).
+TEXTES = {"beige": (.80, .025, 70), "gris": (.80, .012, 60), "rose": (.80, .028, 45)}
+def sienne12(ground, cm, tk):
+    pr = sienne(ground, A_SARCELLE, "", cm=cm)
+    L, C, h = TEXTES[tk]
+    pr["accents"] = {**pr["accents"], "fg": (L, C, h), "base8": (L, C, h), "fg-alt": (L - .10, C * .9, h)}
+    pr["label"] = f"fond {'ardoise' if ground is G_ARDOISE else 'gris-bleu'}, texte {dict(beige='beige discret', gris='gris chaud', rose='beige rosé')[tk]} (chroma {C:.3f})"
+    return pr
+SIENNE12 = {f"sienne12-{g}-{t}": sienne12(gr, cm, t) for g, gr, cm in (("ardoise", G_ARDOISE, 262), ("brume", G_BRUME, 240)) for t in TEXTES}
+# Vesper strings: on real NSI Python the olive green (.72, .11, 128) "does not fit"; four replacements in the free arcs of the wheel
+# (blue 258, purple 318, gold 88, coral 34, turquoise 172 are taken): bright lime, mint, pale sky, grey sage.
+VESPER = vp.FLAVORS["vesper"]
+def vesper_strings(name, green, label):
+    return dict(base="vesper", ground=VESPER["ground"], text=VESPER["text"], accents={**VESPER["extra"]["dark"], "green": green}, roles=VESPER["roles_dark"], label=label)
+STRINGS = {
+    "vesper-lime": vesper_strings("vesper-lime", (.82, .13, 118), "chaînes lime clair (comme Gruvbox, Tokyo Night)"),
+    "vesper-menthe": vesper_strings("vesper-menthe", (.78, .09, 155), "chaînes menthe"),
+    "vesper-ciel": vesper_strings("vesper-ciel", (.80, .08, 228), "chaînes ciel pâle"),
+    "vesper-sauge": vesper_strings("vesper-sauge", (.78, .05, 140), "chaînes sauge grise, discrètes"),
+}
 SHEETS = {
+    "strings": dict(refs=[], protos=STRINGS, themes=["lumina-vesper-dark"], out="strings.html",
+                    title="Vesper sombre : la couleur des chaînes, sur du code Python NSI",
+                    intro="Première carte : Vesper tel que figé (chaînes vert olive #91B265). Puis quatre remplacements, tout le reste identique. Installés sous lumina-vesper-lime, -menthe, -ciel, -sauge (suffixe -dark)."),
+    "final": dict(refs=[], protos={}, themes=["lumina-sienne-dark", "lumina-sienne-light", "lumina-vesper-dark", "lumina-vesper-light"], out="final.html",
+                  title="Sienne et Vesper tels que figés dans la spec",
+                  intro="Sienne sombre : fond ardoise 0,24, texte beige discret 8,8:1, fonctions sarcelle, mots-clés mauve, types or, chaînes olive, constantes corail, builtins abricot. Sienne clair : composé par la recette standard des clairs (provisoire, à valider). Vesper pour mémoire."),
+    "sienne12": dict(refs=["jazz"], protos=SIENNE12, themes=[], out="sienne12.html",
+                     title="Sienne : affectation 2 sur ardoise et gris-bleu, trois tons de texte plus discrets",
+                     intro="Le texte sable (#D1B99F) tirait sur le jaune ; ici trois tons plus neutres, toujours teintés : beige discret, gris chaud, beige rosé. Fonctions sarcelle, mots-clés mauve, types or, chaînes olive, constantes corail, builtins abricot. Installés sous lumina-sienne12-{ardoise,brume}-{beige,gris,rose}-dark."),
     "sienne": dict(refs=["jazz", "doom-rouge"], protos=SIENNE11, themes=[], out="sienne.html",
                    title="Sienne : mêmes six couleurs, quatre affectations, trois fonds",
                    intro="Les six couleurs de sienne10 (corail, mauve, or, olive, abricot, sarcelle) et le texte sable sont gardés. Quatre cartes changent l'affectation sur un fond neutre ; les deux dernières gardent l'affectation 2 sur un fond ardoise (Rouge) et un fond gris-bleu (uwu, Tomorrow Night). Installés sous lumina-sienne11-or, -neutre, -abricot, -mauve, -ardoise, -brume (suffixe -dark)."),
@@ -117,14 +147,16 @@ SHEETS = {
 }
 
 
-def render_doom(theme):
+def render_doom(theme, light=False, sample=None):
     import glob as _g
     hits = _g.glob(str(DOOM.parent / f"*/{theme}-theme.el")) + _g.glob(str(Path.home() / f".doom.d/themes/{theme}-theme.el"))
     d = Path(hits[0]).parent if hits else DOOM
-    env = dict(os.environ, R_THEME=theme, R_OUT=str(explore.OUT / f"{theme}.json"), R_PATH=f"{d}:{d.parent}:{DOOM}:{DOOM}/themes", R_DIR=str(ROOT / "tools/preview"), R_PY=str(ROOT / "docs/sample.py"))
+    env = dict(os.environ, R_THEME=theme, R_OUT=str(explore.OUT / f"{theme}.json"), R_PATH=f"{d}:{d.parent}:{DOOM}:{DOOM}/themes", R_DIR=str(ROOT / "tools/preview"), R_PY=str(sample or ROOT / "docs/sample.py"))
     if theme.startswith("doom-"):
         env["R_DOOM"] = "1"
     env.pop("R_LIGHT", None)
+    if light:
+        env["R_LIGHT"] = "1"
     subprocess.run(["emacs", "-Q", "--batch", "-l", str(ROOT / "tools/preview/render.el")], env=env, capture_output=True)
     return json.loads((explore.OUT / f"{theme}.json").read_text())
 
@@ -132,9 +164,10 @@ def render_doom(theme):
 def main(sheet="warm", install_dir=Path.home() / ".doom.d/themes"):
     import measure
     sh = SHEETS[sheet]
+    sample = ROOT / "docs" / sh.get("sample", "sample_nsi.py"); lines = sh.get("lines", slice(0, 34))
     faces = g._load_decl("faces.json"); variables = g._load_decl("variables.json"); cards = []
     for ref in sh["refs"]:
-        cards.append(explore.card(f"{ref} (référence)", render_doom(ref)))
+        cards.append(explore.card(f"{ref} (référence)", render_doom(ref, sample=sample), lines))
     for name, pr in sh["protos"].items():
         sch = {**g.schema_for(pr["base"], "dark"), "lead": pr["roles"]["functions"], "function_call": pr["roles"]["methods"], "property": pr["roles"]["builtin"]}
         roles = {k: v for k, v in pr["roles"].items() if k != "variables"}
@@ -157,9 +190,9 @@ def main(sheet="warm", install_dir=Path.home() / ".doom.d/themes"):
         (explore.THEMES / f"{theme}-theme.el").write_text(text); (install_dir / f"{theme}-theme.el").write_text(text)
         bg = colors["bg"][0]
         print(f"{theme}: bg {bg} fg {colors['fg'][0]} {contrast(colors['fg'][0], bg):.1f}:1 | " + " ".join(f"{r}={colors[colors[r]['ref']][0]}" for r in ["functions", "keywords", "type", "strings", "constants", "builtin", "variables"]))
-        cards.append(explore.card(f"{theme} : {pr['label']}", explore.render(theme, False)))
+        cards.append(explore.card(f"{theme} : {pr['label']}", explore.render(theme, False, sample), lines))
     for theme in sh["themes"]:
-        cards.append(explore.card(theme, measure.render(theme)))
+        cards.append(explore.card(theme, render_doom(theme, "light" in theme, sample), lines))
     page = ("""<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>""" + sh["title"] + """</title><style>
 body{margin:0;padding:20px 14px;background:#2a2a2a;color:#ddd;font:14px/1.4 -apple-system,system-ui,sans-serif} h1{font-weight:600;margin:0 0 4px} p{color:#aaa;margin:0 0 14px;max-width:90ch}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
