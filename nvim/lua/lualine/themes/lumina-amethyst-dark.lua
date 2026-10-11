@@ -1,6 +1,6 @@
 -- lumina-amethyst-dark -- Lumina lualine theme (amethyst, dark). Generated; do not edit.
 return {
-  normal = { a = { fg = '#1F141F', bg = '#FFD33A', gui = 'bold' }, b = { fg = '#998999', bg = '#261726' }, c = { fg = '#998999', bg = '#190E19' } },
+  normal = { a = { fg = '#1F141F', bg = '#FFD237', gui = 'bold' }, b = { fg = '#998999', bg = '#261726' }, c = { fg = '#998999', bg = '#190E19' } },
   insert = { a = { fg = '#1F141F', bg = '#54E9D3', gui = 'bold' }, b = { fg = '#998999', bg = '#261726' }, c = { fg = '#998999', bg = '#190E19' } },
   visual = { a = { fg = '#1F141F', bg = '#C4B4FF', gui = 'bold' }, b = { fg = '#998999', bg = '#261726' }, c = { fg = '#998999', bg = '#190E19' } },
   replace = { a = { fg = '#1F141F', bg = '#FF92A2', gui = 'bold' }, b = { fg = '#998999', bg = '#261726' }, c = { fg = '#998999', bg = '#190E19' } },

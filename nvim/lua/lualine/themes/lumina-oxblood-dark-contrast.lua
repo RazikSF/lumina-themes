@@ -1,6 +1,6 @@
 -- lumina-oxblood-dark-contrast -- Lumina lualine theme (oxblood, dark). Generated; do not edit.
 return {
-  normal = { a = { fg = '#130C0E', bg = '#F6C2FF', gui = 'bold' }, b = { fg = '#D9CDD0', bg = '#1A1113' }, c = { fg = '#D9CDD0', bg = '#0E0708' } },
+  normal = { a = { fg = '#130C0E', bg = '#F5BDFF', gui = 'bold' }, b = { fg = '#D9CDD0', bg = '#1A1113' }, c = { fg = '#D9CDD0', bg = '#0E0708' } },
   insert = { a = { fg = '#130C0E', bg = '#54E9D3', gui = 'bold' }, b = { fg = '#D9CDD0', bg = '#1A1113' }, c = { fg = '#D9CDD0', bg = '#0E0708' } },
   visual = { a = { fg = '#130C0E', bg = '#D1C1FF', gui = 'bold' }, b = { fg = '#D9CDD0', bg = '#1A1113' }, c = { fg = '#D9CDD0', bg = '#0E0708' } },
   replace = { a = { fg = '#130C0E', bg = '#FFA9B8', gui = 'bold' }, b = { fg = '#D9CDD0', bg = '#1A1113' }, c = { fg = '#D9CDD0', bg = '#0E0708' } },

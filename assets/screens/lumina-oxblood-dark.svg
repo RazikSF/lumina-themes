@@ -19,7 +19,7 @@
 <text x="14" y="197" fill="#504447"> 9</text>
 <text x="43.504999999999995" y="197" xml:space="preserve" fill="#BBB6B7"></text>
 <text x="14" y="218" fill="#504447">10</text>
-<text x="43.504999999999995" y="218" xml:space="preserve" fill="#BBB6B7"><tspan fill="#BBB6B7">    </tspan><tspan fill="#A6B5FF">def</tspan><tspan fill="#BBB6B7"> </tspan><tspan fill="#F6C2FF" font-weight="600">__post_init__</tspan><tspan fill="#BBB6B7">(</tspan><tspan fill="#A6B5FF">self</tspan><tspan fill="#BBB6B7">) </tspan><tspan fill="#928588">-&gt;</tspan><tspan fill="#BBB6B7"> </tspan><tspan fill="#54E9D3">None</tspan><tspan fill="#BBB6B7">:</tspan></text>
+<text x="43.504999999999995" y="218" xml:space="preserve" fill="#BBB6B7"><tspan fill="#BBB6B7">    </tspan><tspan fill="#A6B5FF">def</tspan><tspan fill="#BBB6B7"> </tspan><tspan fill="#F5BDFF" font-weight="600">__post_init__</tspan><tspan fill="#BBB6B7">(</tspan><tspan fill="#A6B5FF">self</tspan><tspan fill="#BBB6B7">) </tspan><tspan fill="#928588">-&gt;</tspan><tspan fill="#BBB6B7"> </tspan><tspan fill="#54E9D3">None</tspan><tspan fill="#BBB6B7">:</tspan></text>
 <text x="14" y="239" fill="#504447">11</text>
 <text x="43.504999999999995" y="239" xml:space="preserve" fill="#BBB6B7"><tspan fill="#BBB6B7">        </tspan><tspan fill="#A6B5FF">self</tspan><tspan fill="#BBB6B7">.</tspan><tspan fill="#BBB6B7">tokens</tspan><tspan fill="#BBB6B7"> </tspan><tspan fill="#928588">=</tspan><tspan fill="#BBB6B7"> </tspan><tspan fill="#78D4FF">float</tspan><tspan fill="#BBB6B7">(</tspan><tspan fill="#A6B5FF">self</tspan><tspan fill="#BBB6B7">.capacity)</tspan></text>
 <text x="14" y="260" fill="#504447">12</text>
@@ -27,10 +27,10 @@
 <text x="14" y="281" fill="#504447">13</text>
 <text x="43.504999999999995" y="281" xml:space="preserve" fill="#BBB6B7"></text>
 <text x="14" y="302" fill="#504447">14</text>
-<text x="43.504999999999995" y="302" xml:space="preserve" fill="#BBB6B7"><tspan fill="#BBB6B7">    </tspan><tspan fill="#A6B5FF">def</tspan><tspan fill="#BBB6B7"> </tspan><tspan fill="#F6C2FF" font-weight="600">try_consume</tspan><tspan fill="#BBB6B7">(</tspan><tspan fill="#A6B5FF">self</tspan><tspan fill="#BBB6B7">, n: </tspan><tspan fill="#78D4FF">float</tspan><tspan fill="#BBB6B7"> </tspan><tspan fill="#928588">=</tspan><tspan fill="#BBB6B7"> 1.0) </tspan><tspan fill="#928588">-&gt;</tspan><tspan fill="#BBB6B7"> </tspan><tspan fill="#78D4FF">bool</tspan><tspan fill="#BBB6B7">:</tspan></text>
-<rect x="0" y="308" width="760" height="21" fill="#2F242A"/>
-<text x="14" y="323" fill="#F6C2FF">15</text>
-<rect x="77.225" y="310" width="8.43" height="17" fill="#F6C2FF"/>
+<text x="43.504999999999995" y="302" xml:space="preserve" fill="#BBB6B7"><tspan fill="#BBB6B7">    </tspan><tspan fill="#A6B5FF">def</tspan><tspan fill="#BBB6B7"> </tspan><tspan fill="#F5BDFF" font-weight="600">try_consume</tspan><tspan fill="#BBB6B7">(</tspan><tspan fill="#A6B5FF">self</tspan><tspan fill="#BBB6B7">, n: </tspan><tspan fill="#78D4FF">float</tspan><tspan fill="#BBB6B7"> </tspan><tspan fill="#928588">=</tspan><tspan fill="#BBB6B7"> 1.0) </tspan><tspan fill="#928588">-&gt;</tspan><tspan fill="#BBB6B7"> </tspan><tspan fill="#78D4FF">bool</tspan><tspan fill="#BBB6B7">:</tspan></text>
+<rect x="0" y="308" width="760" height="21" fill="#2F232A"/>
+<text x="14" y="323" fill="#F5BDFF">15</text>
+<rect x="77.225" y="310" width="8.43" height="17" fill="#F5BDFF"/>
 <text x="43.504999999999995" y="323" xml:space="preserve" fill="#BBB6B7"><tspan fill="#BBB6B7">        </tspan><tspan fill="#9F9194" font-style="italic">&quot;&quot;&quot;Consume `n` tokens; return False if the bucket runs dry.&quot;&quot;&quot;</tspan></text>
 <text x="14" y="344" fill="#504447">16</text>
 <text x="43.504999999999995" y="344" xml:space="preserve" fill="#BBB6B7"><tspan fill="#BBB6B7">        </tspan><tspan fill="#A6B5FF">self</tspan><tspan fill="#BBB6B7">._refill()</tspan></text>
@@ -41,5 +41,5 @@
 <text x="14" y="407" fill="#504447">19</text>
 <text x="43.504999999999995" y="407" xml:space="preserve" fill="#BBB6B7"><tspan fill="#BBB6B7">        </tspan><tspan fill="#A6B5FF">self</tspan><tspan fill="#BBB6B7">.</tspan><tspan fill="#BBB6B7">tokens</tspan><tspan fill="#BBB6B7"> </tspan><tspan fill="#928588">-=</tspan><tspan fill="#BBB6B7"> n</tspan></text>
 <rect x="0" y="431" width="760" height="30" fill="#181012"/>
-<rect x="0" y="431" width="4" height="30" fill="#F6C2FF"/>
+<rect x="0" y="431" width="4" height="30" fill="#F5BDFF"/>
 <text x="18" y="451" fill="#978C8E" font-weight="600">lumina-oxblood-dark</text></svg>

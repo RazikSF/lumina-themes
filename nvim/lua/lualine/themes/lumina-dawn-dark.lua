@@ -1,6 +1,6 @@
 -- lumina-dawn-dark -- Lumina lualine theme (dawn, dark). Generated; do not edit.
 return {
-  normal = { a = { fg = '#1C1917', bg = '#FFD33A', gui = 'bold' }, b = { fg = '#928E8C', bg = '#211E1B' }, c = { fg = '#928E8C', bg = '#161312' } },
+  normal = { a = { fg = '#1C1917', bg = '#FFD237', gui = 'bold' }, b = { fg = '#928E8C', bg = '#211E1B' }, c = { fg = '#928E8C', bg = '#161312' } },
   insert = { a = { fg = '#1C1917', bg = '#54E9D3', gui = 'bold' }, b = { fg = '#928E8C', bg = '#211E1B' }, c = { fg = '#928E8C', bg = '#161312' } },
   visual = { a = { fg = '#1C1917', bg = '#C4B4FF', gui = 'bold' }, b = { fg = '#928E8C', bg = '#211E1B' }, c = { fg = '#928E8C', bg = '#161312' } },
   replace = { a = { fg = '#1C1917', bg = '#FF92A2', gui = 'bold' }, b = { fg = '#928E8C', bg = '#211E1B' }, c = { fg = '#928E8C', bg = '#161312' } },
