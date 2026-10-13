@@ -417,6 +417,31 @@ for _f in HARMONY:
         FLAVORS[_f]["commentary"] = _commentary(_f, FLAVORS[_f].get("commentary") or {})
 PALETTES = {k: compose(**v) for k, v in FLAVORS.items()}
 
+TEXT_TINT = {  # dark text: a very light grey with a reflection of the flavor, never white (hue, chroma)
+    "dawn": (70, .020), "tide": (250, .022), "canopy": (150, .020), "slate": (260, .015), "oxblood": (10, .020),
+    "nocturne": (268, .022), "amethyst": (326, .020), "prisma": (290, .020), "sirocco": (40, .020),
+    "celadon": (178, .020), "sumi": (80, .015), "pivoine": (350, .020), "nuancier": (273, .020),
+    "aquarelle": (273, .020), "jardin": (273, .020)}
+
+
+def tinted_text(bg, hue, chroma, target=9.0):
+    """Lightness of a tinted grey reaching `target` contrast on bg."""
+    lo, hi = .5, .99
+    for _ in range(40):
+        mid = (lo + hi) / 2
+        if contrast(to_hex(mid, chroma, hue), to_hex(*bg)) < target:
+            lo = mid
+        else:
+            hi = mid
+    return (hi, chroma, hue)
+
+
+for _f, (_h, _c) in TEXT_TINT.items():
+    _d = PALETTES[_f]["dark"]
+    _fg = tinted_text(_d["bg"], _h, _c)
+    _d["fg"] = _d["base8"] = _fg
+    _d["fg-alt"] = (_fg[0] - .10, _c, _h)
+
 
 if __name__ == "__main__":
     write(sys.argv[1:] or list(PALETTES))

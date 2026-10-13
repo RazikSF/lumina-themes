@@ -12,7 +12,8 @@ Nineteen flavors, each in dark, light and high contrast, plus Prisma's
 black-and-white twins: 80 themes. The reference is **Nuancier**, taken
 from a slide on web colours: slate night `#1D2130`, sky keywords
 `#77B8E7`, salmon functions `#EC907E`, gold types `#F7C054`, mint strings
-`#87C3AB`, lilac constants `#B5A4EA`, rose builtins `#E297BA`. Six inks,
+`#87C3AB`, lilac constants `#B5A4EA`, rose builtins `#E297BA`, on a deeper
+night `#171A26` with grey-blue text at 9:1 instead of the slide's white. Six inks,
 one per role, of one weight; every other flavor is composed to the same
 standard. **Aquarelle** and **Jardin** are its sisters: the same ground
 and inks, set differently (Aquarelle: gold functions, mint types, salmon
