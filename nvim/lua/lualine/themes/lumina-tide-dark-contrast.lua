@@ -1,6 +1,6 @@
 -- lumina-tide-dark-contrast -- Lumina lualine theme (tide, dark). Generated; do not edit.
 return {
-  normal = { a = { fg = '#070F1A', bg = '#3AC7FF', gui = 'bold' }, b = { fg = '#C7D2E2', bg = '#0A1422' }, c = { fg = '#C7D2E2', bg = '#040914' } },
+  normal = { a = { fg = '#070F1A', bg = '#7ED3FB', gui = 'bold' }, b = { fg = '#C7D2E2', bg = '#0A1422' }, c = { fg = '#C7D2E2', bg = '#040914' } },
   insert = { a = { fg = '#070F1A', bg = '#7DE3D1', gui = 'bold' }, b = { fg = '#C7D2E2', bg = '#0A1422' }, c = { fg = '#C7D2E2', bg = '#040914' } },
   visual = { a = { fg = '#070F1A', bg = '#D0C2FF', gui = 'bold' }, b = { fg = '#C7D2E2', bg = '#0A1422' }, c = { fg = '#C7D2E2', bg = '#040914' } },
   replace = { a = { fg = '#070F1A', bg = '#FFACB9', gui = 'bold' }, b = { fg = '#C7D2E2', bg = '#0A1422' }, c = { fg = '#C7D2E2', bg = '#040914' } },

@@ -1,7 +1,7 @@
 -- lumina-pivoine-light-contrast -- Lumina lualine theme (pivoine, light). Generated; do not edit.
 return {
-  normal = { a = { fg = '#FFFBFE', bg = '#005547', gui = 'bold' }, b = { fg = '#34272C', bg = '#FFF2F7' }, c = { fg = '#34272C', bg = '#FFEEF4' } },
-  insert = { a = { fg = '#FFFBFE', bg = '#005547', gui = 'bold' }, b = { fg = '#34272C', bg = '#FFF2F7' }, c = { fg = '#34272C', bg = '#FFEEF4' } },
+  normal = { a = { fg = '#FFFBFE', bg = '#005546', gui = 'bold' }, b = { fg = '#34272C', bg = '#FFF2F7' }, c = { fg = '#34272C', bg = '#FFEEF4' } },
+  insert = { a = { fg = '#FFFBFE', bg = '#005546', gui = 'bold' }, b = { fg = '#34272C', bg = '#FFF2F7' }, c = { fg = '#34272C', bg = '#FFEEF4' } },
   visual = { a = { fg = '#FFFBFE', bg = '#523AA1', gui = 'bold' }, b = { fg = '#34272C', bg = '#FFF2F7' }, c = { fg = '#34272C', bg = '#FFEEF4' } },
   replace = { a = { fg = '#FFFBFE', bg = '#9C0044', gui = 'bold' }, b = { fg = '#34272C', bg = '#FFF2F7' }, c = { fg = '#34272C', bg = '#FFEEF4' } },
   command = { a = { fg = '#FFFBFE', bg = '#932400', gui = 'bold' }, b = { fg = '#34272C', bg = '#FFF2F7' }, c = { fg = '#34272C', bg = '#FFEEF4' } },

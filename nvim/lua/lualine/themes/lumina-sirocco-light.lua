@@ -1,6 +1,6 @@
 -- lumina-sirocco-light -- Lumina lualine theme (sirocco, light). Generated; do not edit.
 return {
-  normal = { a = { fg = '#FEF9F4', bg = '#00668C', gui = 'bold' }, b = { fg = '#706359', bg = '#FEF1E6' }, c = { fg = '#706359', bg = '#FAEDE3' } },
+  normal = { a = { fg = '#FEF9F4', bg = '#00749E', gui = 'bold' }, b = { fg = '#706359', bg = '#FEF1E6' }, c = { fg = '#706359', bg = '#FAEDE3' } },
   insert = { a = { fg = '#FEF9F4', bg = '#007E6D', gui = 'bold' }, b = { fg = '#706359', bg = '#FEF1E6' }, c = { fg = '#706359', bg = '#FAEDE3' } },
   visual = { a = { fg = '#FEF9F4', bg = '#6550B9', gui = 'bold' }, b = { fg = '#706359', bg = '#FEF1E6' }, c = { fg = '#706359', bg = '#FAEDE3' } },
   replace = { a = { fg = '#FEF9F4', bg = '#AB0650', gui = 'bold' }, b = { fg = '#706359', bg = '#FEF1E6' }, c = { fg = '#706359', bg = '#FAEDE3' } },

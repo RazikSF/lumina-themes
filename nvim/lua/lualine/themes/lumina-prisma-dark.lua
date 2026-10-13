@@ -1,6 +1,6 @@
 -- lumina-prisma-dark -- Lumina lualine theme (prisma, dark). Generated; do not edit.
 return {
-  normal = { a = { fg = '#171624', bg = '#D3ADFF', gui = 'bold' }, b = { fg = '#8D8D9F', bg = '#1B1A2B' }, c = { fg = '#8D8D9F', bg = '#12111E' } },
+  normal = { a = { fg = '#171624', bg = '#CEACF7', gui = 'bold' }, b = { fg = '#8D8D9F', bg = '#1B1A2B' }, c = { fg = '#8D8D9F', bg = '#12111E' } },
   insert = { a = { fg = '#171624', bg = '#71E5D2', gui = 'bold' }, b = { fg = '#8D8D9F', bg = '#1B1A2B' }, c = { fg = '#8D8D9F', bg = '#12111E' } },
   visual = { a = { fg = '#171624', bg = '#C4B4FF', gui = 'bold' }, b = { fg = '#8D8D9F', bg = '#1B1A2B' }, c = { fg = '#8D8D9F', bg = '#12111E' } },
   replace = { a = { fg = '#171624', bg = '#FE93A2', gui = 'bold' }, b = { fg = '#8D8D9F', bg = '#1B1A2B' }, c = { fg = '#8D8D9F', bg = '#12111E' } },

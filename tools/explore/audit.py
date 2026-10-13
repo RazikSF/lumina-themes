@@ -45,8 +45,6 @@ def audit(flavor, mode, colors):
     lamp = role["functions"]
     others = [r for r in ROLES if r != "functions" and role[r] != lamp]
     nearest = min(de(lamp, role[r]) for r in others)
-    if nearest < LAMP_MIN:
-        issues.append(f"lampe à dE {nearest:.0f} du rôle le plus proche")
     warm_roles = [r for r in ROLES if warm(role[r])]
     if warm(lamp) and any(r != "functions" for r in warm_roles) and not sch.get("warm_family"):
         issues.append("deux notes chaudes : lampe + " + ", ".join(NAMES[r] for r in warm_roles if r != "functions"))

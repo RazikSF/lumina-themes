@@ -2,15 +2,15 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-**One lamp lights the room.** Lumina is a family of themes for Emacs,
-Neovim, VS Code, WezTerm and the terminal, built on a single idea: in
-every flavor, one colour is the light (the cursor, the definition you
-are reading, the current line, the heading you are in) and everything
-else sits in the room at equal weight, never louder than the lamp.
+**Even light.** Lumina is a family of themes for Emacs, Neovim, VS Code,
+WezTerm and the terminal, built on a single idea: every colour in the
+code carries the same weight. No colour glows brighter than its
+neighbours; hues alone tell keywords, functions, types and strings
+apart, so the eye can rest on any part of the screen.
 
 Sixteen flavors, each in dark, light and high contrast: 68 themes. The
 flagship is **Sienne**: slate night under warm inks, beige text at
-nearly 9:1, one teal lamp on the functions, mauve keywords, gold types,
+nearly 9:1, teal functions, mauve keywords, gold types,
 olive strings, coral constants, apricot builtins. Light: the same hues
 as inks on slate paper.
 Its cool counterpart is **Vesper**: deep navy at night, blue-lavender
@@ -24,20 +24,19 @@ sets the same azure among peach, straw, lilac and mint on blue slate.
 
 ## What makes it different
 
-- **One lamp.** Each flavor has one lead colour, and only the lamp
-  glows: cursor, current line number, function definitions, headings,
-  mode-line bar, search. Keywords never shout.
+- **One weight for every colour.** Accents share one lightness band and
+  one chroma cap, and yellows, which read brighter at equal lightness,
+  sit a step lower in chroma. Each flavor still has a lead colour for
+  the cursor, the current line number, headings and the mode-line bar,
+  at the same weight as the rest.
 - **Public scales, composed here.** Every accent comes from a public
   colour system: Tailwind v4 step 300 on dark grounds, Radix Colors
   step 11 on light paper, both OKLCH-defined. No editor theme or brand
-  palette is copied; the composition (ground, lamp, roles) is Lumina's.
-- **Equal lightness, one lamp.** Non-lamp accents are clamped to a
-  common lightness band and a chroma cap; only the lamp keeps its full
-  value. Nothing jumps out by accident, the definitions do on purpose.
+  palette is copied; the composition (ground, lead colour, roles) is Lumina's.
 - **Soft text.** Body text sits near 9:1, never white on black: the
   range of Tokyo Night, One Dark and Nord, not the 12 to 15:1 of the
   harder themes.
-- **Light that follows you.** The lamp tints the current line, the
+- **Light that follows you.** The lead colour tints the current line, the
   selection and the completion candidate, and flashes on every jump.
   With [auto-dim-other-buffers](https://github.com/mina86/auto-dim-other-buffers.el)
   the windows you are not working in fall into shade.
@@ -45,11 +44,11 @@ sets the same azure among peach, straw, lilac and mint on blue slate.
   4.7:1 or more, every accent at 4.5:1 or more, on its own tinted ground
   at 4:1 or more. `make check` refuses a
   palette that drifts, and `tools/explore/audit.py` refuses two code roles
-  closer than 8 dE, a lamp closer than 9 to any role, an error red closer
-  than 10, or a second warm note beside the lamp.
+  closer than 8 dE, an error red closer than 10, or warm notes that are
+  not rare.
 - **High contrast built in.** Every theme ships a `-contrast` twin:
   text 15:1 or more, comments 6:1, every accent 7:1 (WCAG AAA), same
-  lamp, same hues.
+  hues at one weight.
 - **Readable diffs.** Added, removed and changed lines sit on tinted
   grounds in magit, diff, smerge and ediff.
 - **Complete coverage.** Close to 3 000 faces per theme, written against
@@ -65,13 +64,13 @@ sets the same azure among peach, straw, lilac and mint on blue slate.
 
 ## Flavors
 
-Each flavor covers one colour group: one ground, one lamp, one role map.
+Each flavor covers one colour group: one ground, one lead colour, one role map.
 Dark grounds are Radix app backgrounds (step 2 of the flavor's hue) or the
 Tailwind neutral that carries the same temperature, and carry Tailwind
 pastels; light paper is always the Radix step 2 of the hue, and carries
 Radix inks.
 
-| Flavor | Ground | Lamp | Keywords, types, strings | Note |
+| Flavor | Ground | Lead colour | Keywords, types, strings | Note |
 |---|---|---|---|---|
 | **Sienne** | slate night / slate paper | teal | mauve, gold, olive | coral, apricot |
 | **Vesper** | deep navy / cool white | blue | purple, sky, straw | coral, rose |
@@ -85,7 +84,7 @@ Radix inks.
 | **Nocturne** | indigo night | sodium orange | violet, sky, emerald | amber |
 | **Amethyst** | purple geode | citrine | orchid, jade, periwinkle | none |
 | **Prisma** | neutral indigo | ultraviolet | emerald, teal, sky; full-spectrum delimiters | orange; black-and-white `-ink` twins |
-| **Sirocco** | terracotta | sky | sand, sage, orchid | the only cool light is the lamp |
+| **Sirocco** | terracotta | sky | sand, sage, orchid | the only cool colour is the lead |
 | **Celadon** | jade porcelain | peach | sky, jade, orchid | none |
 | **Sumi** | ink black / rice paper | vermilion seal | matcha, plum, sky, all whispered | none |
 | **Pivoine** | soft peony dusk, lighter than the night grounds | mint | peony, periwinkle, sky | apricot |
@@ -338,9 +337,9 @@ and light). The generator resolves palette references to literal hex
 per flavor and emits one file per target per (flavor, mode).
 
 A flavor is one `compose(...)` call in `generators/v2_palettes.py`:
-ground, lamp slot, role map, optional hue overrides. It propagates to
+ground, lead slot, role map, optional hue overrides. It propagates to
 all five targets on the next `make build`; a face edit in
-`generators/faces_src.py` propagates to the 52 Emacs themes, one in
+`generators/faces_src.py` propagates to the 68 Emacs themes, one in
 `generators/nvim_src.py` to the 52 Neovim colorschemes.
 
 ## Develop

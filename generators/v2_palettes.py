@@ -257,12 +257,10 @@ def compose(ground, lamp, roles, hues=None, text=(.78, .40), cap=(.13, .16), ban
     for slot, (twn, rxn) in hues.items():
         for pal, table, i in ((dark, TW300, 0), (light, RX11, 1)):
             L, C, hh = table[twn if i == 0 else rxn]
-            if slot == (lamp_d, lamp_l)[i]:
-                L, C = (max(L, band[0][1] + .02), max(C, cap[0] + .01)) if i == 0 else (min(L, band[1][0] - .02), max(C, cap[1] + .02))
-            elif slot == "red":
+            if slot == "red":
                 L, C = (band[0][0] - .01, cap[0] + .02) if i == 0 else (band[1][0] - .02, cap[1] + .03)
             else:
-                L = min(max(L, band[i][0]), band[i][1]); C = min(C, cap[i])
+                L = min(max(L, band[i][0]), band[i][1]); C = min(C, cap[i] * (.78 if i == 0 and 70 <= hh <= 115 else 1))
             pal[slot] = (L, fit_chroma(L, C, hh), hh)
     dark["comments"] = (.61, min(cd * 1.1, .05), h); dark["doc-comments"] = (.67, min(cd * 1.1, .05), h)
     light["comments"] = (.54, max(cl * 2, .012), hl); light["doc-comments"] = (.47, max(cl * 2, .014), hl)
@@ -292,9 +290,9 @@ SIENNE_DARK = {"teal": (.70, .09, 205), "magenta": (.70, .11, 322), "yellow": (.
 SIENNE_LIGHT = {"teal": (.50, .11, 205), "magenta": (.50, .14, 322), "yellow": (.47, .12, 80), "green": (.52, .11, 118), "coral": (.50, .17, 34), "orange": (.55, .14, 64),
                 "red": (.42, .19, 0), "cyan": (.50, .10, 230), "blue": (.50, .12, 250), "violet": (.50, .13, 300)}
 
-INDIGO_DARK = {"blue": (.82, .12, 255), "ink-light": (.86, .12, 100), "ink-mid": (.81, .12, 55), "ink-dim": (.80, .09, 320),
+INDIGO_DARK = {"blue": (.82, .12, 255), "ink-light": (.84, .12, 100), "ink-mid": (.81, .12, 55), "ink-dim": (.80, .09, 320),
                "fg": (.78, .03, 75), "base8": (.78, .03, 75), "fg-alt": (.68, .03, 75)}
-INDIGO_LIGHT = {"blue": (.49, .16, 255), "ink-light": (.50, .14, 95), "ink-mid": (.52, .14, 48), "ink-dim": (.51, .12, 320),
+INDIGO_LIGHT = {"blue": (.50, .14, 255), "ink-light": (.50, .14, 95), "ink-mid": (.52, .14, 48), "ink-dim": (.51, .12, 320),
                 "fg": (.40, .02, 75), "base8": (.40, .02, 75), "fg-alt": (.51, .02, 75)}
 
 
@@ -314,7 +312,7 @@ FLAVORS = {
     "dawn": dict(ground=(56.0, 0.006, .010, 0.216, .975), lamp="yellow", paper=(99.1, 0.0238, 0.986),
                     roles=dict(functions="yellow", keywords="teal", type="blue", strings="cyan", constants="magenta", builtin="blue", methods="blue"),
                     hues={"magenta": ("fuchsia", "plum")},
-                    commentary={"dark": "Lumina Dawn, dark variant.\nWarm sepia room lit by one amber lamp; terracotta keywords, teal types, lime strings, rose constants, soft text.",
+                    commentary={"dark": "Lumina Dawn, dark variant.\nWarm sepia room; amber functions, teal keywords, sky types and strings, rose constants, every colour at one weight, soft text.",
                                 "light": "Lumina Dawn, light variant.\nWarm paper under the same amber lamp; terracotta, teal, lime and crimson inks, soft text."}),
     "oxblood": dict(ground=(3.6, 0.015, .012, 0.208, .975), lamp="magenta", paper=(8.5, 0.0087, 0.983),
                        roles=dict(functions="magenta", keywords="blue", type="orange", strings="green", constants="teal", builtin="cyan", methods="cyan"),
@@ -323,7 +321,7 @@ FLAVORS = {
                                    "light": "Lumina Oxblood, light variant.\nBlush paper under the same rose spotlight; crimson, violet and amber inks, soft text."}),
     "tide": dict(ground=(257.5, 0.029, .006, 0.216, .985), lamp="cyan", paper=(219.6, 0.0103, 0.979),
                     roles=dict(functions="cyan", keywords="teal", type="violet", strings="green", constants="orange", builtin="violet", methods="violet"),
-                    hues={"green": ("lime", "lime")}, cap=(.10, .14), extra={"dark": {"cyan": (.78, .14, 230)}},
+                    hues={"green": ("lime", "lime")}, cap=(.10, .14),
                     commentary={"dark": "Lumina Tide, dark variant.\nDeep ocean at night; a sky-blue lamp lit from within, teal keywords, indigo types, soft text, one amber note.",
                                 "light": "Lumina Tide, light variant.\nSea-washed paper; the same sky lamp as a deep ink, teal and indigo beside it, one amber note."}),
     "canopy": dict(ground=(149.9, 0.013, .006, 0.21, .98), lamp="green", paper=(145.5, 0.0101, 0.982),
@@ -334,7 +332,7 @@ FLAVORS = {
     "slate": dict(ground=(285.9, 0.006, .003, 0.21, .985), lamp="blue", paper=(286.4, 0.0026, 0.983),
                      roles=dict(functions="blue", keywords="cyan", type="yellow", strings="green", constants="magenta", builtin="cyan", methods="yellow"),
                       hues={"magenta": ("fuchsia", "plum")},
-                     cap=(.10, .14), extra={"dark": {"blue": (.78, .13, 275)}},
+                     cap=(.10, .14),
                      commentary={"dark": "Lumina Slate, dark variant.\nCold graphite; one steel-blue lamp, every other accent held back to a whisper, soft text.",
                                  "light": "Lumina Slate, light variant.\nCold white paper; the same steel-blue ink, every other accent held back, soft text."}),
     "indigo": dict(ground=(278, .030, .008, .21, .984), lamp="blue",
@@ -345,8 +343,8 @@ FLAVORS = {
     "azur": dict(ground=(255, .022, .006, .235, .984), lamp="blue",
                     roles=dict(functions="orange", keywords="blue", type="violet", strings="yellow", constants="teal", builtin="violet", methods="orange"),
                     extra={"dark": {"fg": (.80, .025, 255), "base8": (.80, .025, 255), "fg-alt": (.70, .025, 255),
-                                    "blue": (.82, .13, 250), "orange": (.81, .115, 59), "yellow": (.85, .12, 102)},
-                           "light": {"blue": (.47, .19, 255), "orange": (.52, .16, 36), "yellow": (.52, .12, 95)}},
+                                    "blue": (.82, .12, 250), "orange": (.81, .115, 59), "yellow": (.85, .12, 102)},
+                           "light": {"blue": (.50, .16, 255), "orange": (.52, .16, 36), "yellow": (.52, .12, 95)}},
                     commentary={"dark": "Lumina Azur, dark variant.\nBlue slate; one azure lamp on the keywords and four companions of the same weight: peach functions, straw strings, lilac types, mint constants.",
                                 "light": "Lumina Azur, light variant.\nCool paper; the same hues as inks of one weight: azure keywords, orange functions, amber strings, violet types, teal constants."}),
     "nocturne": dict(ground=(266.4, 0.042, .008, 0.208, .98), lamp="orange", paper=(271.3, 0.0083, 0.982),
@@ -366,7 +364,7 @@ FLAVORS = {
                                   "dark-ink": "Lumina Prisma, dark ink variant.\nBlack and white: a single white ray enters a glass prism; the ray is the lamp, the code is its spectrum.",
                                   "light": "Lumina Prisma, light variant.\nWhite paper in daylight; the lamp turns ultraviolet and the code is a full spectrum of vivid inks.",
                                   "light-ink": "Lumina Prisma, light ink variant.\nBlack and white: white paper, one lamp of black ink, and the code as a full spectrum of inks."},
-                      cap=(.11, .15), extra={"dark": {"spark": (.81, .12, 305)}, "light": {"spark": (.48, .17, 300)}},
+                      cap=(.11, .15), extra={"dark": {"spark": (.80, .11, 305)}, "light": {"spark": (.51, .15, 300)}},
                       variants={"dark-ink": ("dark", {"spark": (.97, .015, 95)}), "light-ink": ("light", {"spark": (.26, .03, 280)})}),
     "sirocco": dict(ground=(38, 0.034, .012, 0.22, .978), lamp="cyan", paper=(62, 0.018, 0.984),
                     roles=dict(functions="cyan", keywords="orange", type="green", strings="magenta", constants="blue", builtin="green", methods="green"),
@@ -378,12 +376,12 @@ FLAVORS = {
                     hues={"magenta": ("fuchsia", "plum")},
                     commentary={"dark": "Lumina Celadon, dark variant.\nGlazed jade porcelain; one peach lamp, the warm glint on a cool glaze: sky keywords, jade types, orchid strings, indigo constants.",
                                 "light": "Lumina Celadon, light variant.\nPale celadon paper under the same peach lamp; sky, jade, orchid and indigo inks."}),
-    "sumi": dict(ground=(70, 0.005, .010, 0.165, .978), lamp="orange", paper=(95, 0.006, 0.986), cap=(.08, .12),
+    "sumi": dict(ground=(70, 0.005, .010, 0.165, .978), lamp="green", paper=(95, 0.006, 0.986), cap=(.08, .12),
                  hues={"magenta": ("fuchsia", "plum")},
-                 roles=dict(functions="orange", keywords="green", type="magenta", strings="cyan", constants="magenta", builtin="magenta", methods="magenta"),
-                 extra={"dark": {"orange": (.72, .17, 42), "red": (.80, .15, 2)}, "light": {"orange": (.53, .20, 36)}},
-                 commentary={"dark": "Lumina Sumi, dark variant.\nInk-black ground, one vermilion seal for the lamp, and three whispered inks: matcha keywords, sky strings, plum types and constants.",
-                             "light": "Lumina Sumi, light variant.\nRice paper, the same vermilion seal, the same three whispered inks."}),
+                 roles=dict(functions="green", keywords="orange", type="magenta", strings="cyan", constants="magenta", builtin="magenta", methods="magenta"),
+                 extra={"dark": {"orange": (.80, .085, 44), "red": (.79, .16, 352)}, "light": {"orange": (.52, .12, 44), "red": (.50, .17, 356)}},
+                 commentary={"dark": "Lumina Sumi, dark variant.\nInk-black ground and four whispered inks of one weight: matcha functions, vermilion keywords, sky strings, plum types and constants.",
+                             "light": "Lumina Sumi, light variant.\nRice paper and the same four whispered inks."}),
     "pivoine": dict(ground=(350, 0.032, .012, 0.28, .978), lamp="teal", text=(.87, .40), paper=(355, 0.016, 0.984),
                     extra={"dark": {"comments": (.66, .03, 350), "doc-comments": (.71, .03, 350)}},
                     hues={"magenta": ("fuchsia", "plum")},
