@@ -88,9 +88,13 @@ def score(c):
 cs = []
 for c in combos():
     inner, sal, shared, warm = score(c)
-    rank = sal + (0 if c["co"] == c["fn"] else 4) - 3 * max(0, warm - 1)
+    rank = inner + (2 if c["co"] in (c["kw"], c["fn"]) else 0) - 3 * max(0, warm - 1)
     cs.append({**c, "inner": round(inner, 1), "sal": round(sal, 1), "warm": warm, "rank": round(rank, 1)})
 cs.sort(key=lambda x: -x["rank"])
+by_kw = {}
+for c in cs:
+    by_kw.setdefault(c["kw"], []).append(c)
+cs = [c for group in itertools.zip_longest(*by_kw.values()) for c in group if c]
 
 dark = {"bg": GROUND, "grey": GREY, "inks": INKS, "blue": BLUE,
         "text": {"orig": TEXT, "soft": text_at(9.0, GROUND, False)}}
@@ -145,13 +149,14 @@ pre{margin:0;padding:6px 0 10px;font:12.5px/1.55 "Zed Mono","JetBrains Mono",Men
 @media (max-width:480px){.grid{grid-template-columns:1fr}}
 </style></head><body>
 <h1>Palette de la diapositive : toutes les combinaisons</h1>
-<p class="lead">Fond, texte, gris et cinq couleurs relevés au pixel sur la diapositive. La lampe (fonctions, curseur, ligne courante, titre) est une des quatre encres ; les trois autres se répartissent entre mots-clés, types et chaînes ; les constantes prennent l'une des quatre. Le bleu franc du carré sert à la sélection et à la barre d'état. Le bouton « même intensité » ramène les quatre encres à une clarté et une saturation communes (l'or, plus vif sur la diapo, est le plus touché).</p>
+<p class="lead">Fond, texte, gris et cinq couleurs relevés au pixel sur la diapositive. Les quatre encres se répartissent entre fonctions, mots-clés, types et chaînes ; les constantes reprennent l'une d'elles. Le bleu franc, trop sombre pour du texte (4,1:1), a la même teinte que le ciel : éclairci, il devient le ciel. Le bleu franc du carré sert à la sélection et à la barre d'état. Le bouton « même intensité » ramène les quatre encres à une clarté et une saturation communes (l'or, plus vif sur la diapo, est le plus touché).</p>
 <div class="sw" id="sw"></div>
 <div class="bar">
   <label>Mode <button id="mDark" class="on">sombre</button><button id="mLight">clair</button></label>
   <label>Texte <button id="tOrig" class="on">diapo (12,9:1)</button><button id="tSoft">adouci (9:1)</button></label>
   <label>Encres <button id="iOrig" class="on">diapo</button><button id="iEq">même intensité</button></label>
-  <label>Lampe <select id="lamp"><option value="">toutes</option><option>or</option><option>saumon</option><option>menthe</option><option>ciel</option></select></label>
+  <label>Fonctions <select id="lamp"><option value="">toutes</option><option>or</option><option>saumon</option><option>menthe</option><option>ciel</option></select></label>
+  <label>Mots-clés <select id="kwf"><option value="">tous</option><option>or</option><option>saumon</option><option>menthe</option><option>ciel</option></select></label>
   <label>Afficher <select id="n"><option value="12">les 12 premières</option><option value="24">24</option><option value="96">les 96</option></select></label>
 </div>
 <div class="grid" id="grid"></div>
@@ -174,17 +179,17 @@ function card(c,i){const m=M(), fg=m.text[text], col=r=>r=="fg"?fg:r=="cm"?m.gre
     return `<span class="row" style="${cur?"background:"+m.halo[c.fn]:""}">${ln}${cursor}${body}</span>`}).join("");
   const leg=Object.entries(D.roles).map(([r,nm])=>`<span style="color:${m.inks[c[r]]}">${nm} : ${c[r]}</span>`).join("");
   return `<div class="card" style="background:${m.bg};color:${fg}">
-   <div class="head"><span class="${i<3?"best":""}">n° ${i+1} · lampe ${c.fn}</span><span style="color:${m.grey}">lampe ${c.sal} · encres ${c.inner}</span></div>
+   <div class="head"><span>n° ${i+1} · mots-clés ${c.kw}</span><span style="color:${m.grey}">séparation des encres ${c.inner}</span></div>
    <div class="legend">${leg}</div><pre>${rows}</pre>
    <div class="ml" style="background:${mode=="dark"?"#151827":"#e4e6ec"};color:${m.grey}"><i style="background:${m.blue}"></i><b style="color:${fg}">limiter.py</b><span style="flex:1"></span>Python</div></div>`}
-function render(){swatches();const lamp=$("lamp").value, n=+$("n").value;
-  const list=D.combos.map((c,i)=>[c,i]).filter(([c])=>!lamp||c.fn==lamp).slice(0,n);
+function render(){swatches();const lamp=$("lamp").value, kwf=$("kwf").value, n=+$("n").value;
+  const list=D.combos.map((c,i)=>[c,i]).filter(([c])=>(!lamp||c.fn==lamp)&&(!kwf||c.kw==kwf)).slice(0,n);
   $("grid").innerHTML=list.map(([c,i])=>card(c,i)).join("")}
 function tog(a,b,set){$(a).onclick=()=>{set();$(a).classList.add("on");$(b).classList.remove("on");render()}}
 tog("mDark","mLight",()=>mode="dark");tog("mLight","mDark",()=>mode="light");
 tog("tOrig","tSoft",()=>text="orig");tog("tSoft","tOrig",()=>text="soft");
 tog("iOrig","iEq",()=>ink="orig");tog("iEq","iOrig",()=>ink="eq");
-$("lamp").onchange=render;$("n").onchange=render;render();
+$("lamp").onchange=render;$("kwf").onchange=render;$("n").onchange=render;render();
 </script></body></html>"""
 Path(sys.argv[1]).write_text(page.replace("__DATA__", json.dumps(data, ensure_ascii=False)))
 print("ok", len(cs), "combinaisons ; texte adouci", dark["text"]["soft"], dark["tcontrast"]["soft"], "; clair", light["contrast"])
