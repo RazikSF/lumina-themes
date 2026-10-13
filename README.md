@@ -8,31 +8,35 @@ code carries the same weight. No colour glows brighter than its
 neighbours; hues alone tell keywords, functions, types and strings
 apart, so the eye can rest on any part of the screen.
 
-Sixteen flavors, each in dark, light and high contrast: 68 themes. The
-flagship is **Sienne**: slate night under warm inks, beige text at
-nearly 9:1, teal functions, mauve keywords, gold types,
-olive strings, coral constants, apricot builtins. Light: the same hues
-as inks on slate paper.
-Its cool counterpart is **Vesper**: deep navy at night, blue-lavender
-text, blue functions, purple keywords, sky types, straw strings, coral
-constants, rose builtins, no green in the code.
-**Indigo** keeps one azure for the keywords and desert inks of the same
-weight for everything else (gold sand, copper, dusk mauve); **Azur**
-sets the same azure among peach, straw, lilac and mint on blue slate.
+Seventeen flavors, each in dark, light and high contrast, plus Prisma's
+black-and-white twins: 72 themes. The reference is **Nuancier**, taken
+from a slide on web colours: slate night `#1D2130`, sky keywords
+`#77B8E7`, salmon functions `#EC907E`, gold types `#F7C054`, mint strings
+`#87C3AB`, lilac constants `#B5A4EA`, rose builtins `#E297BA`. Six inks,
+one per role, of one weight; every other flavor is composed to the same
+standard. **Sienne** (slate night under warm inks) and **Vesper** (deep
+navy, no green in the code) keep their own hand-tuned balance.
 
-<img src="assets/screens/lumina-sienne-dark.svg" width="49%"> <img src="assets/screens/lumina-sienne-light.svg" width="49%">
+<img src="assets/screens/lumina-nuancier-dark.svg" width="49%"> <img src="assets/screens/lumina-nuancier-light.svg" width="49%">
 
 ## What makes it different
 
-- **One weight for every colour.** Accents share one lightness band and
-  one chroma cap, and yellows, which read brighter at equal lightness,
-  sit a step lower in chroma. Each flavor still has a lead colour for
-  the cursor, the current line number, headings and the mode-line bar,
-  at the same weight as the rest.
-- **Public scales, composed here.** Every accent comes from a public
-  colour system: Tailwind v4 step 300 on dark grounds, Radix Colors
-  step 11 on light paper, both OKLCH-defined. No editor theme or brand
-  palette is copied; the composition (ground, lead colour, roles) is Lumina's.
+- **Six inks of one weight.** Every flavor gives keywords, functions,
+  types, strings, constants and builtins one ink each. The six hues are
+  spread over the whole colour circle (no gap above 95 degrees, every
+  pair at least 8.5 dE apart), and each ink takes the lightness and
+  chroma that Nuancier gives its hue: mint lower in chroma because green
+  reads vivid, gold a step lighter because yellow reads dull. That is
+  what makes six different colours read as one weight.
+- **Cool where it is frequent.** Keywords and strings, by far the most
+  frequent, sit on cool hues; warm notes go to rarer roles. Olive and
+  khaki hues (90 to 140 degrees) are never used: at this lightness they
+  turn muddy.
+- **Composed, then checked by eye.** `tools/explore/harmony.py` proposes
+  the six inks of each flavor from its ground, its concept colour (the
+  amber of Dawn, the azure of Indigo, the sodium lamp of Nocturne) and
+  the distance to every other flavor; each proposal is reviewed on a
+  rendered contact sheet before it is kept.
 - **Soft text.** Body text sits near 9:1, never white on black: the
   range of Tokyo Night, One Dark and Nord, not the 12 to 15:1 of the
   harder themes.
@@ -64,32 +68,41 @@ sets the same azure among peach, straw, lilac and mint on blue slate.
 
 ## Flavors
 
-Each flavor covers one colour group: one ground, one lead colour, one role map.
+Each flavor covers one colour group: one ground and six inks, one per role.
 Dark grounds are Radix app backgrounds (step 2 of the flavor's hue) or the
 Tailwind neutral that carries the same temperature, and carry Tailwind
 pastels; light paper is always the Radix step 2 of the hue, and carries
 Radix inks.
 
-| Flavor | Ground | Lead colour | Keywords, types, strings | Note |
-|---|---|---|---|---|
-| **Sienne** | slate night / slate paper | teal | mauve, gold, olive | coral, apricot |
-| **Vesper** | deep navy / cool white | blue | purple, sky, straw | coral, rose |
-| **Indigo** | indigo night / lavender paper | azure | gold sand, copper, dusk mauve | none |
-| **Azur** | blue slate / cool paper | azure | peach, lilac, straw | mint |
-| **Dawn** | warm sepia | amber | terracotta, teal, lime | rose |
-| **Oxblood** | dark wine | rose | violet, amber, emerald | orange |
-| **Tide** | deep ocean | sky | teal, indigo, emerald | amber |
-| **Canopy** | pine | leaf green | teal, amber, sky | orange |
-| **Slate** | cold graphite | steel blue | sky, violet, emerald, all held back | orange |
-| **Nocturne** | indigo night | sodium orange | violet, sky, emerald | amber |
-| **Amethyst** | purple geode | citrine | orchid, jade, periwinkle | none |
-| **Prisma** | neutral indigo | ultraviolet | emerald, teal, sky; full-spectrum delimiters | orange; black-and-white `-ink` twins |
-| **Sirocco** | terracotta | sky | sand, sage, orchid | the only cool colour is the lead |
-| **Celadon** | jade porcelain | peach | sky, jade, orchid | none |
-| **Sumi** | ink black / rice paper | vermilion seal | matcha, plum, sky, all whispered | none |
-| **Pivoine** | soft peony dusk, lighter than the night grounds | mint | peony, periwinkle, sky | apricot |
+| Flavor | Ground | Keywords | Functions | Types | Strings | Constants | Builtins |
+|---|---|---|---|---|---|---|---|
+| **Nuancier** | slate night / cool paper | sky | salmon | gold | mint | lilac | pink |
+| **Sienne** | slate night / slate paper | orchid | sky | gold | lime | salmon | apricot |
+| **Vesper** | deep navy / cool white | orchid | periwinkle | sky | straw | salmon | pink |
+| **Indigo** | indigo night / lavender paper | periwinkle | sky | orchid | salmon | sage | gold |
+| **Azur** | blue slate / cool paper | sky | apricot | lilac | gold | sage | rose |
+| **Dawn** | warm sepia | sage | gold | orchid | sky | salmon | periwinkle |
+| **Oxblood** | dark wine | lilac | pink | salmon | sky | sage | gold |
+| **Tide** | deep ocean | mint | periwinkle | orchid | sage | gold | rose |
+| **Canopy** | pine | periwinkle | sage | sky | orchid | rose | gold |
+| **Slate** | cold graphite | mint | periwinkle | gold | rose | orchid | sage |
+| **Nocturne** | indigo night | periwinkle | gold | sky | mint | orchid | rose |
+| **Amethyst** | purple geode | orchid | gold | sage | periwinkle | sky | rose |
+| **Prisma** | neutral indigo | sage | lilac | mint | sky | apricot | orchid |
+| **Sirocco** | terracotta | gold | sky | mint | pink | orchid | salmon |
+| **Celadon** | jade porcelain | sky | salmon | sage | pink | lilac | gold |
+| **Sumi** | ink black / rice paper | rose | sage | periwinkle | sky | apricot | orchid |
+| **Pivoine** | soft peony dusk, lighter than the night grounds | orchid | sage | rose | sky | gold | apricot |
 
 ### Gallery
+
+**Nuancier**
+
+<img src="assets/screens/lumina-nuancier-dark.svg" width="49%"> <img src="assets/screens/lumina-nuancier-light.svg" width="49%">
+
+**Sienne**
+
+<img src="assets/screens/lumina-sienne-dark.svg" width="49%"> <img src="assets/screens/lumina-sienne-light.svg" width="49%">
 
 **Vesper**
 
@@ -158,11 +171,11 @@ Prisma adds black-and-white twins: `lumina-prisma-dark-ink`,
 
 | Target | Output |
 |---|---|
-| **Emacs** (vanilla `deftheme`)  | `emacs/themes/*.el` (68), close to 3 000 faces each |
-| **Neovim** (Lua colorscheme)    | `nvim/colors/*.lua` (68), over 1 600 groups each, plus `nvim/lua/lualine/themes/*.lua` |
-| **VS Code** (extension)         | `vscode/themes/*.json` (68): 565 workbench colours, 80 token scopes, 47 semantic tokens |
-| **WezTerm** (color scheme)      | `wezterm/*.toml` (68): ANSI, indexed, tab bar states, copy and quick-select modes |
-| **base24** (tinted-theming)     | `base24/*.yaml` (68) |
+| **Emacs** (vanilla `deftheme`)  | `emacs/themes/*.el` (72), close to 3 000 faces each |
+| **Neovim** (Lua colorscheme)    | `nvim/colors/*.lua` (72), over 1 600 groups each, plus `nvim/lua/lualine/themes/*.lua` |
+| **VS Code** (extension)         | `vscode/themes/*.json` (72): 565 workbench colours, 80 token scopes, 47 semantic tokens |
+| **WezTerm** (color scheme)      | `wezterm/*.toml` (72): ANSI, indexed, tab bar states, copy and quick-select modes |
+| **base24** (tinted-theming)     | `base24/*.yaml` (72) |
 
 The Emacs files require no external dependency and load on a bare
 `emacs -Q` in about ten milliseconds. Each one styles close to 3 000
@@ -339,7 +352,7 @@ per flavor and emits one file per target per (flavor, mode).
 A flavor is one `compose(...)` call in `generators/v2_palettes.py`:
 ground, lead slot, role map, optional hue overrides. It propagates to
 all five targets on the next `make build`; a face edit in
-`generators/faces_src.py` propagates to the 68 Emacs themes, one in
+`generators/faces_src.py` propagates to the 72 Emacs themes, one in
 `generators/nvim_src.py` to the 52 Neovim colorschemes.
 
 ## Develop

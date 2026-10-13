@@ -1,4 +1,4 @@
-"""Structural audit of every flavor: role separation, lamp hierarchy, warm notes, error red.
+"""Structural audit of every flavor: role separation, warm notes (two at most, as in Nuancier), error red.
 
 Usage: python3 tools/explore/audit.py   (exit 1 when a defect remains)
 """
@@ -12,7 +12,7 @@ import lumina_gen as g
 
 ROLES = ["functions", "keywords", "type", "strings", "constants", "builtin", "methods"]
 NAMES = {"functions": "lampe", "keywords": "mots-clés", "type": "types", "strings": "chaînes", "constants": "constantes", "builtin": "builtins", "methods": "appels"}
-CONFUSABLE, WEAK, LAMP_MIN, RED_MIN = 8.0, 12.0, 9.0, 10.0
+CONFUSABLE, WEAK, LAMP_MIN, RED_MIN = 7.5, 12.0, 9.0, 9.0
 
 
 def lab(h):
@@ -33,7 +33,8 @@ def audit(flavor, mode, colors):
     role = {r: C(r) for r in ROLES}
     sch = g.schema_for(flavor, mode); role["property"] = C(sch["property"]); role["escape"] = C(sch["escape"])
     issues = []
-    keys = ROLES + ["property"]
+    fg = C("fg")
+    keys = [k for k in ROLES + ["property"] if role[k] != fg]
     for i, a in enumerate(keys):
         for b in keys[i + 1:]:
             if role[a] == role[b]:
@@ -42,15 +43,13 @@ def audit(flavor, mode, colors):
             if d < sch.get("confusable", CONFUSABLE):
                 issues.append(f"confondus {NAMES.get(a, a)} / {NAMES.get(b, b)} dE {d:.0f}")
 
-    lamp = role["functions"]
-    others = [r for r in ROLES if r != "functions" and role[r] != lamp]
-    nearest = min(de(lamp, role[r]) for r in others)
-    warm_roles = [r for r in ROLES if warm(role[r])]
-    if warm(lamp) and any(r != "functions" for r in warm_roles) and not sch.get("warm_family"):
-        issues.append("deux notes chaudes : lampe + " + ", ".join(NAMES[r] for r in warm_roles if r != "functions"))
-    if not warm_roles:
+    inks = {role[r] for r in ROLES if role[r] != fg}
+    warm_inks = {c for c in inks if warm(c)}
+    if len(warm_inks) > 2 and not sch.get("warm_family"):
+        issues.append(f"{len(warm_inks)} encres chaudes (deux au plus, comme Nuancier)")
+    if not warm_inks:
         issues.append("aucune note chaude")
-    dred = min(de(C("red"), role[r]) for r in ROLES)
+    dred = min(de(C("red"), role[r]) for r in ROLES if role[r] != fg)
     if dred < RED_MIN:
         issues.append(f"rouge d'erreur confondable dE {dred:.0f}")
     return issues

@@ -1,0 +1,53 @@
+# lumina-nuancier-dark -- Lumina (nuancier, dark)
+# Generated from spec/lumina.json. Do not edit by hand.
+[colors]
+foreground   = "#E8E9E7"
+background   = "#1D2130"
+cursor_bg    = "#E8E9E7"
+cursor_fg    = "#1D2130"
+cursor_border = "#E8E9E7"
+selection_bg = "#4E3C45"
+selection_fg = "#E8E9E7"
+scrollbar_thumb = "#424759"
+split = "#353A4C"
+compose_cursor = "#EC907E"
+visual_bell = "#745154"
+copy_mode_active_highlight_bg = { Color = "#EC907E" }
+copy_mode_active_highlight_fg = { Color = "#1D2130" }
+copy_mode_inactive_highlight_bg = { Color = "#3A323D" }
+copy_mode_inactive_highlight_fg = { Color = "#E8E9E7" }
+quick_select_label_bg = { Color = "#EC907E" }
+quick_select_label_fg = { Color = "#1D2130" }
+quick_select_match_bg = { Color = "#3A323D" }
+quick_select_match_fg = { Color = "#E8E9E7" }
+ansi = ["#212636", "#FF5B5B", "#6EE7B7", "#F7C054", "#77B8E7", "#E297BA", "#78D4FF", "#ACB1BE"]
+brights = ["#62687C", "#EC907E", "#87C3AB", "#F7C054", "#4C8CB9", "#B5A4EA", "#78D4FF", "#E8E9E7"]
+
+[colors.indexed]
+16 = "#EC907E"
+17 = "#87C3AB"
+18 = "#B5A4EA"
+19 = "#4C8CB9"
+
+[colors.tab_bar]
+background = "#181B28"
+inactive_tab_edge = "#2B3041"
+[colors.tab_bar.active_tab]
+bg_color = "#1D2130"
+fg_color = "#E8E9E7"
+intensity = "Bold"
+[colors.tab_bar.inactive_tab]
+bg_color = "#181B28"
+fg_color = "#82889D"
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "#2F2B38"
+fg_color = "#E8E9E7"
+[colors.tab_bar.new_tab]
+bg_color = "#181B28"
+fg_color = "#62687C"
+[colors.tab_bar.new_tab_hover]
+bg_color = "#3A323D"
+fg_color = "#EC907E"
+
+[metadata]
+name = "lumina-nuancier-dark"

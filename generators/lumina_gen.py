@@ -47,7 +47,7 @@ SCHEMAS = {
                "modeline_bg": "bg-alt", "vertico_bg": "halo2", "function_call": "blue", "property": "rose", "preprocessor": "violet", "escape": "orange", "modeline_modified": "orange",
                "rainbow": ["blue", "magenta", "cyan", "orange", "yellow", "violet"], "outline": ["blue", "magenta", "cyan", "yellow"], "orderless": ["blue", "magenta", "orange"],
                "magit_branch_local": "cyan", "magit_branch_remote": "violet", "org_todo": "orange", "org_done": "green"},
-    "sienne": {"v2": True, "lead": "teal", "fg_min": 8, "comments_min": {"dark": 2.8, "light": 4.3}, "accent_min": {"dark": 3.6, "light": 4.5}, "accent_bg_min": {"dark": 3.3, "light": 4.0}, "spread": {"dark": .21, "light": .14},
+    "sienne": {"v2": True, "lead": "teal", "warm_family": True, "fg_min": 8, "comments_min": {"dark": 2.8, "light": 4.3}, "accent_min": {"dark": 3.6, "light": 4.5}, "accent_bg_min": {"dark": 3.3, "light": 4.0}, "spread": {"dark": .21, "light": .14},
                "modeline_bg": "bg-alt", "vertico_bg": "halo2", "function_call": "teal", "property": "orange", "preprocessor": "magenta", "escape": "orange", "modeline_modified": "orange",
                "rainbow": ["teal", "magenta", "yellow", "orange", "green", "violet"], "outline": ["teal", "magenta", "yellow", "green"], "orderless": ["teal", "magenta", "orange"],
                "magit_branch_local": "cyan", "magit_branch_remote": "violet", "org_todo": "orange", "org_done": "green"},
@@ -176,6 +176,14 @@ def C(colors, key, default="#000000"):
     if isinstance(v, dict):
         return C(colors, v["ref"], default)
     return default
+
+
+SCHEMAS["nuancier"] = {"v2": True, "lead": "orange", "fg_min": 8, "fg_max": 13.5, "modeline_bg": "bg-alt", "vertico_bg": "halo2",
+                       "modeline_modified": "orange"}
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from harmony_apply import HARMONY as _HARMONY, schema_overrides as _schema_overrides
+for _f in _HARMONY:
+    SCHEMAS[_f].update(_schema_overrides(_f))
 
 
 def schema_for(flavor: str, mode: str) -> dict:
@@ -699,9 +707,14 @@ def check(spec: dict) -> bool:
                 fails.append(f"fg on overlay {contrast(C(c, 'fg'), C(c, 'overlay')):.1f}")
             if "halo2" in c and contrast(C(c, lead), C(c, "halo2")) < 3.5:
                 fails.append(f"lead on halo2 {contrast(C(c, lead), C(c, 'halo2')):.1f}")
-            ls = [from_hex(C(c, k))[0] for k in ACCENTS + (["spark"] if "spark" in c and from_hex(C(c, "spark"))[1] > .05 else [])]
-            if max(ls) - min(ls) > sch.get("spread", .0805):
-                fails.append(f"accent lightness spread {max(ls) - min(ls):.2f} > {sch.get('spread', .0805):.2f}")
+            if sch.get("role_inks"):
+                ls = [from_hex(resolve_ref(r, c, sch))[0] for r in ("functions", "keywords", "type", "strings", "constants", "builtin")]
+                ls = [from_hex(resolve_ref(r, c, sch))[0] for r in ("functions", "keywords", "type", "strings", "constants", "builtin")
+                      if from_hex(resolve_ref(r, c, sch))[1] > .05]
+            else:
+                ls = [from_hex(C(c, k))[0] for k in ACCENTS + (["spark"] if "spark" in c and from_hex(C(c, "spark"))[1] > .05 else [])]
+            if max(ls) - min(ls) > sch.get("spread", .10 if sch.get("role_inks") else .0805):
+                fails.append(f"accent lightness spread {max(ls) - min(ls):.2f} > {sch.get('spread', .10 if sch.get('role_inks') else .0805):.2f}")
             print(f"{'FAIL' if fails else 'OK  '} {d['theme']}"
                   + (": " + "; ".join(fails) if fails else ""))
             ok = ok and not fails

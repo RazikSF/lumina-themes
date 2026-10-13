@@ -297,6 +297,12 @@ INDIGO_LIGHT = {"blue": (.50, .14, 255), "ink-light": (.50, .14, 95), "ink-mid":
 
 
 FLAVORS = {
+    "nuancier": dict(ground=(272.6, 0.0291, .006, 0.2509, .975), lamp="orange", paper=(270, 0.006, 0.978),
+                     roles=dict(functions="orange", keywords="blue", type="yellow", strings="teal", constants="violet", builtin="magenta", methods="fg"),
+                     extra={"dark": {"bg": (0.2509, 0.0291, 272.6), "fg": (0.9327, 0.0029, 128.5), "base8": (0.9327, 0.0029, 128.5),
+                                     "comments": (0.7303, 0.0235, 274.6), "doc-comments": (0.7803, 0.0235, 274.6)}},
+                     commentary={"dark": "Lumina Nuancier, dark variant.\nThe palette of a slide on web colours: slate night, sky keywords, salmon functions, gold types, mint strings, lilac constants, rose builtins; six inks of one weight.",
+                                 "light": "Lumina Nuancier, light variant.\nCool paper; the same six inks, deepened: sky, salmon, amber, mint, lilac and rose."}),
     "vesper": dict(ground=(265, .028, .004, .22, .985), lamp="blue", paper=(271.3, 0.0083, 0.982), text=(.76, .40),
                       roles=dict(functions="blue", keywords="magenta", type="cyan", strings="yellow", constants="orange", builtin="rose", methods="blue"),
                       extra={"dark": VESPER_DARK, "light": VESPER_LIGHT},
@@ -389,6 +395,16 @@ FLAVORS = {
                     commentary={"dark": "Lumina Pivoine, dark variant.\nA soft dusk of peony petals, lighter than the night themes; one mint lamp, the leaf among the petals: peony keywords, periwinkle types, sky strings, apricot constants.",
                                 "light": "Lumina Pivoine, light variant.\nBlush paper under the same mint lamp; peony, periwinkle, sky and apricot inks."}),
 }
+from harmony_apply import HARMONY, flavor_overrides, commentary as _commentary
+for _f in HARMONY:
+    _roles, _lamp, _extra = flavor_overrides(_f)
+    FLAVORS[_f]["roles"] = _roles
+    FLAVORS[_f]["lamp"] = _lamp
+    _old = FLAVORS[_f].get("extra") or {}
+    FLAVORS[_f]["extra"] = {m: {**_old.get(m, {}), **_extra.get(m, {})} for m in ("dark", "light")}
+    FLAVORS[_f].pop("roles_dark", None)
+    if _f != "nuancier":
+        FLAVORS[_f]["commentary"] = _commentary(_f, FLAVORS[_f].get("commentary") or {})
 PALETTES = {k: compose(**v) for k, v in FLAVORS.items()}
 
 
