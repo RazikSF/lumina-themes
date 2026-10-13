@@ -1,0 +1,53 @@
+# lumina-jardin-light-contrast -- Lumina (jardin, light)
+# Generated from spec/lumina.json. Do not edit by hand.
+[colors]
+foreground   = "#0E0F13"
+background   = "#FDFDFF"
+cursor_bg    = "#0E0F13"
+cursor_fg    = "#FDFDFF"
+cursor_border = "#0E0F13"
+selection_bg = "#E4C5C0"
+selection_fg = "#0E0F13"
+scrollbar_thumb = "#A9ABB0"
+split = "#D8DBE0"
+compose_cursor = "#8E2314"
+visual_bell = "#D19C93"
+copy_mode_active_highlight_bg = { Color = "#8E2314" }
+copy_mode_active_highlight_fg = { Color = "#FDFDFF" }
+copy_mode_inactive_highlight_bg = { Color = "#ECD6D3" }
+copy_mode_inactive_highlight_fg = { Color = "#0E0F13" }
+quick_select_label_bg = { Color = "#8E2314" }
+quick_select_label_fg = { Color = "#FDFDFF" }
+quick_select_match_bg = { Color = "#ECD6D3" }
+quick_select_match_fg = { Color = "#0E0F13" }
+ansi = ["#F4F7FD", "#8A001B", "#005916", "#683D00", "#004D81", "#7A1957", "#004F77", "#2F3035"]
+brights = ["#6F7177", "#8E2314", "#00583C", "#683D00", "#004F84", "#50308C", "#004F77", "#0E0F13"]
+
+[colors.indexed]
+16 = "#8E2314"
+17 = "#00583C"
+18 = "#50308C"
+19 = "#004F84"
+
+[colors.tab_bar]
+background = "#F1F3F9"
+inactive_tab_edge = "#E9EBF1"
+[colors.tab_bar.active_tab]
+bg_color = "#FDFDFF"
+fg_color = "#0E0F13"
+intensity = "Bold"
+[colors.tab_bar.inactive_tab]
+bg_color = "#F1F3F9"
+fg_color = "#4B4D52"
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "#F2E3E2"
+fg_color = "#0E0F13"
+[colors.tab_bar.new_tab]
+bg_color = "#F1F3F9"
+fg_color = "#6F7177"
+[colors.tab_bar.new_tab_hover]
+bg_color = "#ECD6D3"
+fg_color = "#8E2314"
+
+[metadata]
+name = "lumina-jardin-light-contrast"
