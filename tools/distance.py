@@ -16,6 +16,14 @@ def lab(h):
 spec = json.loads(g.SPEC.read_text())["flavors"]
 T = {t["theme"]: [g.resolve_ref(r, t["colors"], g.SCHEMAS[f]) for r in ROLES]
      for f, modes in spec.items() for t in modes.values()}
+if sys.argv[1:2] == ["--near"]:
+    for fl in sys.argv[2:]:
+        for suffix in ("dark", "light"):
+            me = f"lumina-{fl}-{suffix}"
+            near = sorted((sum(100 * math.dist(lab(a), lab(b)) for a, b in zip(T[me], T[o])) / len(ROLES), o[7:-len(suffix) - 1])
+                          for o in T if o.endswith("-" + suffix) and o != me and not o.endswith("ink-" + suffix))
+            print(f"{fl:9} {suffix:5} " + " | ".join(f"{n} {d:.1f}" for d, n in near[:3]))
+    sys.exit(0)
 for suffix in sys.argv[1:] or ["dark", "light"]:
     names = [n for n in T if n.endswith("-" + suffix)]
     pairs = sorted((sum(100 * math.dist(lab(a), lab(b)) for a, b in zip(T[x], T[y])) / len(ROLES), x, y)
