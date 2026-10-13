@@ -16,9 +16,9 @@ code. Light: the same hues as inks on cool white paper.
 Its warm counterpart is **Sienne**: slate night under warm inks, beige
 text, teal functions, mauve keywords, gold types, olive strings, coral
 constants, apricot builtins.
-**Indigo** keeps one azure for the keywords and tints of sand for
-everything else; **Azur** sets the same azure among peach, straw, lilac,
-coral and aqua on blue slate.
+**Indigo** keeps one azure for the keywords and desert inks of the same
+weight for everything else (gold sand, copper, dusk mauve); **Azur**
+sets the same azure among peach, straw, lilac and mint on blue slate.
 
 <img src="assets/screens/lumina-vesper-dark.svg" width="49%"> <img src="assets/screens/lumina-vesper-light.svg" width="49%">
 
@@ -75,8 +75,8 @@ Radix inks.
 |---|---|---|---|---|
 | **Vesper** | deep navy / cool white | blue | purple, sky, straw | coral, rose |
 | **Sienne** | slate night / slate paper | teal | mauve, gold, olive | coral, apricot |
-| **Indigo** | indigo night / lavender paper | azure | sand tints only | cream |
-| **Azur** | blue slate / cool paper | azure | peach, straw, lilac | coral, aqua |
+| **Indigo** | indigo night / lavender paper | azure | gold sand, copper, dusk mauve | none |
+| **Azur** | blue slate / cool paper | azure | peach, lilac, straw | mint |
 | **Dawn** | warm sepia | amber | terracotta, teal, lime | rose |
 | **Oxblood** | dark wine | rose | violet, amber, emerald | orange |
 | **Tide** | deep ocean | sky | teal, indigo, emerald | amber |

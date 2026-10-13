@@ -1,10 +1,10 @@
 -- lumina-indigo-dark -- Lumina lualine theme (indigo, dark). Generated; do not edit.
 return {
-  normal = { a = { fg = '#151725', bg = '#65A7FA', gui = 'bold' }, b = { fg = '#AF9B80', bg = '#191B2C' }, c = { fg = '#AF9B80', bg = '#10111F' } },
-  insert = { a = { fg = '#151725', bg = '#66B5AB', gui = 'bold' }, b = { fg = '#AF9B80', bg = '#191B2C' }, c = { fg = '#AF9B80', bg = '#10111F' } },
-  visual = { a = { fg = '#151725', bg = '#AD98D5', gui = 'bold' }, b = { fg = '#AF9B80', bg = '#191B2C' }, c = { fg = '#AF9B80', bg = '#10111F' } },
-  replace = { a = { fg = '#151725', bg = '#E0576A', gui = 'bold' }, b = { fg = '#AF9B80', bg = '#191B2C' }, c = { fg = '#AF9B80', bg = '#10111F' } },
-  command = { a = { fg = '#151725', bg = '#E6A782', gui = 'bold' }, b = { fg = '#AF9B80', bg = '#191B2C' }, c = { fg = '#AF9B80', bg = '#10111F' } },
-  terminal = { a = { fg = '#151725', bg = '#80B38A', gui = 'bold' }, b = { fg = '#AF9B80', bg = '#191B2C' }, c = { fg = '#AF9B80', bg = '#10111F' } },
+  normal = { a = { fg = '#151725', bg = '#8EC7FF', gui = 'bold' }, b = { fg = '#A39684', bg = '#191B2C' }, c = { fg = '#A39684', bg = '#10111F' } },
+  insert = { a = { fg = '#151725', bg = '#54E9D3', gui = 'bold' }, b = { fg = '#A39684', bg = '#191B2C' }, c = { fg = '#A39684', bg = '#10111F' } },
+  visual = { a = { fg = '#151725', bg = '#C4B4FF', gui = 'bold' }, b = { fg = '#A39684', bg = '#191B2C' }, c = { fg = '#A39684', bg = '#10111F' } },
+  replace = { a = { fg = '#151725', bg = '#FF92A2', gui = 'bold' }, b = { fg = '#A39684', bg = '#191B2C' }, c = { fg = '#A39684', bg = '#10111F' } },
+  command = { a = { fg = '#151725', bg = '#FFB970', gui = 'bold' }, b = { fg = '#A39684', bg = '#191B2C' }, c = { fg = '#A39684', bg = '#10111F' } },
+  terminal = { a = { fg = '#151725', bg = '#6EE7B7', gui = 'bold' }, b = { fg = '#A39684', bg = '#191B2C' }, c = { fg = '#A39684', bg = '#10111F' } },
   inactive = { a = { fg = '#64677C', bg = '#10111F' }, b = { fg = '#64677C', bg = '#10111F' }, c = { fg = '#64677C', bg = '#151725' } },
 }

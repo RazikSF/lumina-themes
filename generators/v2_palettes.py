@@ -292,16 +292,10 @@ SIENNE_DARK = {"teal": (.70, .09, 205), "magenta": (.70, .11, 322), "yellow": (.
 SIENNE_LIGHT = {"teal": (.50, .11, 205), "magenta": (.50, .14, 322), "yellow": (.47, .12, 80), "green": (.52, .11, 118), "coral": (.50, .17, 34), "orange": (.55, .14, 64),
                 "red": (.42, .19, 0), "cyan": (.50, .10, 230), "blue": (.50, .12, 250), "violet": (.50, .13, 300)}
 
-UI_COOL = {"red": (.64, .17, 15), "green": (.72, .08, 150), "teal": (.72, .08, 185), "cyan": (.74, .08, 220), "blue": (.70, .10, 255), "violet": (.72, .09, 300), "magenta": (.72, .11, 320), "yellow": (.82, .08, 85), "orange": (.78, .09, 52)}
-INDIGO_DARK = {**UI_COOL, "blue": (.72, .14, 255),
-               "fg": (.80, .045, 75), "base8": (.80, .045, 75), "fg-alt": (.70, .045, 75), "comments": (.56, .03, 270), "doc-comments": (.60, .03, 270),
-               "ink-light": (.88, .06, 72), "ink-mid": (.76, .065, 70), "ink-dim": (.66, .06, 62)}
-INDIGO_LIGHT = {"blue": (.50, .16, 255), "fg": (.40, .02, 75), "base8": (.40, .02, 75), "fg-alt": (.51, .02, 75),
-                "ink-light": (.30, .06, 72), "ink-mid": (.46, .05, 70), "ink-dim": (.55, .05, 62)}
-AZUR_DARK = {**UI_COOL, "red": (.62, .19, 10), "blue": (.72, .15, 253), "yellow": (.85, .075, 96), "orange": (.78, .12, 46), "violet": (.78, .11, 300), "coral": (.71, .15, 20), "cyan": (.78, .09, 205),
-             "fg": (.82, .03, 255), "base8": (.82, .03, 255), "fg-alt": (.72, .03, 255), "comments": (.55, .02, 255), "doc-comments": (.59, .02, 255)}
-AZUR_LIGHT = {"blue": (.50, .16, 253), "yellow": (.44, .12, 82), "orange": (.54, .14, 48), "violet": (.50, .14, 300), "coral": (.44, .17, 18), "cyan": (.48, .10, 205),
-              "red": (.36, .20, 345), "green": (.50, .12, 150), "teal": (.48, .10, 185), "magenta": (.50, .14, 330)}
+INDIGO_DARK = {"blue": (.82, .12, 255), "ink-light": (.86, .12, 100), "ink-mid": (.81, .12, 55), "ink-dim": (.80, .09, 320),
+               "fg": (.78, .03, 75), "base8": (.78, .03, 75), "fg-alt": (.68, .03, 75)}
+INDIGO_LIGHT = {"blue": (.49, .16, 255), "ink-light": (.50, .14, 95), "ink-mid": (.52, .14, 48), "ink-dim": (.51, .12, 320),
+                "fg": (.40, .02, 75), "base8": (.40, .02, 75), "fg-alt": (.51, .02, 75)}
 
 
 FLAVORS = {
@@ -343,18 +337,18 @@ FLAVORS = {
                      cap=(.10, .14), extra={"dark": {"blue": (.78, .13, 275)}},
                      commentary={"dark": "Lumina Slate, dark variant.\nCold graphite; one steel-blue lamp, every other accent held back to a whisper, soft text.",
                                  "light": "Lumina Slate, light variant.\nCold white paper; the same steel-blue ink, every other accent held back, soft text."}),
-    "indigo": dict(ground=(278, .030, .008, .21, .984), lamp="blue", text=(.80, .40),
+    "indigo": dict(ground=(278, .030, .008, .21, .984), lamp="blue",
                       roles=dict(functions="ink-light", keywords="blue", type="ink-mid", strings="ink-dim", constants="ink-light", builtin="ink-mid", methods="ink-light"),
                       extra={"dark": INDIGO_DARK, "light": INDIGO_LIGHT},
-                      sig={"halo": (.07, .12), "halo2": (.14, .18), "region": (.24, .26), "glow": (.42, .45)},
-                      commentary={"dark": "Lumina Indigo, dark variant.\nIndigo night, one azure for the keywords, everything else in tints of sand: cream functions and constants, sand types and builtins, tan strings, sand text.",
+                      commentary={"dark": "Lumina Indigo, dark variant.\nIndigo night, one azure for the keywords, everything else in desert inks of the same weight: gold sand, copper and dusk mauve, sand-tinted text.",
                                   "light": "Lumina Indigo, light variant.\nLavender-white paper, the same azure for the keywords, umber inks for the rest."}),
-    "azur": dict(ground=(255, .022, .006, .235, .984), lamp="blue", text=(.82, .40),
-                    roles=dict(functions="orange", keywords="blue", type="violet", strings="yellow", constants="coral", builtin="cyan", methods="orange"),
-                    extra={"dark": AZUR_DARK, "light": AZUR_LIGHT},
-                    sig={"halo": (.07, .12), "halo2": (.14, .18), "region": (.24, .26), "glow": (.42, .45)},
-                    commentary={"dark": "Lumina Azur, dark variant.\nBlue slate; Monoink's azure on the keywords and five companions: peach functions, straw strings, coral constants, lilac types, aqua builtins, blue-grey text.",
-                                "light": "Lumina Azur, light variant.\nCool paper; the same hues as inks: azure keywords, rust functions, amber strings, coral constants, violet types, teal builtins."}),
+    "azur": dict(ground=(255, .022, .006, .235, .984), lamp="blue",
+                    roles=dict(functions="orange", keywords="blue", type="violet", strings="yellow", constants="teal", builtin="violet", methods="orange"),
+                    extra={"dark": {"fg": (.80, .025, 255), "base8": (.80, .025, 255), "fg-alt": (.70, .025, 255),
+                                    "blue": (.82, .13, 250), "orange": (.81, .115, 59), "yellow": (.85, .12, 102)},
+                           "light": {"blue": (.47, .19, 255), "orange": (.52, .16, 36), "yellow": (.52, .12, 95)}},
+                    commentary={"dark": "Lumina Azur, dark variant.\nBlue slate; one azure lamp on the keywords and four companions of the same weight: peach functions, straw strings, lilac types, mint constants.",
+                                "light": "Lumina Azur, light variant.\nCool paper; the same hues as inks of one weight: azure keywords, orange functions, amber strings, violet types, teal constants."}),
     "nocturne": dict(ground=(266.4, 0.042, .008, 0.208, .98), lamp="orange", paper=(271.3, 0.0083, 0.982),
                         roles=dict(functions="orange", keywords="blue", type="cyan", strings="green", constants="magenta", builtin="cyan", methods="cyan"),
                         hues={"magenta": ("fuchsia", "plum")},
@@ -372,6 +366,7 @@ FLAVORS = {
                                   "dark-ink": "Lumina Prisma, dark ink variant.\nBlack and white: a single white ray enters a glass prism; the ray is the lamp, the code is its spectrum.",
                                   "light": "Lumina Prisma, light variant.\nWhite paper in daylight; the lamp turns ultraviolet and the code is a full spectrum of vivid inks.",
                                   "light-ink": "Lumina Prisma, light ink variant.\nBlack and white: white paper, one lamp of black ink, and the code as a full spectrum of inks."},
+                      cap=(.11, .15), extra={"dark": {"spark": (.81, .12, 305)}, "light": {"spark": (.48, .17, 300)}},
                       variants={"dark-ink": ("dark", {"spark": (.97, .015, 95)}), "light-ink": ("light", {"spark": (.26, .03, 280)})}),
 }
 PALETTES = {k: compose(**v) for k, v in FLAVORS.items()}
