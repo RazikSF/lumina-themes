@@ -25,7 +25,10 @@ COMBOS = {"n° 19 (4 couleurs)": dict(fn="saumon", kw="ciel", ty="or", st="menth
           "n° 23 (4 couleurs)": dict(fn="saumon", kw="ciel", ty="or", st="menthe", co="ciel", bi="or"),
           "6 couleurs : constantes lilas, builtins rose": dict(fn="saumon", kw="ciel", ty="or", st="menthe", co="lilas", bi="rose"),
           "6 couleurs : constantes rose, builtins lilas": dict(fn="saumon", kw="ciel", ty="or", st="menthe", co="rose", bi="lilas"),
-          "6 couleurs : constantes lilas, builtins vert tendre": dict(fn="saumon", kw="ciel", ty="or", st="menthe", co="lilas", bi="vert tendre")}
+          "6 couleurs : constantes lilas, builtins vert tendre": dict(fn="saumon", kw="ciel", ty="or", st="menthe", co="lilas", bi="vert tendre"),
+          "n° 11 (4 couleurs)": dict(fn="or", kw="ciel", ty="menthe", st="saumon", co="or", bi="menthe"),
+          "n° 15 (4 couleurs)": dict(fn="or", kw="ciel", ty="menthe", st="saumon", co="ciel", bi="menthe"),
+          "n° 11 en 6 couleurs : constantes lilas, builtins rose": dict(fn="or", kw="ciel", ty="menthe", st="saumon", co="lilas", bi="rose")}
 
 
 def role(tt):
@@ -110,7 +113,7 @@ def main():
       return `<div class="card" style="background:${m.bg};color:${fg}"><div class="t" style="color:${m.grey}">${n}</div><pre>${toks.map(([r,v])=>`<span style="color:${col(r)}${r=="cm"?";font-style:italic":""}">${esc(v)}</span>`).join("")}</pre></div>`}
     const names=Object.keys(D.combos), L=document.getElementById("left"), R=document.getElementById("right");
     for(const s of [L,R]) s.innerHTML=names.map(n=>`<option>${n}</option>`).join("");
-    L.value=names[0]; R.value=names[2];
+    L.value=names[2]; R.value=names[names.length-1];
     const RN={fn:"fonctions",kw:"mots-clés",ty:"types",st:"chaînes",co:"constantes",bi:"builtins"};
     function legend(n){const m=D.modes[mode],c=D.combos[n];return `<div class="sw">${Object.entries(RN).map(([r,t])=>`<span style="background:${m.bg};color:${m.inks[c[r]]}">${t} : ${c[r]}</span>`).join("")}</div>`}
     function render(){document.getElementById("kl").innerHTML=legend(L.value);document.getElementById("kr").innerHTML=legend(R.value);
