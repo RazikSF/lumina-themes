@@ -10,8 +10,8 @@ ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(ROOT / "generators"))
 from oklch import contrast, fit_chroma, from_hex, to_hex
 
-GROUND, TEXT, GREY, BLUE = "#1C2030", "#E2E6EA", "#A2A6B6", "#2E86C1"
-INKS = {"or": "#F8BE50", "saumon": "#EC8C7C", "menthe": "#84C4A8", "ciel": "#74B8E8"}
+GROUND, TEXT, GREY, BLUE = "#1D2130", "#E8E9E7", "#A3A7B7", "#2E86C1"
+INKS = {"or": "#F7C054", "saumon": "#EC907E", "menthe": "#87C3AB", "ciel": "#77B8E7", "bleu": "#2E86C1"}
 PAPER = "#F6F7FA"
 
 
@@ -44,6 +44,7 @@ def text_at(target, bg, light):
 def light_inks():
     out = {k: with_L(v, .50, 1.35) for k, v in INKS.items()}
     out["or"] = to_hex(.53, fit_chroma(.53, .16, 66), 66)
+    out["bleu"] = with_L(INKS["bleu"], .46, 1.1)
     return out
 
 
@@ -66,12 +67,9 @@ ROLE_NAMES = {"fn": "fonctions", "kw": "mots-clés", "ty": "types", "st": "chaî
 
 
 def combos():
-    names = list(INKS)
-    for lamp in names:
-        rest = [n for n in names if n != lamp]
-        for kw, ty, st in itertools.permutations(rest, 3):
-            for co in [lamp] + rest:
-                yield {"fn": lamp, "kw": kw, "ty": ty, "st": st, "co": co, "bi": ty}
+    for fn, kw, ty, st in itertools.permutations(list(INKS), 4):
+        for co in (fn, kw, ty, st):
+            yield {"fn": fn, "kw": kw, "ty": ty, "st": st, "co": co, "bi": ty}
 
 
 def score(c):
@@ -149,15 +147,15 @@ pre{margin:0;padding:6px 0 10px;font:12.5px/1.55 "Zed Mono","JetBrains Mono",Men
 @media (max-width:480px){.grid{grid-template-columns:1fr}}
 </style></head><body>
 <h1>Palette de la diapositive : toutes les combinaisons</h1>
-<p class="lead">Fond, texte, gris et cinq couleurs relevés au pixel sur la diapositive. Les quatre encres se répartissent entre fonctions, mots-clés, types et chaînes ; les constantes reprennent l'une d'elles. Le bleu franc, trop sombre pour du texte (4,1:1), a la même teinte que le ciel : éclairci, il devient le ciel. Le bleu franc du carré sert à la sélection et à la barre d'état. Le bouton « même intensité » ramène les quatre encres à une clarté et une saturation communes (l'or, plus vif sur la diapo, est le plus touché).</p>
+<p class="lead">Fond, texte, gris et cinq couleurs relevés au pixel sur la diapositive (médiane exacte, sans arrondi ; le bleu franc reprend la valeur #2E86C1 écrite sur la diapo). Les quatre encres se répartissent entre fonctions, mots-clés, types et chaînes ; les constantes reprennent l'une d'elles. Le bleu franc est une encre comme les autres : à 4,1:1 sur le fond, il est un peu sous le seuil de lisibilité de 4,5:1, à juger à l'œil. Le bleu franc du carré sert à la sélection et à la barre d'état. Le bouton « même intensité » ramène les quatre encres à une clarté et une saturation communes (l'or, plus vif sur la diapo, est le plus touché).</p>
 <div class="sw" id="sw"></div>
 <div class="bar">
   <label>Mode <button id="mDark" class="on">sombre</button><button id="mLight">clair</button></label>
   <label>Texte <button id="tOrig" class="on">diapo (12,9:1)</button><button id="tSoft">adouci (9:1)</button></label>
   <label>Encres <button id="iOrig" class="on">diapo</button><button id="iEq">même intensité</button></label>
-  <label>Fonctions <select id="lamp"><option value="">toutes</option><option>or</option><option>saumon</option><option>menthe</option><option>ciel</option></select></label>
-  <label>Mots-clés <select id="kwf"><option value="">tous</option><option>or</option><option>saumon</option><option>menthe</option><option>ciel</option></select></label>
-  <label>Afficher <select id="n"><option value="12">les 12 premières</option><option value="24">24</option><option value="96">les 96</option></select></label>
+  <label>Fonctions <select id="lamp"><option value="">toutes</option><option>or</option><option>saumon</option><option>menthe</option><option>ciel</option><option>bleu</option></select></label>
+  <label>Mots-clés <select id="kwf"><option value="">tous</option><option>or</option><option>saumon</option><option>menthe</option><option>ciel</option><option>bleu</option></select></label>
+  <label>Afficher <select id="n"><option value="12">les 12 premières</option><option value="24">24</option><option value="96">96</option><option value="480">les 480</option></select></label>
 </div>
 <div class="grid" id="grid"></div>
 <script>
