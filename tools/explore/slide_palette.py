@@ -10,8 +10,9 @@ ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(ROOT / "generators"))
 from oklch import contrast, fit_chroma, from_hex, to_hex
 
-GROUND, TEXT, GREY, BLUE = "#1D2130", "#E8E9E7", "#A3A7B7", "#2E86C1"
-INKS = {"or": "#F7C054", "saumon": "#EC907E", "menthe": "#87C3AB", "ciel": "#77B8E7", "bleu": "#2E86C1"}
+GROUND, TEXT, GREY = "#1D2130", "#E8E9E7", "#A3A7B7"
+INKS = {"or": "#F7C054", "saumon": "#EC907E", "menthe": "#87C3AB", "ciel": "#77B8E7"}
+BLUE = INKS["ciel"]
 PAPER = "#F6F7FA"
 
 
@@ -44,7 +45,6 @@ def text_at(target, bg, light):
 def light_inks():
     out = {k: with_L(v, .50, 1.35) for k, v in INKS.items()}
     out["or"] = to_hex(.53, fit_chroma(.53, .16, 66), 66)
-    out["bleu"] = with_L(INKS["bleu"], .46, 1.1)
     return out
 
 
@@ -115,7 +115,7 @@ for m in (dark, light):
     m["halo"] = {k: mix(m["bg"], v, .10) for k, v in m["inks"].items()}
     m["halo_eq"] = {k: mix(m["bg"], v, .10) for k, v in m["inks_eq"].items()}
     m["contrast_eq"] = {k: round(contrast(v, m["bg"]), 1) for k, v in m["inks_eq"].items()}
-    m["region"] = mix(m["bg"], m["blue"], .38)
+    m["region"] = mix(m["bg"], m["blue"], .30)
     m["ln"] = mix(m["bg"], m["grey"], .45)
     m["contrast"] = {k: round(contrast(v, m["bg"]), 1) for k, v in m["inks"].items()}
     m["tcontrast"] = {k: round(contrast(v, m["bg"]), 1) for k, v in m["text"].items()}
@@ -147,15 +147,15 @@ pre{margin:0;padding:6px 0 10px;font:12.5px/1.55 "Zed Mono","JetBrains Mono",Men
 @media (max-width:480px){.grid{grid-template-columns:1fr}}
 </style></head><body>
 <h1>Palette de la diapositive : toutes les combinaisons</h1>
-<p class="lead">Fond, texte, gris et cinq couleurs relevés au pixel sur la diapositive (médiane exacte, sans arrondi ; le bleu franc reprend la valeur #2E86C1 écrite sur la diapo). Les quatre encres se répartissent entre fonctions, mots-clés, types et chaînes ; les constantes reprennent l'une d'elles. Le bleu franc est une encre comme les autres : à 4,1:1 sur le fond, il est un peu sous le seuil de lisibilité de 4,5:1, à juger à l'œil. Le bleu franc du carré sert à la sélection et à la barre d'état. Le bouton « même intensité » ramène les quatre encres à une clarté et une saturation communes (l'or, plus vif sur la diapo, est le plus touché).</p>
+<p class="lead">Fond, texte, gris et quatre couleurs relevés au pixel sur la diapositive (médiane exacte, sans arrondi) : l'or du titre, le saumon, la menthe et le ciel des trois mots, le texte et le gris. Les quatre encres se répartissent entre fonctions, mots-clés, types et chaînes ; les constantes reprennent l'une d'elles. La sélection et la barre d'état prennent une teinte tirée du ciel. Le bouton « même intensité » ramène les quatre encres à une clarté et une saturation communes (l'or, plus vif sur la diapo, est le plus touché).</p>
 <div class="sw" id="sw"></div>
 <div class="bar">
   <label>Mode <button id="mDark" class="on">sombre</button><button id="mLight">clair</button></label>
   <label>Texte <button id="tOrig" class="on">diapo (12,9:1)</button><button id="tSoft">adouci (9:1)</button></label>
   <label>Encres <button id="iOrig" class="on">diapo</button><button id="iEq">même intensité</button></label>
-  <label>Fonctions <select id="lamp"><option value="">toutes</option><option>or</option><option>saumon</option><option>menthe</option><option>ciel</option><option>bleu</option></select></label>
-  <label>Mots-clés <select id="kwf"><option value="">tous</option><option>or</option><option>saumon</option><option>menthe</option><option>ciel</option><option>bleu</option></select></label>
-  <label>Afficher <select id="n"><option value="12">les 12 premières</option><option value="24">24</option><option value="96">96</option><option value="480">les 480</option></select></label>
+  <label>Fonctions <select id="lamp"><option value="">toutes</option><option>or</option><option>saumon</option><option>menthe</option><option>ciel</option></select></label>
+  <label>Mots-clés <select id="kwf"><option value="">tous</option><option>or</option><option>saumon</option><option>menthe</option><option>ciel</option></select></label>
+  <label>Afficher <select id="n"><option value="12">les 12 premières</option><option value="24">24</option><option value="96">les 96</option></select></label>
 </div>
 <div class="grid" id="grid"></div>
 <script>
@@ -165,7 +165,7 @@ function M(){const m=D[mode];return {...m,inks:ink=="eq"?m.inks_eq:m.inks_orig,h
 const $=id=>document.getElementById(id);
 function esc(s){return s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]))}
 function swatches(){const m=M();$("sw").innerHTML=
-  [["fond",m.bg],["texte",m.text[text]],["gris",m.grey],...Object.entries(m.inks),["bleu franc",m.blue]].map(([k,v])=>
+  [["fond",m.bg],["texte",m.text[text]],["gris",m.grey],...Object.entries(m.inks),["sélection",m.region]].map(([k,v])=>
   `<div><span style="background:${v};outline:1px solid #8884"></span>${k} ${v}${m.contrast[k]?` · ${m.contrast[k]}:1`:""}${k=="texte"?` · ${m.tcontrast[text]}:1`:""}</div>`).join("")}
 function card(c,i){const m=M(), fg=m.text[text], col=r=>r=="fg"?fg:r=="cm"?m.grey:m.inks[c[r]];
   const lamp=m.inks[c.fn];
