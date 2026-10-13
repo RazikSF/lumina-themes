@@ -1,0 +1,12 @@
+/* Bouton principal */
+:root { --accent: #2f6fdf; }
+
+.exercice > button.primaire:hover {
+  color: white;
+  background: var(--accent);
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px !important;
+  transition: background 120ms ease-in;
+}
+
+@media (max-width: 600px) { .exercice { margin: 0; } }
