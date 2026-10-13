@@ -2,26 +2,26 @@
 # Generated from spec/lumina.json. Do not edit by hand.
 [colors]
 foreground   = "#A7B0CF"
-background   = "#151A26"
+background   = "#0F141D"
 cursor_bg    = "#A7B0CF"
-cursor_fg    = "#151A26"
+cursor_fg    = "#0F141D"
 cursor_border = "#A7B0CF"
-selection_bg = "#26364F"
+selection_bg = "#223047"
 selection_fg = "#A7B0CF"
-scrollbar_thumb = "#404859"
-split = "#2B3343"
+scrollbar_thumb = "#414855"
+split = "#252B38"
 compose_cursor = "#6499E8"
-visual_bell = "#344B71"
+visual_bell = "#31476A"
 copy_mode_active_highlight_bg = { Color = "#6499E8" }
-copy_mode_active_highlight_fg = { Color = "#151A26" }
-copy_mode_inactive_highlight_bg = { Color = "#1F2A3E" }
+copy_mode_active_highlight_fg = { Color = "#0F141D" }
+copy_mode_inactive_highlight_bg = { Color = "#1A2435" }
 copy_mode_inactive_highlight_fg = { Color = "#A7B0CF" }
 quick_select_label_bg = { Color = "#F07B60" }
-quick_select_label_fg = { Color = "#151A26" }
-quick_select_match_bg = { Color = "#1F2A3E" }
+quick_select_label_fg = { Color = "#0F141D" }
+quick_select_match_bg = { Color = "#1A2435" }
 quick_select_match_fg = { Color = "#A7B0CF" }
-ansi = ["#181F2E", "#E44A65", "#80B38A", "#DFCA7D", "#6499E8", "#BE78D4", "#5BC1D9", "#ABB1BE"]
-brights = ["#60697B", "#F07B60", "#66B5AB", "#DFCA7D", "#3B6EB9", "#A388D2", "#5BC1D9", "#A7B0CF"]
+ansi = ["#131824", "#E44A65", "#80B38A", "#DFCA7D", "#6499E8", "#BE78D4", "#5BC1D9", "#ACB1BB"]
+brights = ["#626978", "#F07B60", "#66B5AB", "#DFCA7D", "#3B6EB9", "#A388D2", "#5BC1D9", "#A7B0CF"]
 
 [colors.indexed]
 16 = "#F07B60"
@@ -30,23 +30,23 @@ brights = ["#60697B", "#F07B60", "#66B5AB", "#DFCA7D", "#3B6EB9", "#A388D2", "#5
 19 = "#3B6EB9"
 
 [colors.tab_bar]
-background = "#0F1520"
-inactive_tab_edge = "#212938"
+background = "#0A0E17"
+inactive_tab_edge = "#1C222E"
 [colors.tab_bar.active_tab]
-bg_color = "#151A26"
+bg_color = "#0F141D"
 fg_color = "#A7B0CF"
 intensity = "Bold"
 [colors.tab_bar.inactive_tab]
-bg_color = "#0F1520"
-fg_color = "#80899C"
+bg_color = "#0A0E17"
+fg_color = "#828999"
 [colors.tab_bar.inactive_tab_hover]
-bg_color = "#1A2232"
+bg_color = "#151C29"
 fg_color = "#A7B0CF"
 [colors.tab_bar.new_tab]
-bg_color = "#0F1520"
-fg_color = "#60697B"
+bg_color = "#0A0E17"
+fg_color = "#626978"
 [colors.tab_bar.new_tab_hover]
-bg_color = "#1F2A3E"
+bg_color = "#1A2435"
 fg_color = "#6499E8"
 
 [metadata]

@@ -178,7 +178,7 @@ def C(colors, key, default="#000000"):
     return default
 
 
-SCHEMAS["nuancier"] = {"v2": True, "lead": "orange", "fg_min": 8, "fg_max": 13.5, "modeline_bg": "bg-alt", "vertico_bg": "halo2",
+SCHEMAS["nuancier"] = {"v2": True, "lead": "orange", "fg_min": 8, "fg_max": 14.5, "modeline_bg": "bg-alt", "vertico_bg": "halo2",
                        "modeline_modified": "orange"}
 SCHEMAS["aquarelle"] = dict(SCHEMAS["nuancier"])
 SCHEMAS["jardin"] = dict(SCHEMAS["nuancier"])

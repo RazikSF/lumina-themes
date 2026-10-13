@@ -2,25 +2,25 @@
 # Generated from spec/lumina.json. Do not edit by hand.
 [colors]
 foreground   = "#EFEEED"
-background   = "#100E0C"
+background   = "#0F0E0D"
 cursor_bg    = "#EFEEED"
-cursor_fg    = "#100E0C"
+cursor_fg    = "#0F0E0D"
 cursor_border = "#EFEEED"
 selection_bg = "#2E372D"
 selection_fg = "#EFEEED"
 scrollbar_thumb = "#4F4D4A"
-split = "#2D2B28"
+split = "#2D2B29"
 compose_cursor = "#91C89C"
-visual_bell = "#465947"
+visual_bell = "#455A47"
 copy_mode_active_highlight_bg = { Color = "#91C89C" }
-copy_mode_active_highlight_fg = { Color = "#100E0C" }
+copy_mode_active_highlight_fg = { Color = "#0F0E0D" }
 copy_mode_inactive_highlight_bg = { Color = "#222720" }
 copy_mode_inactive_highlight_fg = { Color = "#EFEEED" }
 quick_select_label_bg = { Color = "#FFB77B" }
-quick_select_label_fg = { Color = "#100E0C" }
+quick_select_label_fg = { Color = "#0F0E0D" }
 quick_select_match_bg = { Color = "#222720" }
 quick_select_match_fg = { Color = "#EFEEED" }
-ansi = ["#151311", "#FF9071", "#91C89C", "#DCCDA0", "#AFCDFF", "#FFB0C2", "#88DDEC", "#C5C4C2"]
+ansi = ["#151312", "#FF9071", "#91C89C", "#DCCDA0", "#AFCDFF", "#FFB0C2", "#88DDEC", "#C5C4C2"]
 brights = ["#7C7A77", "#FFB77B", "#91DFD1", "#DCCDA0", "#6984C0", "#E8BAFA", "#88DDEC", "#EFEEED"]
 
 [colors.indexed]
@@ -30,20 +30,20 @@ brights = ["#7C7A77", "#FFB77B", "#91DFD1", "#DCCDA0", "#6984C0", "#E8BAFA", "#8
 19 = "#6984C0"
 
 [colors.tab_bar]
-background = "#0A0907"
-inactive_tab_edge = "#201E1B"
+background = "#0A0908"
+inactive_tab_edge = "#1F1E1C"
 [colors.tab_bar.active_tab]
-bg_color = "#100E0C"
+bg_color = "#0F0E0D"
 fg_color = "#EFEEED"
 intensity = "Bold"
 [colors.tab_bar.inactive_tab]
-bg_color = "#0A0907"
-fg_color = "#A19E9B"
+bg_color = "#0A0908"
+fg_color = "#A09E9B"
 [colors.tab_bar.inactive_tab_hover]
 bg_color = "#1B1D18"
 fg_color = "#EFEEED"
 [colors.tab_bar.new_tab]
-bg_color = "#0A0907"
+bg_color = "#0A0908"
 fg_color = "#7C7A77"
 [colors.tab_bar.new_tab_hover]
 bg_color = "#222720"
