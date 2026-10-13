@@ -1,0 +1,53 @@
+# lumina-aquarelle-light -- Lumina (aquarelle, light)
+# Generated from spec/lumina.json. Do not edit by hand.
+[colors]
+foreground   = "#46484C"
+background   = "#F7F8FA"
+cursor_bg    = "#46484C"
+cursor_fg    = "#F7F8FA"
+cursor_border = "#46484C"
+selection_bg = "#DDD0BF"
+selection_fg = "#46484C"
+scrollbar_thumb = "#AFB1B7"
+split = "#D3D5DB"
+compose_cursor = "#936500"
+visual_bell = "#CAB495"
+copy_mode_active_highlight_bg = { Color = "#936500" }
+copy_mode_active_highlight_fg = { Color = "#F7F8FA" }
+copy_mode_inactive_highlight_bg = { Color = "#E5DCD1" }
+copy_mode_inactive_highlight_fg = { Color = "#46484C" }
+quick_select_label_bg = { Color = "#A93D2D" }
+quick_select_label_fg = { Color = "#F7F8FA" }
+quick_select_match_bg = { Color = "#E5DCD1" }
+quick_select_match_fg = { Color = "#46484C" }
+ansi = ["#EFF1F7", "#8A001B", "#2A7E3B", "#936500", "#006DA3", "#9D3C76", "#00749E", "#46484C"]
+brights = ["#84868B", "#A93D2D", "#00795A", "#936500", "#004F84", "#6E50AF", "#00749E", "#46484C"]
+
+[colors.indexed]
+16 = "#A93D2D"
+17 = "#00795A"
+18 = "#6E50AF"
+19 = "#004F84"
+
+[colors.tab_bar]
+background = "#EBEEF4"
+inactive_tab_edge = "#E3E5EB"
+[colors.tab_bar.active_tab]
+bg_color = "#F7F8FA"
+fg_color = "#46484C"
+intensity = "Bold"
+[colors.tab_bar.inactive_tab]
+bg_color = "#EBEEF4"
+fg_color = "#616368"
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "#EBE5DF"
+fg_color = "#46484C"
+[colors.tab_bar.new_tab]
+bg_color = "#EBEEF4"
+fg_color = "#84868B"
+[colors.tab_bar.new_tab_hover]
+bg_color = "#E5DCD1"
+fg_color = "#936500"
+
+[metadata]
+name = "lumina-aquarelle-light"

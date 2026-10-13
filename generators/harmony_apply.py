@@ -79,7 +79,7 @@ SCENES = {
     "amethyst": ("Inside a split amethyst geode", "Lilac paper"), "prisma": ("Neutral night, the full spectrum", "White paper, the full spectrum"),
     "indigo": ("Indigo night", "Lavender-white paper"), "azur": ("Blue slate under a clear sky, vivid", "Cool paper, vivid inks"),
     "sirocco": ("Desert wind at dusk over terracotta", "Sand paper"), "celadon": ("Glazed jade porcelain", "Pale celadon paper"),
-    "sumi": ("Ink-black ground", "Rice paper"), "pivoine": ("A soft dusk of peony petals, lighter than the night grounds", "Blush paper"),
+    "sumi": ("Ink-black ground", "Rice paper"), "aquarelle": ("The slide palette rearranged, slate night", "Cool paper, the same inks"), "pivoine": ("A soft dusk of peony petals, lighter than the night grounds", "Blush paper"),
 }
 
 

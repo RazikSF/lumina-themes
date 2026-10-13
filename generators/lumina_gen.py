@@ -180,6 +180,7 @@ def C(colors, key, default="#000000"):
 
 SCHEMAS["nuancier"] = {"v2": True, "lead": "orange", "fg_min": 8, "fg_max": 13.5, "modeline_bg": "bg-alt", "vertico_bg": "halo2",
                        "modeline_modified": "orange"}
+SCHEMAS["aquarelle"] = dict(SCHEMAS["nuancier"])
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from harmony_apply import HARMONY as _HARMONY, schema_overrides as _schema_overrides
 for _f in _HARMONY:

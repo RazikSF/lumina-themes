@@ -7,7 +7,7 @@ sys.path.insert(0, str(ROOT / "generators"))
 import lumina_gen as g
 
 SPEC = json.loads(g.SPEC.read_text())["flavors"]
-RANGES = {"Signature": ["nuancier", "sienne", "vesper", "indigo", "azur"], "Feutrés": ["dawn", "oxblood", "tide", "canopy", "slate"],
+RANGES = {"Signature": ["nuancier", "aquarelle", "sienne", "vesper", "indigo", "azur"], "Feutrés": ["dawn", "oxblood", "tide", "canopy", "slate"],
           "Vifs": ["nocturne", "amethyst", "prisma"], "Matières": ["sirocco", "celadon", "sumi", "pivoine"]}
 LINES = slice(13, 32)
 SPAN = re.compile(r'<span style="([^"]*)">(.*?)</span>', re.S)

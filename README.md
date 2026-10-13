@@ -8,13 +8,14 @@ code carries the same weight. No colour glows brighter than its
 neighbours; hues alone tell keywords, functions, types and strings
 apart, so the eye can rest on any part of the screen.
 
-Seventeen flavors, each in dark, light and high contrast, plus Prisma's
-black-and-white twins: 72 themes. The reference is **Nuancier**, taken
+Eighteen flavors, each in dark, light and high contrast, plus Prisma's
+black-and-white twins: 76 themes. The reference is **Nuancier**, taken
 from a slide on web colours: slate night `#1D2130`, sky keywords
 `#77B8E7`, salmon functions `#EC907E`, gold types `#F7C054`, mint strings
 `#87C3AB`, lilac constants `#B5A4EA`, rose builtins `#E297BA`. Six inks,
 one per role, of one weight; every other flavor is composed to the same
-standard. **Sienne** (slate night under warm inks) and **Vesper** (deep
+standard. **Aquarelle** is its sister: the same ground and inks, set
+differently (gold functions, mint types, salmon strings). **Sienne** (slate night under warm inks) and **Vesper** (deep
 navy, no green in the code) keep their own hand-tuned balance.
 
 <img src="assets/screens/lumina-nuancier-dark.svg" width="49%"> <img src="assets/screens/lumina-nuancier-light.svg" width="49%">
@@ -77,6 +78,7 @@ Radix inks.
 | Flavor | Ground | Keywords | Functions | Types | Strings | Constants | Builtins |
 |---|---|---|---|---|---|---|---|
 | **Nuancier** | slate night / cool paper | sky | salmon | gold | mint | lilac | pink |
+| **Aquarelle** | slate night / cool paper | sky | gold | mint | salmon | lilac | pink |
 | **Sienne** | slate night / slate paper | orchid | sky | gold | lime | salmon | apricot |
 | **Vesper** | deep navy / cool white | orchid | periwinkle | sky | straw | salmon | pink |
 | **Indigo** | indigo night / lavender paper | periwinkle | sky | orchid | salmon | sage | gold |
@@ -99,6 +101,10 @@ Radix inks.
 **Nuancier**
 
 <img src="assets/screens/lumina-nuancier-dark.svg" width="49%"> <img src="assets/screens/lumina-nuancier-light.svg" width="49%">
+
+**Aquarelle**
+
+<img src="assets/screens/lumina-aquarelle-dark.svg" width="49%"> <img src="assets/screens/lumina-aquarelle-light.svg" width="49%">
 
 **Sienne**
 
@@ -171,11 +177,11 @@ Prisma adds black-and-white twins: `lumina-prisma-dark-ink`,
 
 | Target | Output |
 |---|---|
-| **Emacs** (vanilla `deftheme`)  | `emacs/themes/*.el` (72), close to 3 000 faces each |
-| **Neovim** (Lua colorscheme)    | `nvim/colors/*.lua` (72), over 1 600 groups each, plus `nvim/lua/lualine/themes/*.lua` |
-| **VS Code** (extension)         | `vscode/themes/*.json` (72): 565 workbench colours, 80 token scopes, 47 semantic tokens |
-| **WezTerm** (color scheme)      | `wezterm/*.toml` (72): ANSI, indexed, tab bar states, copy and quick-select modes |
-| **base24** (tinted-theming)     | `base24/*.yaml` (72) |
+| **Emacs** (vanilla `deftheme`)  | `emacs/themes/*.el` (76), close to 3 000 faces each |
+| **Neovim** (Lua colorscheme)    | `nvim/colors/*.lua` (76), over 1 600 groups each, plus `nvim/lua/lualine/themes/*.lua` |
+| **VS Code** (extension)         | `vscode/themes/*.json` (76): 565 workbench colours, 80 token scopes, 47 semantic tokens |
+| **WezTerm** (color scheme)      | `wezterm/*.toml` (76): ANSI, indexed, tab bar states, copy and quick-select modes |
+| **base24** (tinted-theming)     | `base24/*.yaml` (76) |
 
 The Emacs files require no external dependency and load on a bare
 `emacs -Q` in about ten milliseconds. Each one styles close to 3 000
@@ -352,7 +358,7 @@ per flavor and emits one file per target per (flavor, mode).
 A flavor is one `compose(...)` call in `generators/v2_palettes.py`:
 ground, lead slot, role map, optional hue overrides. It propagates to
 all five targets on the next `make build`; a face edit in
-`generators/faces_src.py` propagates to the 72 Emacs themes, one in
+`generators/faces_src.py` propagates to the 76 Emacs themes, one in
 `generators/nvim_src.py` to the 52 Neovim colorschemes.
 
 ## Develop
