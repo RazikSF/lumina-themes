@@ -97,8 +97,22 @@ dark = {"bg": GROUND, "grey": GREY, "inks": INKS, "blue": BLUE,
 li = light_inks()
 light = {"bg": PAPER, "grey": with_L(GREY, .55), "inks": li, "blue": with_L(BLUE, .50, 1.1),
          "text": {"orig": "#1E2230", "soft": text_at(9.0, PAPER, True)}}
+def equalise(inks, L, cap):
+    out = {}
+    for k, v in inks.items():
+        _, C, hh = from_hex(v)
+        c = min(C, cap * (.78 if 70 <= hh <= 115 else 1))
+        out[k] = to_hex(L, fit_chroma(L, c, hh), hh)
+    return out
+
+
+dark["inks_eq"] = equalise(INKS, .77, .105)
+light["inks_eq"] = equalise(li, .51, .14)
 for m in (dark, light):
+    m["inks_orig"] = m["inks"]
     m["halo"] = {k: mix(m["bg"], v, .10) for k, v in m["inks"].items()}
+    m["halo_eq"] = {k: mix(m["bg"], v, .10) for k, v in m["inks_eq"].items()}
+    m["contrast_eq"] = {k: round(contrast(v, m["bg"]), 1) for k, v in m["inks_eq"].items()}
     m["region"] = mix(m["bg"], m["blue"], .38)
     m["ln"] = mix(m["bg"], m["grey"], .45)
     m["contrast"] = {k: round(contrast(v, m["bg"]), 1) for k, v in m["inks"].items()}
@@ -131,24 +145,26 @@ pre{margin:0;padding:6px 0 10px;font:12.5px/1.55 "Zed Mono","JetBrains Mono",Men
 @media (max-width:480px){.grid{grid-template-columns:1fr}}
 </style></head><body>
 <h1>Palette de la diapositive : toutes les combinaisons</h1>
-<p class="lead">Fond, texte, gris et cinq couleurs relevés au pixel sur la diapositive. La lampe (fonctions, curseur, ligne courante, titre) est une des quatre encres ; les trois autres se répartissent entre mots-clés, types et chaînes ; les constantes prennent l'une des quatre. Le bleu franc du carré sert à la sélection et à la barre d'état. Classement : visibilité de la lampe, constantes dans leur propre couleur, notes chaudes rares.</p>
+<p class="lead">Fond, texte, gris et cinq couleurs relevés au pixel sur la diapositive. La lampe (fonctions, curseur, ligne courante, titre) est une des quatre encres ; les trois autres se répartissent entre mots-clés, types et chaînes ; les constantes prennent l'une des quatre. Le bleu franc du carré sert à la sélection et à la barre d'état. Le bouton « même intensité » ramène les quatre encres à une clarté et une saturation communes (l'or, plus vif sur la diapo, est le plus touché).</p>
 <div class="sw" id="sw"></div>
 <div class="bar">
   <label>Mode <button id="mDark" class="on">sombre</button><button id="mLight">clair</button></label>
   <label>Texte <button id="tOrig" class="on">diapo (12,9:1)</button><button id="tSoft">adouci (9:1)</button></label>
+  <label>Encres <button id="iOrig" class="on">diapo</button><button id="iEq">même intensité</button></label>
   <label>Lampe <select id="lamp"><option value="">toutes</option><option>or</option><option>saumon</option><option>menthe</option><option>ciel</option></select></label>
   <label>Afficher <select id="n"><option value="12">les 12 premières</option><option value="24">24</option><option value="96">les 96</option></select></label>
 </div>
 <div class="grid" id="grid"></div>
 <script>
 const D=__DATA__;
-let mode="dark", text="orig";
+let mode="dark", text="orig", ink="orig";
+function M(){const m=D[mode];return {...m,inks:ink=="eq"?m.inks_eq:m.inks_orig,halo:ink=="eq"?m.halo_eq:m.halo,contrast:ink=="eq"?m.contrast_eq:m.contrast}}
 const $=id=>document.getElementById(id);
 function esc(s){return s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]))}
-function swatches(){const m=D[mode];$("sw").innerHTML=
+function swatches(){const m=M();$("sw").innerHTML=
   [["fond",m.bg],["texte",m.text[text]],["gris",m.grey],...Object.entries(m.inks),["bleu franc",m.blue]].map(([k,v])=>
   `<div><span style="background:${v};outline:1px solid #8884"></span>${k} ${v}${m.contrast[k]?` · ${m.contrast[k]}:1`:""}${k=="texte"?` · ${m.tcontrast[text]}:1`:""}</div>`).join("")}
-function card(c,i){const m=D[mode], fg=m.text[text], col=r=>r=="fg"?fg:r=="cm"?m.grey:m.inks[c[r]];
+function card(c,i){const m=M(), fg=m.text[text], col=r=>r=="fg"?fg:r=="cm"?m.grey:m.inks[c[r]];
   const lamp=m.inks[c.fn];
   const rows=D.sample.map((line,j)=>{const n=j+1, cur=n==7;
     let body=line.map(([r,t])=>`<span style="color:${col(r)}${r=="cm"?";font-style:italic":""}">${esc(t)}</span>`).join("")||"&nbsp;";
@@ -167,6 +183,7 @@ function render(){swatches();const lamp=$("lamp").value, n=+$("n").value;
 function tog(a,b,set){$(a).onclick=()=>{set();$(a).classList.add("on");$(b).classList.remove("on");render()}}
 tog("mDark","mLight",()=>mode="dark");tog("mLight","mDark",()=>mode="light");
 tog("tOrig","tSoft",()=>text="orig");tog("tSoft","tOrig",()=>text="soft");
+tog("iOrig","iEq",()=>ink="orig");tog("iEq","iOrig",()=>ink="eq");
 $("lamp").onchange=render;$("n").onchange=render;render();
 </script></body></html>"""
 Path(sys.argv[1]).write_text(page.replace("__DATA__", json.dumps(data, ensure_ascii=False)))
