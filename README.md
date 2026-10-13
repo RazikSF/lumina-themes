@@ -8,7 +8,7 @@ every flavor, one colour is the light (the cursor, the definition you
 are reading, the current line, the heading you are in) and everything
 else sits in the room at equal weight, never louder than the lamp.
 
-Twelve flavors, each in dark, light and high contrast: 52 themes. The
+Sixteen flavors, each in dark, light and high contrast: 68 themes. The
 flagship is **Vesper**. Dark: deep navy at night, blue-lavender text at
 8:1 and every accent below it, blue functions, purple keywords, sky
 types, straw strings, coral constants, rose builtins, no green in the
@@ -83,8 +83,12 @@ Radix inks.
 | **Canopy** | pine | leaf green | teal, amber, sky | orange |
 | **Slate** | cold graphite | steel blue | sky, violet, emerald, all held back | orange |
 | **Nocturne** | indigo night | sodium orange | violet, sky, emerald | amber |
-| **Amethyst** | purple geode | citrine | orchid, sky, emerald | orange |
-| **Prisma** | neutral indigo | ultraviolet | violet, amber, emerald; full-spectrum delimiters | black-and-white `-ink` twins |
+| **Amethyst** | purple geode | citrine | orchid, jade, periwinkle | none |
+| **Prisma** | neutral indigo | ultraviolet | emerald, teal, sky; full-spectrum delimiters | orange; black-and-white `-ink` twins |
+| **Sirocco** | terracotta | sky | sand, sage, orchid | the only cool light is the lamp |
+| **Celadon** | jade porcelain | peach | sky, jade, orchid | none |
+| **Sumi** | ink black / rice paper | vermilion seal | matcha, plum, sky, all whispered | none |
+| **Pivoine** | soft peony dusk, lighter than the night grounds | mint | peony, periwinkle, sky | apricot |
 
 ### Gallery
 
@@ -124,6 +128,22 @@ Radix inks.
 
 <img src="assets/screens/lumina-prisma-dark-ink.svg" width="49%"> <img src="assets/screens/lumina-prisma-light-ink.svg" width="49%">
 
+**Sirocco**
+
+<img src="assets/screens/lumina-sirocco-dark.svg" width="49%"> <img src="assets/screens/lumina-sirocco-light.svg" width="49%">
+
+**Celadon**
+
+<img src="assets/screens/lumina-celadon-dark.svg" width="49%"> <img src="assets/screens/lumina-celadon-light.svg" width="49%">
+
+**Sumi**
+
+<img src="assets/screens/lumina-sumi-dark.svg" width="49%"> <img src="assets/screens/lumina-sumi-light.svg" width="49%">
+
+**Pivoine**
+
+<img src="assets/screens/lumina-pivoine-dark.svg" width="49%"> <img src="assets/screens/lumina-pivoine-light.svg" width="49%">
+
 ### Names
 
 `lumina-<flavor>-<dark|light>` and `lumina-<flavor>-<dark|light>-contrast`,
@@ -135,11 +155,11 @@ Prisma adds black-and-white twins: `lumina-prisma-dark-ink`,
 
 | Target | Output |
 |---|---|
-| **Emacs** (vanilla `deftheme`)  | `emacs/themes/*.el` (52), close to 3 000 faces each |
-| **Neovim** (Lua colorscheme)    | `nvim/colors/*.lua` (52), over 1 600 groups each, plus `nvim/lua/lualine/themes/*.lua` |
-| **VS Code** (extension)         | `vscode/themes/*.json` (52): 565 workbench colours, 80 token scopes, 47 semantic tokens |
-| **WezTerm** (color scheme)      | `wezterm/*.toml` (52): ANSI, indexed, tab bar states, copy and quick-select modes |
-| **base24** (tinted-theming)     | `base24/*.yaml` (52) |
+| **Emacs** (vanilla `deftheme`)  | `emacs/themes/*.el` (68), close to 3 000 faces each |
+| **Neovim** (Lua colorscheme)    | `nvim/colors/*.lua` (68), over 1 600 groups each, plus `nvim/lua/lualine/themes/*.lua` |
+| **VS Code** (extension)         | `vscode/themes/*.json` (68): 565 workbench colours, 80 token scopes, 47 semantic tokens |
+| **WezTerm** (color scheme)      | `wezterm/*.toml` (68): ANSI, indexed, tab bar states, copy and quick-select modes |
+| **base24** (tinted-theming)     | `base24/*.yaml` (68) |
 
 The Emacs files require no external dependency and load on a bare
 `emacs -Q` in about ten milliseconds. Each one styles close to 3 000

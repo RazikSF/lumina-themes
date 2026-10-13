@@ -1,0 +1,53 @@
+# lumina-celadon-light-contrast -- Lumina (celadon, light)
+# Generated from spec/lumina.json. Do not edit by hand.
+[colors]
+foreground   = "#02140C"
+background   = "#F7FFFC"
+cursor_bg    = "#02140C"
+cursor_fg    = "#F7FFFC"
+cursor_border = "#02140C"
+selection_bg = "#DFC7B9"
+selection_fg = "#02140C"
+scrollbar_thumb = "#9AB1A6"
+split = "#CFDFD7"
+compose_cursor = "#8A2800"
+visual_bell = "#CC9F89"
+copy_mode_active_highlight_bg = { Color = "#8A2800" }
+copy_mode_active_highlight_fg = { Color = "#F7FFFC" }
+copy_mode_inactive_highlight_bg = { Color = "#E7D9CD" }
+copy_mode_inactive_highlight_fg = { Color = "#02140C" }
+quick_select_label_bg = { Color = "#8A2800" }
+quick_select_label_fg = { Color = "#F7FFFC" }
+quick_select_match_bg = { Color = "#E7D9CD" }
+quick_select_match_fg = { Color = "#02140C" }
+ansi = ["#EBFBF3", "#9C0044", "#006321", "#7D3E00", "#2A46A8", "#772884", "#005982", "#21352C"]
+brights = ["#61786D", "#8A2800", "#006252", "#7D3E00", "#243E9F", "#523AA1", "#005982", "#02140C"]
+
+[colors.indexed]
+16 = "#8A2800"
+17 = "#006252"
+18 = "#523AA1"
+19 = "#243E9F"
+
+[colors.tab_bar]
+background = "#E8F8F0"
+inactive_tab_edge = "#E0F0E8"
+[colors.tab_bar.active_tab]
+bg_color = "#F7FFFC"
+fg_color = "#02140C"
+intensity = "Bold"
+[colors.tab_bar.inactive_tab]
+bg_color = "#E8F8F0"
+fg_color = "#3D5349"
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "#ECE6DC"
+fg_color = "#02140C"
+[colors.tab_bar.new_tab]
+bg_color = "#E8F8F0"
+fg_color = "#61786D"
+[colors.tab_bar.new_tab_hover]
+bg_color = "#E7D9CD"
+fg_color = "#8A2800"
+
+[metadata]
+name = "lumina-celadon-light-contrast"

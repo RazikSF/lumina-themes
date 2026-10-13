@@ -1,0 +1,10 @@
+-- lumina-sumi-dark -- Lumina lualine theme (sumi, dark). Generated; do not edit.
+return {
+  normal = { a = { fg = '#100E0C', bg = '#FA7A45', gui = 'bold' }, b = { fg = '#918F8C', bg = '#141210' }, c = { fg = '#918F8C', bg = '#0A0907' } },
+  insert = { a = { fg = '#100E0C', bg = '#91DFD1', gui = 'bold' }, b = { fg = '#918F8C', bg = '#141210' }, c = { fg = '#918F8C', bg = '#0A0907' } },
+  visual = { a = { fg = '#100E0C', bg = '#C3B8F1', gui = 'bold' }, b = { fg = '#918F8C', bg = '#141210' }, c = { fg = '#918F8C', bg = '#0A0907' } },
+  replace = { a = { fg = '#100E0C', bg = '#FF92B6', gui = 'bold' }, b = { fg = '#918F8C', bg = '#141210' }, c = { fg = '#918F8C', bg = '#0A0907' } },
+  command = { a = { fg = '#100E0C', bg = '#FA7A45', gui = 'bold' }, b = { fg = '#918F8C', bg = '#141210' }, c = { fg = '#918F8C', bg = '#0A0907' } },
+  terminal = { a = { fg = '#100E0C', bg = '#9ADDBF', gui = 'bold' }, b = { fg = '#918F8C', bg = '#141210' }, c = { fg = '#918F8C', bg = '#0A0907' } },
+  inactive = { a = { fg = '#6B6866', bg = '#0A0907' }, b = { fg = '#6B6866', bg = '#0A0907' }, c = { fg = '#6B6866', bg = '#100E0C' } },
+}

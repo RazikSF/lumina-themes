@@ -1,0 +1,53 @@
+# lumina-sumi-light -- Lumina (sumi, light)
+# Generated from spec/lumina.json. Do not edit by hand.
+[colors]
+foreground   = "#494843"
+background   = "#FBFAF8"
+cursor_bg    = "#494843"
+cursor_fg    = "#FBFAF8"
+cursor_border = "#494843"
+selection_bg = "#F4C8BB"
+selection_fg = "#494843"
+scrollbar_thumb = "#B3B1AB"
+split = "#D9D8D2"
+compose_cursor = "#C42600"
+visual_bell = "#EBA38E"
+copy_mode_active_highlight_bg = { Color = "#C42600" }
+copy_mode_active_highlight_fg = { Color = "#FBFAF8" }
+copy_mode_inactive_highlight_bg = { Color = "#F6D8CD" }
+copy_mode_inactive_highlight_fg = { Color = "#494843" }
+quick_select_label_bg = { Color = "#C42600" }
+quick_select_label_fg = { Color = "#FBFAF8" }
+quick_select_match_bg = { Color = "#F6D8CD" }
+quick_select_match_fg = { Color = "#494843" }
+ansi = ["#F5F4EE", "#9E2D53", "#327D3F", "#9B5A00", "#4761AA", "#895092", "#00749E", "#494843"]
+brights = ["#888681", "#C42600", "#007E6D", "#9B5A00", "#2D448A", "#6458A5", "#00749E", "#494843"]
+
+[colors.indexed]
+16 = "#C42600"
+17 = "#007E6D"
+18 = "#6458A5"
+19 = "#2D448A"
+
+[colors.tab_bar]
+background = "#F2F0EA"
+inactive_tab_edge = "#EAE8E2"
+[colors.tab_bar.active_tab]
+bg_color = "#FBFAF8"
+fg_color = "#494843"
+intensity = "Bold"
+[colors.tab_bar.inactive_tab]
+bg_color = "#F2F0EA"
+fg_color = "#65635E"
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "#F8E3DC"
+fg_color = "#494843"
+[colors.tab_bar.new_tab]
+bg_color = "#F2F0EA"
+fg_color = "#888681"
+[colors.tab_bar.new_tab_hover]
+bg_color = "#F6D8CD"
+fg_color = "#C42600"
+
+[metadata]
+name = "lumina-sumi-light"

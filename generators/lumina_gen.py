@@ -67,6 +67,10 @@ SCHEMAS = {
     "nocturne": {"v2": True, "lead": "orange", "fg_min": 8, "modeline_bg": "bg-alt", "vertico_bg": "halo2", "function_call": "cyan", "property": "cyan", "preprocessor": "blue", "escape": "magenta", "modeline_modified": "yellow", "rainbow": ["orange", "blue", "cyan", "magenta", "green", "violet"], "outline": ["orange", "blue", "cyan", "green"], "orderless": ["orange", "blue", "magenta"], "magit_branch_local": "blue", "magit_branch_remote": "teal", "org_todo": "yellow", "org_done": "green"},
     "amethyst": {"v2": True, "lead": "yellow", "fg_min": 8, "modeline_bg": "bg-alt", "vertico_bg": "halo2", "function_call": "cyan", "property": "green", "preprocessor": "magenta", "escape": "blue", "modeline_modified": "orange", "rainbow": ["yellow", "magenta", "cyan", "blue", "green", "violet"], "outline": ["yellow", "magenta", "green", "cyan"], "orderless": ["yellow", "magenta", "cyan"], "magit_branch_local": "blue", "magit_branch_remote": "teal", "org_todo": "orange", "org_done": "green"},
     "prisma": {"v2": True, "lead": "spark", "fg_min": 8, "modeline_bg": "bg-alt", "vertico_bg": "halo2", "function_call": "teal", "property": "cyan", "preprocessor": "green", "escape": "orange", "modeline_modified": "orange", "rainbow": ["red", "orange", "yellow", "green", "blue", "violet"], "outline": ["spark", "green", "teal", "cyan"], "orderless": ["spark", "green", "orange"], "magit_branch_local": "blue", "magit_branch_remote": "teal", "org_todo": "orange", "org_done": "green"},
+    "sirocco": {"v2": True, "lead": "cyan", "fg_min": 8, "warm_family": True, "modeline_bg": "bg-alt", "vertico_bg": "halo2", "function_call": "green", "property": "blue", "preprocessor": "orange", "escape": "cyan", "modeline_modified": "orange", "rainbow": ["cyan", "orange", "green", "magenta", "blue", "yellow"], "outline": ["cyan", "orange", "green", "magenta"], "orderless": ["cyan", "orange", "magenta"], "magit_branch_local": "cyan", "magit_branch_remote": "green", "org_todo": "orange", "org_done": "green"},
+    "celadon": {"v2": True, "lead": "orange", "fg_min": 8, "modeline_bg": "bg-alt", "vertico_bg": "halo2", "function_call": "green", "property": "blue", "preprocessor": "cyan", "escape": "orange", "modeline_modified": "orange", "rainbow": ["orange", "cyan", "green", "magenta", "blue", "violet"], "outline": ["orange", "cyan", "green", "magenta"], "orderless": ["orange", "cyan", "magenta"], "magit_branch_local": "blue", "magit_branch_remote": "green", "org_todo": "orange", "org_done": "green"},
+    "sumi": {"v2": True, "lead": "orange", "fg_min": 8, "modeline_bg": "bg-alt", "vertico_bg": "halo2", "function_call": "magenta", "property": "cyan", "preprocessor": "green", "escape": "orange", "modeline_modified": "yellow", "rainbow": ["orange", "green", "magenta", "blue", "cyan", "violet"], "outline": ["orange", "green", "cyan", "magenta"], "orderless": ["orange", "green", "cyan"], "magit_branch_local": "blue", "magit_branch_remote": "green", "org_todo": "orange", "org_done": "green"},
+    "pivoine": {"v2": True, "lead": "teal", "fg_min": 8, "modeline_bg": "bg-alt", "vertico_bg": "halo2", "function_call": "blue", "property": "cyan", "preprocessor": "magenta", "escape": "orange", "modeline_modified": "orange", "rainbow": ["teal", "magenta", "blue", "cyan", "orange", "violet"], "outline": ["teal", "magenta", "blue", "cyan"], "orderless": ["teal", "magenta", "blue"], "magit_branch_local": "blue", "magit_branch_remote": "teal", "org_todo": "orange", "org_done": "teal"},
 }
 
 
@@ -555,7 +559,7 @@ def build_vscode(spec: dict):
         "displayName": "Lumina",
         "description":
             "A curated palette-first theme family — one light governs each "
-            "field. Nine flavors in dark, light and high contrast.",
+            "field. Sixteen flavors in dark, light and high contrast.",
         "version": "2.1.0",
         "publisher": "RazikSF",
         "license": "MIT",
