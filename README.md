@@ -9,18 +9,18 @@ are reading, the current line, the heading you are in) and everything
 else sits in the room at equal weight, never louder than the lamp.
 
 Sixteen flavors, each in dark, light and high contrast: 68 themes. The
-flagship is **Vesper**. Dark: deep navy at night, blue-lavender text at
-8:1 and every accent below it, blue functions, purple keywords, sky
-types, straw strings, coral constants, rose builtins, no green in the
-code. Light: the same hues as inks on cool white paper.
-Its warm counterpart is **Sienne**: slate night under warm inks, beige
-text, teal functions, mauve keywords, gold types, olive strings, coral
-constants, apricot builtins.
+flagship is **Sienne**: slate night under warm inks, beige text at
+nearly 9:1, one teal lamp on the functions, mauve keywords, gold types,
+olive strings, coral constants, apricot builtins. Light: the same hues
+as inks on slate paper.
+Its cool counterpart is **Vesper**: deep navy at night, blue-lavender
+text, blue functions, purple keywords, sky types, straw strings, coral
+constants, rose builtins, no green in the code.
 **Indigo** keeps one azure for the keywords and desert inks of the same
 weight for everything else (gold sand, copper, dusk mauve); **Azur**
 sets the same azure among peach, straw, lilac and mint on blue slate.
 
-<img src="assets/screens/lumina-vesper-dark.svg" width="49%"> <img src="assets/screens/lumina-vesper-light.svg" width="49%">
+<img src="assets/screens/lumina-sienne-dark.svg" width="49%"> <img src="assets/screens/lumina-sienne-light.svg" width="49%">
 
 ## What makes it different
 
@@ -73,8 +73,8 @@ Radix inks.
 
 | Flavor | Ground | Lamp | Keywords, types, strings | Note |
 |---|---|---|---|---|
-| **Vesper** | deep navy / cool white | blue | purple, sky, straw | coral, rose |
 | **Sienne** | slate night / slate paper | teal | mauve, gold, olive | coral, apricot |
+| **Vesper** | deep navy / cool white | blue | purple, sky, straw | coral, rose |
 | **Indigo** | indigo night / lavender paper | azure | gold sand, copper, dusk mauve | none |
 | **Azur** | blue slate / cool paper | azure | peach, lilac, straw | mint |
 | **Dawn** | warm sepia | amber | terracotta, teal, lime | rose |
@@ -91,6 +91,10 @@ Radix inks.
 | **Pivoine** | soft peony dusk, lighter than the night grounds | mint | peony, periwinkle, sky | apricot |
 
 ### Gallery
+
+**Vesper**
+
+<img src="assets/screens/lumina-vesper-dark.svg" width="49%"> <img src="assets/screens/lumina-vesper-light.svg" width="49%">
 
 **Dawn**
 
