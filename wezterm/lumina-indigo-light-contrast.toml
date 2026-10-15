@@ -10,24 +10,24 @@ selection_bg = "#BACFD2"
 selection_fg = "#150E06"
 scrollbar_thumb = "#A9AAB2"
 split = "#D9DAE2"
-compose_cursor = "#005358"
+compose_cursor = "#005359"
 visual_bell = "#8AAEB1"
-copy_mode_active_highlight_bg = { Color = "#005358" }
+copy_mode_active_highlight_bg = { Color = "#005359" }
 copy_mode_active_highlight_fg = { Color = "#FDFDFF" }
 copy_mode_inactive_highlight_bg = { Color = "#CEDDE0" }
 copy_mode_inactive_highlight_fg = { Color = "#150E06" }
-quick_select_label_bg = { Color = "#861600" }
+quick_select_label_bg = { Color = "#860F28" }
 quick_select_label_fg = { Color = "#FDFDFF" }
 quick_select_match_bg = { Color = "#CEDDE0" }
 quick_select_match_fg = { Color = "#150E06" }
-ansi = ["#F5F6FF", "#8A001B", "#205603", "#673E00", "#0B4196", "#741B67", "#005358", "#2F3036"]
-brights = ["#707178", "#861600", "#005848", "#673E00", "#0F449A", "#492F96", "#005358", "#150E06"]
+ansi = ["#F5F6FF", "#871300", "#1F5605", "#743200", "#004791", "#711D6D", "#005359", "#2F3036"]
+brights = ["#707178", "#860F28", "#005848", "#743200", "#004A94", "#492F96", "#005359", "#150E06"]
 
 [colors.indexed]
-16 = "#861600"
+16 = "#860F28"
 17 = "#005848"
 18 = "#492F96"
-19 = "#0F449A"
+19 = "#004A94"
 
 [colors.tab_bar]
 background = "#F1F3FB"
@@ -47,7 +47,7 @@ bg_color = "#F1F3FB"
 fg_color = "#707178"
 [colors.tab_bar.new_tab_hover]
 bg_color = "#CEDDE0"
-fg_color = "#005358"
+fg_color = "#005359"
 
 [metadata]
 name = "lumina-indigo-light-contrast"

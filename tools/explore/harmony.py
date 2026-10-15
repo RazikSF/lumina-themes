@@ -27,9 +27,9 @@ FIXED = {  # the standard itself, as measured on the slide
     "nuancier": {"functions": "#EC907E", "keywords": "#77B8E7", "type": "#F7C054", "strings": "#87C3AB",
                  "constants": "#B5A4EA", "builtin": "#E297BA"}}
 CHROMA = {"dawn": .10, "oxblood": .10, "tide": .10, "canopy": .10, "slate": .10, "vesper": .105, "sienne": .105,
-          "indigo": .105, "azur": .125, "nocturne": .125, "amethyst": .125, "prisma": .125, "sirocco": .105, "celadon": .105,
+          "indigo": .105, "azur": .115, "nocturne": .115, "amethyst": .115, "prisma": .115, "sirocco": .105, "celadon": .105,
           "sumi": .10, "pivoine": .10}
-INK_L = {"pivoine": .80}
+INK_L = {"pivoine": .78}
 LOVED = {"vesper", "sienne"}
 ORDER = ["vesper", "sienne", "dawn", "oxblood", "tide", "canopy", "slate", "nocturne", "amethyst", "prisma",
          "indigo", "azur", "sirocco", "celadon", "sumi", "pivoine"]
@@ -63,10 +63,28 @@ def profile(h):
     return 0, .1
 
 
-def ink(L, h, C=.10):
-    dl, c = profile(h)
-    L2 = L + dl
-    return (L2, fit_chroma(L2, c * C / .10, h), h)
+VS_PROFILE = [(30, .716, .150), (62, .770, .150), (92, .830, .105), (116, .741, .111), (210, .730, .095),
+              (258, .680, .131), (320, .690, .130), (350, .739, .120)]  # measured on Vesper and Sienne (dark)
+
+
+def vs_profile(h):
+    """Lightness and chroma Vesper and Sienne give to hue h, interpolated around the circle."""
+    pts = sorted(VS_PROFILE)
+    for i, (h0, l0, c0) in enumerate(pts):
+        h1, l1, c1 = pts[(i + 1) % len(pts)]
+        span = (h1 - h0) % 360
+        t = ((h - h0) % 360) / span if span else 0
+        if 0 <= t <= 1:
+            return l0 + (l1 - l0) * t, c0 + (c1 - c0) * t
+    return .73, .12
+
+
+def ink(L, h, C=.105):
+    """An ink in the Vesper and Sienne manner: lightness and chroma from their profile, shifted by
+    (L - .74) for lighter grounds, chroma scaled by the flavor's range."""
+    l0, c0 = vs_profile(h)
+    L2 = l0 + (L - .74)
+    return (L2, fit_chroma(L2, c0 * C / .105, h), h)
 
 
 def light_ink(h, paper, C):
@@ -101,7 +119,7 @@ def current(f, src=None):
 
 def design(f, done, seed=1):
     cur, fg, bg = current(f, origin)
-    Lk = INK_L.get(f, .76)
+    Lk = INK_L.get(f, .74)
     Cf = CHROMA[f]
     idw = 2.0 if f in LOVED else 1.0
     warmfam = bool(g.SCHEMAS[f].get("warm_family"))

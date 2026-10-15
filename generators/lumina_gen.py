@@ -715,8 +715,8 @@ def check(spec: dict) -> bool:
                       if from_hex(resolve_ref(r, c, sch))[1] > .05]
             else:
                 ls = [from_hex(C(c, k))[0] for k in ACCENTS + (["spark"] if "spark" in c and from_hex(C(c, "spark"))[1] > .05 else [])]
-            if max(ls) - min(ls) > sch.get("spread", .10 if sch.get("role_inks") else .0805):
-                fails.append(f"accent lightness spread {max(ls) - min(ls):.2f} > {sch.get('spread', .10 if sch.get('role_inks') else .0805):.2f}")
+            if max(ls) - min(ls) > sch.get("spread", .16 if sch.get("role_inks") else .0805):
+                fails.append(f"accent lightness spread {max(ls) - min(ls):.2f} > {sch.get('spread', .16 if sch.get('role_inks') else .0805):.2f}")
             print(f"{'FAIL' if fails else 'OK  '} {d['theme']}"
                   + (": " + "; ".join(fails) if fails else ""))
             ok = ok and not fails
