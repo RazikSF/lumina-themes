@@ -8,7 +8,8 @@ import lumina_gen as g
 
 SPEC = json.loads(g.SPEC.read_text())["flavors"]
 RANGES = {"Signature": ["nuancier", "aquarelle", "jardin", "sienne", "vesper", "indigo", "azur"], "Feutrés": ["dawn", "oxblood", "tide", "canopy", "slate"],
-          "Vifs": ["nocturne", "amethyst", "prisma"], "Matières": ["sirocco", "celadon", "sumi", "pivoine"]}
+          "Vifs": ["nocturne", "amethyst", "prisma"], "Matières": ["sirocco", "celadon", "sumi", "pivoine"],
+          "Esquisses de Gemini": ["neon-cyber", "borealis", "cashmere", "aethelgard", "sakura"]}
 LINES = slice(13, 32)
 SPAN = re.compile(r'<span style="([^"]*)">(.*?)</span>', re.S)
 

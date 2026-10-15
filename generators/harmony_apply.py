@@ -58,6 +58,20 @@ def schema_overrides(flavor):
             "role_inks": True}
 
 
+SEMIBOLD = {f: {"weight": "semi-bold"} for f in ("font-lock-keyword-face", "font-lock-type-face", "font-lock-function-name-face")}
+
+
+def gemini_design(flavor):
+    """Gemini's face design: calls in the function ink, properties and escapes in the builtin ink, the
+    preprocessor in the keyword ink, grey brackets, semi-bold keywords, types and definitions."""
+    sl = slots(flavor)
+    return {"function_call": sl["functions"], "property": sl["builtin"], "preprocessor": sl["keywords"], "escape": sl["builtin"],
+            "rainbow": ["base6"] * 6, "faces": {"dark": SEMIBOLD, "light": SEMIBOLD}}
+
+
+AS_DRAWN = {"fg_max": {"dark": 17, "light": 12.5}, "comments_min": {"dark": 3.8, "light": 4.3}}  # Gemini's drafts: brighter text, softer comments
+
+
 NAMES = [(20, "rose"), (45, "salmon"), (65, "apricot"), (92, "gold"), (115, "straw"), (138, "lime"), (160, "sage"),
          (200, "mint"), (250, "sky"), (275, "periwinkle"), (305, "lilac"), (335, "orchid"), (361, "pink")]
 

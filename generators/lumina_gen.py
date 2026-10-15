@@ -191,6 +191,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from harmony_apply import HARMONY as _HARMONY, schema_overrides as _schema_overrides
 for _f in _HARMONY:
     SCHEMAS[_f].update(_schema_overrides(_f))
+from harmony_apply import gemini_design as _gemini_design, AS_DRAWN as _AS_DRAWN
+for _f in ("neon-cyber", "borealis", "cashmere", "aethelgard", "sakura"):
+    SCHEMAS[_f].update({**_gemini_design(_f), **_AS_DRAWN})
 
 
 def schema_for(flavor: str, mode: str) -> dict:
@@ -386,7 +389,7 @@ def build_emacs(spec: dict):
                                    for ln in d["commentary"].split("\n"))
             docstring = (commentary.split("\n")[0].lstrip("; ").strip()
                          or short).replace('"', '\\"')
-            faces = [emit_face(name, spec_to_attrs(fs, c, sch))
+            faces = [emit_face(name, spec_to_attrs({**fs, **sch.get("faces", {}).get(name, {})}, c, sch))
                      for name, fs in face_map.items()]
             variables = ""
             if var_map:

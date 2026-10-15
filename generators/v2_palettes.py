@@ -14,10 +14,11 @@ import math
 import sys
 from pathlib import Path
 
-from oklch import contrast, to_hex, fit_chroma
+from oklch import contrast, to_hex, fit_chroma, from_hex
 
 ROOT = Path(__file__).resolve().parent.parent
 SPEC = ROOT / "spec" / "lumina.json"
+DRAWN = json.loads((ROOT / "generators" / "gemini_drawn.json").read_text())  # Gemini's drafts, as drawn
 
 
 
@@ -123,6 +124,7 @@ def write(flavors):
             sig = pal.get("sig")
             variants = {mode: signature(base, lead, dark, sig),
                         f"{mode}-contrast": signature(high_contrast(base, lead, dark), lead, dark, sig)}
+            variants[mode].update({k: from_hex(v) for k, v in DRAWN.get(flavor, {}).get(mode, {}).items()})
             for vname, vpal in variants.items():
                 t = modes.setdefault(vname, {})
                 old = t.get("colors", {})
