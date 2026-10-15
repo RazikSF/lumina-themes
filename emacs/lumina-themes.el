@@ -9,9 +9,9 @@
 ;;
 ;;; Commentary:
 ;;
-;; Lumina is a family of twenty-five flavors, each in a dark, a light and
+;; Lumina is a family of twenty-four flavors, each in a dark, a light and
 ;; two high-contrast variants, plus black-and-white Prisma twins --
-;; 104 themes in total.  Pure `deftheme' files, no external dependency,
+;; 100 themes in total.  Pure `deftheme' files, no external dependency,
 ;; close to 3 000 faces each: core UI, built-in modes and some 180
 ;; packages (org, magit, vertico, corfu, lsp, treemacs, mu4e, ...).
 ;;

@@ -86,7 +86,6 @@ SCENES = {
     "cashmere": ("Espresso velvet, warm pastels", "Warm linen paper"),
     "aethelgard": ("Midnight velvet and astral gold", "Cool marble paper"),
     "sakura": ("Twilight plum night under cherry blossom", "Blossom-white paper"),
-    "obsidian": ("Obsidian black, brushed gold and copper", "Platinum white paper"),
 }
 
 

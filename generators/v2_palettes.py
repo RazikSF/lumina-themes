@@ -429,11 +429,6 @@ FLAVORS = {
                 extra={"dark": {"bg": (0.1858, 0.0153, 310.6), "comments": (0.597, 0.0372, 318.1), "doc-comments": (0.647, 0.0372, 318.1)},
                        "light": {"bg": (0.9808, 0.0066, 340.4), "fg": (0.346, 0.0268, 331.5), "base8": (0.346, 0.0268, 331.5), "fg-alt": (0.456, 0.0268, 331.5), "comments": (0.5492, 0.0331, 334.8), "doc-comments": (0.4892, 0.0331, 334.8)}},
                 commentary={"dark": "Lumina Sakura, dark variant.", "light": "Lumina Sakura, light variant."}),
-    "obsidian": dict(ground=(271, 0.0065, 0.0026, 0.164, 0.9827), lamp="blue", paper=(286.4, 0.0026, 0.9827),
-                roles=dict(functions="blue", keywords="magenta", type="yellow", strings="green", constants="orange", builtin="violet", methods="fg"),
-                extra={"dark": {"bg": (0.164, 0.0065, 271), "comments": (0.5883, 0.0225, 262.9), "doc-comments": (0.6383, 0.0225, 262.9)},
-                       "light": {"bg": (0.9827, 0.0026, 286.4), "fg": (0.3443, 0.0077, 285.7), "base8": (0.3443, 0.0077, 285.7), "fg-alt": (0.4543, 0.0077, 285.7), "comments": (0.5482, 0.0167, 285.9), "doc-comments": (0.4882, 0.0167, 285.9)}},
-                commentary={"dark": "Lumina Obsidian, dark variant.", "light": "Lumina Obsidian, light variant."}),
 }
 from harmony_apply import HARMONY, flavor_overrides, commentary as _commentary
 for _f in HARMONY:
@@ -452,7 +447,7 @@ TEXT_TINT = {  # dark text: a very light grey with a reflection of the flavor, n
     "nocturne": (268, .022), "amethyst": (326, .020), "prisma": (290, .020), "sirocco": (40, .020),
     "celadon": (178, .020), "sumi": (80, .015), "pivoine": (350, .020), "nuancier": (273, .020),
     "aquarelle": (273, .020), "jardin": (273, .020), "cyber": (237, .020), "borealis": (179, .020), "cashmere": (74, .022),
-    "aethelgard": (73, .020), "sakura": (330, .027), "obsidian": (73, .015)}
+    "aethelgard": (73, .020), "sakura": (330, .027)}
 
 
 def tinted_text(bg, hue, chroma, target=9.0):

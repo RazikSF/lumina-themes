@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Gemini's six dark themes (oct. 2026) as Lumina flavors: dark inks kept exactly, light inks derived.
+"""Gemini's dark themes (oct. 2026) as Lumina flavors: dark inks kept exactly, light inks derived.
 
 Dark: Gemini's ground and six role inks, untouched. Light: Gemini's light paper, text and comments where
 it proposed them; each ink keeps its dark hue and chroma (fitted to the gamut) and takes the lightness that
@@ -35,9 +35,6 @@ G = {
     "sakura": dict(bg="#151118", fg="#EAD9E8", comment="#7D6D82", red="#FF6B8B",
                    inks=dict(keywords="#C397D8", strings="#A8E6CF", functions="#F4A6BF", type="#F9D3B4", constants="#FFE79A", builtin="#C397D8"),
                    light=dict(bg="#FCF7FA", fg="#362934", comment="#877382")),
-    "obsidian": dict(bg="#0D0E11", fg="#E1DCD6", comment="#5C6370", red="#E06C75",
-                     inks=dict(keywords="#D19A66", strings="#98C379", functions="#E5C07B", type="#61AFEF", constants="#C678DD", builtin="#E5E5E5"),
-                     light=dict(bg="#F9F9FB", fg="#1A1A1E", comment="#7A7A85")),
 }
 
 
