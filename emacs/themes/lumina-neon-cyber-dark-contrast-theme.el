@@ -1,4 +1,4 @@
-;;; lumina-cyber-dark-contrast-theme.el --- Lumina Cyber Dark Contrast -*- lexical-binding: t; -*-
+;;; lumina-neon-cyber-dark-contrast-theme.el --- Lumina Neon Cyber Dark Contrast -*- lexical-binding: t; -*-
 ;;
 ;; Author: razik <https://github.com/RazikSF>
 ;; Maintainer: razik <https://github.com/RazikSF>
@@ -9,16 +9,16 @@
 ;;
 ;;; Commentary:
 ;;
-;; Lumina Cyber, dark variant, high contrast.
+;; Lumina Neon Cyber, dark variant, high contrast.
 ;; Urban night in neon, every ink at full voltage; rose keywords, sky functions, straw types, sage strings, salmon constants, pink builtins: six inks of one weight.
 ;;
 ;;; Code:
 
-(deftheme lumina-cyber-dark-contrast
-  "Lumina Cyber, dark variant, high contrast.")
+(deftheme lumina-neon-cyber-dark-contrast
+  "Lumina Neon Cyber, dark variant, high contrast.")
 
 (custom-theme-set-faces
- 'lumina-cyber-dark-contrast
+ 'lumina-neon-cyber-dark-contrast
  '(default ((t (:foreground "#E3F1FB" :background "#0C0D19"))))
  '(fringe ((t (:foreground "#4A4C5C" :background "#0C0D19"))))
  '(mode-line ((t (:foreground "#C5D3DD" :background "#070812" :box (:line-width 6 :color "#070812")))))
@@ -3014,7 +3014,7 @@
  '(posframe-border ((t (:background "#282A39")))) )
 
 (custom-theme-set-variables
- 'lumina-cyber-dark-contrast
+ 'lumina-neon-cyber-dark-contrast
  '(hl-todo-keyword-faces '(("TODO" . "#FFAC73") ("FIXME" . "#FF91BE") ("HACK" . "#FFA6F1") ("REVIEW" . "#CEDFFF") ("NOTE" . "#FFE600") ("DEPRECATED" . "#77798B") ("BUG" . "#FF91BE") ("XXX" . "#FF88D3")))
  '(vc-annotate-color-map '((20 . "#FF91BE") (40 . "#FFAC73") (60 . "#FCE294") (80 . "#FFE600") (100 . "#50FF36") (120 . "#00F0FF") (140 . "#CEDFFF") (160 . "#7C8AD0") (180 . "#FFA6F1") (200 . "#FF88D3") (220 . "#9A9DB0") (240 . "#9A9DB0") (260 . "#77798B") (280 . "#77798B") (300 . "#77798B") (320 . "#77798B") (340 . "#77798B") (360 . "#77798B")))
  '(vc-annotate-very-old-color nil)
@@ -3028,6 +3028,6 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'lumina-cyber-dark-contrast)
+(provide-theme 'lumina-neon-cyber-dark-contrast)
 
-;;; lumina-cyber-dark-contrast-theme.el ends here
+;;; lumina-neon-cyber-dark-contrast-theme.el ends here

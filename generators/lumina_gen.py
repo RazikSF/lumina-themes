@@ -182,9 +182,9 @@ SCHEMAS["nuancier"] = {"v2": True, "lead": "orange", "fg_min": 8, "fg_max": 12.5
                        "modeline_modified": "orange"}
 SCHEMAS["aquarelle"] = dict(SCHEMAS["nuancier"])
 SCHEMAS["jardin"] = dict(SCHEMAS["nuancier"])
-for _f in ("cyber", "borealis", "cashmere", "aethelgard", "sakura"):
+for _f in ("neon-cyber", "borealis", "cashmere", "aethelgard", "sakura"):
     SCHEMAS[_f] = dict(SCHEMAS["nuancier"])
-SCHEMAS["cyber"]["spread"] = {"dark": .28, "light": .16}
+SCHEMAS["neon-cyber"]["spread"] = {"dark": .28, "light": .16}
 SCHEMAS["sakura"]["spread"] = {"dark": .20, "light": .16}
 SCHEMAS["cashmere"]["warm_family"] = True
 sys.path.insert(0, str(Path(__file__).resolve().parent))

@@ -1,4 +1,4 @@
-;;; lumina-cyber-dark-theme.el --- Lumina Cyber Dark -*- lexical-binding: t; -*-
+;;; lumina-neon-cyber-dark-theme.el --- Lumina Neon Cyber Dark -*- lexical-binding: t; -*-
 ;;
 ;; Author: razik <https://github.com/RazikSF>
 ;; Maintainer: razik <https://github.com/RazikSF>
@@ -9,16 +9,16 @@
 ;;
 ;;; Commentary:
 ;;
-;; Lumina Cyber, dark variant.
+;; Lumina Neon Cyber, dark variant.
 ;; Urban night in neon, every ink at full voltage; rose keywords, sky functions, straw types, sage strings, salmon constants, pink builtins: six inks of one weight.
 ;;
 ;;; Code:
 
-(deftheme lumina-cyber-dark
-  "Lumina Cyber, dark variant.")
+(deftheme lumina-neon-cyber-dark
+  "Lumina Neon Cyber, dark variant.")
 
 (custom-theme-set-faces
- 'lumina-cyber-dark
+ 'lumina-neon-cyber-dark
  '(default ((t (:foreground "#A6B3BC" :background "#0C0D19"))))
  '(fringe ((t (:foreground "#444657" :background "#0C0D19"))))
  '(mode-line ((t (:foreground "#87949D" :background "#070812" :box (:line-width 6 :color "#070812")))))
@@ -3014,7 +3014,7 @@
  '(posframe-border ((t (:background "#222433")))) )
 
 (custom-theme-set-variables
- 'lumina-cyber-dark
+ 'lumina-neon-cyber-dark
  '(hl-todo-keyword-faces '(("TODO" . "#FF5F1F") ("FIXME" . "#FF2A6D") ("HACK" . "#FF66B2") ("REVIEW" . "#A6B5FF") ("NOTE" . "#FFE600") ("DEPRECATED" . "#656879") ("BUG" . "#FF2A6D") ("XXX" . "#FF007F")))
  '(vc-annotate-color-map '((20 . "#FF2A6D") (40 . "#FF5F1F") (60 . "#E6CC7E") (80 . "#FFE600") (100 . "#39FF14") (120 . "#00F0FF") (140 . "#A6B5FF") (160 . "#7C8AD0") (180 . "#FF66B2") (200 . "#FF007F") (220 . "#85889A") (240 . "#85889A") (260 . "#656879") (280 . "#656879") (300 . "#656879") (320 . "#656879") (340 . "#656879") (360 . "#656879")))
  '(vc-annotate-very-old-color nil)
@@ -3028,6 +3028,6 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'lumina-cyber-dark)
+(provide-theme 'lumina-neon-cyber-dark)
 
-;;; lumina-cyber-dark-theme.el ends here
+;;; lumina-neon-cyber-dark-theme.el ends here

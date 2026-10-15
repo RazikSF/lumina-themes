@@ -404,11 +404,11 @@ FLAVORS = {
                     roles=dict(functions="teal", keywords="magenta", type="blue", strings="cyan", constants="orange", builtin="blue", methods="blue"),
                     commentary={"dark": "Lumina Pivoine, dark variant.\nA soft dusk of peony petals, lighter than the night themes; one mint lamp, the leaf among the petals: peony keywords, periwinkle types, sky strings, apricot constants.",
                                 "light": "Lumina Pivoine, light variant.\nBlush paper under the same mint lamp; peony, periwinkle, sky and apricot inks."}),
-    "cyber": dict(ground=(279.6, 0.0252, 0.0066, 0.1647, 0.9746), lamp="blue", paper=(286.3, 0.0066, 0.9746),
+    "neon-cyber": dict(ground=(279.6, 0.0252, 0.0066, 0.1647, 0.9746), lamp="blue", paper=(286.3, 0.0066, 0.9746),
                 roles=dict(functions="blue", keywords="magenta", type="yellow", strings="green", constants="orange", builtin="violet", methods="fg"),
                 extra={"dark": {"bg": (0.1647, 0.0252, 279.6), "comments": (0.593, 0.079, 282.6), "doc-comments": (0.643, 0.079, 282.6)},
                        "light": {"bg": (0.9746, 0.0066, 286.3), "fg": (0.3392, 0.0455, 284.2), "base8": (0.3392, 0.0455, 284.2), "fg-alt": (0.4492, 0.0455, 284.2), "comments": (0.548, 0.079, 282.6), "doc-comments": (0.488, 0.079, 282.6)}},
-                commentary={"dark": "Lumina Cyber, dark variant.", "light": "Lumina Cyber, light variant."}),
+                commentary={"dark": "Lumina Neon Cyber, dark variant.", "light": "Lumina Neon Cyber, light variant."}),
     "borealis": dict(ground=(173, 0.01, 0.0059, 0.1931, 0.9658), lamp="blue", paper=(170.4, 0.0059, 0.9658),
                 roles=dict(functions="blue", keywords="magenta", type="yellow", strings="green", constants="orange", builtin="violet", methods="fg"),
                 extra={"dark": {"bg": (0.1931, 0.01, 173), "comments": (0.5967, 0.0225, 176.9), "doc-comments": (0.6467, 0.0225, 176.9)},
@@ -446,7 +446,7 @@ TEXT_TINT = {  # dark text: a very light grey with a reflection of the flavor, n
     "dawn": (70, .020), "tide": (250, .022), "canopy": (150, .020), "slate": (260, .015), "oxblood": (10, .020),
     "nocturne": (268, .022), "amethyst": (326, .020), "prisma": (290, .020), "sirocco": (40, .020),
     "celadon": (178, .020), "sumi": (80, .015), "pivoine": (350, .020), "nuancier": (273, .020),
-    "aquarelle": (273, .020), "jardin": (273, .020), "cyber": (237, .020), "borealis": (179, .020), "cashmere": (74, .022),
+    "aquarelle": (273, .020), "jardin": (273, .020), "neon-cyber": (237, .020), "borealis": (179, .020), "cashmere": (74, .022),
     "aethelgard": (73, .020), "sakura": (330, .027)}
 
 

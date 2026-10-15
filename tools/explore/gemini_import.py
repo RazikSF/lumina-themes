@@ -20,7 +20,7 @@ SPREAD = .22  # contrast change per 0.1 of dark lightness: an ink lighter at nig
 ROLES = ["keywords", "strings", "type", "builtin", "constants", "functions"]
 
 G = {
-    "cyber": dict(bg="#0C0D19", fg="#E8EEF2", comment="#6A6B9E", red="#FF2A6D",
+    "neon-cyber": dict(bg="#0C0D19", fg="#E8EEF2", comment="#6A6B9E", red="#FF2A6D",
                   inks=dict(keywords="#FF007F", strings="#39FF14", functions="#00F0FF", type="#FFE600", constants="#FF5F1F", builtin="#FF66B2"),
                   light=dict(bg="#F6F6FB", fg="#1C1B33", comment="#6A6B9E")),
     "borealis": dict(bg="#101614", fg="#D0DCD9", comment="#697B76", red="#C97A85",

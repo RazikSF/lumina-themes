@@ -1,4 +1,4 @@
-;;; lumina-cyber-light-theme.el --- Lumina Cyber Light -*- lexical-binding: t; -*-
+;;; lumina-neon-cyber-light-theme.el --- Lumina Neon Cyber Light -*- lexical-binding: t; -*-
 ;;
 ;; Author: razik <https://github.com/RazikSF>
 ;; Maintainer: razik <https://github.com/RazikSF>
@@ -9,16 +9,16 @@
 ;;
 ;;; Commentary:
 ;;
-;; Lumina Cyber, light variant.
+;; Lumina Neon Cyber, light variant.
 ;; Cool white paper, the same neon as deep inks; rose keywords, blue functions, amber types, jade strings, brick constants, crimson builtins: six inks of one weight.
 ;;
 ;;; Code:
 
-(deftheme lumina-cyber-light
-  "Lumina Cyber, light variant.")
+(deftheme lumina-neon-cyber-light
+  "Lumina Neon Cyber, light variant.")
 
 (custom-theme-set-faces
- 'lumina-cyber-light
+ 'lumina-neon-cyber-light
  '(default ((t (:foreground "#35344F" :background "#F6F6FB"))))
  '(fringe ((t (:foreground "#B0B0B7" :background "#F6F6FB"))))
  '(mode-line ((t (:foreground "#52526E" :background "#ECECF3" :box (:line-width 6 :color "#ECECF3")))))
@@ -3014,7 +3014,7 @@
  '(posframe-border ((t (:background "#D3D3DA")))) )
 
 (custom-theme-set-variables
- 'lumina-cyber-light
+ 'lumina-neon-cyber-light
  '(hl-todo-keyword-faces '(("TODO" . "#A23300") ("FIXME" . "#C8004F") ("HACK" . "#B21471") ("REVIEW" . "#3D5DC0") ("NOTE" . "#966700") ("DEPRECATED" . "#85858C") ("BUG" . "#C8004F") ("XXX" . "#A90052")))
  '(vc-annotate-color-map '((20 . "#C8004F") (40 . "#A23300") (60 . "#9B5A00") (80 . "#966700") (100 . "#158200") (120 . "#007C85") (140 . "#3D5DC0") (160 . "#243E9F") (180 . "#B21471") (200 . "#A90052") (220 . "#636368") (240 . "#636368") (260 . "#85858C") (280 . "#85858C") (300 . "#85858C") (320 . "#85858C") (340 . "#85858C") (360 . "#85858C")))
  '(vc-annotate-very-old-color nil)
@@ -3028,6 +3028,6 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'lumina-cyber-light)
+(provide-theme 'lumina-neon-cyber-light)
 
-;;; lumina-cyber-light-theme.el ends here
+;;; lumina-neon-cyber-light-theme.el ends here

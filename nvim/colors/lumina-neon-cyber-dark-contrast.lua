@@ -1,10 +1,10 @@
--- lumina-cyber-dark-contrast -- Lumina (cyber, dark)
+-- lumina-neon-cyber-dark-contrast -- Lumina (neon-cyber, dark)
 -- Generated from spec/lumina.json + spec/nvim_highlights.json.
 
 vim.cmd('highlight clear')
 if vim.fn.exists('syntax_on') == 1 then vim.cmd('syntax reset') end
 vim.o.background = 'dark'
-vim.g.colors_name = 'lumina-cyber-dark-contrast'
+vim.g.colors_name = 'lumina-neon-cyber-dark-contrast'
 
 local set = vim.api.nvim_set_hl
 

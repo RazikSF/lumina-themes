@@ -1,4 +1,4 @@
--- lumina-cyber-dark-contrast -- Lumina lualine theme (cyber, dark). Generated; do not edit.
+-- lumina-neon-cyber-dark-contrast -- Lumina lualine theme (neon-cyber, dark). Generated; do not edit.
 return {
   normal = { a = { fg = '#0C0D19', bg = '#00F0FF', gui = 'bold' }, b = { fg = '#C5D3DD', bg = '#111220' }, c = { fg = '#C5D3DD', bg = '#070812' } },
   insert = { a = { fg = '#0C0D19', bg = '#50FF36', gui = 'bold' }, b = { fg = '#C5D3DD', bg = '#111220' }, c = { fg = '#C5D3DD', bg = '#070812' } },

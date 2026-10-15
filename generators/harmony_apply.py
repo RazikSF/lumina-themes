@@ -81,7 +81,7 @@ SCENES = {
     "sirocco": ("Desert wind at dusk over terracotta", "Sand paper"), "celadon": ("Glazed jade porcelain", "Pale celadon paper"),
     "sumi": ("Ink-black ground", "Rice paper"), "aquarelle": ("The slide palette rearranged, slate night", "Cool paper, the same inks"),
     "jardin": ("The slide palette with mint keywords, slate night", "Cool paper, the same inks"), "pivoine": ("A soft dusk of peony petals, lighter than the night grounds", "Blush paper"),
-    "cyber": ("Urban night in neon, every ink at full voltage", "Cool white paper, the same neon as deep inks"),
+    "neon-cyber": ("Urban night in neon, every ink at full voltage", "Cool white paper, the same neon as deep inks"),
     "borealis": ("Misty pine forest under the aurora", "Frosted white paper"),
     "cashmere": ("Espresso velvet, warm pastels", "Warm linen paper"),
     "aethelgard": ("Midnight velvet and astral gold", "Cool marble paper"),
