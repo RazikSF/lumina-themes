@@ -61,11 +61,10 @@ def schema_overrides(flavor):
 SEMIBOLD = {f: {"weight": "semi-bold"} for f in ("font-lock-keyword-face", "font-lock-type-face", "font-lock-function-name-face")}
 
 
-def gemini_design(flavor):
-    """Gemini's face design: calls in the function ink, properties and escapes in the builtin ink, the
-    preprocessor in the keyword ink, grey brackets, semi-bold keywords, types and definitions."""
-    sl = slots(flavor)
-    return {"function_call": sl["functions"], "property": sl["builtin"], "preprocessor": sl["keywords"], "escape": sl["builtin"],
+def gemini_design(flavor=None):
+    """Gemini's face design, for every flavor: calls in the function ink, properties and escapes in the
+    builtin ink, the preprocessor in the keyword ink, grey brackets, semi-bold keywords, types and definitions."""
+    return {"function_call": "functions", "property": "builtin", "preprocessor": "keywords", "escape": "builtin",
             "rainbow": ["base6"] * 6, "faces": {"dark": SEMIBOLD, "light": SEMIBOLD}}
 
 

@@ -192,8 +192,10 @@ from harmony_apply import HARMONY as _HARMONY, schema_overrides as _schema_overr
 for _f in _HARMONY:
     SCHEMAS[_f].update(_schema_overrides(_f))
 from harmony_apply import gemini_design as _gemini_design, AS_DRAWN as _AS_DRAWN
+for _f in SCHEMAS:
+    SCHEMAS[_f].update(_gemini_design())
 for _f in ("neon-cyber", "borealis", "cashmere", "aethelgard", "sakura"):
-    SCHEMAS[_f].update({**_gemini_design(_f), **_AS_DRAWN})
+    SCHEMAS[_f].update(_AS_DRAWN)
 
 
 def schema_for(flavor: str, mode: str) -> dict:

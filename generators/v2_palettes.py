@@ -124,6 +124,9 @@ def write(flavors):
             sig = pal.get("sig")
             variants = {mode: signature(base, lead, dark, sig),
                         f"{mode}-contrast": signature(high_contrast(base, lead, dark), lead, dark, sig)}
+            if dark and flavor not in DRAWN:  # Gemini's line numbers: a step above the ground
+                L_, C_, h_ = variants[mode]["bg"]
+                variants[mode]["base4"] = (L_ + .14, C_ * 1.3, h_)
             variants[mode].update({k: from_hex(v) for k, v in DRAWN.get(flavor, {}).get(mode, {}).items()})
             for vname, vpal in variants.items():
                 t = modes.setdefault(vname, {})
@@ -444,7 +447,7 @@ for _f in HARMONY:
         FLAVORS[_f]["commentary"] = _commentary(_f, FLAVORS[_f].get("commentary") or {})
 PALETTES = {k: compose(**v) for k, v in FLAVORS.items()}
 
-TEXT_TINT = {  # dark text: a very light grey with a reflection of the flavor, never white (hue, chroma)
+TEXT_TINT = {  # dark text: a light grey with a reflection of the flavor at 12:1, as in Gemini's drafts (hue, chroma)
     "dawn": (70, .020), "tide": (250, .022), "canopy": (150, .020), "slate": (260, .015), "oxblood": (10, .020),
     "nocturne": (268, .022), "amethyst": (326, .020), "prisma": (290, .020), "sirocco": (40, .020),
     "celadon": (178, .020), "sumi": (80, .015), "pivoine": (350, .020), "nuancier": (273, .020),
@@ -452,7 +455,7 @@ TEXT_TINT = {  # dark text: a very light grey with a reflection of the flavor, n
     "aethelgard": (73, .020), "sakura": (330, .027)}
 
 
-def tinted_text(bg, hue, chroma, target=9.0):
+def tinted_text(bg, hue, chroma, target=12.0):
     """Lightness of a tinted grey reaching `target` contrast on bg."""
     lo, hi = .5, .99
     for _ in range(40):

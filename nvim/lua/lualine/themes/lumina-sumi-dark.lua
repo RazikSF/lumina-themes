@@ -1,10 +1,10 @@
 -- lumina-sumi-dark -- Lumina lualine theme (sumi, dark). Generated; do not edit.
 return {
-  normal = { a = { fg = '#090807', bg = '#7BBC88', gui = 'bold' }, b = { fg = '#948F86', bg = '#0D0C0A' }, c = { fg = '#948F86', bg = '#050404' } },
-  insert = { a = { fg = '#090807', bg = '#91DFD1', gui = 'bold' }, b = { fg = '#948F86', bg = '#0D0C0A' }, c = { fg = '#948F86', bg = '#050404' } },
-  visual = { a = { fg = '#090807', bg = '#8591E5', gui = 'bold' }, b = { fg = '#948F86', bg = '#0D0C0A' }, c = { fg = '#948F86', bg = '#050404' } },
-  replace = { a = { fg = '#090807', bg = '#F84F33', gui = 'bold' }, b = { fg = '#948F86', bg = '#0D0C0A' }, c = { fg = '#948F86', bg = '#050404' } },
-  command = { a = { fg = '#090807', bg = '#ED8188', gui = 'bold' }, b = { fg = '#948F86', bg = '#0D0C0A' }, c = { fg = '#948F86', bg = '#050404' } },
-  terminal = { a = { fg = '#090807', bg = '#7BBC88', gui = 'bold' }, b = { fg = '#948F86', bg = '#0D0C0A' }, c = { fg = '#948F86', bg = '#050404' } },
+  normal = { a = { fg = '#090807', bg = '#7BBC88', gui = 'bold' }, b = { fg = '#AEA89E', bg = '#0D0C0A' }, c = { fg = '#AEA89E', bg = '#050404' } },
+  insert = { a = { fg = '#090807', bg = '#91DFD1', gui = 'bold' }, b = { fg = '#AEA89E', bg = '#0D0C0A' }, c = { fg = '#AEA89E', bg = '#050404' } },
+  visual = { a = { fg = '#090807', bg = '#8591E5', gui = 'bold' }, b = { fg = '#AEA89E', bg = '#0D0C0A' }, c = { fg = '#AEA89E', bg = '#050404' } },
+  replace = { a = { fg = '#090807', bg = '#F84F33', gui = 'bold' }, b = { fg = '#AEA89E', bg = '#0D0C0A' }, c = { fg = '#AEA89E', bg = '#050404' } },
+  command = { a = { fg = '#090807', bg = '#ED8188', gui = 'bold' }, b = { fg = '#AEA89E', bg = '#0D0C0A' }, c = { fg = '#AEA89E', bg = '#050404' } },
+  terminal = { a = { fg = '#090807', bg = '#7BBC88', gui = 'bold' }, b = { fg = '#AEA89E', bg = '#0D0C0A' }, c = { fg = '#AEA89E', bg = '#050404' } },
   inactive = { a = { fg = '#6B6866', bg = '#050404' }, b = { fg = '#6B6866', bg = '#050404' }, c = { fg = '#6B6866', bg = '#090807' } },
 }
