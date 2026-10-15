@@ -8,8 +8,8 @@ code carries the same weight. No colour glows brighter than its
 neighbours; hues alone tell keywords, functions, types and strings
 apart, so the eye can rest on any part of the screen.
 
-Nineteen flavors, each in dark, light and high contrast, plus Prisma's
-black-and-white twins: 80 themes. The reference is **Nuancier**, taken
+Twenty-five flavors, each in dark, light and high contrast, plus Prisma's
+black-and-white twins: 104 themes. The reference is **Nuancier**, taken
 from a slide on web colours: slate night `#1D2130`, sky keywords
 `#77B8E7`, salmon functions `#EC907E`, gold types `#F7C054`, mint strings
 `#87C3AB`, lilac constants `#B5A4EA`, rose builtins `#E297BA`, on a deeper
@@ -186,7 +186,7 @@ Prisma adds black-and-white twins: `lumina-prisma-dark-ink`,
 |---|---|
 | **Emacs** (vanilla `deftheme`)  | `emacs/themes/*.el` (80), close to 3 000 faces each |
 | **Neovim** (Lua colorscheme)    | `nvim/colors/*.lua` (80), over 1 600 groups each, plus `nvim/lua/lualine/themes/*.lua` |
-| **VS Code** (extension)         | `vscode/themes/*.json` (80): 565 workbench colours, 80 token scopes, 47 semantic tokens |
+| **VS Code** (extension)         | `vscode/themes/*.json` (104): 565 workbench colours, 80 token scopes, 47 semantic tokens |
 | **WezTerm** (color scheme)      | `wezterm/*.toml` (80): ANSI, indexed, tab bar states, copy and quick-select modes |
 | **base24** (tinted-theming)     | `base24/*.yaml` (80) |
 
@@ -365,7 +365,7 @@ per flavor and emits one file per target per (flavor, mode).
 A flavor is one `compose(...)` call in `generators/v2_palettes.py`:
 ground, lead slot, role map, optional hue overrides. It propagates to
 all five targets on the next `make build`; a face edit in
-`generators/faces_src.py` propagates to the 80 Emacs themes, one in
+`generators/faces_src.py` propagates to the 104 Emacs themes, one in
 `generators/nvim_src.py` to the 52 Neovim colorschemes.
 
 ## Develop

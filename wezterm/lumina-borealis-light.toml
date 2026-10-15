@@ -1,0 +1,53 @@
+# lumina-borealis-light -- Lumina (borealis, light)
+# Generated from spec/lumina.json. Do not edit by hand.
+[colors]
+foreground   = "#253935"
+background   = "#F0F5F3"
+cursor_bg    = "#253935"
+cursor_fg    = "#F0F5F3"
+cursor_border = "#253935"
+selection_bg = "#BBD1CB"
+selection_fg = "#253935"
+scrollbar_thumb = "#ACB3B0"
+split = "#CCD3D0"
+compose_cursor = "#1A6E61"
+visual_bell = "#94B7AF"
+copy_mode_active_highlight_bg = { Color = "#1A6E61" }
+copy_mode_active_highlight_fg = { Color = "#F0F5F3" }
+copy_mode_inactive_highlight_bg = { Color = "#CBDCD7" }
+copy_mode_inactive_highlight_fg = { Color = "#253935" }
+quick_select_label_bg = { Color = "#8F4E3E" }
+quick_select_label_fg = { Color = "#F0F5F3" }
+quick_select_match_bg = { Color = "#CBDCD7" }
+quick_select_match_fg = { Color = "#253935" }
+ansi = ["#E8EFEC", "#954C58", "#866619", "#925F21", "#3D5DC0", "#B23860", "#1A6E61", "#434947"]
+brights = ["#828885", "#8F4E3E", "#3C735D", "#925F21", "#243E9F", "#635883", "#1A6E61", "#253935"]
+
+[colors.indexed]
+16 = "#8F4E3E"
+17 = "#3C735D"
+18 = "#635883"
+19 = "#243E9F"
+
+[colors.tab_bar]
+background = "#E5ECE9"
+inactive_tab_edge = "#DCE3E1"
+[colors.tab_bar.active_tab]
+bg_color = "#F0F5F3"
+fg_color = "#253935"
+intensity = "Bold"
+[colors.tab_bar.inactive_tab]
+bg_color = "#E5ECE9"
+fg_color = "#5F6562"
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "#D7E4E0"
+fg_color = "#253935"
+[colors.tab_bar.new_tab]
+bg_color = "#E5ECE9"
+fg_color = "#828885"
+[colors.tab_bar.new_tab_hover]
+bg_color = "#CBDCD7"
+fg_color = "#1A6E61"
+
+[metadata]
+name = "lumina-borealis-light"

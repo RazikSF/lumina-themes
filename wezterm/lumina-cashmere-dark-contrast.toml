@@ -1,0 +1,53 @@
+# lumina-cashmere-dark-contrast -- Lumina (cashmere, dark)
+# Generated from spec/lumina.json. Do not edit by hand.
+[colors]
+foreground   = "#F8EDDF"
+background   = "#110D0F"
+cursor_bg    = "#F8EDDF"
+cursor_fg    = "#110D0F"
+cursor_border = "#F8EDDF"
+selection_bg = "#423329"
+selection_fg = "#F8EDDF"
+scrollbar_thumb = "#514B4E"
+split = "#2F2A2C"
+compose_cursor = "#F0B97B"
+visual_bell = "#6B533D"
+copy_mode_active_highlight_bg = { Color = "#F0B97B" }
+copy_mode_active_highlight_fg = { Color = "#110D0F" }
+copy_mode_inactive_highlight_bg = { Color = "#2E241F" }
+copy_mode_inactive_highlight_fg = { Color = "#F8EDDF" }
+quick_select_label_bg = { Color = "#FFB8BB" }
+quick_select_label_fg = { Color = "#110D0F" }
+quick_select_match_bg = { Color = "#2E241F" }
+quick_select_match_fg = { Color = "#F8EDDF" }
+ansi = ["#171215", "#FFB093", "#F7C59F", "#FFBA9C", "#BBCBFF", "#FFB995", "#C5D9AA", "#C7C3C5"]
+brights = ["#7E787B", "#FFB8BB", "#F0B97B", "#FFBA9C", "#7C8AD0", "#D3C4FF", "#C5D9AA", "#F8EDDF"]
+
+[colors.indexed]
+16 = "#FFB8BB"
+17 = "#F0B97B"
+18 = "#D3C4FF"
+19 = "#7C8AD0"
+
+[colors.tab_bar]
+background = "#0B080A"
+inactive_tab_edge = "#211D1F"
+[colors.tab_bar.active_tab]
+bg_color = "#110D0F"
+fg_color = "#F8EDDF"
+intensity = "Bold"
+[colors.tab_bar.inactive_tab]
+bg_color = "#0B080A"
+fg_color = "#A29C9F"
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "#231B19"
+fg_color = "#F8EDDF"
+[colors.tab_bar.new_tab]
+bg_color = "#0B080A"
+fg_color = "#7E787B"
+[colors.tab_bar.new_tab_hover]
+bg_color = "#2E241F"
+fg_color = "#F0B97B"
+
+[metadata]
+name = "lumina-cashmere-dark-contrast"

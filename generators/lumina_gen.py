@@ -47,7 +47,7 @@ SCHEMAS = {
                "modeline_bg": "bg-alt", "vertico_bg": "halo2", "function_call": "blue", "property": "rose", "preprocessor": "violet", "escape": "orange", "modeline_modified": "orange",
                "rainbow": ["blue", "magenta", "cyan", "orange", "yellow", "violet"], "outline": ["blue", "magenta", "cyan", "yellow"], "orderless": ["blue", "magenta", "orange"],
                "magit_branch_local": "cyan", "magit_branch_remote": "violet", "org_todo": "orange", "org_done": "green"},
-    "sienne": {"v2": True, "lead": "teal", "warm_family": True, "fg_min": 8, "comments_min": {"dark": 2.8, "light": 4.3}, "accent_min": {"dark": 3.6, "light": 4.5}, "accent_bg_min": {"dark": 3.3, "light": 4.0}, "spread": {"dark": .21, "light": .14},
+    "sienne": {"v2": True, "lead": "teal", "warm_family": True, "fg_min": 8, "comments_min": {"dark": 2.8, "light": 4.3}, "accent_min": {"dark": 3.6, "light": 4.5}, "accent_bg_min": {"dark": 3.3, "light": 4.0}, "spread": {"dark": .22, "light": .14},
                "modeline_bg": "bg-alt", "vertico_bg": "halo2", "function_call": "teal", "property": "orange", "preprocessor": "magenta", "escape": "orange", "modeline_modified": "orange",
                "rainbow": ["teal", "magenta", "yellow", "orange", "green", "violet"], "outline": ["teal", "magenta", "yellow", "green"], "orderless": ["teal", "magenta", "orange"],
                "magit_branch_local": "cyan", "magit_branch_remote": "violet", "org_todo": "orange", "org_done": "green"},
@@ -182,6 +182,11 @@ SCHEMAS["nuancier"] = {"v2": True, "lead": "orange", "fg_min": 8, "fg_max": 12.5
                        "modeline_modified": "orange"}
 SCHEMAS["aquarelle"] = dict(SCHEMAS["nuancier"])
 SCHEMAS["jardin"] = dict(SCHEMAS["nuancier"])
+for _f in ("cyber", "borealis", "cashmere", "aethelgard", "sakura", "obsidian"):
+    SCHEMAS[_f] = dict(SCHEMAS["nuancier"])
+SCHEMAS["cyber"]["spread"] = {"dark": .28, "light": .16}
+SCHEMAS["sakura"]["spread"] = {"dark": .20, "light": .16}
+SCHEMAS["cashmere"]["warm_family"] = True
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from harmony_apply import HARMONY as _HARMONY, schema_overrides as _schema_overrides
 for _f in _HARMONY:

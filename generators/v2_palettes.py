@@ -284,9 +284,9 @@ VESPER_DARK = {"blue": (.68, .13, 258), "magenta": (.68, .15, 318), "cyan": (.76
                "fg": (.76, .045, 272), "base8": (.76, .045, 272), "fg-alt": (.66, .04, 272), "comments": (.50, .02, 265), "doc-comments": (.55, .02, 265)}
 VESPER_LIGHT = {"blue": (.50, .15, 258), "magenta": (.50, .16, 318), "cyan": (.50, .11, 215), "yellow": (.54, .13, 72), "orange": (.54, .16, 34), "rose": (.52, .16, 350),
                 "red": (.42, .19, 10), "violet": (.50, .13, 300), "green": (.50, .12, 150), "teal": (.50, .10, 185)}
-SIENNE_DARK = {"teal": (.70, .09, 205), "magenta": (.70, .11, 322), "yellow": (.82, .11, 88), "green": (.74, .11, 116), "coral": (.72, .15, 28), "orange": (.77, .15, 62),
+SIENNE_DARK = {"teal": (.70, .09, 205), "magenta": (.7212, .1093, 320.6), "yellow": (.8359, .1065, 89.1), "green": (.7552, .1009, 119.3), "coral": (.7012, .1381, 27.6), "orange": (.7687, .139, 62.3),
                "red": (.62, .20, 12), "cyan": (.72, .08, 230), "blue": (.68, .08, 250), "violet": (.68, .10, 300),
-               "fg": (.80, .025, 70), "base8": (.80, .025, 70), "fg-alt": (.70, .0225, 70), "comments": (.51, .015, 262), "doc-comments": (.56, .02, 262)}
+               "fg": (.80, .025, 70), "base8": (.80, .025, 70), "fg-alt": (.70, .0225, 70), "comments": (.5753, .0312, 265.3), "doc-comments": (.6251, .031, 263.3)}
 SIENNE_LIGHT = {"teal": (.50, .11, 205), "magenta": (.50, .14, 322), "yellow": (.47, .12, 80), "green": (.52, .11, 118), "coral": (.50, .17, 34), "orange": (.55, .14, 64),
                 "red": (.42, .19, 0), "cyan": (.50, .10, 230), "blue": (.50, .12, 250), "violet": (.50, .13, 300)}
 
@@ -404,6 +404,36 @@ FLAVORS = {
                     roles=dict(functions="teal", keywords="magenta", type="blue", strings="cyan", constants="orange", builtin="blue", methods="blue"),
                     commentary={"dark": "Lumina Pivoine, dark variant.\nA soft dusk of peony petals, lighter than the night themes; one mint lamp, the leaf among the petals: peony keywords, periwinkle types, sky strings, apricot constants.",
                                 "light": "Lumina Pivoine, light variant.\nBlush paper under the same mint lamp; peony, periwinkle, sky and apricot inks."}),
+    "cyber": dict(ground=(279.6, 0.0252, 0.0066, 0.1647, 0.9746), lamp="blue", paper=(286.3, 0.0066, 0.9746),
+                roles=dict(functions="blue", keywords="magenta", type="yellow", strings="green", constants="orange", builtin="violet", methods="fg"),
+                extra={"dark": {"bg": (0.1647, 0.0252, 279.6), "comments": (0.593, 0.079, 282.6), "doc-comments": (0.643, 0.079, 282.6)},
+                       "light": {"bg": (0.9746, 0.0066, 286.3), "fg": (0.3392, 0.0455, 284.2), "base8": (0.3392, 0.0455, 284.2), "fg-alt": (0.4492, 0.0455, 284.2), "comments": (0.548, 0.079, 282.6), "doc-comments": (0.488, 0.079, 282.6)}},
+                commentary={"dark": "Lumina Cyber, dark variant.", "light": "Lumina Cyber, light variant."}),
+    "borealis": dict(ground=(173, 0.01, 0.0059, 0.1931, 0.9658), lamp="blue", paper=(170.4, 0.0059, 0.9658),
+                roles=dict(functions="blue", keywords="magenta", type="yellow", strings="green", constants="orange", builtin="violet", methods="fg"),
+                extra={"dark": {"bg": (0.1931, 0.01, 173), "comments": (0.5967, 0.0225, 176.9), "doc-comments": (0.6467, 0.0225, 176.9)},
+                       "light": {"bg": (0.9658, 0.0059, 170.4), "fg": (0.3278, 0.027, 180.2), "base8": (0.3278, 0.027, 180.2), "fg-alt": (0.4378, 0.027, 180.2), "comments": (0.5355, 0.0297, 175.6), "doc-comments": (0.4755, 0.0297, 175.6)}},
+                commentary={"dark": "Lumina Borealis, dark variant.", "light": "Lumina Borealis, light variant."}),
+    "cashmere": dict(ground=(346.1, 0.0075, 0.009, 0.1969, 0.9746), lamp="blue", paper=(78.3, 0.009, 0.9746),
+                roles=dict(functions="blue", keywords="magenta", type="yellow", strings="green", constants="orange", builtin="violet", methods="fg"),
+                extra={"dark": {"bg": (0.1969, 0.0075, 346.1), "comments": (0.6155, 0.0161, 7), "doc-comments": (0.6655, 0.0161, 7)},
+                       "light": {"bg": (0.9746, 0.009, 78.3), "fg": (0.3377, 0.0108, 36.5), "base8": (0.3377, 0.0108, 36.5), "fg-alt": (0.4477, 0.0108, 36.5), "comments": (0.547, 0.0224, 37), "doc-comments": (0.487, 0.0224, 37)}},
+                commentary={"dark": "Lumina Cashmere, dark variant.", "light": "Lumina Cashmere, light variant."}),
+    "aethelgard": dict(ground=(267.3, 0.022, 0.0045, 0.1695, 0.9755), lamp="blue", paper=(258.3, 0.0045, 0.9755),
+                roles=dict(functions="blue", keywords="magenta", type="yellow", strings="green", constants="orange", builtin="violet", methods="fg"),
+                extra={"dark": {"bg": (0.1695, 0.022, 267.3), "comments": (0.6166, 0.0401, 266.5), "doc-comments": (0.6666, 0.0401, 266.5)},
+                       "light": {"bg": (0.9755, 0.0045, 258.3), "fg": (0.3387, 0.0306, 260.5), "base8": (0.3387, 0.0306, 260.5), "fg-alt": (0.4487, 0.0306, 260.5), "comments": (0.5428, 0.0324, 257.8), "doc-comments": (0.4828, 0.0324, 257.8)}},
+                commentary={"dark": "Lumina Aethelgard, dark variant.", "light": "Lumina Aethelgard, light variant."}),
+    "sakura": dict(ground=(310.6, 0.0153, 0.0066, 0.1858, 0.9808), lamp="blue", paper=(340.4, 0.0066, 0.9808),
+                roles=dict(functions="blue", keywords="magenta", type="yellow", strings="green", constants="orange", builtin="violet", methods="fg"),
+                extra={"dark": {"bg": (0.1858, 0.0153, 310.6), "comments": (0.597, 0.0372, 318.1), "doc-comments": (0.647, 0.0372, 318.1)},
+                       "light": {"bg": (0.9808, 0.0066, 340.4), "fg": (0.346, 0.0268, 331.5), "base8": (0.346, 0.0268, 331.5), "fg-alt": (0.456, 0.0268, 331.5), "comments": (0.5492, 0.0331, 334.8), "doc-comments": (0.4892, 0.0331, 334.8)}},
+                commentary={"dark": "Lumina Sakura, dark variant.", "light": "Lumina Sakura, light variant."}),
+    "obsidian": dict(ground=(271, 0.0065, 0.0026, 0.164, 0.9827), lamp="blue", paper=(286.4, 0.0026, 0.9827),
+                roles=dict(functions="blue", keywords="magenta", type="yellow", strings="green", constants="orange", builtin="violet", methods="fg"),
+                extra={"dark": {"bg": (0.164, 0.0065, 271), "comments": (0.5883, 0.0225, 262.9), "doc-comments": (0.6383, 0.0225, 262.9)},
+                       "light": {"bg": (0.9827, 0.0026, 286.4), "fg": (0.3443, 0.0077, 285.7), "base8": (0.3443, 0.0077, 285.7), "fg-alt": (0.4543, 0.0077, 285.7), "comments": (0.5482, 0.0167, 285.9), "doc-comments": (0.4882, 0.0167, 285.9)}},
+                commentary={"dark": "Lumina Obsidian, dark variant.", "light": "Lumina Obsidian, light variant."}),
 }
 from harmony_apply import HARMONY, flavor_overrides, commentary as _commentary
 for _f in HARMONY:
@@ -421,7 +451,8 @@ TEXT_TINT = {  # dark text: a very light grey with a reflection of the flavor, n
     "dawn": (70, .020), "tide": (250, .022), "canopy": (150, .020), "slate": (260, .015), "oxblood": (10, .020),
     "nocturne": (268, .022), "amethyst": (326, .020), "prisma": (290, .020), "sirocco": (40, .020),
     "celadon": (178, .020), "sumi": (80, .015), "pivoine": (350, .020), "nuancier": (273, .020),
-    "aquarelle": (273, .020), "jardin": (273, .020)}
+    "aquarelle": (273, .020), "jardin": (273, .020), "cyber": (237, .020), "borealis": (179, .020), "cashmere": (74, .022),
+    "aethelgard": (73, .020), "sakura": (330, .027), "obsidian": (73, .015)}
 
 
 def tinted_text(bg, hue, chroma, target=9.0):

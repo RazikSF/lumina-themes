@@ -1,0 +1,53 @@
+# lumina-obsidian-light-contrast -- Lumina (obsidian, light)
+# Generated from spec/lumina.json. Do not edit by hand.
+[colors]
+foreground   = "#0F0F13"
+background   = "#FDFDFF"
+cursor_bg    = "#0F0F13"
+cursor_fg    = "#FDFDFF"
+cursor_border = "#0F0F13"
+selection_bg = "#D4CABB"
+selection_fg = "#0F0F13"
+scrollbar_thumb = "#AAAAAD"
+split = "#DADADD"
+compose_cursor = "#654500"
+visual_bell = "#B6A78B"
+copy_mode_active_highlight_bg = { Color = "#654500" }
+copy_mode_active_highlight_fg = { Color = "#FDFDFF" }
+copy_mode_inactive_highlight_bg = { Color = "#E0DAD0" }
+copy_mode_inactive_highlight_fg = { Color = "#0F0F13" }
+quick_select_label_bg = { Color = "#654500" }
+quick_select_label_fg = { Color = "#FDFDFF" }
+quick_select_match_bg = { Color = "#E0DAD0" }
+quick_select_match_fg = { Color = "#0F0F13" }
+ansi = ["#F6F6F9", "#811028", "#454545", "#683800", "#004981", "#84003B", "#004D75", "#303032"]
+brights = ["#717174", "#654500", "#2C5101", "#683800", "#004C85", "#68197C", "#004D75", "#0F0F13"]
+
+[colors.indexed]
+16 = "#654500"
+17 = "#2C5101"
+18 = "#68197C"
+19 = "#004C85"
+
+[colors.tab_bar]
+background = "#F3F3F6"
+inactive_tab_edge = "#EBEBED"
+[colors.tab_bar.active_tab]
+bg_color = "#FDFDFF"
+fg_color = "#0F0F13"
+intensity = "Bold"
+[colors.tab_bar.inactive_tab]
+bg_color = "#F3F3F6"
+fg_color = "#4D4D4F"
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "#EAE6DF"
+fg_color = "#0F0F13"
+[colors.tab_bar.new_tab]
+bg_color = "#F3F3F6"
+fg_color = "#717174"
+[colors.tab_bar.new_tab_hover]
+bg_color = "#E0DAD0"
+fg_color = "#654500"
+
+[metadata]
+name = "lumina-obsidian-light-contrast"

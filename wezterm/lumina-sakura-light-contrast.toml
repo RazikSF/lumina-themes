@@ -1,0 +1,53 @@
+# lumina-sakura-light-contrast -- Lumina (sakura, light)
+# Generated from spec/lumina.json. Do not edit by hand.
+[colors]
+foreground   = "#160B15"
+background   = "#FFFCFF"
+cursor_bg    = "#160B15"
+cursor_fg    = "#FFFCFF"
+cursor_border = "#160B15"
+selection_bg = "#DEC5CD"
+selection_fg = "#160B15"
+scrollbar_thumb = "#AFA9AC"
+split = "#DFD8DC"
+compose_cursor = "#77354E"
+visual_bell = "#C49FAB"
+copy_mode_active_highlight_bg = { Color = "#77354E" }
+copy_mode_active_highlight_fg = { Color = "#FFFCFF" }
+copy_mode_inactive_highlight_bg = { Color = "#E9D6DC" }
+copy_mode_inactive_highlight_fg = { Color = "#160B15" }
+quick_select_label_bg = { Color = "#77354E" }
+quick_select_label_fg = { Color = "#FFFCFF" }
+quick_select_match_bg = { Color = "#E9D6DC" }
+quick_select_match_fg = { Color = "#160B15" }
+ansi = ["#FBF4F9", "#9C003C", "#704A00", "#6A4B2F", "#2C48A9", "#673F79", "#005B83", "#342F32"]
+brights = ["#766F73", "#77354E", "#225F4C", "#6A4B2F", "#243E9F", "#673F79", "#005B83", "#160B15"]
+
+[colors.indexed]
+16 = "#77354E"
+17 = "#225F4C"
+18 = "#673F79"
+19 = "#243E9F"
+
+[colors.tab_bar]
+background = "#F8F1F5"
+inactive_tab_edge = "#F0E9ED"
+[colors.tab_bar.active_tab]
+bg_color = "#FFFCFF"
+fg_color = "#160B15"
+intensity = "Bold"
+[colors.tab_bar.inactive_tab]
+bg_color = "#F8F1F5"
+fg_color = "#514B4F"
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "#F1E2E8"
+fg_color = "#160B15"
+[colors.tab_bar.new_tab]
+bg_color = "#F8F1F5"
+fg_color = "#766F73"
+[colors.tab_bar.new_tab_hover]
+bg_color = "#E9D6DC"
+fg_color = "#77354E"
+
+[metadata]
+name = "lumina-sakura-light-contrast"

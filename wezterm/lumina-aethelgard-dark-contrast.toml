@@ -1,0 +1,53 @@
+# lumina-aethelgard-dark-contrast -- Lumina (aethelgard, dark)
+# Generated from spec/lumina.json. Do not edit by hand.
+[colors]
+foreground   = "#F7EDE0"
+background   = "#0A0E18"
+cursor_bg    = "#F7EDE0"
+cursor_fg    = "#0A0E18"
+cursor_border = "#F7EDE0"
+selection_bg = "#1D3B3E"
+selection_fg = "#F7EDE0"
+scrollbar_thumb = "#474D5B"
+split = "#262B38"
+compose_cursor = "#4FD6BE"
+visual_bell = "#2A5F5D"
+copy_mode_active_highlight_bg = { Color = "#4FD6BE" }
+copy_mode_active_highlight_fg = { Color = "#0A0E18" }
+copy_mode_inactive_highlight_bg = { Color = "#16292F" }
+copy_mode_inactive_highlight_fg = { Color = "#F7EDE0" }
+quick_select_label_bg = { Color = "#FFBB9B" }
+quick_select_label_fg = { Color = "#0A0E18" }
+quick_select_match_bg = { Color = "#16292F" }
+quick_select_match_fg = { Color = "#F7EDE0" }
+ansi = ["#0F131F", "#FF98C2", "#FFD166", "#FFC281", "#C2D3FF", "#FFBBFF", "#9FE8E0", "#C0C4CE"]
+brights = ["#747A89", "#FFBB9B", "#4FD6BE", "#FFC281", "#7C8AD0", "#FBB9FF", "#9FE8E0", "#F7EDE0"]
+
+[colors.indexed]
+16 = "#FFBB9B"
+17 = "#4FD6BE"
+18 = "#FBB9FF"
+19 = "#7C8AD0"
+
+[colors.tab_bar]
+background = "#060911"
+inactive_tab_edge = "#191E2A"
+[colors.tab_bar.active_tab]
+bg_color = "#0A0E18"
+fg_color = "#F7EDE0"
+intensity = "Bold"
+[colors.tab_bar.inactive_tab]
+bg_color = "#060911"
+fg_color = "#989EAE"
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "#111E26"
+fg_color = "#F7EDE0"
+[colors.tab_bar.new_tab]
+bg_color = "#060911"
+fg_color = "#747A89"
+[colors.tab_bar.new_tab_hover]
+bg_color = "#16292F"
+fg_color = "#4FD6BE"
+
+[metadata]
+name = "lumina-aethelgard-dark-contrast"
