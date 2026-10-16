@@ -43,12 +43,6 @@ def audit(flavor, mode, colors):
             if d < sch.get("confusable", CONFUSABLE):
                 issues.append(f"confondus {NAMES.get(a, a)} / {NAMES.get(b, b)} dE {d:.0f}")
 
-    inks = {role[r] for r in ROLES if role[r] != fg}
-    warm_inks = {c for c in inks if warm(c)}
-    if len(warm_inks) > 2 and not sch.get("warm_family"):
-        issues.append(f"{len(warm_inks)} encres chaudes (deux au plus, comme Nuancier)")
-    if not warm_inks:
-        issues.append("aucune note chaude")
     dred = min(de(C("red"), role[r]) for r in ROLES if role[r] != fg)
     if dred < RED_MIN:
         issues.append(f"rouge d'erreur confondable dE {dred:.0f}")

@@ -1,45 +1,45 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="760" height="461" viewBox="0 0 760 461" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="14">
 <rect width="760" height="461" rx="10" fill="#FBFAF8"/>
 <text x="14" y="29" fill="#B3B1AB"> 1</text>
-<text x="43.504999999999995" y="29" xml:space="preserve" fill="#494843"><tspan fill="#965AA4" font-weight="600">@dataclass</tspan></text>
+<text x="43.504999999999995" y="29" xml:space="preserve" fill="#494843"><tspan fill="#84517C" font-weight="600">@dataclass</tspan></text>
 <text x="14" y="50" fill="#B3B1AB"> 2</text>
-<text x="43.504999999999995" y="50" xml:space="preserve" fill="#494843"><tspan fill="#B85143" font-weight="600">class</tspan><tspan fill="#494843"> </tspan><tspan fill="#965AA4" font-weight="600">TokenBucket</tspan><tspan fill="#494843">:</tspan></text>
+<text x="43.504999999999995" y="50" xml:space="preserve" fill="#494843"><tspan fill="#A65C69" font-weight="600">class</tspan><tspan fill="#494843"> </tspan><tspan fill="#84517C" font-weight="600">TokenBucket</tspan><tspan fill="#494843">:</tspan></text>
 <text x="14" y="71" fill="#B3B1AB"> 3</text>
 <text x="43.504999999999995" y="71" xml:space="preserve" fill="#494843"><tspan fill="#494843">    </tspan><tspan fill="#5D5B52" font-style="italic">&quot;&quot;&quot;A single bucket with a refill rate measured in tokens per second.&quot;&quot;&quot;</tspan></text>
 <text x="14" y="92" fill="#B3B1AB"> 4</text>
 <text x="43.504999999999995" y="92" xml:space="preserve" fill="#494843"></text>
 <text x="14" y="113" fill="#B3B1AB"> 5</text>
-<text x="43.504999999999995" y="113" xml:space="preserve" fill="#494843"><tspan fill="#494843">    capacity: </tspan><tspan fill="#84355F">float</tspan></text>
+<text x="43.504999999999995" y="113" xml:space="preserve" fill="#494843"><tspan fill="#494843">    capacity: </tspan><tspan fill="#7B364A">float</tspan></text>
 <text x="14" y="134" fill="#B3B1AB"> 6</text>
-<text x="43.504999999999995" y="134" xml:space="preserve" fill="#494843"><tspan fill="#494843">    refill_rate: </tspan><tspan fill="#84355F">float</tspan></text>
+<text x="43.504999999999995" y="134" xml:space="preserve" fill="#494843"><tspan fill="#494843">    refill_rate: </tspan><tspan fill="#7B364A">float</tspan></text>
 <text x="14" y="155" fill="#B3B1AB"> 7</text>
-<text x="43.504999999999995" y="155" xml:space="preserve" fill="#494843"><tspan fill="#494843">    </tspan><tspan fill="#494843">tokens</tspan><tspan fill="#494843">: </tspan><tspan fill="#84355F">float</tspan><tspan fill="#494843"> </tspan><tspan fill="#65635E">=</tspan><tspan fill="#494843"> field(init</tspan><tspan fill="#65635E">=</tspan><tspan fill="#7E4400">False</tspan><tspan fill="#494843">)</tspan></text>
+<text x="43.504999999999995" y="155" xml:space="preserve" fill="#494843"><tspan fill="#494843">    </tspan><tspan fill="#494843">tokens</tspan><tspan fill="#494843">: </tspan><tspan fill="#7B364A">float</tspan><tspan fill="#494843"> </tspan><tspan fill="#65635E">=</tspan><tspan fill="#494843"> field(init</tspan><tspan fill="#65635E">=</tspan><tspan fill="#8D4E3E">False</tspan><tspan fill="#494843">)</tspan></text>
 <text x="14" y="176" fill="#B3B1AB"> 8</text>
-<text x="43.504999999999995" y="176" xml:space="preserve" fill="#494843"><tspan fill="#494843">    </tspan><tspan fill="#494843">last_refill</tspan><tspan fill="#494843">: </tspan><tspan fill="#84355F">float</tspan><tspan fill="#494843"> </tspan><tspan fill="#65635E">=</tspan><tspan fill="#494843"> field(init</tspan><tspan fill="#65635E">=</tspan><tspan fill="#7E4400">False</tspan><tspan fill="#494843">)</tspan></text>
+<text x="43.504999999999995" y="176" xml:space="preserve" fill="#494843"><tspan fill="#494843">    </tspan><tspan fill="#494843">last_refill</tspan><tspan fill="#494843">: </tspan><tspan fill="#7B364A">float</tspan><tspan fill="#494843"> </tspan><tspan fill="#65635E">=</tspan><tspan fill="#494843"> field(init</tspan><tspan fill="#65635E">=</tspan><tspan fill="#8D4E3E">False</tspan><tspan fill="#494843">)</tspan></text>
 <text x="14" y="197" fill="#B3B1AB"> 9</text>
 <text x="43.504999999999995" y="197" xml:space="preserve" fill="#494843"></text>
 <text x="14" y="218" fill="#B3B1AB">10</text>
-<text x="43.504999999999995" y="218" xml:space="preserve" fill="#494843"><tspan fill="#494843">    </tspan><tspan fill="#B85143" font-weight="600">def</tspan><tspan fill="#494843"> </tspan><tspan fill="#00823A" font-weight="600">__post_init__</tspan><tspan fill="#494843">(</tspan><tspan fill="#B85143" font-weight="600">self</tspan><tspan fill="#494843">) </tspan><tspan fill="#65635E">-&gt;</tspan><tspan fill="#494843"> </tspan><tspan fill="#7E4400">None</tspan><tspan fill="#494843">:</tspan></text>
+<text x="43.504999999999995" y="218" xml:space="preserve" fill="#494843"><tspan fill="#494843">    </tspan><tspan fill="#A65C69" font-weight="600">def</tspan><tspan fill="#494843"> </tspan><tspan fill="#007463" font-weight="600">__post_init__</tspan><tspan fill="#494843">(</tspan><tspan fill="#A65C69" font-weight="600">self</tspan><tspan fill="#494843">) </tspan><tspan fill="#65635E">-&gt;</tspan><tspan fill="#494843"> </tspan><tspan fill="#8D4E3E">None</tspan><tspan fill="#494843">:</tspan></text>
 <text x="14" y="239" fill="#B3B1AB">11</text>
-<text x="43.504999999999995" y="239" xml:space="preserve" fill="#494843"><tspan fill="#494843">        </tspan><tspan fill="#B85143" font-weight="600">self</tspan><tspan fill="#494843">.</tspan><tspan fill="#494843">tokens</tspan><tspan fill="#494843"> </tspan><tspan fill="#65635E">=</tspan><tspan fill="#494843"> </tspan><tspan fill="#84355F">float</tspan><tspan fill="#494843">(</tspan><tspan fill="#B85143" font-weight="600">self</tspan><tspan fill="#494843">.capacity)</tspan></text>
+<text x="43.504999999999995" y="239" xml:space="preserve" fill="#494843"><tspan fill="#494843">        </tspan><tspan fill="#A65C69" font-weight="600">self</tspan><tspan fill="#494843">.</tspan><tspan fill="#494843">tokens</tspan><tspan fill="#494843"> </tspan><tspan fill="#65635E">=</tspan><tspan fill="#494843"> </tspan><tspan fill="#7B364A">float</tspan><tspan fill="#494843">(</tspan><tspan fill="#A65C69" font-weight="600">self</tspan><tspan fill="#494843">.capacity)</tspan></text>
 <text x="14" y="260" fill="#B3B1AB">12</text>
-<text x="43.504999999999995" y="260" xml:space="preserve" fill="#494843"><tspan fill="#494843">        </tspan><tspan fill="#B85143" font-weight="600">self</tspan><tspan fill="#494843">.</tspan><tspan fill="#494843">last_refill</tspan><tspan fill="#494843"> </tspan><tspan fill="#65635E">=</tspan><tspan fill="#494843"> time.monotonic()</tspan></text>
+<text x="43.504999999999995" y="260" xml:space="preserve" fill="#494843"><tspan fill="#494843">        </tspan><tspan fill="#A65C69" font-weight="600">self</tspan><tspan fill="#494843">.</tspan><tspan fill="#494843">last_refill</tspan><tspan fill="#494843"> </tspan><tspan fill="#65635E">=</tspan><tspan fill="#494843"> time.monotonic()</tspan></text>
 <text x="14" y="281" fill="#B3B1AB">13</text>
 <text x="43.504999999999995" y="281" xml:space="preserve" fill="#494843"></text>
 <text x="14" y="302" fill="#B3B1AB">14</text>
-<text x="43.504999999999995" y="302" xml:space="preserve" fill="#494843"><tspan fill="#494843">    </tspan><tspan fill="#B85143" font-weight="600">def</tspan><tspan fill="#494843"> </tspan><tspan fill="#00823A" font-weight="600">try_consume</tspan><tspan fill="#494843">(</tspan><tspan fill="#B85143" font-weight="600">self</tspan><tspan fill="#494843">, n: </tspan><tspan fill="#84355F">float</tspan><tspan fill="#494843"> </tspan><tspan fill="#65635E">=</tspan><tspan fill="#494843"> 1.0) </tspan><tspan fill="#65635E">-&gt;</tspan><tspan fill="#494843"> </tspan><tspan fill="#84355F">bool</tspan><tspan fill="#494843">:</tspan></text>
-<rect x="0" y="308" width="760" height="21" fill="#E1ECE0"/>
-<text x="14" y="323" fill="#00823A">15</text>
-<rect x="77.225" y="310" width="8.43" height="17" fill="#00823A"/>
+<text x="43.504999999999995" y="302" xml:space="preserve" fill="#494843"><tspan fill="#494843">    </tspan><tspan fill="#A65C69" font-weight="600">def</tspan><tspan fill="#494843"> </tspan><tspan fill="#007463" font-weight="600">try_consume</tspan><tspan fill="#494843">(</tspan><tspan fill="#A65C69" font-weight="600">self</tspan><tspan fill="#494843">, n: </tspan><tspan fill="#7B364A">float</tspan><tspan fill="#494843"> </tspan><tspan fill="#65635E">=</tspan><tspan fill="#494843"> 1.0) </tspan><tspan fill="#65635E">-&gt;</tspan><tspan fill="#494843"> </tspan><tspan fill="#7B364A">bool</tspan><tspan fill="#494843">:</tspan></text>
+<rect x="0" y="308" width="760" height="21" fill="#E0EAE5"/>
+<text x="14" y="323" fill="#007463">15</text>
+<rect x="77.225" y="310" width="8.43" height="17" fill="#007463"/>
 <text x="43.504999999999995" y="323" xml:space="preserve" fill="#494843"><tspan fill="#494843">        </tspan><tspan fill="#5D5B52" font-style="italic">&quot;&quot;&quot;Consume `n` tokens; return False if the bucket runs dry.&quot;&quot;&quot;</tspan></text>
 <text x="14" y="344" fill="#B3B1AB">16</text>
-<text x="43.504999999999995" y="344" xml:space="preserve" fill="#494843"><tspan fill="#494843">        </tspan><tspan fill="#B85143" font-weight="600">self</tspan><tspan fill="#494843">._refill()</tspan></text>
+<text x="43.504999999999995" y="344" xml:space="preserve" fill="#494843"><tspan fill="#494843">        </tspan><tspan fill="#A65C69" font-weight="600">self</tspan><tspan fill="#494843">._refill()</tspan></text>
 <text x="14" y="365" fill="#B3B1AB">17</text>
-<text x="43.504999999999995" y="365" xml:space="preserve" fill="#494843"><tspan fill="#494843">        </tspan><tspan fill="#B85143" font-weight="600">if</tspan><tspan fill="#494843"> </tspan><tspan fill="#B85143" font-weight="600">self</tspan><tspan fill="#494843">.tokens </tspan><tspan fill="#65635E">&lt;</tspan><tspan fill="#494843"> n:</tspan></text>
+<text x="43.504999999999995" y="365" xml:space="preserve" fill="#494843"><tspan fill="#494843">        </tspan><tspan fill="#A65C69" font-weight="600">if</tspan><tspan fill="#494843"> </tspan><tspan fill="#A65C69" font-weight="600">self</tspan><tspan fill="#494843">.tokens </tspan><tspan fill="#65635E">&lt;</tspan><tspan fill="#494843"> n:</tspan></text>
 <text x="14" y="386" fill="#B3B1AB">18</text>
-<text x="43.504999999999995" y="386" xml:space="preserve" fill="#494843"><tspan fill="#494843">            </tspan><tspan fill="#B85143" font-weight="600">return</tspan><tspan fill="#494843"> </tspan><tspan fill="#7E4400">False</tspan></text>
+<text x="43.504999999999995" y="386" xml:space="preserve" fill="#494843"><tspan fill="#494843">            </tspan><tspan fill="#A65C69" font-weight="600">return</tspan><tspan fill="#494843"> </tspan><tspan fill="#8D4E3E">False</tspan></text>
 <text x="14" y="407" fill="#B3B1AB">19</text>
-<text x="43.504999999999995" y="407" xml:space="preserve" fill="#494843"><tspan fill="#494843">        </tspan><tspan fill="#B85143" font-weight="600">self</tspan><tspan fill="#494843">.</tspan><tspan fill="#494843">tokens</tspan><tspan fill="#494843"> </tspan><tspan fill="#65635E">-=</tspan><tspan fill="#494843"> n</tspan></text>
+<text x="43.504999999999995" y="407" xml:space="preserve" fill="#494843"><tspan fill="#494843">        </tspan><tspan fill="#A65C69" font-weight="600">self</tspan><tspan fill="#494843">.</tspan><tspan fill="#494843">tokens</tspan><tspan fill="#494843"> </tspan><tspan fill="#65635E">-=</tspan><tspan fill="#494843"> n</tspan></text>
 <rect x="0" y="431" width="760" height="30" fill="#F2F0EA"/>
-<rect x="0" y="431" width="4" height="30" fill="#00823A"/>
+<rect x="0" y="431" width="4" height="30" fill="#007463"/>
 <text x="18" y="451" fill="#676661" font-weight="600">lumina-sumi-light</text></svg>

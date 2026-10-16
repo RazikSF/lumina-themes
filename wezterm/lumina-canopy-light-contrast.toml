@@ -6,28 +6,28 @@ background   = "#FBFEFB"
 cursor_bg    = "#0C110C"
 cursor_fg    = "#FBFEFB"
 cursor_border = "#0C110C"
-selection_bg = "#BCD1BC"
+selection_bg = "#BED0C7"
 selection_fg = "#0C110C"
 scrollbar_thumb = "#A5ADA5"
 split = "#D5DDD5"
-compose_cursor = "#00580E"
-visual_bell = "#8FB18F"
-copy_mode_active_highlight_bg = { Color = "#00580E" }
+compose_cursor = "#125540"
+visual_bell = "#93AFA2"
+copy_mode_active_highlight_bg = { Color = "#125540" }
 copy_mode_active_highlight_fg = { Color = "#FBFEFB" }
-copy_mode_inactive_highlight_bg = { Color = "#CFDFCF" }
+copy_mode_inactive_highlight_bg = { Color = "#D1DED7" }
 copy_mode_inactive_highlight_fg = { Color = "#0C110C" }
-quick_select_label_bg = { Color = "#821E01" }
+quick_select_label_bg = { Color = "#8B1C00" }
 quick_select_label_fg = { Color = "#FBFEFB" }
-quick_select_match_bg = { Color = "#CFDFCF" }
+quick_select_match_bg = { Color = "#D1DED7" }
 quick_select_match_fg = { Color = "#0C110C" }
-ansi = ["#F1F9F1", "#871300", "#00580E", "#653E00", "#005171", "#6D1C79", "#005357", "#2C322C"]
-brights = ["#6D746D", "#821E01", "#00583F", "#653E00", "#005C7C", "#492F96", "#005357", "#0C110C"]
+ansi = ["#F1F9F1", "#9A0011", "#634422", "#664221", "#1B583F", "#71217D", "#005665", "#2C322C"]
+brights = ["#6D746D", "#8B1C00", "#125540", "#664221", "#1C5940", "#00576B", "#005665", "#0C110C"]
 
 [colors.indexed]
-16 = "#821E01"
-17 = "#00583F"
-18 = "#492F96"
-19 = "#005C7C"
+16 = "#8B1C00"
+17 = "#125540"
+18 = "#00576B"
+19 = "#1C5940"
 
 [colors.tab_bar]
 background = "#EEF6EE"
@@ -40,14 +40,14 @@ intensity = "Bold"
 bg_color = "#EEF6EE"
 fg_color = "#484F48"
 [colors.tab_bar.inactive_tab_hover]
-bg_color = "#DEE9DE"
+bg_color = "#DFE9E3"
 fg_color = "#0C110C"
 [colors.tab_bar.new_tab]
 bg_color = "#EEF6EE"
 fg_color = "#6D746D"
 [colors.tab_bar.new_tab_hover]
-bg_color = "#CFDFCF"
-fg_color = "#00580E"
+bg_color = "#D1DED7"
+fg_color = "#125540"
 
 [metadata]
 name = "lumina-canopy-light-contrast"

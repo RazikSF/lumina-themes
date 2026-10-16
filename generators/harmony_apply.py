@@ -98,6 +98,8 @@ SCENES = {
     "borealis": ("Misty pine forest under the aurora", "Frosted white paper"),
     "cashmere": ("Espresso velvet, warm pastels", "Warm linen paper"),
     "aethelgard": ("Midnight velvet and astral gold", "Cool marble paper"),
+    "vesper": ("Deep navy at night", "Cool white paper"),
+    "sienne": ("Slate night under warm inks", "Slate paper"),
     "cafe": ("Espresso brown, crema and cinnamon", "Latte cream paper"),
     "petrole": ("Deep petrol blue under brass lamps", "Pale petrol paper"),
     "synthwave": ("Violet night of an eighties sunset, neon", "Lilac paper, the same neon as deep inks"),
