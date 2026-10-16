@@ -1,53 +1,53 @@
 # lumina-azur-dark -- Lumina (azur, dark)
 # Generated from spec/lumina.json. Do not edit by hand.
 [colors]
-foreground   = "#B3BFCE"
+foreground   = "#C9D5E4"
 background   = "#12181E"
-cursor_bg    = "#B3BFCE"
+cursor_bg    = "#C9D5E4"
 cursor_fg    = "#12181E"
-cursor_border = "#B3BFCE"
-selection_bg = "#49342D"
-selection_fg = "#B3BFCE"
+cursor_border = "#C9D5E4"
+selection_bg = "#483A33"
+selection_fg = "#C9D5E4"
 scrollbar_thumb = "#323A44"
 split = "#293039"
-compose_cursor = "#FE8A41"
-visual_bell = "#744935"
-copy_mode_active_highlight_bg = { Color = "#FE8A41" }
+compose_cursor = "#FFA76A"
+visual_bell = "#735442"
+copy_mode_active_highlight_bg = { Color = "#FFA76A" }
 copy_mode_active_highlight_fg = { Color = "#12181E" }
-copy_mode_inactive_highlight_bg = { Color = "#332928" }
-copy_mode_inactive_highlight_fg = { Color = "#B3BFCE" }
-quick_select_label_bg = { Color = "#FE8A41" }
+copy_mode_inactive_highlight_bg = { Color = "#332C2C" }
+copy_mode_inactive_highlight_fg = { Color = "#C9D5E4" }
+quick_select_label_bg = { Color = "#D38080" }
 quick_select_label_fg = { Color = "#12181E" }
-quick_select_match_bg = { Color = "#332928" }
-quick_select_match_fg = { Color = "#B3BFCE" }
-ansi = ["#161C25", "#F84F33", "#6EE7B7", "#E4C366", "#40ABE2", "#F47C92", "#78D4FF", "#ACB2B9"]
-brights = ["#626A74", "#FE8A41", "#45BFB1", "#E4C366", "#007FB4", "#BC7ED7", "#78D4FF", "#B3BFCE"]
+quick_select_match_bg = { Color = "#332C2C" }
+quick_select_match_fg = { Color = "#C9D5E4" }
+ansi = ["#161C25", "#F84F33", "#BFA430", "#FFA76A", "#58A6E5", "#EFACFB", "#78D4FF", "#ACB2B9"]
+brights = ["#626A74", "#D38080", "#66CEB4", "#FFA76A", "#297BB7", "#CAADFF", "#78D4FF", "#C9D5E4"]
 
 [colors.indexed]
-16 = "#FE8A41"
-17 = "#45BFB1"
-18 = "#BC7ED7"
-19 = "#007FB4"
+16 = "#D38080"
+17 = "#66CEB4"
+18 = "#CAADFF"
+19 = "#297BB7"
 
 [colors.tab_bar]
 background = "#0D1219"
 inactive_tab_edge = "#1F262F"
 [colors.tab_bar.active_tab]
 bg_color = "#12181E"
-fg_color = "#B3BFCE"
+fg_color = "#C9D5E4"
 intensity = "Bold"
 [colors.tab_bar.inactive_tab]
 bg_color = "#0D1219"
 fg_color = "#818A95"
 [colors.tab_bar.inactive_tab_hover]
-bg_color = "#272324"
-fg_color = "#B3BFCE"
+bg_color = "#262427"
+fg_color = "#C9D5E4"
 [colors.tab_bar.new_tab]
 bg_color = "#0D1219"
 fg_color = "#626A74"
 [colors.tab_bar.new_tab_hover]
-bg_color = "#332928"
-fg_color = "#FE8A41"
+bg_color = "#332C2C"
+fg_color = "#FFA76A"
 
 [metadata]
 name = "lumina-azur-dark"

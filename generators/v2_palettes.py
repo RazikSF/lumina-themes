@@ -452,7 +452,8 @@ TEXT_TINT = {  # dark text: a light grey with a reflection of the flavor at 12:1
     "nocturne": (268, .022), "amethyst": (326, .020), "prisma": (290, .020), "sirocco": (40, .020),
     "celadon": (178, .020), "sumi": (80, .015), "pivoine": (350, .020), "nuancier": (273, .020),
     "aquarelle": (273, .020), "jardin": (273, .020), "neon-cyber": (237, .020), "borealis": (179, .020), "cashmere": (74, .022),
-    "aethelgard": (73, .020), "sakura": (330, .027)}
+    "aethelgard": (73, .020), "sakura": (330, .027), "vesper": (272, .045), "sienne": (70, .025),
+    "indigo": (75, .030), "azur": (255, .025)}
 
 
 def tinted_text(bg, hue, chroma, target=12.0):

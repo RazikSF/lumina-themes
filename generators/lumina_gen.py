@@ -194,6 +194,7 @@ for _f in _HARMONY:
 from harmony_apply import gemini_design as _gemini_design, AS_DRAWN as _AS_DRAWN
 for _f in SCHEMAS:
     SCHEMAS[_f].update(_gemini_design())
+SCHEMAS["dawn"]["warm_family"] = True
 for _f in ("neon-cyber", "borealis", "cashmere", "aethelgard", "sakura"):
     SCHEMAS[_f].update(_AS_DRAWN)
 
