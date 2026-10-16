@@ -101,6 +101,9 @@ SCENES = {
     "cafe": ("Espresso brown, crema and cinnamon", "Latte cream paper"),
     "petrole": ("Deep petrol blue under brass lamps", "Pale petrol paper"),
     "synthwave": ("Violet night of an eighties sunset, neon", "Lilac paper, the same neon as deep inks"),
+    "brume": ("Morning mist on a lake, a mid-dark ground", "Soft grey paper, dimmed"),
+    "lucide": ("Neutral night, inks told apart with any colour vision", "White paper, the same inks for every eye"),
+    "encre": ("Two inks only, blue and amber, on night paper", "Warm paper, blue and amber inks"),
     "sakura": ("Twilight plum night under cherry blossom", "Blossom-white paper"),
 }
 

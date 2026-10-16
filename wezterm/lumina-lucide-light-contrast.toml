@@ -1,0 +1,53 @@
+# lumina-lucide-light-contrast -- Lumina (lucide, light)
+# Generated from spec/lumina.json. Do not edit by hand.
+[colors]
+foreground   = "#0D1013"
+background   = "#FCFEFF"
+cursor_bg    = "#0D1013"
+cursor_fg    = "#FCFEFF"
+cursor_border = "#0D1013"
+selection_bg = "#D8C9BC"
+selection_fg = "#0D1013"
+scrollbar_thumb = "#A7ABB0"
+split = "#D7DBE0"
+compose_cursor = "#723E00"
+visual_bell = "#BEA48C"
+copy_mode_active_highlight_bg = { Color = "#723E00" }
+copy_mode_active_highlight_fg = { Color = "#FCFEFF" }
+copy_mode_inactive_highlight_bg = { Color = "#E3D9D0" }
+copy_mode_inactive_highlight_fg = { Color = "#0D1013" }
+quick_select_label_bg = { Color = "#772500" }
+quick_select_label_fg = { Color = "#FCFEFF" }
+quick_select_match_bg = { Color = "#E3D9D0" }
+quick_select_match_fg = { Color = "#0D1013" }
+ansi = ["#F3F7FC", "#8C0002", "#653A00", "#723E00", "#004B73", "#652E54", "#004C74", "#2D3134"]
+brights = ["#6E7276", "#772500", "#005636", "#723E00", "#004B72", "#462B92", "#004C74", "#0D1013"]
+
+[colors.indexed]
+16 = "#772500"
+17 = "#005636"
+18 = "#462B92"
+19 = "#004B72"
+
+[colors.tab_bar]
+background = "#EFF4F9"
+inactive_tab_edge = "#E7ECF1"
+[colors.tab_bar.active_tab]
+bg_color = "#FCFEFF"
+fg_color = "#0D1013"
+intensity = "Bold"
+[colors.tab_bar.inactive_tab]
+bg_color = "#EFF4F9"
+fg_color = "#4A4D52"
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "#EBE5E0"
+fg_color = "#0D1013"
+[colors.tab_bar.new_tab]
+bg_color = "#EFF4F9"
+fg_color = "#6E7276"
+[colors.tab_bar.new_tab_hover]
+bg_color = "#E3D9D0"
+fg_color = "#723E00"
+
+[metadata]
+name = "lumina-lucide-light-contrast"

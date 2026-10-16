@@ -182,8 +182,11 @@ SCHEMAS["nuancier"] = {"v2": True, "lead": "orange", "fg_min": 8, "fg_max": 12.5
                        "modeline_modified": "orange"}
 SCHEMAS["aquarelle"] = dict(SCHEMAS["nuancier"])
 SCHEMAS["jardin"] = dict(SCHEMAS["nuancier"])
-for _f in ("neon-cyber", "borealis", "cashmere", "aethelgard", "sakura", "cafe", "petrole", "synthwave"):
+for _f in ("neon-cyber", "borealis", "cashmere", "aethelgard", "sakura", "cafe", "petrole", "synthwave", "brume", "lucide", "encre"):
     SCHEMAS[_f] = dict(SCHEMAS["nuancier"])
+SCHEMAS["encre"]["spread"] = {"dark": .25, "light": .18}
+SCHEMAS["lucide"]["spread"] = {"dark": .24, "light": .16}
+SCHEMAS["lucide"]["warm_family"] = SCHEMAS["encre"]["warm_family"] = True
 SCHEMAS["neon-cyber"]["spread"] = {"dark": .28, "light": .16}
 SCHEMAS["sakura"]["spread"] = {"dark": .20, "light": .16}
 SCHEMAS["cashmere"]["warm_family"] = True

@@ -1,0 +1,53 @@
+# lumina-lucide-dark -- Lumina (lucide, dark)
+# Generated from spec/lumina.json. Do not edit by hand.
+[colors]
+foreground   = "#C9D2DA"
+background   = "#101419"
+cursor_bg    = "#C9D2DA"
+cursor_fg    = "#101419"
+cursor_border = "#C9D2DA"
+selection_bg = "#3C342E"
+selection_fg = "#C9D2DA"
+scrollbar_thumb = "#30363C"
+split = "#262C32"
+compose_cursor = "#D39F6C"
+visual_bell = "#604E3D"
+copy_mode_active_highlight_bg = { Color = "#D39F6C" }
+copy_mode_active_highlight_fg = { Color = "#101419" }
+copy_mode_inactive_highlight_bg = { Color = "#2B2826" }
+copy_mode_inactive_highlight_fg = { Color = "#C9D2DA" }
+quick_select_label_bg = { Color = "#C0755B" }
+quick_select_label_fg = { Color = "#101419" }
+quick_select_match_bg = { Color = "#2B2826" }
+quick_select_match_fg = { Color = "#C9D2DA" }
+ansi = ["#14191E", "#F4514F", "#DCCC6C", "#D39F6C", "#99D9FF", "#CB99B9", "#78D4FF", "#ADB2B6"]
+brights = ["#636A70", "#C0755B", "#7BE2B7", "#D39F6C", "#6DACD0", "#C4B4FF", "#78D4FF", "#C9D2DA"]
+
+[colors.indexed]
+16 = "#C0755B"
+17 = "#7BE2B7"
+18 = "#C4B4FF"
+19 = "#6DACD0"
+
+[colors.tab_bar]
+background = "#0B0F13"
+inactive_tab_edge = "#1D2228"
+[colors.tab_bar.active_tab]
+bg_color = "#101419"
+fg_color = "#C9D2DA"
+intensity = "Bold"
+[colors.tab_bar.inactive_tab]
+bg_color = "#0B0F13"
+fg_color = "#838A91"
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "#202021"
+fg_color = "#C9D2DA"
+[colors.tab_bar.new_tab]
+bg_color = "#0B0F13"
+fg_color = "#636A70"
+[colors.tab_bar.new_tab_hover]
+bg_color = "#2B2826"
+fg_color = "#D39F6C"
+
+[metadata]
+name = "lumina-lucide-dark"

@@ -443,6 +443,17 @@ FLAVORS = {
     "synthwave": dict(ground=(300, .045, .014, .175, .975), lamp="magenta", paper=(310, .014, .975),
                       roles=dict(functions="magenta", keywords="violet", type="yellow", strings="cyan", constants="orange", builtin="red", methods="fg"),
                       commentary={"dark": "Lumina Synthwave, dark variant.", "light": "Lumina Synthwave, light variant."}),
+    "brume": dict(ground=(255, .020, .014, .290, .940), lamp="cyan", paper=(240, .014, .940), text=(.88, .36),
+                  extra={"dark": {"comments": (.70, .03, 255), "doc-comments": (.75, .03, 255)},
+                         "light": {"comments": (.50, .02, 240), "doc-comments": (.44, .02, 240), "green": (.46, .11, 155)}},
+                  roles=dict(functions="cyan", keywords="blue", type="teal", strings="green", constants="orange", builtin="violet", methods="fg"),
+                  commentary={"dark": "Lumina Brume, dark variant.", "light": "Lumina Brume, light variant."}),
+    "lucide": dict(ground=(250, .012, .006, .190, .975), lamp="orange", paper=(250, .006, .975),
+                   roles=dict(functions="orange", keywords="cyan", type="yellow", strings="green", constants="magenta", builtin="red", methods="fg"),
+                   commentary={"dark": "Lumina Lucide, dark variant.", "light": "Lumina Lucide, light variant."}),
+    "encre": dict(ground=(250, .014, .006, .180, .975), lamp="orange", paper=(80, .010, .975),
+                  roles=dict(functions="orange", keywords="blue", type="cyan", strings="yellow", constants="red", builtin="violet", methods="fg"),
+                  commentary={"dark": "Lumina Encre, dark variant.", "light": "Lumina Encre, light variant."}),
 }
 from harmony_apply import HARMONY, flavor_overrides, commentary as _commentary
 for _f in HARMONY:
@@ -462,7 +473,8 @@ TEXT_TINT = {  # dark text: a light grey with a reflection of the flavor at 12:1
     "celadon": (178, .020), "sumi": (80, .015), "pivoine": (350, .020), "nuancier": (273, .020),
     "aquarelle": (273, .020), "jardin": (273, .020), "neon-cyber": (237, .020), "borealis": (179, .020), "cashmere": (74, .022),
     "aethelgard": (73, .020), "sakura": (330, .027), "vesper": (272, .045), "sienne": (70, .025),
-    "indigo": (75, .030), "azur": (255, .025), "cafe": (70, .025), "petrole": (200, .022), "synthwave": (310, .030)}
+    "indigo": (75, .030), "azur": (255, .025), "cafe": (70, .025), "petrole": (200, .022), "synthwave": (310, .030),
+    "brume": (250, .020, 9.6), "lucide": (250, .015), "encre": (250, .015)}
 
 
 def tinted_text(bg, hue, chroma, target=12.0):
@@ -477,9 +489,9 @@ def tinted_text(bg, hue, chroma, target=12.0):
     return (hi, chroma, hue)
 
 
-for _f, (_h, _c) in TEXT_TINT.items():
+for _f, (_h, _c, *_t) in TEXT_TINT.items():
     _d = PALETTES[_f]["dark"]
-    _fg = tinted_text(_d["bg"], _h, _c)
+    _fg = tinted_text(_d["bg"], _h, _c, *_t)
     _d["fg"] = _d["base8"] = _fg
     _d["fg-alt"] = (_fg[0] - .10, _c, _h)
 

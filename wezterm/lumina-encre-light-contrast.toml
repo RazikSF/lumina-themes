@@ -1,0 +1,53 @@
+# lumina-encre-light-contrast -- Lumina (encre, light)
+# Generated from spec/lumina.json. Do not edit by hand.
+[colors]
+foreground   = "#130F09"
+background   = "#FFFDFA"
+cursor_bg    = "#130F09"
+cursor_fg    = "#FFFDFA"
+cursor_border = "#130F09"
+selection_bg = "#D3C6B7"
+selection_fg = "#130F09"
+scrollbar_thumb = "#AFAAA1"
+split = "#E0DAD1"
+compose_cursor = "#5B3700"
+visual_bell = "#B39F89"
+copy_mode_active_highlight_bg = { Color = "#5B3700" }
+copy_mode_active_highlight_fg = { Color = "#FFFDFA" }
+copy_mode_inactive_highlight_bg = { Color = "#E0D7CB" }
+copy_mode_inactive_highlight_fg = { Color = "#130F09" }
+quick_select_label_bg = { Color = "#5B3C12" }
+quick_select_label_fg = { Color = "#FFFDFA" }
+quick_select_match_bg = { Color = "#E0D7CB" }
+quick_select_match_fg = { Color = "#130F09" }
+ansi = ["#FCF6ED", "#870007", "#5B3700", "#643700", "#00457A", "#800038", "#00428C", "#343028"]
+brights = ["#767169", "#5B3C12", "#005344", "#643700", "#00295C", "#234567", "#00428C", "#130F09"]
+
+[colors.indexed]
+16 = "#5B3C12"
+17 = "#005344"
+18 = "#234567"
+19 = "#00295C"
+
+[colors.tab_bar]
+background = "#F8F3E9"
+inactive_tab_edge = "#F0EAE1"
+[colors.tab_bar.active_tab]
+bg_color = "#FFFDFA"
+fg_color = "#130F09"
+intensity = "Bold"
+[colors.tab_bar.inactive_tab]
+bg_color = "#F8F3E9"
+fg_color = "#514C45"
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "#EBE3DB"
+fg_color = "#130F09"
+[colors.tab_bar.new_tab]
+bg_color = "#F8F3E9"
+fg_color = "#767169"
+[colors.tab_bar.new_tab_hover]
+bg_color = "#E0D7CB"
+fg_color = "#5B3700"
+
+[metadata]
+name = "lumina-encre-light-contrast"

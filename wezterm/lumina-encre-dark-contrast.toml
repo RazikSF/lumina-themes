@@ -1,0 +1,53 @@
+# lumina-encre-dark-contrast -- Lumina (encre, dark)
+# Generated from spec/lumina.json. Do not edit by hand.
+[colors]
+foreground   = "#E7F0F8"
+background   = "#0A0F14"
+cursor_bg    = "#E7F0F8"
+cursor_fg    = "#0A0F14"
+cursor_border = "#E7F0F8"
+selection_bg = "#37312B"
+selection_fg = "#E7F0F8"
+scrollbar_thumb = "#474E55"
+split = "#262C33"
+compose_cursor = "#D3A56F"
+visual_bell = "#5B4D3C"
+copy_mode_active_highlight_bg = { Color = "#D3A56F" }
+copy_mode_active_highlight_fg = { Color = "#0A0F14" }
+copy_mode_inactive_highlight_bg = { Color = "#252322" }
+copy_mode_inactive_highlight_fg = { Color = "#E7F0F8" }
+quick_select_label_bg = { Color = "#EED0AF" }
+quick_select_label_fg = { Color = "#0A0F14" }
+quick_select_match_bg = { Color = "#252322" }
+quick_select_match_fg = { Color = "#E7F0F8" }
+ansi = ["#0F141B", "#FF9E95", "#D3A56F", "#FFC981", "#A4DBFF", "#FDB9FF", "#9CDCFF", "#BFC5CA"]
+brights = ["#747B83", "#EED0AF", "#5EF2DB", "#FFC981", "#588DC2", "#BCD9F9", "#9CDCFF", "#E7F0F8"]
+
+[colors.indexed]
+16 = "#EED0AF"
+17 = "#5EF2DB"
+18 = "#BCD9F9"
+19 = "#588DC2"
+
+[colors.tab_bar]
+background = "#060A0E"
+inactive_tab_edge = "#191F25"
+[colors.tab_bar.active_tab]
+bg_color = "#0A0F14"
+fg_color = "#E7F0F8"
+intensity = "Bold"
+[colors.tab_bar.inactive_tab]
+bg_color = "#060A0E"
+fg_color = "#979FA8"
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "#1B1B1D"
+fg_color = "#E7F0F8"
+[colors.tab_bar.new_tab]
+bg_color = "#060A0E"
+fg_color = "#747B83"
+[colors.tab_bar.new_tab_hover]
+bg_color = "#252322"
+fg_color = "#D3A56F"
+
+[metadata]
+name = "lumina-encre-dark-contrast"
