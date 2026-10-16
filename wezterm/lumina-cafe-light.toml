@@ -1,0 +1,53 @@
+# lumina-cafe-light -- Lumina (cafe, light)
+# Generated from spec/lumina.json. Do not edit by hand.
+[colors]
+foreground   = "#4E463A"
+background   = "#F7F4EF"
+cursor_bg    = "#4E463A"
+cursor_fg    = "#F7F4EF"
+cursor_border = "#4E463A"
+selection_bg = "#DDCBB6"
+selection_fg = "#4E463A"
+scrollbar_thumb = "#B9B0A2"
+split = "#D9D1C4"
+compose_cursor = "#925B00"
+visual_bell = "#CAAE8D"
+copy_mode_active_highlight_bg = { Color = "#925B00" }
+copy_mode_active_highlight_fg = { Color = "#F7F4EF" }
+copy_mode_inactive_highlight_bg = { Color = "#E5D7C7" }
+copy_mode_inactive_highlight_fg = { Color = "#4E463A" }
+quick_select_label_bg = { Color = "#863400" }
+quick_select_label_fg = { Color = "#F7F4EF" }
+quick_select_match_bg = { Color = "#E5D7C7" }
+quick_select_match_fg = { Color = "#4E463A" }
+ansi = ["#F5EDDF", "#81002E", "#2A7E3B", "#925B00", "#00769D", "#6E3B6A", "#005458", "#4E463A"]
+brights = ["#8E8577", "#863400", "#007066", "#925B00", "#00597E", "#6550B9", "#005458", "#4E463A"]
+
+[colors.indexed]
+16 = "#863400"
+17 = "#007066"
+18 = "#6550B9"
+19 = "#00597E"
+
+[colors.tab_bar]
+background = "#F2E9DC"
+inactive_tab_edge = "#EAE1D4"
+[colors.tab_bar.active_tab]
+bg_color = "#F7F4EF"
+fg_color = "#4E463A"
+intensity = "Bold"
+[colors.tab_bar.inactive_tab]
+bg_color = "#F2E9DC"
+fg_color = "#6A6255"
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "#EBE1D4"
+fg_color = "#4E463A"
+[colors.tab_bar.new_tab]
+bg_color = "#F2E9DC"
+fg_color = "#8E8577"
+[colors.tab_bar.new_tab_hover]
+bg_color = "#E5D7C7"
+fg_color = "#925B00"
+
+[metadata]
+name = "lumina-cafe-light"

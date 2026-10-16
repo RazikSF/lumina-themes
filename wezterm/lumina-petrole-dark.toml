@@ -1,0 +1,53 @@
+# lumina-petrole-dark -- Lumina (petrole, dark)
+# Generated from spec/lumina.json. Do not edit by hand.
+[colors]
+foreground   = "#C0D5D5"
+background   = "#04161B"
+cursor_bg    = "#C0D5D5"
+cursor_fg    = "#04161B"
+cursor_border = "#C0D5D5"
+selection_bg = "#383C31"
+selection_fg = "#C0D5D5"
+scrollbar_thumb = "#1E3940"
+split = "#162E35"
+compose_cursor = "#E6BA6D"
+visual_bell = "#615A41"
+copy_mode_active_highlight_bg = { Color = "#E6BA6D" }
+copy_mode_active_highlight_fg = { Color = "#04161B" }
+copy_mode_inactive_highlight_bg = { Color = "#232D29" }
+copy_mode_inactive_highlight_fg = { Color = "#C0D5D5" }
+quick_select_label_bg = { Color = "#D28765" }
+quick_select_label_fg = { Color = "#04161B" }
+quick_select_match_bg = { Color = "#232D29" }
+quick_select_match_fg = { Color = "#C0D5D5" }
+ansi = ["#031B21", "#F0555B", "#6EE7B7", "#E6BA6D", "#60ABDD", "#EFACFB", "#85CCCB", "#A3B5BA"]
+brights = ["#546E76", "#D28765", "#42B389", "#E6BA6D", "#337FAF", "#C9B0DE", "#85CCCB", "#C0D5D5"]
+
+[colors.indexed]
+16 = "#D28765"
+17 = "#42B389"
+18 = "#C9B0DE"
+19 = "#337FAF"
+
+[colors.tab_bar]
+background = "#011015"
+inactive_tab_edge = "#0B242B"
+[colors.tab_bar.active_tab]
+bg_color = "#04161B"
+fg_color = "#C0D5D5"
+intensity = "Bold"
+[colors.tab_bar.inactive_tab]
+bg_color = "#011015"
+fg_color = "#738E97"
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "#172423"
+fg_color = "#C0D5D5"
+[colors.tab_bar.new_tab]
+bg_color = "#011015"
+fg_color = "#546E76"
+[colors.tab_bar.new_tab_hover]
+bg_color = "#232D29"
+fg_color = "#E6BA6D"
+
+[metadata]
+name = "lumina-petrole-dark"

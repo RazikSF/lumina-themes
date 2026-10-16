@@ -434,6 +434,15 @@ FLAVORS = {
                 extra={"dark": {"bg": (0.1858, 0.0153, 310.6), "comments": (0.597, 0.0372, 318.1), "doc-comments": (0.647, 0.0372, 318.1)},
                        "light": {"bg": (0.9808, 0.0066, 340.4), "fg": (0.346, 0.0268, 331.5), "base8": (0.346, 0.0268, 331.5), "fg-alt": (0.456, 0.0268, 331.5), "comments": (0.5492, 0.0331, 334.8), "doc-comments": (0.4892, 0.0331, 334.8)}},
                 commentary={"dark": "Lumina Sakura, dark variant.", "light": "Lumina Sakura, light variant."}),
+    "cafe": dict(ground=(55, .022, .016, .185, .968), lamp="orange", paper=(78, .016, .968),
+                 roles=dict(functions="orange", keywords="red", type="magenta", strings="green", constants="yellow", builtin="cyan", methods="fg"),
+                 commentary={"dark": "Lumina Café, dark variant.", "light": "Lumina Café, light variant."}),
+    "petrole": dict(ground=(218, .030, .012, .185, .972), lamp="yellow", paper=(205, .012, .972),
+                    roles=dict(functions="yellow", keywords="cyan", type="orange", strings="teal", constants="red", builtin="blue", methods="fg"),
+                    commentary={"dark": "Lumina Pétrole, dark variant.", "light": "Lumina Pétrole, light variant."}),
+    "synthwave": dict(ground=(300, .045, .014, .175, .975), lamp="magenta", paper=(310, .014, .975),
+                      roles=dict(functions="magenta", keywords="violet", type="yellow", strings="cyan", constants="orange", builtin="red", methods="fg"),
+                      commentary={"dark": "Lumina Synthwave, dark variant.", "light": "Lumina Synthwave, light variant."}),
 }
 from harmony_apply import HARMONY, flavor_overrides, commentary as _commentary
 for _f in HARMONY:
@@ -453,7 +462,7 @@ TEXT_TINT = {  # dark text: a light grey with a reflection of the flavor at 12:1
     "celadon": (178, .020), "sumi": (80, .015), "pivoine": (350, .020), "nuancier": (273, .020),
     "aquarelle": (273, .020), "jardin": (273, .020), "neon-cyber": (237, .020), "borealis": (179, .020), "cashmere": (74, .022),
     "aethelgard": (73, .020), "sakura": (330, .027), "vesper": (272, .045), "sienne": (70, .025),
-    "indigo": (75, .030), "azur": (255, .025)}
+    "indigo": (75, .030), "azur": (255, .025), "cafe": (70, .025), "petrole": (200, .022), "synthwave": (310, .030)}
 
 
 def tinted_text(bg, hue, chroma, target=12.0):

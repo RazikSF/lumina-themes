@@ -34,8 +34,11 @@ FAMILIES = {  # keywords, functions, type, strings, constants, builtin
     "celadon": (210, 50, 160, 180, 250, 140), # jade porcelain: sky, jade, celadon, indigo, green; peach lamp
     "sumi": (30, 150, 320, 220, 60, 350),     # ink: vermilion, matcha, plum, sky, ochre, rose
     "pivoine": (350, 165, 320, 20, 60, 280),  # peony: peony, orchid, salmon, apricot, lavender; mint lamp
+    "cafe": (200, 70, 185, 45, 230, 330),     # espresso in a blue cup: caramel, cinnamon, cocoa mauve; sky, teal, slate
+    "petrole": (195, 80, 45, 165, 310, 240),  # petrol blue: cyan, jade, steel, oil-sheen violet; brass lamp, copper
+    "synthwave": (290, 340, 90, 200, 50, 355),  # eighties sunset: violet, magenta, sun yellow, cyan, orange, hot pink
 }
-CHROMA = {"azur": (.10, .14), "nocturne": (.08, .13)}
+CHROMA = {"azur": (.10, .14), "nocturne": (.08, .13), "synthwave": (.15, .21)}
 MIN_DE = 9.0
 
 
