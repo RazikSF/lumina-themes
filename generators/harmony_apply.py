@@ -87,17 +87,16 @@ def hue_name(h, light=False):
 
 SCENES = {
     "dawn": ("Warm sepia room", "Warm paper"), "oxblood": ("A theatre after the curtain falls, oxblood velvet", "Blush programme paper"),
-    "tide": ("Deep ocean at night", "Sea-washed paper"), "canopy": ("Pine forest at noon", "Moss-white paper"),
-    "slate": ("Cold graphite", "Cold white paper"), "nocturne": ("A city at night under an indigo sky", "Moonlit blue-white paper"),
-    "amethyst": ("Inside a split amethyst geode", "Lilac paper"), "prisma": ("Neutral night, the full spectrum", "White paper, the full spectrum"),
-    "indigo": ("Indigo night", "Lavender-white paper"), "azur": ("Blue slate under a clear sky, vivid", "Cool paper, vivid inks"),
-    "sirocco": ("Desert wind at dusk over terracotta", "Sand paper"), "celadon": ("Glazed jade porcelain", "Pale celadon paper"),
+    "tide": ("Deep ocean at night", "Sea-washed paper"), "slate": ("Cold graphite", "Cold white paper"), "nocturne": ("A city at night under an indigo sky", "Moonlit blue-white paper"),
+    "prisma": ("Neutral night, the full spectrum", "White paper, the full spectrum"),
+    "indigo": ("Indigo night", "Lavender-white paper"), "sirocco": ("Desert wind at dusk over terracotta", "Sand paper"), "celadon": ("Glazed jade porcelain", "Pale celadon paper"),
     "sumi": ("Ink-black ground", "Rice paper"), "aquarelle": ("The slide palette rearranged, slate night", "Cool paper, the same inks"),
     "jardin": ("The slide palette with mint keywords, slate night", "Cool paper, the same inks"), "pivoine": ("A soft dusk of peony petals, lighter than the night grounds", "Blush paper"),
     "neon-cyber": ("Urban night in neon, every ink at full voltage", "Cool white paper, the same neon as deep inks"),
     "borealis": ("Misty pine forest under the aurora", "Frosted white paper"),
     "cashmere": ("Espresso velvet, warm pastels", "Warm linen paper"),
     "aethelgard": ("Midnight velvet and astral gold", "Cool marble paper"),
+    "nuancier": ("The palette of a slide on web colours, slate night", "Cool paper, the same inks"),
     "vesper": ("Deep navy at night", "Cool white paper"),
     "sienne": ("Slate night under warm inks", "Slate paper"),
     "cafe": ("Espresso brown, crema and cinnamon", "Latte cream paper"),
@@ -106,8 +105,7 @@ SCENES = {
     "brume": ("Morning mist on a lake, a mid-dark ground", "Soft grey paper, dimmed"),
     "lucide": ("Neutral night, inks told apart with any colour vision", "White paper, the same inks for every eye"),
     "encre": ("Two inks only, blue and amber, on night paper", "Warm paper, blue and amber inks"),
-    "sakura": ("Twilight plum night under cherry blossom", "Blossom-white paper"),
-}
+    }
 
 
 def commentary(flavor, old):

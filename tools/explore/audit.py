@@ -49,7 +49,7 @@ def audit(flavor, mode, colors):
     return issues
 
 
-AS_DRAWN = {"neon-cyber", "borealis", "cashmere", "aethelgard", "sakura"}  # Gemini's palettes, kept as drawn: reported, never failed
+AS_DRAWN = {"neon-cyber", "borealis", "cashmere", "aethelgard"}  # Gemini's palettes, kept as drawn: reported, never failed
 
 
 def main():

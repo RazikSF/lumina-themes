@@ -9,9 +9,9 @@
 ;;
 ;;; Commentary:
 ;;
-;; Lumina is a family of thirty flavors, each in a dark, a light and
+;; Lumina is a family of twenty-six flavors, each in a dark, a light and
 ;; two high-contrast variants, plus black-and-white Prisma twins --
-;; 124 themes in total.  Pure `deftheme' files, no external dependency,
+;; 108 themes in total.  Pure `deftheme' files, no external dependency,
 ;; close to 3 000 faces each: core UI, built-in modes and some 180
 ;; packages (org, magit, vertico, corfu, lsp, treemacs, mu4e, ...).
 ;;
@@ -72,7 +72,7 @@ Off by default: Lumina keeps italics for comments only."
 
 (defcustom lumina-themes-bold-keywords nil
   "When non-nil, render keywords in bold.
-Off by default: Lumina sets hierarchy with one lamp colour, not weight."
+Keywords are already semi-bold; this makes them bold."
   :type 'boolean
   :group 'lumina-themes)
 

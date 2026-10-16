@@ -32,9 +32,6 @@ G = {
     "aethelgard": dict(bg="#0B0F19", fg="#E2D9CE", comment="#7A859E", red="#FF5C8A",
                        inks=dict(keywords="#CF8EF0", strings="#99E1D9", functions="#4FD6BE", type="#FFD166", constants="#FF9F80", builtin="#F4A261"),
                        light=dict(bg="#F5F7FA", fg="#202938", comment="#7E8B9E")),
-    "sakura": dict(bg="#151118", fg="#EAD9E8", comment="#7D6D82", red="#FF6B8B",
-                   inks=dict(keywords="#C397D8", strings="#A8E6CF", functions="#F4A6BF", type="#F9D3B4", constants="#FFE79A", builtin="#C397D8"),
-                   light=dict(bg="#FCF7FA", fg="#362934", comment="#877382")),
 }
 
 

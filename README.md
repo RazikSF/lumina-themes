@@ -8,51 +8,40 @@ code carries the same weight. No colour glows brighter than its
 neighbours; hues alone tell keywords, functions, types and strings
 apart, so the eye can rest on any part of the screen.
 
-Thirty flavors, each in dark, light and high contrast, plus Prisma's
-black-and-white twins: 124 themes. The reference is **Nuancier**, taken
-from a slide on web colours: slate night `#1D2130`, sky keywords
-`#77B8E7`, salmon functions `#EC907E`, gold types `#F7C054`, mint strings
-`#87C3AB`, lilac constants `#B5A4EA`, rose builtins `#E297BA`, on a deeper
-night `#171A26` with grey-blue text at 9:1 instead of the slide's white. Six inks,
-one per role, of one weight; every other flavor is composed to the same
-standard. **Aquarelle** and **Jardin** are its sisters: the same ground
-and inks, set differently (Aquarelle: gold functions, mint types, salmon
-strings; Jardin: mint keywords, sky strings). **Sienne** (slate night under warm inks) and **Vesper** (deep
-navy, no green in the code) keep their own hand-tuned balance.
+Twenty-six flavors, each in dark, light and high contrast, plus Prisma's
+black-and-white twins: 108 themes. The reference is **Encre**: two inks
+only, blue and amber, on a night ground `#0D1217` with blue-grey text at
+12:1. Keywords `#91C1E0`, types `#74A4C2` and builtins `#AFE0FF` are three
+lightnesses of one blue; functions `#B3A27C`, constants `#CFC098` and
+strings `#EDDDB4` three lightnesses of one amber. It scores highest on
+colour-design theory, and every other flavor is tuned to the same standard.
 
-<img src="assets/screens/lumina-nuancier-dark.svg" width="49%"> <img src="assets/screens/lumina-nuancier-light.svg" width="49%">
+<img src="assets/screens/lumina-encre-dark.svg" width="49%"> <img src="assets/screens/lumina-encre-light.svg" width="49%">
 
 ## What makes it different
 
-- **Six inks of one weight.** Every flavor gives keywords, functions,
-  types, strings, constants and builtins one ink each. The six hues are
-  spread over the whole colour circle (no gap above 95 degrees, every
-  pair at least 8.5 dE apart), and each ink takes the lightness and
-  chroma that Nuancier gives its hue: mint lower in chroma because green
-  reads vivid, gold a step lighter because yellow reads dull. That is
-  what makes six different colours read as one weight.
-- **Cool where it is frequent.** Keywords and strings, by far the most
-  frequent, sit on cool hues; warm notes go to rarer roles. Olive and
-  khaki hues (90 to 140 degrees) are never used: at this lightness they
-  turn muddy.
-- **Composed, then checked by eye.** `tools/explore/harmony.py` proposes
-  the six inks of each flavor from its ground, its concept colour (the
-  amber of Dawn, the azure of Indigo, the sodium lamp of Nocturne) and
-  the distance to every other flavor; each proposal is reviewed on a
-  rendered contact sheet before it is kept.
-- **Soft text.** Body text sits near 9:1, never white on black: the
-  range of Tokyo Night, One Dark and Nord, not the 12 to 15:1 of the
-  harder themes.
+- **Harmony by colour theory.** Each flavor draws its six inks from a
+  family of hues set by its scene (a warm room, the ocean, a city at
+  night), then tunes them by published models: Ou and Luo's two-colour
+  harmony, Matsuda's hue templates, and an even chroma. No ink is lit
+  above the others: lightness stays within 0.15 across the six.
+- **Distinct, even for colour-blind eyes.** Every pair of inks stays
+  apart (OKLab distance 9 at night, 8 on paper). **Lucide** goes further:
+  its inks stay apart under simulated deuteranopia and protanopia.
+- **A clear face design.** Function calls take the function ink,
+  properties the builtin ink; keywords, types and definitions are
+  semi-bold; brackets and operators stay grey; line numbers fade into the
+  ground.
+- **Tinted text.** Body text is a light grey with a reflection of the
+  flavor's hue at 12:1, never pure white.
 - **Light that follows you.** The lead colour tints the current line, the
   selection and the completion candidate, and flashes on every jump.
   With [auto-dim-other-buffers](https://github.com/mina86/auto-dim-other-buffers.el)
   the windows you are not working in fall into shade.
-- **Measured, not guessed.** Text sits at 8.6 to 9.7:1, comments at
-  4.7:1 or more, every accent at 4.5:1 or more, on its own tinted ground
-  at 4:1 or more. `make check` refuses a
-  palette that drifts, and `tools/explore/audit.py` refuses two code roles
-  closer than 8 dE, an error red closer than 10, or warm notes that are
-  not rare.
+- **Measured, not guessed.** Comments sit at 4.3:1 or more, every accent
+  at 4.5:1 or more, on its own tinted ground at 4:1 or more. `make check`
+  refuses a palette that drifts, and `tools/explore/audit.py` refuses two
+  code roles closer than 7.5 dE or an error red closer than 9.
 - **High contrast built in.** Every theme ships a `-contrast` twin:
   text 15:1 or more, comments 6:1, every accent 7:1 (WCAG AAA), same
   hues at one weight.
@@ -71,35 +60,48 @@ navy, no green in the code) keep their own hand-tuned balance.
 
 ## Flavors
 
-Each flavor covers one colour group: one ground and six inks, one per role.
-Dark grounds are Radix app backgrounds (step 2 of the flavor's hue) or the
-Tailwind neutral that carries the same temperature, and carry Tailwind
-pastels; light paper is always the Radix step 2 of the hue, and carries
-Radix inks.
+Each flavor sets one scene, a ground and six inks, one per role, drawn from a family of hues
+that suits the scene. The inks are tuned by colour-design theory: the Ou and Luo (2006)
+harmony model over every pair, Matsuda's hue templates and an even chroma, while staying
+legible (4.6:1 or more) and apart from one another (`tools/explore/theorie.py`, scored by
+`tools/explore/beaute.py`). Ink names below are those of the dark variant.
 
-| Flavor | Ground | Keywords | Functions | Types | Strings | Constants | Builtins |
+| Flavor | Scene | Keywords | Functions | Types | Strings | Constants | Builtins |
 |---|---|---|---|---|---|---|---|
-| **Nuancier** | slate night / cool paper | sky | salmon | gold | mint | lilac | pink |
-| **Aquarelle** | slate night / cool paper | sky | gold | mint | salmon | lilac | pink |
-| **Jardin** | slate night / cool paper | mint | salmon | gold | sky | lilac | pink |
-| **Sienne** | slate night / slate paper | orchid | sky | gold | lime | salmon | apricot |
-| **Vesper** | deep navy / cool white | orchid | periwinkle | sky | straw | salmon | pink |
-| **Indigo** | indigo night / lavender paper | periwinkle | sky | orchid | salmon | sage | gold |
-| **Azur** | blue slate / cool paper | sky | apricot | lilac | gold | sage | rose |
-| **Dawn** | warm sepia | sage | gold | orchid | sky | salmon | periwinkle |
-| **Oxblood** | dark wine | lilac | pink | salmon | sky | sage | gold |
-| **Tide** | deep ocean | mint | periwinkle | orchid | sage | gold | rose |
-| **Canopy** | pine | periwinkle | sage | sky | orchid | rose | gold |
-| **Slate** | cold graphite | mint | periwinkle | gold | rose | orchid | sage |
-| **Nocturne** | indigo night | periwinkle | gold | sky | mint | orchid | rose |
-| **Amethyst** | purple geode | orchid | gold | sage | periwinkle | sky | rose |
-| **Prisma** | neutral indigo | sage | lilac | mint | sky | apricot | orchid |
-| **Sirocco** | terracotta | gold | sky | mint | pink | orchid | salmon |
-| **Celadon** | jade porcelain | sky | salmon | sage | pink | lilac | gold |
-| **Sumi** | ink black / rice paper | rose | sage | periwinkle | sky | apricot | orchid |
-| **Pivoine** | soft peony dusk, lighter than the night grounds | orchid | sage | rose | sky | gold | apricot |
+| **Encre** | Two inks only, blue and amber, on night paper | sky | gold | sky | gold | gold | sky |
+| **Nuancier** | The palette of a slide on web colours, slate night | sky | gold | gold | sage | lilac | lilac |
+| **Aquarelle** | The slide palette rearranged, slate night | sky | gold | sage | gold | lilac | orchid |
+| **Jardin** | The slide palette with mint keywords, slate night | sage | apricot | gold | periwinkle | lilac | orchid |
+| **Sienne** | Slate night under warm inks | periwinkle | sky | gold | lime | gold | apricot |
+| **Vesper** | Deep navy at night | lilac | periwinkle | sky | gold | pink | orchid |
+| **Indigo** | Indigo night | periwinkle | straw | apricot | lilac | salmon | gold |
+| **Dawn** | Warm sepia room | salmon | gold | salmon | sage | gold | straw |
+| **Oxblood** | A theatre after the curtain falls, oxblood velvet | lilac | orchid | straw | mint | orchid | periwinkle |
+| **Tide** | Deep ocean at night | mint | sky | lilac | mint | salmon | sky |
+| **Slate** | Cold graphite | sky | periwinkle | lilac | sky | orchid | mint |
+| **Brume** | Morning mist on a lake, a mid-dark ground | sky | sky | sky | mint | orchid | lilac |
+| **Nocturne** | A city at night under an indigo sky | lilac | gold | sky | periwinkle | orchid | sky |
+| **Prisma** | Neutral night, the full spectrum | lime | periwinkle | sky | lilac | gold | gold |
+| **Neon Cyber** | Urban night in neon, every ink at full voltage | pink | mint | straw | sage | gold | pink |
+| **Synthwave** | Violet night of an eighties sunset, neon | periwinkle | orchid | gold | sky | gold | lilac |
+| **Sirocco** | Desert wind at dusk over terracotta | gold | sky | gold | pink | pink | sky |
+| **Celadon** | Glazed jade porcelain | sky | gold | mint | mint | sky | sage |
+| **Sumi** | Ink-black ground | salmon | mint | orchid | sky | apricot | orchid |
+| **Pivoine** | A soft dusk of peony petals, lighter than the night grounds | orchid | sky | orchid | salmon | salmon | lilac |
+| **Café** | Espresso brown, crema and cinnamon | sky | gold | mint | gold | sky | pink |
+| **Pétrole** | Deep petrol blue under brass lamps | sky | gold | gold | sky | pink | sky |
+| **Borealis** | Misty pine forest under the aurora | periwinkle | sky | straw | sky | salmon | gold |
+| **Cashmere** | Espresso velvet, warm pastels | rose | straw | apricot | straw | gold | apricot |
+| **Aethelgard** | Midnight velvet and astral gold | pink | sky | gold | mint | apricot | gold |
+| **Lucide** | Neutral night, inks told apart with any colour vision | sky | gold | straw | mint | orchid | apricot |
 
 ### Gallery
+
+#### Signature
+
+**Encre**
+
+<img src="assets/screens/lumina-encre-dark.svg" width="49%"> <img src="assets/screens/lumina-encre-light.svg" width="49%">
 
 **Nuancier**
 
@@ -121,6 +123,12 @@ Radix inks.
 
 <img src="assets/screens/lumina-vesper-dark.svg" width="49%"> <img src="assets/screens/lumina-vesper-light.svg" width="49%">
 
+**Indigo**
+
+<img src="assets/screens/lumina-indigo-dark.svg" width="49%"> <img src="assets/screens/lumina-indigo-light.svg" width="49%">
+
+#### Muted
+
 **Dawn**
 
 <img src="assets/screens/lumina-dawn-dark.svg" width="49%"> <img src="assets/screens/lumina-dawn-light.svg" width="49%">
@@ -133,21 +141,19 @@ Radix inks.
 
 <img src="assets/screens/lumina-tide-dark.svg" width="49%"> <img src="assets/screens/lumina-tide-light.svg" width="49%">
 
-**Canopy**
-
-<img src="assets/screens/lumina-canopy-dark.svg" width="49%"> <img src="assets/screens/lumina-canopy-light.svg" width="49%">
-
 **Slate**
 
 <img src="assets/screens/lumina-slate-dark.svg" width="49%"> <img src="assets/screens/lumina-slate-light.svg" width="49%">
 
+**Brume**
+
+<img src="assets/screens/lumina-brume-dark.svg" width="49%"> <img src="assets/screens/lumina-brume-light.svg" width="49%">
+
+#### Vivid
+
 **Nocturne**
 
 <img src="assets/screens/lumina-nocturne-dark.svg" width="49%"> <img src="assets/screens/lumina-nocturne-light.svg" width="49%">
-
-**Amethyst**
-
-<img src="assets/screens/lumina-amethyst-dark.svg" width="49%"> <img src="assets/screens/lumina-amethyst-light.svg" width="49%">
 
 **Prisma**
 
@@ -156,6 +162,16 @@ Radix inks.
 **Prisma ink** (black and white)
 
 <img src="assets/screens/lumina-prisma-dark-ink.svg" width="49%"> <img src="assets/screens/lumina-prisma-light-ink.svg" width="49%">
+
+**Neon Cyber**
+
+<img src="assets/screens/lumina-neon-cyber-dark.svg" width="49%"> <img src="assets/screens/lumina-neon-cyber-light.svg" width="49%">
+
+**Synthwave**
+
+<img src="assets/screens/lumina-synthwave-dark.svg" width="49%"> <img src="assets/screens/lumina-synthwave-light.svg" width="49%">
+
+#### Materials
 
 **Sirocco**
 
@@ -172,6 +188,34 @@ Radix inks.
 **Pivoine**
 
 <img src="assets/screens/lumina-pivoine-dark.svg" width="49%"> <img src="assets/screens/lumina-pivoine-light.svg" width="49%">
+
+**Café**
+
+<img src="assets/screens/lumina-cafe-dark.svg" width="49%"> <img src="assets/screens/lumina-cafe-light.svg" width="49%">
+
+**Pétrole**
+
+<img src="assets/screens/lumina-petrole-dark.svg" width="49%"> <img src="assets/screens/lumina-petrole-light.svg" width="49%">
+
+#### Gemini's drafts
+
+**Borealis**
+
+<img src="assets/screens/lumina-borealis-dark.svg" width="49%"> <img src="assets/screens/lumina-borealis-light.svg" width="49%">
+
+**Cashmere**
+
+<img src="assets/screens/lumina-cashmere-dark.svg" width="49%"> <img src="assets/screens/lumina-cashmere-light.svg" width="49%">
+
+**Aethelgard**
+
+<img src="assets/screens/lumina-aethelgard-dark.svg" width="49%"> <img src="assets/screens/lumina-aethelgard-light.svg" width="49%">
+
+#### For every eye
+
+**Lucide**
+
+<img src="assets/screens/lumina-lucide-dark.svg" width="49%"> <img src="assets/screens/lumina-lucide-light.svg" width="49%">
 
 ### Names
 

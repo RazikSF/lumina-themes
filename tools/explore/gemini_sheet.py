@@ -12,7 +12,6 @@ GEMINI_LIGHT = {  # Gemini's light drafts: four inks only
     "borealis": dict(keywords="#6B5FA3", strings="#2D7E63", functions="#1D7A6B", type="#9E7B2A"),
     "cashmere": dict(keywords="#BD5D63", strings="#597A45", functions="#B37A2E", type="#C4683D"),
     "aethelgard": dict(keywords="#8A39C4", strings="#1D8A78", functions="#0A8A73", type="#B38600"),
-    "sakura": dict(keywords="#834FA2", strings="#2D7E58", functions="#C75D81", type="#B86A2E"),
 }
 spec = json.loads(g.SPEC.read_text())["flavors"]
 code = tokens("ex.py")[:60]

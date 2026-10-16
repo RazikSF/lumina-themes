@@ -37,7 +37,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 SPEC = ROOT / "spec" / "lumina.json"
 DOOM_THEMES = Path.home() / ".doom.d" / "themes"
 
-FLAVORS = ["dawn", "oxblood", "tide", "canopy", "slate"]
+FLAVORS = ["dawn", "oxblood", "tide", "slate"]
 
 # ---------------------------------------------------------------------------
 # Per-flavour syntax schema (face design intent, shared dark/light).
@@ -54,18 +54,12 @@ SCHEMAS = {
     "dawn": {"v2": True, "lead": "yellow", "fg_min": 8, "modeline_bg": "bg-alt", "vertico_bg": "halo2", "function_call": "blue", "property": "blue", "preprocessor": "teal", "escape": "magenta", "modeline_modified": "orange", "rainbow": ["yellow", "teal", "blue", "magenta", "cyan", "violet"], "outline": ["yellow", "teal", "blue", "cyan"], "orderless": ["yellow", "teal", "magenta"], "magit_branch_local": "blue", "magit_branch_remote": "teal", "org_todo": "orange", "org_done": "green"},
     "oxblood": {"v2": True, "lead": "magenta", "fg_min": 8, "modeline_bg": "bg-alt", "vertico_bg": "halo2", "function_call": "cyan", "property": "cyan", "preprocessor": "blue", "escape": "teal", "modeline_modified": "orange", "rainbow": ["magenta", "blue", "orange", "teal", "green", "cyan"], "outline": ["magenta", "blue", "orange", "green"], "orderless": ["magenta", "blue", "teal"], "magit_branch_local": "blue", "magit_branch_remote": "teal", "org_todo": "orange", "org_done": "green"},
     "tide": {"v2": True, "lead": "cyan", "fg_min": 8, "modeline_bg": "bg-alt", "vertico_bg": "halo2", "function_call": "violet", "property": "violet", "preprocessor": "teal", "escape": "orange", "modeline_modified": "orange", "rainbow": ["cyan", "teal", "violet", "orange", "green", "magenta"], "outline": ["cyan", "teal", "violet", "green"], "orderless": ["cyan", "teal", "orange"], "magit_branch_local": "blue", "magit_branch_remote": "teal", "org_todo": "orange", "org_done": "green"},
-    "canopy": {"v2": True, "lead": "green", "fg_min": 8, "modeline_bg": "bg-alt", "vertico_bg": "halo2", "function_call": "yellow", "property": "yellow", "preprocessor": "blue", "escape": "magenta", "modeline_modified": "orange", "rainbow": ["green", "blue", "yellow", "magenta", "cyan", "violet"], "outline": ["green", "blue", "yellow", "cyan"], "orderless": ["green", "blue", "magenta"], "magit_branch_local": "blue", "magit_branch_remote": "teal", "org_todo": "orange", "org_done": "green"},
     "slate": {"v2": True, "lead": "blue", "fg_min": 8, "modeline_bg": "bg-alt", "vertico_bg": "halo2", "function_call": "yellow", "property": "cyan", "preprocessor": "cyan", "escape": "magenta", "modeline_modified": "orange", "rainbow": ["blue", "cyan", "yellow", "magenta", "green", "violet"], "outline": ["blue", "cyan", "yellow", "green"], "orderless": ["blue", "cyan", "magenta"], "magit_branch_local": "cyan", "magit_branch_remote": "teal", "org_todo": "orange", "org_done": "green"},
     "indigo": {"v2": True, "lead": "blue", "fg_min": 8, "warm_family": True,
                "modeline_bg": "bg-alt", "vertico_bg": "halo2", "function_call": "ink-light", "property": "ink-mid", "preprocessor": "violet", "escape": "orange", "modeline_modified": "orange",
                "rainbow": ["blue", "orange", "violet", "cyan", "yellow", "magenta"], "outline": ["blue", "violet", "cyan", "orange"], "orderless": ["blue", "orange", "violet"],
                "magit_branch_local": "cyan", "magit_branch_remote": "violet", "org_todo": "orange", "org_done": "green"},
-    "azur": {"v2": True, "lead": "blue", "fg_min": 8, "warm_family": True,
-             "modeline_bg": "bg-alt", "vertico_bg": "halo2", "function_call": "orange", "property": "violet", "preprocessor": "violet", "escape": "yellow", "modeline_modified": "orange",
-             "rainbow": ["blue", "orange", "violet", "yellow", "teal", "green"], "outline": ["blue", "orange", "violet", "teal"], "orderless": ["blue", "orange", "yellow"],
-             "magit_branch_local": "cyan", "magit_branch_remote": "violet", "org_todo": "orange", "org_done": "green"},
     "nocturne": {"v2": True, "lead": "orange", "fg_min": 8, "modeline_bg": "bg-alt", "vertico_bg": "halo2", "function_call": "cyan", "property": "cyan", "preprocessor": "blue", "escape": "magenta", "modeline_modified": "yellow", "rainbow": ["orange", "blue", "cyan", "magenta", "green", "violet"], "outline": ["orange", "blue", "cyan", "green"], "orderless": ["orange", "blue", "magenta"], "magit_branch_local": "blue", "magit_branch_remote": "teal", "org_todo": "yellow", "org_done": "green"},
-    "amethyst": {"v2": True, "lead": "yellow", "fg_min": 8, "modeline_bg": "bg-alt", "vertico_bg": "halo2", "function_call": "cyan", "property": "green", "preprocessor": "magenta", "escape": "blue", "modeline_modified": "orange", "rainbow": ["yellow", "magenta", "cyan", "blue", "green", "violet"], "outline": ["yellow", "magenta", "green", "cyan"], "orderless": ["yellow", "magenta", "cyan"], "magit_branch_local": "blue", "magit_branch_remote": "teal", "org_todo": "orange", "org_done": "green"},
     "prisma": {"v2": True, "lead": "spark", "fg_min": 8, "modeline_bg": "bg-alt", "vertico_bg": "halo2", "function_call": "teal", "property": "cyan", "preprocessor": "green", "escape": "orange", "modeline_modified": "orange", "rainbow": ["red", "orange", "yellow", "green", "blue", "violet"], "outline": ["spark", "green", "teal", "cyan"], "orderless": ["spark", "green", "orange"], "magit_branch_local": "blue", "magit_branch_remote": "teal", "org_todo": "orange", "org_done": "green"},
     "sirocco": {"v2": True, "lead": "cyan", "fg_min": 8, "warm_family": True, "modeline_bg": "bg-alt", "vertico_bg": "halo2", "function_call": "green", "property": "blue", "preprocessor": "orange", "escape": "cyan", "modeline_modified": "orange", "rainbow": ["cyan", "orange", "green", "magenta", "blue", "yellow"], "outline": ["cyan", "orange", "green", "magenta"], "orderless": ["cyan", "orange", "magenta"], "magit_branch_local": "cyan", "magit_branch_remote": "green", "org_todo": "orange", "org_done": "green"},
     "celadon": {"v2": True, "lead": "orange", "fg_min": 8, "modeline_bg": "bg-alt", "vertico_bg": "halo2", "function_call": "green", "property": "blue", "preprocessor": "cyan", "escape": "orange", "modeline_modified": "orange", "rainbow": ["orange", "cyan", "green", "magenta", "blue", "violet"], "outline": ["orange", "cyan", "green", "magenta"], "orderless": ["orange", "cyan", "magenta"], "magit_branch_local": "blue", "magit_branch_remote": "green", "org_todo": "orange", "org_done": "green"},
@@ -182,13 +176,12 @@ SCHEMAS["nuancier"] = {"v2": True, "lead": "orange", "fg_min": 8, "fg_max": 12.5
                        "modeline_modified": "orange"}
 SCHEMAS["aquarelle"] = dict(SCHEMAS["nuancier"])
 SCHEMAS["jardin"] = dict(SCHEMAS["nuancier"])
-for _f in ("neon-cyber", "borealis", "cashmere", "aethelgard", "sakura", "cafe", "petrole", "synthwave", "brume", "lucide", "encre"):
+for _f in ("neon-cyber", "borealis", "cashmere", "aethelgard", "cafe", "petrole", "synthwave", "brume", "lucide", "encre"):
     SCHEMAS[_f] = dict(SCHEMAS["nuancier"])
 SCHEMAS["encre"]["spread"] = {"dark": .25, "light": .18}
 SCHEMAS["lucide"]["spread"] = {"dark": .24, "light": .16}
 SCHEMAS["lucide"]["warm_family"] = SCHEMAS["encre"]["warm_family"] = True
 SCHEMAS["neon-cyber"]["spread"] = {"dark": .28, "light": .16}
-SCHEMAS["sakura"]["spread"] = {"dark": .20, "light": .16}
 SCHEMAS["cashmere"]["warm_family"] = True
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from harmony_apply import HARMONY as _HARMONY, schema_overrides as _schema_overrides
@@ -198,7 +191,7 @@ from harmony_apply import gemini_design as _gemini_design, AS_DRAWN as _AS_DRAWN
 for _f in SCHEMAS:
     SCHEMAS[_f].update(_gemini_design())
 SCHEMAS["dawn"]["warm_family"] = True
-for _f in ("neon-cyber", "borealis", "cashmere", "aethelgard", "sakura"):
+for _f in ("neon-cyber", "borealis", "cashmere", "aethelgard"):
     SCHEMAS[_f].update(_AS_DRAWN)
 
 

@@ -6,7 +6,7 @@ deterministic hill climb moves hue (within 25 degrees of the current one), light
 the beauty score (Ou-Luo harmony, template fit, chroma coherence) while keeping the inks legible (>= 4.6:1)
 and apart (OKLab distance >= 9 at night, 8 on paper), at most 8.5:1 on paper, with the flavor's mean
 saturation kept (no ink below 70 % of it). The error red is then placed furthest from the inks. Writes generators/harmony.json.
-Usage: theorie.py [flavor ...]
+Usage: theorie.py flavor ...
 """
 import itertools, json, math, random, statistics as st, sys
 from pathlib import Path
@@ -110,6 +110,8 @@ def main():
     path = ROOT / "generators/harmony.json"
     harmony = json.loads(path.read_text())
     only = sys.argv[1:]
+    if not only:
+        sys.exit("name the flavors to harmonise: the approved inks of the others stay as they are")
     for f, m in spec.items():
         if only and f not in only:
             continue

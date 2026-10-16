@@ -5,7 +5,7 @@ scene (warm room, ocean, forest...), not from six hues spread evenly round the c
 Hues are chosen by hand per flavor; a random search then sets lightness (.68-.84) and chroma (.06-.13) so
 every pair stays apart (OKLab distance x100), close hues being told apart by lightness as in Vesper. Light
 inks: same hue (yellows to amber), searched between 4.6:1 and 8:1 for the widest distance.
-Lucide keeps its inks apart under simulated deuteranopia and protanopia as well. Usage: families.py [flavor ...]
+Lucide keeps its inks apart under simulated deuteranopia and protanopia as well. Superseded by theorie.py for the approved flavors. Usage: families.py flavor ...
 Writes the flavors into generators/harmony.json; the error red stays as it is there.
 """
 import itertools
@@ -25,12 +25,9 @@ FAMILIES = {  # keywords, functions, type, strings, constants, builtin
     "dawn": (30, 78, 5, 165, 50, 95),        # sepia room: terracotta, amber lamp, rose, peach, sand; one sage
     "oxblood": (300, 350, 80, 195, 25, 325),  # theatre: rose spotlight, violet, mauve, coral, gold; one slate teal
     "tide": (180, 228, 275, 155, 35, 205),    # ocean: teal, sky, periwinkle, seafoam, cyan; one coral
-    "canopy": (225, 145, 75, 170, 35, 200),   # forest: leaf, mint, aqua, sky through leaves; amber and bark
     "slate": (215, 255, 285, 180, 20, 160),   # graphite: steel, sky, lavender, teal, mint; one rose whisper
     "nocturne": (290, 60, 230, 260, 330, 200),  # city night: violet, sky, periwinkle, orchid, cyan; sodium lamp
-    "amethyst": (320, 90, 285, 250, 345, 210),  # geode: orchid, lavender, periwinkle, pink, ice; citrine shard
     "indigo": (250, 85, 45, 320, 20, 65),     # desert night: azure; gold sand, copper, rose, amber, dusk mauve
-    "azur": (245, 55, 300, 95, 175, 20),      # blue slate under a clear sky, the vivid one
     "sirocco": (80, 225, 35, 355, 300, 160),  # desert wind: sand, terracotta, rose, dusk mauve, sage; sky lamp
     "celadon": (210, 50, 160, 180, 250, 140), # jade porcelain: sky, jade, celadon, indigo, green; peach lamp
     "sumi": (30, 150, 320, 220, 60, 350),     # ink: vermilion, matcha, plum, sky, ochre, rose
@@ -42,7 +39,7 @@ FAMILIES = {  # keywords, functions, type, strings, constants, builtin
     "lucide": (235, 65, 100, 165, 340, 40),   # Okabe-Ito hues: sky, orange, yellow, bluish green, reddish purple, vermilion
     "encre": (250, 70, 250, 70, 70, 250),     # two inks, blue and amber, told apart by lightness and chroma
 }
-CHROMA = {"azur": (.10, .14), "nocturne": (.08, .13), "synthwave": (.15, .21), "encre": (.05, .13), "brume": (.05, .10)}
+CHROMA = {"nocturne": (.08, .13), "synthwave": (.15, .21), "encre": (.05, .13), "brume": (.05, .10)}
 LIGHTNESS = {"brume": (.76, .88), "encre": (.64, .88), "lucide": (.62, .88)}  # Brume sits on a mid-dark ground; Encre tells its two hues apart by lightness
 SPREAD_MAX = {"encre": .24, "lucide": .24}
 OLIVE_GUARD = {"brume", "lucide", "encre"}  # flavors made after the guard; the earlier ones keep their approved inks
@@ -122,6 +119,8 @@ def main():
     harmony = json.loads(path.read_text())
     sys.path.insert(0, str(ROOT / "generators"))
     import v2_palettes as v2
+    if not sys.argv[1:]:
+        sys.exit("name the flavors to recompute: the approved inks of the others stay as they are")
     for f, hues in FAMILIES.items():
         if sys.argv[1:] and f not in sys.argv[1:]:
             continue

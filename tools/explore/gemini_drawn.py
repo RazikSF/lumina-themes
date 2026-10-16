@@ -13,7 +13,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from gemini_import import G
 
 ROOT = Path(__file__).resolve().parents[2]
-FILES = {"neon-cyber": "neon-cyber", "borealis": "borealis", "cashmere": "cashmere", "aethelgard": "aethelgard", "sakura": "twilight-sakura"}
+FILES = {"neon-cyber": "neon-cyber", "borealis": "borealis", "cashmere": "cashmere", "aethelgard": "aethelgard"}
 TAKE = {  # palette key <- (face, attribute: 0 fg, 1 bg)
     "fg": ("default", 0), "base8": ("default", 0), "halo": ("hl-line", 1), "region": ("region", 1), "selection": ("region", 1),
     "base4": ("line-number", 0), "fg-alt": ("mode-line", 0), "bg-alt": ("mode-line", 1), "base5": ("mode-line-inactive", 0),
