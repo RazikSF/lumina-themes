@@ -1,0 +1,188 @@
+{
+  "name": "lumina-themes",
+  "displayName": "Lumina Themes",
+  "description": "Fourteen flavors, each in dark and light: six code colours drawn from one scene, on tinted grounds. Quartz adds a high-contrast pair.",
+  "version": "1.0.0",
+  "publisher": "RazikSF",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "color-theme",
+    "dark",
+    "light",
+    "lumina"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RazikSF/lumina-themes.git"
+  },
+  "homepage": "https://github.com/RazikSF/lumina-themes",
+  "bugs": {
+    "url": "https://github.com/RazikSF/lumina-themes/issues"
+  },
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#161A25",
+    "theme": "dark"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Lumina Quartz Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lumina-quartz-dark-color-theme.json"
+      },
+      {
+        "label": "Lumina Quartz Light",
+        "uiTheme": "vs",
+        "path": "./themes/lumina-quartz-light-color-theme.json"
+      },
+      {
+        "label": "Lumina Quartz Dark Contrast",
+        "uiTheme": "hc-black",
+        "path": "./themes/lumina-quartz-dark-contrast-color-theme.json"
+      },
+      {
+        "label": "Lumina Quartz Light Contrast",
+        "uiTheme": "hc-light",
+        "path": "./themes/lumina-quartz-light-contrast-color-theme.json"
+      },
+      {
+        "label": "Lumina Canopy Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lumina-canopy-dark-color-theme.json"
+      },
+      {
+        "label": "Lumina Canopy Light",
+        "uiTheme": "vs",
+        "path": "./themes/lumina-canopy-light-color-theme.json"
+      },
+      {
+        "label": "Lumina Oxblood Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lumina-oxblood-dark-color-theme.json"
+      },
+      {
+        "label": "Lumina Oxblood Light",
+        "uiTheme": "vs",
+        "path": "./themes/lumina-oxblood-light-color-theme.json"
+      },
+      {
+        "label": "Lumina Cherenkov Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lumina-cherenkov-dark-color-theme.json"
+      },
+      {
+        "label": "Lumina Cherenkov Light",
+        "uiTheme": "vs",
+        "path": "./themes/lumina-cherenkov-light-color-theme.json"
+      },
+      {
+        "label": "Lumina Ember Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lumina-ember-dark-color-theme.json"
+      },
+      {
+        "label": "Lumina Ember Light",
+        "uiTheme": "vs",
+        "path": "./themes/lumina-ember-light-color-theme.json"
+      },
+      {
+        "label": "Lumina Nebula Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lumina-nebula-dark-color-theme.json"
+      },
+      {
+        "label": "Lumina Nebula Light",
+        "uiTheme": "vs",
+        "path": "./themes/lumina-nebula-light-color-theme.json"
+      },
+      {
+        "label": "Lumina Harbor Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lumina-harbor-dark-color-theme.json"
+      },
+      {
+        "label": "Lumina Harbor Light",
+        "uiTheme": "vs",
+        "path": "./themes/lumina-harbor-light-color-theme.json"
+      },
+      {
+        "label": "Lumina Dusk Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lumina-dusk-dark-color-theme.json"
+      },
+      {
+        "label": "Lumina Dusk Light",
+        "uiTheme": "vs",
+        "path": "./themes/lumina-dusk-light-color-theme.json"
+      },
+      {
+        "label": "Lumina Rayleigh Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lumina-rayleigh-dark-color-theme.json"
+      },
+      {
+        "label": "Lumina Rayleigh Light",
+        "uiTheme": "vs",
+        "path": "./themes/lumina-rayleigh-light-color-theme.json"
+      },
+      {
+        "label": "Lumina Lagoon Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lumina-lagoon-dark-color-theme.json"
+      },
+      {
+        "label": "Lumina Lagoon Light",
+        "uiTheme": "vs",
+        "path": "./themes/lumina-lagoon-light-color-theme.json"
+      },
+      {
+        "label": "Lumina Aurora Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lumina-aurora-dark-color-theme.json"
+      },
+      {
+        "label": "Lumina Aurora Light",
+        "uiTheme": "vs",
+        "path": "./themes/lumina-aurora-light-color-theme.json"
+      },
+      {
+        "label": "Lumina Espresso Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lumina-espresso-dark-color-theme.json"
+      },
+      {
+        "label": "Lumina Espresso Light",
+        "uiTheme": "vs",
+        "path": "./themes/lumina-espresso-light-color-theme.json"
+      },
+      {
+        "label": "Lumina Olive Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lumina-olive-dark-color-theme.json"
+      },
+      {
+        "label": "Lumina Olive Light",
+        "uiTheme": "vs",
+        "path": "./themes/lumina-olive-light-color-theme.json"
+      },
+      {
+        "label": "Lumina Parchment Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lumina-parchment-dark-color-theme.json"
+      },
+      {
+        "label": "Lumina Parchment Light",
+        "uiTheme": "vs",
+        "path": "./themes/lumina-parchment-light-color-theme.json"
+      }
+    ]
+  }
+}
