@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.2
+
+- No change to the themes; published again so that Open VSX activates the extension.
+
 ## 1.0.1
 
 - The gallery shows the themes in VS Code itself, on a demo project.
