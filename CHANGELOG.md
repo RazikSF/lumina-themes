@@ -36,3 +36,4 @@
 - Lapis, Indigo, Petrol, Mist and Rime archived in archive/; the former palettes of the kept flavors in archive/avant-famille/.
 - Three warm flavors: Espresso, a café on a coffee-brown night; Olive, Provence on an olive night; Parchment, a reading room on tobacco and parchment.
 - Ready for MELPA and the Marketplace: theme files provide their feature and pass package-lint; the VS Code extension shows as Lumina Themes.
+- Screenshots taken in VS Code, Neovim and the terminal, on a demo project.
