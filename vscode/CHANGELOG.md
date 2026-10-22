@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1
+
+- The gallery shows the themes in VS Code itself, on a demo project.
+
 ## 1.0.0
 
 - First release: fourteen flavors (Rayleigh, Cherenkov, Quartz, Olive, Dusk, Oxblood, Lagoon, Ember, Canopy, Harbor, Espresso, Aurora, Parchment, Nebula) in dark and light and Quartz's high-contrast pair: 30 themes.

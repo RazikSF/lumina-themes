@@ -1,6 +1,8 @@
 # Lumina
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![VS Code: Marketplace](https://img.shields.io/badge/VS%20Code-Marketplace-0078d4)](https://marketplace.visualstudio.com/items?itemName=RazikSF.lumina-themes)
+[![VSCodium · Cursor: Open VSX](https://img.shields.io/badge/VSCodium%20%C2%B7%20Cursor-Open%20VSX-a60ee5)](https://open-vsx.org/extension/RazikSF/lumina-themes)
 
 Colour themes for **Emacs**, **Neovim**, **VS Code**, **WezTerm** and your
 terminal: fourteen flavors, each with a dark and a light version, plus a
@@ -19,7 +21,13 @@ anywhere on the screen. Rayleigh is the default flavor.
 
 <img src="assets/screens/lumina-rayleigh-dark.svg" width="49%"> <img src="assets/screens/lumina-rayleigh-light.svg" width="49%">
 
-*Rayleigh, the default flavor: the blue hour by night, a clear noon by day.*
+*Rayleigh, the default flavor, in Emacs: the blue hour by night, a clear noon by day.*
+
+<img src="assets/vscode/lumina-rayleigh-dark.png" width="100%">
+
+<img src="assets/nvim/lumina-rayleigh-dark.png" width="59%"> <img src="assets/terminal/lumina-rayleigh-dark.png" width="39%">
+
+*The same Rayleigh in VS Code, Neovim and the terminal.*
 
 ## Flavors
 
@@ -214,17 +222,18 @@ require("lualine").setup({ options = { theme = "lumina-rayleigh-dark" } })
 
 ### VS Code
 
-Build the extension from the `vscode/` folder and install it:
+Install **Lumina Themes** from the
+[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=RazikSF.lumina-themes)
+(VS Code) or from [Open VSX](https://open-vsx.org/extension/RazikSF/lumina-themes)
+(VSCodium, Cursor and other editors built on VS Code): search for
+*Lumina Themes* in the Extensions view, or run
 
 ```sh
-cd vscode && npx @vscode/vsce package --no-dependencies
-code --install-extension lumina-themes-1.0.0.vsix
+code --install-extension RazikSF.lumina-themes
 ```
 
 Then open the theme picker (`Ctrl+K Ctrl+T`, `Cmd+K Cmd+T` on macOS) and
-choose a Lumina flavor: 30 entries. Each
-theme sets 568 workbench colours, 94 token rules and 54 semantic token
-rules; the Quartz contrast pair registers as a high-contrast theme.
+choose a Lumina flavor.
 
 ### WezTerm
 

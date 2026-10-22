@@ -25,73 +25,73 @@ The same themes exist for Emacs, Neovim, WezTerm and terminals:
 <!-- gallery -->
 **Rayleigh**
 
-![Rayleigh dark](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/png/lumina-rayleigh-dark.png)
-![Rayleigh light](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/png/lumina-rayleigh-light.png)
+![Rayleigh dark](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/vscode/lumina-rayleigh-dark.png)
+![Rayleigh light](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/vscode/lumina-rayleigh-light.png)
 
 **Cherenkov**
 
-![Cherenkov dark](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/png/lumina-cherenkov-dark.png)
-![Cherenkov light](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/png/lumina-cherenkov-light.png)
+![Cherenkov dark](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/vscode/lumina-cherenkov-dark.png)
+![Cherenkov light](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/vscode/lumina-cherenkov-light.png)
 
 **Quartz**
 
-![Quartz dark](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/png/lumina-quartz-dark.png)
-![Quartz light](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/png/lumina-quartz-light.png)
+![Quartz dark](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/vscode/lumina-quartz-dark.png)
+![Quartz light](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/vscode/lumina-quartz-light.png)
 
 **Olive**
 
-![Olive dark](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/png/lumina-olive-dark.png)
-![Olive light](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/png/lumina-olive-light.png)
+![Olive dark](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/vscode/lumina-olive-dark.png)
+![Olive light](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/vscode/lumina-olive-light.png)
 
 **Dusk**
 
-![Dusk dark](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/png/lumina-dusk-dark.png)
-![Dusk light](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/png/lumina-dusk-light.png)
+![Dusk dark](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/vscode/lumina-dusk-dark.png)
+![Dusk light](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/vscode/lumina-dusk-light.png)
 
 **Oxblood**
 
-![Oxblood dark](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/png/lumina-oxblood-dark.png)
-![Oxblood light](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/png/lumina-oxblood-light.png)
+![Oxblood dark](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/vscode/lumina-oxblood-dark.png)
+![Oxblood light](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/vscode/lumina-oxblood-light.png)
 
 **Lagoon**
 
-![Lagoon dark](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/png/lumina-lagoon-dark.png)
-![Lagoon light](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/png/lumina-lagoon-light.png)
+![Lagoon dark](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/vscode/lumina-lagoon-dark.png)
+![Lagoon light](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/vscode/lumina-lagoon-light.png)
 
 **Ember**
 
-![Ember dark](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/png/lumina-ember-dark.png)
-![Ember light](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/png/lumina-ember-light.png)
+![Ember dark](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/vscode/lumina-ember-dark.png)
+![Ember light](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/vscode/lumina-ember-light.png)
 
 **Canopy**
 
-![Canopy dark](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/png/lumina-canopy-dark.png)
-![Canopy light](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/png/lumina-canopy-light.png)
+![Canopy dark](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/vscode/lumina-canopy-dark.png)
+![Canopy light](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/vscode/lumina-canopy-light.png)
 
 **Harbor**
 
-![Harbor dark](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/png/lumina-harbor-dark.png)
-![Harbor light](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/png/lumina-harbor-light.png)
+![Harbor dark](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/vscode/lumina-harbor-dark.png)
+![Harbor light](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/vscode/lumina-harbor-light.png)
 
 **Espresso**
 
-![Espresso dark](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/png/lumina-espresso-dark.png)
-![Espresso light](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/png/lumina-espresso-light.png)
+![Espresso dark](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/vscode/lumina-espresso-dark.png)
+![Espresso light](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/vscode/lumina-espresso-light.png)
 
 **Aurora**
 
-![Aurora dark](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/png/lumina-aurora-dark.png)
-![Aurora light](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/png/lumina-aurora-light.png)
+![Aurora dark](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/vscode/lumina-aurora-dark.png)
+![Aurora light](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/vscode/lumina-aurora-light.png)
 
 **Parchment**
 
-![Parchment dark](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/png/lumina-parchment-dark.png)
-![Parchment light](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/png/lumina-parchment-light.png)
+![Parchment dark](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/vscode/lumina-parchment-dark.png)
+![Parchment light](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/vscode/lumina-parchment-light.png)
 
 **Nebula**
 
-![Nebula dark](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/png/lumina-nebula-dark.png)
-![Nebula light](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/png/lumina-nebula-light.png)
+![Nebula dark](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/vscode/lumina-nebula-dark.png)
+![Nebula light](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/vscode/lumina-nebula-light.png)
 <!-- /gallery -->
 
 ## License
