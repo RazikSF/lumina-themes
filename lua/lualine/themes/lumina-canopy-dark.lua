@@ -1,10 +1,10 @@
 -- lumina-canopy-dark -- Lumina lualine theme (canopy, dark). Generated; do not edit.
 return {
-    normal = { a = { fg = '#131D16', bg = '#F2BB31', gui = 'bold' }, b = { fg = '#ADBBB0', bg = '#17221A' }, c = { fg = '#ADBBB0', bg = '#0C160F' } },
-    insert = { a = { fg = '#131D16', bg = '#8CE3DD', gui = 'bold' }, b = { fg = '#ADBBB0', bg = '#17221A' }, c = { fg = '#ADBBB0', bg = '#0C160F' } },
-    visual = { a = { fg = '#131D16', bg = '#D1A5D3', gui = 'bold' }, b = { fg = '#ADBBB0', bg = '#17221A' }, c = { fg = '#ADBBB0', bg = '#0C160F' } },
-    replace = { a = { fg = '#131D16', bg = '#D3665E', gui = 'bold' }, b = { fg = '#ADBBB0', bg = '#17221A' }, c = { fg = '#ADBBB0', bg = '#0C160F' } },
-    command = { a = { fg = '#131D16', bg = '#F18282', gui = 'bold' }, b = { fg = '#ADBBB0', bg = '#17221A' }, c = { fg = '#ADBBB0', bg = '#0C160F' } },
-    terminal = { a = { fg = '#131D16', bg = '#8DC6FF', gui = 'bold' }, b = { fg = '#ADBBB0', bg = '#17221A' }, c = { fg = '#ADBBB0', bg = '#0C160F' } },
-    inactive = { a = { fg = '#617064', bg = '#0C160F' }, b = { fg = '#617064', bg = '#0C160F' }, c = { fg = '#617064', bg = '#131D16' } },
+    normal = { a = { fg = '#0C1B10', bg = '#EDB064', gui = 'bold' }, b = { fg = '#B8C3B6', bg = '#0F2014' }, c = { fg = '#B8C3B6', bg = '#06140A' } },
+    insert = { a = { fg = '#0C1B10', bg = '#77D0C6', gui = 'bold' }, b = { fg = '#B8C3B6', bg = '#0F2014' }, c = { fg = '#B8C3B6', bg = '#06140A' } },
+    visual = { a = { fg = '#0C1B10', bg = '#9ACAF1', gui = 'bold' }, b = { fg = '#B8C3B6', bg = '#0F2014' }, c = { fg = '#B8C3B6', bg = '#06140A' } },
+    replace = { a = { fg = '#0C1B10', bg = '#D57068', gui = 'bold' }, b = { fg = '#B8C3B6', bg = '#0F2014' }, c = { fg = '#B8C3B6', bg = '#06140A' } },
+    command = { a = { fg = '#0C1B10', bg = '#F49287', gui = 'bold' }, b = { fg = '#B8C3B6', bg = '#0F2014' }, c = { fg = '#B8C3B6', bg = '#06140A' } },
+    terminal = { a = { fg = '#0C1B10', bg = '#C0DE92', gui = 'bold' }, b = { fg = '#B8C3B6', bg = '#0F2014' }, c = { fg = '#B8C3B6', bg = '#06140A' } },
+    inactive = { a = { fg = '#5B6F5F', bg = '#06140A' }, b = { fg = '#5B6F5F', bg = '#06140A' }, c = { fg = '#5B6F5F', bg = '#0C1B10' } },
   }

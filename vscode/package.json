@@ -1,8 +1,8 @@
 {
   "name": "lumina-themes",
   "displayName": "Lumina Themes",
-  "description": "Fourteen flavors, each in dark and light: six code colours drawn from one scene, on tinted grounds. Quartz adds a high-contrast pair.",
-  "version": "1.0.2",
+  "description": "Fourteen flavors, each in dark and light: six code colours drawn from one scene, on tinted grounds. Vitrail is the high-contrast pair, for low vision.",
+  "version": "1.1.0",
   "publisher": "RazikSF",
   "license": "MIT",
   "engines": {
@@ -42,16 +42,6 @@
         "label": "Lumina Quartz Light",
         "uiTheme": "vs",
         "path": "./themes/lumina-quartz-light-color-theme.json"
-      },
-      {
-        "label": "Lumina Quartz Dark Contrast",
-        "uiTheme": "hc-black",
-        "path": "./themes/lumina-quartz-dark-contrast-color-theme.json"
-      },
-      {
-        "label": "Lumina Quartz Light Contrast",
-        "uiTheme": "hc-light",
-        "path": "./themes/lumina-quartz-light-contrast-color-theme.json"
       },
       {
         "label": "Lumina Canopy Dark",
@@ -182,6 +172,26 @@
         "label": "Lumina Parchment Light",
         "uiTheme": "vs",
         "path": "./themes/lumina-parchment-light-color-theme.json"
+      },
+      {
+        "label": "Lumina Polaire Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lumina-polaire-dark-color-theme.json"
+      },
+      {
+        "label": "Lumina Polaire Light",
+        "uiTheme": "vs",
+        "path": "./themes/lumina-polaire-light-color-theme.json"
+      },
+      {
+        "label": "Lumina Vitrail Dark",
+        "uiTheme": "hc-black",
+        "path": "./themes/lumina-vitrail-dark-color-theme.json"
+      },
+      {
+        "label": "Lumina Vitrail Light",
+        "uiTheme": "hc-light",
+        "path": "./themes/lumina-vitrail-light-color-theme.json"
       }
     ]
   }

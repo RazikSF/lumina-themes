@@ -92,6 +92,16 @@ The same themes exist for Emacs, Neovim, WezTerm and terminals:
 
 ![Nebula dark](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/vscode/lumina-nebula-dark.png)
 ![Nebula light](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/vscode/lumina-nebula-light.png)
+
+**Polaire**
+
+![Polaire dark](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/vscode/lumina-polaire-dark.png)
+![Polaire light](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/vscode/lumina-polaire-light.png)
+
+**Vitrail**
+
+![Vitrail dark](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/vscode/lumina-vitrail-dark.png)
+![Vitrail light](https://raw.githubusercontent.com/RazikSF/lumina-themes/main/assets/vscode/lumina-vitrail-light.png)
 <!-- /gallery -->
 
 ## License

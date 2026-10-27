@@ -32,8 +32,8 @@
 ;;
 ;;; Commentary:
 ;;
-;; Lumina is a family of fourteen flavors, each in a dark and a light
-;; variant, plus a high-contrast Quartz pair: 30 themes.  Rayleigh is
+;; Lumina is a family of fifteen flavors, each in a dark and a light
+;; variant, plus Vitrail, a high-contrast pair: 32 themes.  Rayleigh is
 ;; the default flavor, by night and by day.  The themes are plain
 ;; `deftheme' files with no dependency, close to 3 000 faces each:
 ;; core UI, built-in modes and over 150 packages (org, magit, vertico,

@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.0
+
+- Every night redrawn as an immersion theme: its ground and all its inks come from one scene.
+- Every day redrawn from its night: each role keeps its hue, on a paper tinted by the scene.
+- Polaire, a new flavor: a polar night and pale ice under a low sun.
+- Vitrail, stained glass, replaces Quartz's high-contrast pair: lumina-vitrail-dark and lumina-vitrail-light.
+- Selections, search matches, line numbers and punctuation derived again from the new grounds.
+
 ## 1.0.2
 
 - No change to the themes; published again so that Open VSX activates the extension.

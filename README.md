@@ -5,13 +5,18 @@
 [![VSCodium · Cursor: Open VSX](https://img.shields.io/badge/VSCodium%20%C2%B7%20Cursor-Open%20VSX-a60ee5)](https://open-vsx.org/extension/RazikSF/lumina-themes)
 
 Colour themes for **Emacs**, **Neovim**, **VS Code**, **WezTerm** and your
-terminal: fourteen flavors, each with a dark and a light version, plus a
-high-contrast pair for low vision.
+terminal: fifteen flavors, each with a dark and a light version, plus
+Vitrail, a high-contrast pair for low vision.
 
-Each flavor starts from a scene, a sky at dusk, a lagoon, a café, a
-library, and takes its colours from it. The colours are calm and of even
+Each flavor starts from a scene, a sky at dusk, a lagoon, a peat fire, an
+illuminated manuscript, and takes its colours from it. The colours are calm and of even
 strength: none shouts louder than the others, so your eyes can rest
 anywhere on the screen. Rayleigh is the default flavor.
+
+Lumina is a family of **immersion themes**. At night above all, the
+background and every ink come from the same scene, so you do not look at
+a colour scheme: you sit inside it, at the blue hour, by a reactor pool,
+in an olive grove at dusk.
 
 - **Easy on the eyes.** Soft text, tinted by the background.
 - **Readable by everyone.** Every colour stays legible and distinct,
@@ -19,13 +24,14 @@ anywhere on the screen. Rayleigh is the default flavor.
 - **The same everywhere.** One design in every editor, and in over 150
   Emacs packages.
 
-<img src="assets/screens/lumina-rayleigh-dark.svg" width="49%"> <img src="assets/screens/lumina-rayleigh-light.svg" width="49%">
+<img src="assets/screens/lumina-rayleigh-dark.svg" width="100%">
+<img src="assets/screens/lumina-rayleigh-light.svg" width="100%">
 
 *Rayleigh, the default flavor, in Emacs: the blue hour by night, a clear noon by day.*
 
 <img src="assets/vscode/lumina-rayleigh-dark.png" width="100%">
 
-<img src="assets/nvim/lumina-rayleigh-dark.png" width="59%"> <img src="assets/terminal/lumina-rayleigh-dark.png" width="39%">
+<img src="assets/nvim/lumina-rayleigh-dark.png" width="54%"> <img src="assets/terminal/lumina-rayleigh-dark.png" width="44%">
 
 *The same Rayleigh in VS Code, Neovim and the terminal.*
 
@@ -34,20 +40,22 @@ anywhere on the screen. Rayleigh is the default flavor.
 <!-- flavors -->
 | | Flavor | Dark | Light |
 |---|---|---|---|
-| <img src="assets/swatches/lumina-rayleigh.svg" width="240"> | **Rayleigh** | Twilight after sunset: the blue hour, the Belt of Venus and the last gold | A clear sky at noon: zenith blue ink on cloud white |
-| <img src="assets/swatches/lumina-cherenkov.svg" width="240"> | **Cherenkov** | The blue-violet glow of a reactor pool, uranium-glass green | The same glow printed in cobalt |
-| <img src="assets/swatches/lumina-quartz.svg" width="240"> | **Quartz** | Violet quartz on a neutral grey night | Amethyst ink on white paper |
-| <img src="assets/swatches/lumina-olive.svg" width="240"> | **Olive** | Provence at dusk: an olive grove, lavender rows, rosé, ochre cliffs, blue shutters, terracotta roofs | Limestone paper, lavender ink |
-| <img src="assets/swatches/lumina-dusk.svg" width="240"> | **Dusk** | A warm evening on a mid-dark plum ground: orchid, honey and coral | Lilac paper, aubergine ink |
-| <img src="assets/swatches/lumina-oxblood.svg" width="240"> | **Oxblood** | A wine cellar by candlelight: rose and candle gold on wine | Powdered paper, wine and gold inks |
-| <img src="assets/swatches/lumina-lagoon.svg" width="240"> | **Lagoon** | A lagoon at dusk on a mid-dark blue-green ground: coral, golden sand, clear water | Pale lagoon paper, coral ink |
-| <img src="assets/swatches/lumina-ember.svg" width="240"> | **Ember** | A desk lamp on warm graphite: apricot and butter | Ivory paper, printer's inks |
-| <img src="assets/swatches/lumina-canopy.svg" width="240"> | **Canopy** | The sun above a forest at night | Old gold on celadon paper |
-| <img src="assets/swatches/lumina-harbor.svg" width="240"> | **Harbor** | Harbour lights on navy water: lemon, amber, sea glass | A nautical chart: teal ink on pale blue paper |
-| <img src="assets/swatches/lumina-espresso.svg" width="240"> | **Espresso** | A café at night: espresso, crema, pistachio, cinnamon and a blue enamel cup | Latte paper, roasted inks |
-| <img src="assets/swatches/lumina-aurora.svg" width="240"> | **Aurora** | Green curtains over a violet polar night: star gold, the red flash of oxygen | Snow paper under the aurora, emerald ink |
-| <img src="assets/swatches/lumina-parchment.svg" width="240"> | **Parchment** | A reading room at night: tobacco leather, a brass lamp, teal bindings | Parchment, teal and madder inks |
-| <img src="assets/swatches/lumina-nebula.svg" width="240"> | **Nebula** | An emission nebula in deep space: oxygen cyan, sulphur gold, hydrogen rose | The nebula printed in an atlas: peacock ink on clean white |
+| <img src="assets/swatches/lumina-rayleigh.svg" width="240"> | **Rayleigh** | Twilight after sunset: the blue hour, the Belt of Venus and the last gold | A clear sky at noon: sky-blue, gold and terracotta inks on cloud white |
+| <img src="assets/swatches/lumina-cherenkov.svg" width="240"> | **Cherenkov** | The blue glow of a reactor pool: electric blue, cyan and brass | The same glow by day: cobalt, teal and brass on blue-white paper |
+| <img src="assets/swatches/lumina-quartz.svg" width="240"> | **Quartz** | Rock crystal on a neutral night: clear keywords, ice blue, jade, lilac and rose | Crystal by daylight: graphite keywords, ice blue, jade and amethyst on white |
+| <img src="assets/swatches/lumina-olive.svg" width="240"> | **Olive** | An olive grove at night: sage, sky blue, honey, mauve and terracotta | Limestone in the Mediterranean sun: olive, sky and honey inks |
+| <img src="assets/swatches/lumina-dusk.svg" width="240"> | **Dusk** | Dusk over the hills: coral, honey, mint and lilac on a violet sky | The hour before sunset: brick coral and honey on lavender paper |
+| <img src="assets/swatches/lumina-oxblood.svg" width="240"> | **Oxblood** | Oxblood velvet: raspberry, candle gold, orchid, bottle green and teal | The velvet in daylight: raspberry ink on powder-pink paper |
+| <img src="assets/swatches/lumina-lagoon.svg" width="240"> | **Lagoon** | A lagoon at night: turquoise, coral, lavender and sand | Shallow water over white sand: teal, coral and lavender on aqua paper |
+| <img src="assets/swatches/lumina-ember.svg" width="240"> | **Ember** | A peat fire: ember orange, straw gold, sage and steel blue | Warm ash in the morning: ember, straw and moss inks on ash paper |
+| <img src="assets/swatches/lumina-canopy.svg" width="240"> | **Canopy** | Under the forest canopy: amber, leaf green, sky blue and berry red | Light through the leaves: amber and leaf inks on soft green paper |
+| <img src="assets/swatches/lumina-harbor.svg" width="240"> | **Harbor** | A harbour at night: coral lights, sand, sea green and sky blue on navy | A sea chart: navy ink, coral and sea green on cream paper |
+| <img src="assets/swatches/lumina-espresso.svg" width="240"> | **Espresso** | Smoked tea in a coffee roastery: lavender, honey, mint and terracotta on roasted brown | Crema paper, espresso ink, violet and terracotta |
+| <img src="assets/swatches/lumina-aurora.svg" width="240"> | **Aurora** | The northern lights: aurora green, pale gold, pink and violet on a black-teal night | A snowfield under the aurora: green, gold and pink inks on white |
+| <img src="assets/swatches/lumina-parchment.svg" width="240"> | **Parchment** | An illuminated manuscript by lamplight: gold leaf, vermilion, verdigris, lapis and purple | Vellum and iron-gall ink, with the illuminator's gold, vermilion and lapis |
+| <img src="assets/swatches/lumina-nebula.svg" width="240"> | **Nebula** | An indigo nebula: lavender, gold, jade and sky blue | The nebula in an atlas: violet and jade inks on lavender paper |
+| <img src="assets/swatches/lumina-polaire.svg" width="240"> | **Polaire** | A polar night: glacier blue, lilac and the low sun on the ice | Pale ice under a low sun: glacier and slate inks |
+| <img src="assets/swatches/lumina-vitrail.svg" width="240"> | **Vitrail** | Stained glass by night: cobalt, gold, emerald, ruby and amethyst glass lit in black lead, for low vision | Stained glass by day: jewel inks on pale stone, for low vision |
 
 The swatches show the six code colours in role order: keywords, functions,
 types, strings, constants, builtins; dark variant on the left, light on the right.
@@ -109,6 +117,14 @@ types, strings, constants, builtins; dark variant on the left, light on the righ
 **Nebula**
 
 <img src="assets/screens/lumina-nebula-dark.svg" width="49%"> <img src="assets/screens/lumina-nebula-light.svg" width="49%">
+
+**Polaire**
+
+<img src="assets/screens/lumina-polaire-dark.svg" width="49%"> <img src="assets/screens/lumina-polaire-light.svg" width="49%">
+
+**Vitrail**
+
+<img src="assets/screens/lumina-vitrail-dark.svg" width="49%"> <img src="assets/screens/lumina-vitrail-light.svg" width="49%">
 <!-- /flavors -->
 
 ## Install
@@ -252,10 +268,10 @@ and the rest of your tools.
 ## Names
 
 `lumina-<flavor>-<dark|light>`, for example `lumina-rayleigh-dark` or
-`lumina-aurora-light`, in every editor. Quartz adds
-`lumina-quartz-dark-contrast` and `lumina-quartz-light-contrast`: text
-above 16:1, comments above 6:1, every code colour at 7:1 or more (WCAG
-AAA).
+`lumina-aurora-light`, in every editor. The high-contrast pair is
+`lumina-vitrail-dark` and `lumina-vitrail-light`: text above 16:1,
+comments above 6:1, every code colour at 7:1 or more (WCAG AAA), and
+the six code colours kept apart for colour-blind readers.
 
 ## Contributing
 
